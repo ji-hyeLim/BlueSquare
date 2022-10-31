@@ -99,20 +99,42 @@ header {
             }
 
             .square-title {
+                position: relative;
                 padding: 20px;
+                height: 100%;
+                // background-color: red;
 
                 span {
-                    &:nth-child(1),
-                    &:nth-child(2),
-                    &:nth-child(4),
-                    &:nth-child(5) {
-                        margin-right: 10px;
+                    position: absolute;
+                    &:nth-child(1) {
+                        top: 10%;
+                        left: 10%;
                     }
 
-                    &:nth-child(4),
-                    &:nth-child(5),
+                    &:nth-child(2) {
+                        @include pos-center-x();
+                        top: 10%;
+                    }
+
+                    &:nth-child(3) {
+                        top: 10%;
+                        right: 10%;
+                    }
+                    
+                    &:nth-child(4) {
+                        bottom: 10%;
+                        left: 10%;
+                    }
+
+                    &:nth-child(5) {
+                        @include pos-center-x();
+                        bottom: 10%;
+
+                    }
+
                     &:nth-child(6) {
-                        margin-top: 20px;
+                        bottom: 10%;
+                        right: 10%;
                     }
                 }   
                 
@@ -258,23 +280,44 @@ header {
 
 main {
     position: relative;
-    background-color: aliceblue;
 
     h1 {
         font-size: 0;
     }
 
-    .main-tab {
-        display: flex;
-        justify-content: center;
+    ul.tab {
         margin-top: 200px;
         margin-bottom: 200px;
-
-        .main-tab-box {
-            width: 220px;
-            height: 20px;
+        @include flex-box() {
+            justify-content: center;
         }
-    } //main-tab
+
+        li {
+            padding: 0 20px;
+
+            @include responsive(large-tablet-screens) {
+                padding: 0 50px;
+            }
+
+            a {
+                &::after {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    margin-top: 5px;
+                    background-color: #000;
+                    transform: scale(0);
+                    transition: all 0.5s;
+                }
+
+                &:hover::after {
+                    transform: scale(1);
+                    font-weight: 600;
+                }
+            }
+        }
+    } //ul.tab
 
     .bookpark-intro {
         text-align: center;
@@ -290,7 +333,82 @@ main {
     } //bookpark-intro
 
     .bookpark-des {
-        background-color: pink;
+        // background-color: pink;
+
+        img {
+            width: 100%;
+            height: 600px;
+
+            @include responsive(large-tablet-screens) {
+            // height: auto;
+                
+
+            }
+        }
+
+        p {
+            line-height: 24px;
+        }
+
+        .bookpark-des-flex {
+            width: 100%;
+            // height: 100%;
+            position: relative;
+            margin-bottom: 1000px;
+            background-color: aqua;
+            @include flex-box() {
+                flex-direction: column-reverse;
+            }            
+
+            @include responsive(large-tablet-screens) {
+                @include flex-box() {
+                    flex-direction: row-reverse;
+                }             
+            }
+
+            .text {
+                text-align: center;
+                background-color: red;
+                @include pos-center();
+            }
+            
+            .img-and-square1 {
+                background-color: red;
+                position: absolute;
+                left: 0;
+
+                .frontimg {
+                    position: absolute;
+                    width: 300px;
+                    left: 30px;
+                    box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+                }
+            }
+            
+        }
+
+        h3 {
+            padding: 10px 0;
+        }
+    } //bookpark-des
+
+    .bookpark-guide {
+        margin: 100px 0;
+        text-align: center;
+
+        h4 {
+            padding-bottom: 10px;
+        }
+
+        div:nth-child(2) {
+            padding: 30px 0;
+        }
+
+        p {
+            padding-bottom: 5px;
+        }
+
+        
     }
 }
 
