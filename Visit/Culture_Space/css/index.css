@@ -91,7 +91,6 @@ footer {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 header {
@@ -101,13 +100,62 @@ header {
 header .header-bg {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
-header .header-bg video {
+header .header-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header .header-bg .square {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  color: white;
+  font-size: 38px;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header .header-bg .square .square-liner {
+  position: absolute;
+  background-color: white;
+  height: 5px;
+}
+header .header-bg .square .sqare-line1 {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+}
+header .header-bg .square .sqare-line2 {
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+}
+header .header-bg .square .sqare-line3 {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+}
+header .header-bg .square .sqare-line4 {
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 100%;
+}
+header .header-bg .square .square-title {
+  padding: 20px;
+}
+header .header-bg .square .square-title span:nth-child(1), header .header-bg .square .square-title span:nth-child(2), header .header-bg .square .square-title span:nth-child(4), header .header-bg .square .square-title span:nth-child(5) {
+  margin-right: 10px;
+}
+header .header-bg .square .square-title span:nth-child(4), header .header-bg .square .square-title span:nth-child(5), header .header-bg .square .square-title span:nth-child(6) {
+  margin-top: 20px;
 }
 header .logo-menu-box {
   position: absolute;
@@ -233,8 +281,35 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  height: 2000px;
+  position: relative;
   background-color: aliceblue;
+}
+main h1 {
+  font-size: 0;
+}
+main .main-tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+main .main-tab .main-tab-box {
+  width: 220px;
+  height: 20px;
+}
+main .bookpark-intro {
+  text-align: center;
+}
+main .bookpark-intro h2 {
+  font-size: 32px;
+}
+main .bookpark-intro p {
+  margin-top: 50px;
+  margin-bottom: 120px;
+  line-height: 26px;
+}
+main .bookpark-des {
+  background-color: pink;
 }
 
 footer {
