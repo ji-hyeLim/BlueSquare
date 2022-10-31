@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -100,34 +101,287 @@ header {
 }
 header .header-bg {
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
-header .header-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media screen and (min-width: 1024px) {
+  header .header-bg {
+    height: 100vh;
+  }
 }
-header .logo-menu-box {
+header .header-bg .fnb-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box {
+    flex-direction: row;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a > div {
+    transform: skewX(-10deg);
+  }
+}
+header .header-bg .fnb-box a.menu1 {
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu1 {
+    width: 25%;
+  }
+}
+header .header-bg .fnb-box a.menu1 .solos {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu1 .solos {
+    margin-left: -100px;
+    width: 120%;
+  }
+}
+header .header-bg .fnb-box a.menu1 .solos img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+header .header-bg .fnb-box a.menu1 .solos .white-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 158px;
+  background-color: white;
+  opacity: 0.35;
+}
+header .header-bg .fnb-box a.menu1 .solos .white-bar h2 {
+  font-size: 0;
+}
+header .header-bg .fnb-box a.menu1 .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .header-bg .fnb-box a.menu1 .txt .dancing_sc50 {
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 38px;
+}
+header .header-bg .fnb-box a.menu1 .txt .title30 {
+  font-family: "Montserrat", sans-serif, Arial;
+  font-size: 30px;
+  font-weight: bold;
+}
+header .header-bg .fnb-box a.menu1:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu1:hover {
+    scale: none;
+    width: 31%;
+  }
+}
+header .header-bg .fnb-box a.menu2 {
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu2 {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu2 .stageb {
+    margin-left: -50px;
+    width: 120%;
+  }
+}
+header .header-bg .fnb-box a.menu2 .stageb img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+header .header-bg .fnb-box a.menu2 .stageb .white-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 158px;
+  background-color: white;
+  opacity: 0.35;
+}
+header .header-bg .fnb-box a.menu2 .stageb .white-bar h2 {
+  font-size: 0;
+}
+header .header-bg .fnb-box a.menu2 .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .header-bg .fnb-box a.menu2 .txt .dancing_sc50 {
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 38px;
+}
+header .header-bg .fnb-box a.menu2 .txt .title30 {
+  font-family: "Montserrat", sans-serif, Arial;
+  font-size: 30px;
+  font-weight: bold;
+}
+header .header-bg .fnb-box a.menu2:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu2:hover {
+    scale: none;
+    width: 31%;
+  }
+}
+header .header-bg .fnb-box a.menu3 {
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu3 {
+    width: 25%;
+  }
+}
+header .header-bg .fnb-box a.menu3 .philos img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+header .header-bg .fnb-box a.menu3 .philos .white-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 158px;
+  background-color: white;
+  opacity: 0.35;
+}
+header .header-bg .fnb-box a.menu3 .philos .white-bar h2 {
+  font-size: 0;
+}
+header .header-bg .fnb-box a.menu3 .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .header-bg .fnb-box a.menu3 .txt .dancing_sc50 {
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 38px;
+}
+header .header-bg .fnb-box a.menu3 .txt .title30 {
+  font-family: "Montserrat", sans-serif, Arial;
+  font-size: 30px;
+  font-weight: bold;
+}
+header .header-bg .fnb-box a.menu3:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu3:hover {
+    scale: none;
+    width: 31%;
+  }
+}
+header .header-bg .fnb-box a.menu4 {
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu4 {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu4 .cake {
+    margin-right: 0;
+    width: 120%;
+  }
+}
+header .header-bg .fnb-box a.menu4 .cake img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+header .header-bg .fnb-box a.menu4 .cake .white-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 158px;
+  background-color: white;
+  opacity: 0.35;
+}
+header .header-bg .fnb-box a.menu4 .cake .white-bar h2 {
+  font-size: 0;
+}
+header .header-bg .fnb-box a.menu4 .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .header-bg .fnb-box a.menu4 .txt .dancing_sc50 {
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 38px;
+}
+header .header-bg .fnb-box a.menu4 .txt .title30 {
+  font-family: "Montserrat", sans-serif, Arial;
+  font-size: 30px;
+  font-weight: bold;
+}
+header .header-bg .fnb-box a.menu4:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu4:hover {
+    scale: none;
+    width: 31%;
+  }
+}
+
+.logo-menu-box {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 }
-header .logo-menu-box .flex-box {
+.logo-menu-box .flex-box {
   position: relative;
   display: flex;
   height: 80px;
 }
 @media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box {
+  .logo-menu-box .flex-box {
     height: 100px;
   }
 }
-header .logo-menu-box .flex-box .header-logo {
+.logo-menu-box .flex-box .header-logo {
   width: 15%;
 }
-header .logo-menu-box .flex-box .header-logo a img {
+.logo-menu-box .flex-box .header-logo a img {
   width: 48px;
   display: block;
   position: absolute;
@@ -135,20 +389,20 @@ header .logo-menu-box .flex-box .header-logo a img {
   transform: translateY(-50%);
 }
 @media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box .header-logo a img {
+  .logo-menu-box .flex-box .header-logo a img {
     width: 132px;
   }
 }
-header .logo-menu-box .flex-box nav.main-menu {
+.logo-menu-box .flex-box nav.main-menu {
   display: none;
   width: 504px;
 }
 @media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box nav.main-menu {
+  .logo-menu-box .flex-box nav.main-menu {
     display: block;
   }
 }
-header .logo-menu-box .flex-box nav.main-menu .gnb {
+.logo-menu-box .flex-box nav.main-menu .gnb {
   width: inherit;
   display: flex;
   justify-content: space-between;
@@ -156,11 +410,11 @@ header .logo-menu-box .flex-box nav.main-menu .gnb {
   top: 50%;
   transform: translateY(-50%);
 }
-header .logo-menu-box .flex-box nav.main-menu .gnb li a {
+.logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
   color: #fff;
 }
-header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
+.logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   display: block;
   content: "";
   width: 100%;
@@ -170,13 +424,13 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   transform: scale(0);
   transition: all 0.4s;
 }
-header .logo-menu-box .flex-box nav.main-menu .gnb li a:hover::after {
+.logo-menu-box .flex-box nav.main-menu .gnb li a:hover::after {
   transform: scale(1);
 }
-header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
+.logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
   display: none;
 }
-header .logo-menu-box .flex-box .right-menu {
+.logo-menu-box .flex-box .right-menu {
   width: 80px;
   position: absolute;
   top: 50%;
@@ -184,30 +438,30 @@ header .logo-menu-box .flex-box .right-menu {
   right: 0;
 }
 @media screen and (min-width: 600px) {
-  header .logo-menu-box .flex-box .right-menu {
+  .logo-menu-box .flex-box .right-menu {
     width: 110px;
   }
 }
 @media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box .right-menu {
+  .logo-menu-box .flex-box .right-menu {
     width: 188px;
   }
 }
 @media screen and (min-width: 1400px) {
-  header .logo-menu-box .flex-box .right-menu {
+  .logo-menu-box .flex-box .right-menu {
     right: 0;
   }
 }
-header .logo-menu-box .flex-box .right-menu ul {
+.logo-menu-box .flex-box .right-menu ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-header .logo-menu-box .flex-box .right-menu ul li a {
+.logo-menu-box .flex-box .right-menu ul li a {
   color: #fff;
   font-family: "Montserrat", sans-serif, Arial;
 }
-header .logo-menu-box .flex-box .right-menu ul li a::after {
+.logo-menu-box .flex-box .right-menu ul li a::after {
   display: block;
   content: "";
   width: 100%;
@@ -218,22 +472,17 @@ header .logo-menu-box .flex-box .right-menu ul li a::after {
   transition: all 0.4s;
 }
 @media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box .right-menu ul li a:hover::after {
+  .logo-menu-box .flex-box .right-menu ul li a:hover::after {
     transform: scale(1);
   }
 }
-header .logo-menu-box .flex-box .right-menu ul li a img {
+.logo-menu-box .flex-box .right-menu ul li a img {
   width: 30px;
 }
 @media screen and (min-width: 600px) {
-  header .logo-menu-box .flex-box .right-menu ul li a img {
+  .logo-menu-box .flex-box .right-menu ul li a img {
     width: 40px;
   }
-}
-
-main {
-  height: 2000px;
-  background-color: aliceblue;
 }
 
 footer {
@@ -404,4 +653,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
