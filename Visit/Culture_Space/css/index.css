@@ -104,7 +104,8 @@ header .header-bg {
 header .header-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header-bg .square {
   position: absolute;
@@ -148,13 +149,40 @@ header .header-bg .square .sqare-line4 {
   height: 100%;
 }
 header .header-bg .square .square-title {
+  position: relative;
   padding: 20px;
+  height: 100%;
 }
-header .header-bg .square .square-title span:nth-child(1), header .header-bg .square .square-title span:nth-child(2), header .header-bg .square .square-title span:nth-child(4), header .header-bg .square .square-title span:nth-child(5) {
-  margin-right: 10px;
+header .header-bg .square .square-title span {
+  position: absolute;
 }
-header .header-bg .square .square-title span:nth-child(4), header .header-bg .square .square-title span:nth-child(5), header .header-bg .square .square-title span:nth-child(6) {
-  margin-top: 20px;
+header .header-bg .square .square-title span:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+header .header-bg .square .square-title span:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+header .header-bg .square .square-title span:nth-child(3) {
+  top: 10%;
+  right: 10%;
+}
+header .header-bg .square .square-title span:nth-child(4) {
+  bottom: 10%;
+  left: 10%;
+}
+header .header-bg .square .square-title span:nth-child(5) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+}
+header .header-bg .square .square-title span:nth-child(6) {
+  bottom: 10%;
+  right: 10%;
 }
 header .logo-menu-box {
   position: absolute;
@@ -281,20 +309,38 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main {
   position: relative;
-  background-color: aliceblue;
 }
 main h1 {
   font-size: 0;
 }
-main .main-tab {
-  display: flex;
-  justify-content: center;
+main ul.tab {
   margin-top: 200px;
   margin-bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
 }
-main .main-tab .main-tab-box {
-  width: 220px;
-  height: 20px;
+main ul.tab li {
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  main ul.tab li {
+    padding: 0 50px;
+  }
+}
+main ul.tab li a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+main ul.tab li a:hover::after {
+  transform: scale(1);
+  font-weight: 600;
 }
 main .bookpark-intro {
   text-align: center;
@@ -307,8 +353,63 @@ main .bookpark-intro p {
   margin-bottom: 120px;
   line-height: 26px;
 }
-main .bookpark-des {
-  background-color: pink;
+main .bookpark-des img {
+  width: 100%;
+  height: 600px;
+}
+main .bookpark-des p {
+  line-height: 24px;
+}
+main .bookpark-des .bookpark-des-flex {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1000px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1024px) {
+  main .bookpark-des .bookpark-des-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+main .bookpark-des .bookpark-des-flex .text {
+  text-align: center;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .bookpark-des .bookpark-des-flex .img-and-square1 {
+  background-color: red;
+  position: absolute;
+  left: 0;
+}
+main .bookpark-des .bookpark-des-flex .img-and-square1 .frontimg {
+  position: absolute;
+  width: 300px;
+  left: 30px;
+  box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+}
+main .bookpark-des h3 {
+  padding: 10px 0;
+}
+main .bookpark-guide {
+  margin: 100px 0;
+  text-align: center;
+}
+main .bookpark-guide h4 {
+  padding-bottom: 10px;
+}
+main .bookpark-guide div:nth-child(2) {
+  padding: 30px 0;
+}
+main .bookpark-guide p {
+  padding-bottom: 5px;
 }
 
 footer {
@@ -479,4 +580,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
