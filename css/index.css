@@ -298,8 +298,26 @@ main section.performance .slide-btn a img {
   width: 100%;
 }
 main section.restaurant_and_cafe {
+  position: relative;
   margin-top: 234px;
   margin-bottom: 234px;
+}
+@media screen and (min-width: 1024px) {
+  main section.restaurant_and_cafe h2 {
+    position: absolute;
+    top: 0;
+  }
+}
+main section.restaurant_and_cafe p.des {
+  display: none;
+  position: absolute;
+  top: 5%;
+  font-size: 18px;
+}
+@media screen and (min-width: 1024px) {
+  main section.restaurant_and_cafe p.des {
+    display: block;
+  }
 }
 main section.restaurant_and_cafe .outer-flex-box {
   display: flex;
@@ -310,6 +328,7 @@ main section.restaurant_and_cafe .outer-flex-box {
   main section.restaurant_and_cafe .outer-flex-box {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: right;
   }
 }
 main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box {
@@ -329,7 +348,8 @@ main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box:hover {
 }
 @media screen and (min-width: 1024px) {
   main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box {
-    width: 49%;
+    width: 32.4%;
+    margin-right: 20px;
     margin-bottom: 0;
     padding: 0;
     border: 0;
@@ -339,6 +359,9 @@ main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box:hover {
   main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box:hover {
     border: 0;
     box-shadow: 0 0 0 0 transparent;
+  }
+  main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box:nth-child(2), main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box:last-child {
+    margin-right: 0;
   }
 }
 main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box::after {
@@ -398,8 +421,16 @@ main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span {
 }
 @media screen and (min-width: 1024px) {
   main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span {
+    width: 100%;
+    text-align: center;
     padding-bottom: 41px;
     font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+    transform: translate(0, -50%);
   }
 }
 main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span img {

@@ -271,8 +271,27 @@ main {
     } // section.performance
 
     section.restaurant_and_cafe {
+        position: relative;
         margin-top: 234px;
         margin-bottom: 234px;
+
+        h2 {
+            @include responsive(large-tablet-screens) {
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        p.des {
+            display: none;
+            position: absolute;
+            top: 5%;
+            font-size: $sub-title-font-size;
+            @include responsive(large-tablet-screens) {
+                display: block;
+            }
+        }
+
         .outer-flex-box {
             @include flex-box() {
                 flex-direction: column;
@@ -281,10 +300,10 @@ main {
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
                 flex-wrap: wrap;
+                justify-content: right;
             }
 
             a.inner-flex-box {
-                // background-color: red;
                 width: 100%;
                 position: relative;
                 margin-bottom: 15px;
@@ -301,7 +320,8 @@ main {
                 }
 
                 @include responsive(large-tablet-screens) {
-                    width: 49%;
+                    width: 32.4%;
+                    margin-right: 20px;
                     margin-bottom: 0;
                     padding: 0;
                     border: 0;
@@ -311,6 +331,11 @@ main {
                     &:hover {
                         border: 0;
                         box-shadow: 0 0 0 0 transparent;
+                    }
+
+                    &:nth-child(2),
+                    &:last-child {
+                        margin-right: 0;
                     }
                 }
 
@@ -368,8 +393,14 @@ main {
                     @include pos-center();
                     
                     @include responsive(large-tablet-screens) {
+                        width: 100%;
+                        text-align: center;
                         padding-bottom: 41px;
                         font-size: 22px;
+                        @include pos-center() {
+                            left: 0;
+                            transform: translate(0, -50%);
+                        }
                     }
 
                     img {
@@ -392,10 +423,7 @@ main {
                 &:hover > span {
                     display: block;
                 }
-
-
             } // a.inner-flex-box
-
         } // .outer-flex-box
     } // . section.restaurant_and_cafe
     
