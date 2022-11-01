@@ -138,7 +138,7 @@ header .header-bg .fnb-box a.menu1 .solos {
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .fnb-box a.menu1 .solos {
-    margin-left: -100px;
+    margin-left: -112px;
     width: 120%;
   }
 }
@@ -198,7 +198,7 @@ header .header-bg .fnb-box a.menu2 {
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .fnb-box a.menu2 .stageb {
-    margin-left: -50px;
+    margin-left: -60px;
     width: 120%;
   }
 }
@@ -254,6 +254,12 @@ header .header-bg .fnb-box a.menu3 {
 @media screen and (min-width: 1024px) {
   header .header-bg .fnb-box a.menu3 {
     width: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .fnb-box a.menu3 .philos {
+    margin-left: -10px;
+    width: 120%;
   }
 }
 header .header-bg .fnb-box a.menu3 .philos img {

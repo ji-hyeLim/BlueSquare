@@ -31,7 +31,7 @@
 }
 
 html,
-body {
+body {               
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -89,7 +89,7 @@ header {
                     width: 100%;
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -100px;
+                        margin-left: -112px;
                         width: 120%;
                     }
 
@@ -139,7 +139,7 @@ header {
                 .stageb {
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -50px;
+                        margin-left: -60px;
                         width: 120%;
                     }
 
@@ -185,6 +185,11 @@ header {
                 }
 
                 .philos {
+
+                    @include responsive(large-tablet-screens) {
+                        margin-left: -10px;
+                        width: 120%;
+                    }
                     img {
                         @include img();
                     }
