@@ -90,7 +90,7 @@ header {
 
                     @include responsive(large-tablet-screens) {
                         margin-left: -112px;
-                        width: 130%;
+                        width: 120%;
                     }
 
                     img {
@@ -139,7 +139,7 @@ header {
                 .stageb {
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -50px;
+                        margin-left: -60px;
                         width: 120%;
                     }
 
@@ -187,7 +187,8 @@ header {
                 .philos {
 
                     @include responsive(large-tablet-screens) {
-                        width: 110%;
+                        margin-left: -10px;
+                        width: 120%;
                     }
                     img {
                         @include img();
