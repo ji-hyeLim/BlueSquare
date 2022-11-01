@@ -31,7 +31,7 @@
 }
 
 html,
-body {
+body {               
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -89,8 +89,8 @@ header {
                     width: 100%;
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -100px;
-                        width: 120%;
+                        margin-left: -112px;
+                        width: 130%;
                     }
 
                     img {
