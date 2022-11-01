@@ -185,6 +185,10 @@ header {
                 }
 
                 .philos {
+
+                    @include responsive(large-tablet-screens) {
+                        width: 110%;
+                    }
                     img {
                         @include img();
                     }
