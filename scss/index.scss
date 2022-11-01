@@ -364,21 +364,35 @@ main {
                     display: none;
                     z-index: 999;
                     color: #fff;
-                    font: {
-                        size: 20px;
-                        // weight: 500;
-                    }
-                    position: absolute;
+                    font-size: 18px;
                     @include pos-center();
                     
                     @include responsive(large-tablet-screens) {
                         padding-bottom: 41px;
+                        font-size: 22px;
+                    }
+
+                    img {
+                        display: inline-flex;
+                        width: 18px;
+                        height: auto;
+                        transition: all 0.5s;
+
+                        @include responsive(large-tablet-screens) {
+                            width: 24px;
+                        }
+    
+                    }
+
+                    &:hover > img {
+                        transform: translateX(20px);
                     }
                 }
 
                 &:hover > span {
                     display: block;
                 }
+
 
             } // a.inner-flex-box
 

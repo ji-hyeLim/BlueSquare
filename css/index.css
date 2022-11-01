@@ -390,8 +390,7 @@ main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span {
   display: none;
   z-index: 999;
   color: #fff;
-  font-size: 20px;
-  position: absolute;
+  font-size: 18px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -400,7 +399,22 @@ main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span {
 @media screen and (min-width: 1024px) {
   main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span {
     padding-bottom: 41px;
+    font-size: 22px;
   }
+}
+main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span img {
+  display: inline-flex;
+  width: 18px;
+  height: auto;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span img {
+    width: 24px;
+  }
+}
+main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box span:hover > img {
+  transform: translateX(20px);
 }
 main section.restaurant_and_cafe .outer-flex-box a.inner-flex-box:hover > span {
   display: block;
