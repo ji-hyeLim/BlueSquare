@@ -58,6 +58,14 @@ footer {
   display: block;
 }
 
+@keyframes bannermove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
 .container {
   position: relative;
   margin: 0 auto;
@@ -230,10 +238,251 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
     width: 40px;
   }
 }
+header .intro-text {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  color: white;
+  line-height: 30px;
+}
+header .intro-text h1 {
+  line-height: 55px;
+  margin-bottom: 20px;
+  font-size: 38px;
+}
+header .intro-text h1 span {
+  font-size: 50px;
+}
+header .intro-text a {
+  margin-top: 50px;
+  color: white;
+  font-size: 18px;
+}
+header .intro-text p {
+  font-size: 16px;
+}
+header .intro-text p:last-child {
+  margin-top: 180px;
+  font-size: 13px;
+}
 
 main {
-  height: 2000px;
-  background-color: aliceblue;
+  position: relative;
+  text-align: center;
+}
+main h1 {
+  font-size: 0;
+}
+main hr {
+  margin-top: 100px;
+}
+main h2 {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34px;
+  font-weight: 200;
+}
+main h2 span {
+  font-weight: 600;
+}
+main #flow {
+  overflow: hidden;
+  width: 600px;
+}
+@media screen and (min-width: 1400px) {
+  main #flow {
+    width: 100%;
+  }
+}
+main #flow .flow-img {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  width: 1600px;
+  animation: bannermove 10s linear infinite;
+}
+@media screen and (min-width: 1400px) {
+  main #flow .flow-img {
+    width: 1860px;
+  }
+}
+main #flow .flow-img li {
+  padding-left: 10px;
+}
+@media screen and (min-width: 1400px) {
+  main #flow .flow-img li {
+    padding-left: 40px;
+  }
+}
+main #flow .flow-img li img {
+  width: 122px;
+  height: 175px;
+}
+@media screen and (min-width: 1400px) {
+  main #flow .flow-img li img {
+    width: 290px;
+    height: 400px;
+  }
+}
+main .ticket-intro {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .ticket-intro {
+    margin-bottom: 300px;
+  }
+  main .ticket-intro .left-img {
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+  }
+  main .ticket-intro .left-img .first-content {
+    width: 55%;
+  }
+  main .ticket-intro .left-img .last-content {
+    border-left: 1px solid #000;
+    width: 45%;
+  }
+  main .ticket-intro .right-img {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    border-bottom: 1px solid #000;
+  }
+  main .ticket-intro .right-img .last-content {
+    border-left: 1px solid #000;
+    width: 55%;
+    order: 2;
+  }
+  main .ticket-intro .right-img .first-content {
+    width: 45%;
+    order: 1;
+  }
+}
+main .ticket-intro .ticket-poster {
+  margin-top: 80px;
+}
+main .ticket-intro .ticket-poster img {
+  width: 270px;
+  height: 380px;
+  margin-bottom: 40px;
+  box-shadow: 8px 8px 3px gray;
+}
+@media screen and (min-width: 1400px) {
+  main .ticket-intro .ticket-poster img {
+    width: 580px;
+    height: 810px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    box-shadow: 8px 8px 3px gray;
+  }
+}
+main .ticket-intro .ticket-text {
+  border-bottom: 1px solid #000;
+}
+@media screen and (min-width: 1400px) {
+  main .ticket-intro .ticket-text {
+    border-bottom: 0;
+    margin: 200px 120px;
+  }
+}
+main .ticket-intro .ticket-text .show-info-ing {
+  width: 60px;
+  padding: 5px;
+  background-color: crimson;
+}
+main .ticket-intro .ticket-text .show-info-ing p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+main .ticket-intro .ticket-text .show-info-schedule {
+  width: 70px;
+  padding: 5px;
+  background-color: #ccc;
+}
+main .ticket-intro .ticket-text .show-info-schedule p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+main .ticket-intro .ticket-text .ticket-intro-text {
+  text-align: left;
+}
+main .ticket-intro .ticket-text .ticket-intro-text h3 {
+  margin: 10px 0;
+  font-size: 38px;
+}
+main .ticket-intro .ticket-text .ticket-intro-text .date {
+  font-size: 13px;
+  margin: 10px 0;
+}
+main .ticket-intro .ticket-text .ticket-intro-text ul li {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  line-height: 30px;
+}
+main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(1) p:last-child, main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(2) p:last-child {
+  padding-left: 87px;
+}
+main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(3) p:last-child, main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(4) p:last-child {
+  padding-left: 60px;
+}
+main .ticket-intro .ticket-text .ticket-intro-text ul li p:first-child {
+  font-weight: 600;
+}
+@media screen and (min-width: 1400px) {
+  main .ticket-intro .ticket-text .ticket-intro-text h3 {
+    margin: 20px 0;
+    font-size: 42px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text .date {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li {
+    padding: 10px 0;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li:last-child {
+    margin-bottom: 100px;
+  }
+}
+main .ticket-intro .ticket-text .detail-booking-button {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul li {
+  margin-right: 20px;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul li:last-child {
+  background-color: #000;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul li:last-child a {
+  color: #fff;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul li a {
+  position: relative;
+  width: 130px;
+  padding: 12px 0;
+  border: 1px solid #000;
+  text-align: left;
+  text-indent: 20px;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul li a img {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 20px;
 }
 
 footer {

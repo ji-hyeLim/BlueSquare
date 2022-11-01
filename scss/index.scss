@@ -192,21 +192,20 @@ header {
 
 main {
     section {
-        height: 100vh;
         h1 {
             font-size: 0;
         }
-
+        
         h2 {
             font-size: $title-font-size;
             margin-bottom: 58px;
-
+            
         }
     }
     
     section.performance {
+        height: 100vh;
         margin-top: 166px;
-
         .slides {
             margin-left: 20px;
             overflow-x: scroll;
@@ -272,57 +271,119 @@ main {
     } // section.performance
 
     section.restaurant_and_cafe {
+        margin-top: 234px;
+        margin-bottom: 234px;
         .outer-flex-box {
-            width: 100%;
             @include flex-box() {
                 flex-direction: column;
             }
 
+            @include responsive(large-tablet-screens) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
             a.inner-flex-box {
+                // background-color: red;
+                width: 100%;
                 position: relative;
                 margin-bottom: 15px;
-                border: 2px solid $gray-bg;
+                padding: 15px 0 15px 20px;
                 border-radius: 10px;
                 box-shadow: 3px 3px 5px 0 $gray-border;
                 cursor: pointer;
                 @include flex-box() {
                     align-items: center;
                 }
-
+                
                 &:hover {
-                    border: 2px solid $gray-border;
                     box-shadow: 0 0 0 0 $gray-border;
                 }
-            
-                .overlay {
-                    width: 50%;
-                    position: relative;
-                    padding: 15px 0 15px 20px;
 
-                    img {
-                        display: block;
-                        width: 100px;
-                        height: 100px;
-                        object-fit: cover;
-                        border-radius: 10px;
+                @include responsive(large-tablet-screens) {
+                    width: 49%;
+                    margin-bottom: 0;
+                    padding: 0;
+                    border: 0;
+                    box-shadow: 0 0 0 0 transparent;
+                    flex-direction: column;
+                    
+                    &:hover {
+                        border: 0;
+                        box-shadow: 0 0 0 0 transparent;
                     }
                 }
-                
+
+                &::after{
+                    display: none;
+                    position: absolute;
+                    top: 0; right: 0; left: 0; bottom: 0;
+                    content:""; 
+                    z-index: 10;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0.8);
+
+                    @include responsive(large-tablet-screens) {
+                        bottom: 41px;
+                    }
+                }
+
+                &:hover::after {
+                    display: block;
+                }
+
+                img {
+                    position: relative;
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 10px;
+                    object-fit: cover;
+
+                    @include responsive(large-tablet-screens) {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+    
                 p {
                     width: 50%;
-                    padding: 0 20px;
                     font: {
                         size: $sub-title-font-size;
                         weight: 600;
                     }
-                    // @include pos-center-x();
+
+                    @include responsive(large-tablet-screens) {
+                        width: 100%;
+                        padding: 10px 0;
+                    }
+                } // p
+
+                span {
+                    display: none;
+                    z-index: 999;
+                    color: #fff;
+                    font: {
+                        size: 20px;
+                        // weight: 500;
+                    }
+                    position: absolute;
+                    @include pos-center();
+                    
+                    @include responsive(large-tablet-screens) {
+                        padding-bottom: 41px;
+                    }
                 }
 
-                
+                &:hover > span {
+                    display: block;
+                }
+
             } // a.inner-flex-box
+
         } // .outer-flex-box
     } // . section.restaurant_and_cafe
-
     
 } // main
 
