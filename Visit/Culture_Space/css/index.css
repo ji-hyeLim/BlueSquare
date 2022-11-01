@@ -104,7 +104,8 @@ header .header-bg {
 header .header-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header-bg .square {
   position: absolute;
@@ -579,4 +580,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */

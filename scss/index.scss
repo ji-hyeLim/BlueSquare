@@ -191,6 +191,8 @@ header {
 // * ===================== main ===================== *
 
 main {
+    margin-top: 266px;
+    margin-bottom: 266px;
     section {
         h1 {
             font-size: 0;
@@ -204,8 +206,6 @@ main {
     }
     
     section.performance {
-        height: 100vh;
-        margin-top: 166px;
         .slides {
             margin-left: 20px;
             overflow-x: scroll;
@@ -285,7 +285,7 @@ main {
         p.des {
             display: none;
             position: absolute;
-            top: 5%;
+            top: 50px;
             font-size: $sub-title-font-size;
             @include responsive(large-tablet-screens) {
                 display: block;
@@ -426,7 +426,108 @@ main {
             } // a.inner-flex-box
         } // .outer-flex-box
     } // . section.restaurant_and_cafe
-    
+
+    section.culture-space {
+        // position: relative;
+
+        .flex-box {
+            @include flex-box()  {
+                flex-direction: column;
+            }
+
+            @include responsive(small-tablet-screens) {
+                flex-direction: row;
+            }
+
+            & > div {
+                @include responsive(small-tablet-screens) {
+                    flex: 50%;
+                }
+            }
+
+            .imgs-box {
+                .img1,
+                .img2 {
+                    img {
+                        display: block;
+                    }
+                }
+
+               .img2 {
+                    @include responsive(large-tablet-screens) {
+                        padding-top: 41px;  
+                        padding-left: 200px;                           
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+
+                        @include responsive(large-tablet-screens) {
+                            width: auto;
+                        }
+                    }
+                }
+                
+
+            } // .imgs-box
+
+            .contents-box {
+                padding-top: 28px;
+
+                @include responsive(small-tablet-screens) {
+                    align-self: flex-end;
+                    padding-left: 20px;
+                    // padding-bottom: 102px;
+                }
+
+                @include responsive(large-tablet-screens) {
+                    align-self: flex-end;
+                    width: 100%;
+                    padding-left: 116px;
+                    padding-bottom: 102px;
+
+                }
+
+                h2 {
+                    display: none;
+
+                    @include responsive(large-tablet-screens) {
+                        display: block;
+                    }
+                }
+
+                strong {
+                    padding-bottom: 14px;
+                }
+
+                p {
+                    line-height: 1.5;
+                }
+
+                a {
+                    margin-top: 50px;
+                    text-align: center;
+                    font-size: $mini-text-font-size;
+
+                    @include responsive(small-tablet-screens) {
+                        text-align: left;
+                    }
+
+                    &:hover {
+                        font-weight: 600;
+                    }
+
+                    img {
+                        width: 10px;
+                    }
+                }
+
+                
+            } // .contents-box
+
+        } // .flex-box
+    } // section.culture-space
 } // main
 
 
