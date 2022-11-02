@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <link rel="stylesheet" href="./css/culture_space.css" type="text/css">
     <title>BLUE SQUARE</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="header-bg">
+            <div class="header-bg-bookpark">
                 <img src="./img/bookpark01.png" alt="서점의 측면 책꽂이에 책이 꽂혀있는 모습">
                 <div class="square">
                     <div class="square-liner sqare-line1"></div>
@@ -26,7 +26,24 @@
                         <span>지</span> 
                     </div>
                 </div>
-            </div> <!-- header-bg -->
+            </div> 
+
+            <div class="header-bg-sodam">
+                <img src="./img/sodam01.png" alt="소담상회 입구 간판을 확대한 사진">
+                <div class="square">
+                    <div class="square-liner sqare-line1"></div>
+                    <div class="square-liner sqare-line2"></div>
+                    <div class="square-liner sqare-line3"></div>
+                    <div class="square-liner sqare-line4"></div>
+                    <div class="square-title">
+                        <span>소</span>
+                        <span>담</span>
+                        <span>상</span>
+                        <span>회</span>
+                    </div>
+                </div> <!-- 깃 안돼ㅜ  -->
+            </div>
+
             <div class="logo-menu-box">
                 <div class="container">
                     <div class="flex-box">
@@ -34,7 +51,7 @@
                             <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
                             <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
                         </div>
-    
+
                         <nav class="main-menu">
                             <ul class="gnb">
                                 <li>
@@ -92,13 +109,14 @@
         </header> <!-- header -->
 
         <main>
-            <div class="container">
-                <h1>Main</h1>
-                <ul class="tab">
-                    <li><a href="#">북파크 라운지</a></li>
-                    <li><a href="#">소담상회</a></li>
-                </ul>
+            <h1>Main</h1>
 
+            <ul class="tab">
+                <li><a href="#">북파크 라운지</a></li>
+                <li><a href="#">소담상회</a></li>
+            </ul>
+
+            <div class="container bookpark">
                 <div class="bookpark-intro">
                     <h2>나만의 서재, 편안한 휴식</h2>
                     <p>
@@ -106,22 +124,25 @@
                         나만의 공간에서 마음껏 읽을 수 있는 고품격 문화 공간입니다.
                     </p>
                 </div> <!-- bookpark-intro -->
+
                 <div class="bookpark-des">
-                    <div class="bookpark-des-flex bookpark-des-box1">
-                        <div class="text">
+                    <div class="bookpark-des-flex bookpark-des-box-L">
+                        <div class="text right">
                             <h3>최상급 원두를 사용한 프리미엄 카페</h3>
                             <p>
                                 북파크 라운지에서는 신선한 원두로 만들어진 음료를<br>
                                 하루에 한 잔씩 무료로 제공합니다.
                             </p>
                         </div>
+
                         <div class="img-and-square1">
                             <div class="square1"></div>
                             <div class="frontimg"><img src="./img/bookpark02.png" alt="커피 가루 사이에 있는 공기를 빼내는 모습"></div>
                         </div>
                     </div>
-                    <div class="bookpark-des-flex bookpark-des-box2">
-                        <div class="text">
+
+                    <div class="bookpark-des-flex bookpark-des-box-R">
+                        <div class="text left">
                             <h3>강연, 체험, 독서모임 등의 다양한 문화행사</h3>
                             <p>
                                 북파크라운지에서 열리는 다양한 행사에<br>
@@ -130,11 +151,13 @@
                         </div>
                         <div class="img-and-square2">
                             <div class="square2"></div>
-                            <img src="./img/bookpark03.png" alt="폭이 좁고 긴 테이블에서 책을 읽고있는 사람의 옆모습">
+                            <div class="frontimg"><img src="./img/bookpark03.png" alt="폭이 좁고 긴 테이블에서 책을 읽고있는 사람의 옆모습"></div>
+                            
                         </div>
                     </div>
-                    <div class="bookpark-des-flex bookpark-des-box3">
-                        <div class="text">
+
+                    <div class="bookpark-des-flex bookpark-des-box-L">
+                        <div class="text right">
                             <h3>3천여권의 전문 큐레이션 도서</h3>
                             <p>
                                 트렌드에 따라 도서 큐레이션 서비스를 제공합니다.<br>
@@ -143,11 +166,14 @@
                         </div>
                         <div class="img-and-square3">
                             <div class="square3"></div>
-                            <img src="./img/bookpark04.png" alt="폭이 좁고 긴 테이블에서 책을 읽고있는 사람의 옆모습">
+                            <div class="frontimg">
+                                <img src="./img/bookpark04.png" alt="폭이 좁고 긴 테이블에서 책을 읽고있는 사람의 옆모습">
+                            </div>
                         </div>
                     </div>
-                    <div class="bookpark-des-flex bookpark-des-box4">
-                        <div class="text">
+
+                    <div class="bookpark-des-flex bookpark-des-box-R">
+                        <div class="text4">
                             <h3>도심속에서 즐기는 나만의 서재</h3>
                             <p>
                                 조용하고 프라이빗한 분위기 속에서 <br>
@@ -156,10 +182,14 @@
                         </div>
                         <div class="img-and-square4">
                             <div class="square4"></div>
-                            <img src="./img/bookpark05.png" alt="폭이 좁고 긴 테이블에서 책을 읽고있는 사람의 옆모습">
+                            <div class="frontimg">
+                                <img src="./img/bookpark05.png" alt="폭이 좁고 긴 테이블에서 책을 읽고있는 사람의 옆모습">
+                            </div>
+                            
                         </div>
                     </div>
                 </div> <!-- bookpark-des -->
+
                 <div class="bookpark-guide">
                     <div class="price">
                         <h4>가격</h4>
@@ -177,6 +207,227 @@
                     </div>
                 </div> <!-- bookpark-guide -->
             </div> <!-- container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="sodam">
+                <div class="container">
+                    <section class="sodam-intro">
+                        <h2><strong>소</strong>상공인의 이야기와<br>제품을 <strong>담</strong>은 공간</h2>
+                        <p>
+                            소담상회는 인터파크, 중소벤처기업부, 중소기업유통센터가 함께하는<br>
+                            소상공인 지원 정책의 일환으로 설립된 스토어입니다.<br>
+                            좋은 품질로 승부하는 소상공인의 상품을<br>
+                            직접 체험할 수 있도록 한 자리에 모았습니다.<br>
+                        </p>
+                        <p>
+                            공연 예술을 포함하여 폭넓은 문화 체험이 가능한
+                            다채로운 행사도 진행중이니 다양하게 즐기고 누려보세요.
+                        </p>
+                    </section> <!-- bookpark-intro -->
+                </div> <!-- container   -->
+
+                <div class="container">
+                    <section class="sodam-blue">    
+                        <div class="circle"></div>
+                        <div class="blue-container img-l">
+                            <div class="info no1">
+                                <div class="blue-title">
+                                    <h3>소담상회 <span class="title-blue">BLUE</span></h3>
+                                </div>
+                                <p class="blue-desc">
+                                    소담상회의 메인스토어 입니다. <br>
+                                    소상공인 제품만의 가치와 매력을 느껴보세요!
+                                </p>
+                            </div>
+                            <div class="right">
+                                <img class="blue-img" src="./img/sodam02.png" alt="">
+                            </div>
+                        </div> <!-- blue-container -->
+
+                        <div class="blue-container img-r">
+                            <div class="left">  
+                                <img class="blue-img" src="./img/sodam04.png" alt="">
+                            </div>
+                            <div class="info no2">
+                                <h4 class="blue-desc-title">
+                                    가치를 더하는 소상 제품
+                                </h4>
+                                <p class="blue-desc">
+                                    성장잠재력을 보유한 소상공인, <br>
+                                    높은 품질의 제품을 만나보세요!
+                                </p>
+                            </div>
+                        </div> <!-- blue-container -->
+
+                        <div class="blue-container img-l">
+                            <div class="info no3">
+                                <h4 class="blue-desc-title">
+                                    오프라인 스토어부터 온라인 스토어까지
+                                </h4>
+                                <p class="blue-desc">
+                                    제품의 QR코드를 찍어보세요. <br>
+                                    온라인으로 구매가 가능합니다!
+                                </p>
+                            </div>
+                            <div class="right">
+                                <img class="blue-img" src="./img/sodam04.png" alt="">
+                            </div>
+                        </div> <!-- blue-container -->
+                    </section> <!-- sodam-blue -->
+
+                    <section class="sodam-nemo">
+                        <div class="nemo-container img-r">
+                            <div class="left">
+                                <img class="nemo-img" src="./img/sodam05.png" alt="">
+                            </div>
+                            <div class="info no4">
+                                <div class="nemo-title">
+                                    <h3>소담상회 <span class="title-nemo">NEMO</span></h3>
+                                </div>
+                                <p class="nemo-desc">
+                                    테마별, 상품별 재미가 가득한 <br>
+                                    복합문화공간 NEMO<br>
+                                    다양한 문화 행사에 참여해보세요!
+                                </p>
+                            </div>
+                        </div> <!-- nemo-container -->
+
+                        <div class="nemo-container img-l">
+                            <div class="info no5">
+                                <h4 class="nemo-desc-title">
+                                    전문 장비가 갖춰진 영상 촬영실
+                                </h4>
+                                <p class="nemo-desc">
+                                    소담상회 입점업체 및 소상공인을 위한 <br>
+                                    영상촬영실 대여 서비스를 운영중입니다.
+                                </p>
+                            </div>
+                            <div class="right">
+                                <img class="nemo-img" src="./img/sodam06.png" alt="">
+                            </div>
+                        </div> <!-- nemo-container -->
+
+                        <div class="nemo-container img-r">
+                            <div class="left">
+                                <img class="nemo-img" src="./img/sodam07.png" alt="">
+                            </div>
+                            <div class="info no6">
+                                <h4 class="nemo-desc-title">
+                                    영감이 되는 공간
+                                </h4>
+                                <p class="nemo-desc">
+                                    네모관에서 열리는 다양한 전시회를 만나보세요. <br>
+                                    색다른 즐거움과 볼거리를 선사합니다.
+                                </p>
+                            </div>
+                        </div> <!-- nemo-container -->
+                    </section> <!-- sodam-nemo -->
+                </div> <!-- section-wrapper -->
+
+
+
+
+
+
+
+
+                <div class="bookpark-guide">
+                    <div class="price">
+                        <h4>가격</h4>
+                        <p>1일 회원권 9,900원~</p>
+                        <p>블루스퀘어 건물 3층 입구에서 현장 결제</p>
+                    </div>
+                    <div class="location">
+                        <h4>위치</h4>
+                        <p>서울시 용산구 이태원로294 블루스퀘어 3층</p>
+                    </div>
+                    <div class="time">
+                        <h4>이용 시간</h4>
+                        <p>11:00 - 22:00</p>
+                        <p>매주 월요일 휴무</p>
+                    </div>
+                </div> <!-- bookpark-guide -->
+            </div> <!-- sodam -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </main> <!-- main -->
 
         <footer>

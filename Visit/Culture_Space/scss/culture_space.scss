@@ -33,10 +33,8 @@
 html,
 body {
     max-width: 100%;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
-
-
 
 // * ===================== header ===================== *
 
@@ -44,7 +42,10 @@ header {
     position: relative;
     width: 100vw;
 
-    .header-bg {
+    .header-bg-bookpark {
+        display: none;
+
+
         width: 100%; 
         height: 100vh;
     
@@ -137,10 +138,96 @@ header {
                         right: 10%;
                     }
                 }   
-                
             }
         }
-    } // header-bg
+    } // header-bg-bookpark 
+
+    .header-bg-sodam {
+
+        width: 100%; 
+        height: 100vh;
+    
+        img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .square{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            color: white;
+            font-size: 38px;
+            font-weight: 600;
+            // border: 5px solid red;
+            @include pos-center();
+
+            .square-liner {
+                position: absolute;
+                background-color: white;
+                height: 5px;
+            }
+
+            .sqare-line1 {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 5px;
+            }
+
+            .sqare-line2 {
+                right: 0;
+                top: 0;
+                width: 5px;
+                height: 100%;
+            }
+
+            .sqare-line3 {
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 5px;
+            }
+
+            .sqare-line4 {
+                left: 0;
+                bottom: 0;
+                width: 5px;
+                height: 100%;
+            }
+
+            .square-title {
+                position: relative;
+                padding: 20px;
+                height: 100%;
+                // background-color: red;
+
+                span {
+                    position: absolute;
+                    &:nth-child(1) {
+                        top: 10%;
+                        left: 10%;
+                    }
+
+                    &:nth-child(2) {
+                        top: 10%;
+                        right: 10%;
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 10%;
+                        left: 10%;
+                    }
+                    
+                    &:nth-child(4) {
+                        bottom: 10%;
+                        right: 10%;
+                    }
+                } //span
+            } //square-title
+        } //square
+    } // header-bg-sodam 
 
     .logo-menu-box {
         position: absolute;
@@ -279,8 +366,15 @@ header {
 // * ===================== main ===================== *
 
 main {
-    position: relative;
+    //================================================
 
+    .bookpark {
+        display: none;
+    }
+    //================================================
+
+    position: relative;
+    
     h1 {
         font-size: 0;
     }
@@ -311,9 +405,12 @@ main {
                     transition: all 0.5s;
                 }
 
+                &:hover {
+                    font-weight: 600;
+                }
+
                 &:hover::after {
                     transform: scale(1);
-                    font-weight: 600;
                 }
             }
         }
@@ -321,6 +418,7 @@ main {
 
     .bookpark-intro {
         text-align: center;
+
         h2 {
             font-size: 32px;
         }
@@ -332,68 +430,362 @@ main {
         }
     } //bookpark-intro
 
+
     .bookpark-des {
         // background-color: pink;
 
-        img {
-            width: 100%;
-            height: 600px;
-
-            @include responsive(large-tablet-screens) {
-            // height: auto;
-                
-
-            }
+        h3 {
+            padding: 10px 0;
         }
 
         p {
             line-height: 24px;
         }
 
-        .bookpark-des-flex {
+        img {
             width: 100%;
-            // height: 100%;
-            position: relative;
-            margin-bottom: 1000px;
-            background-color: aqua;
-            @include flex-box() {
-                flex-direction: column-reverse;
-            }            
-
-            @include responsive(large-tablet-screens) {
-                @include flex-box() {
-                    flex-direction: row-reverse;
-                }             
-            }
-
-            .text {
-                text-align: center;
-                background-color: red;
-                @include pos-center();
-            }
-            
-            .img-and-square1 {
-                background-color: red;
-                position: absolute;
-                left: 0;
-
-                .frontimg {
-                    position: absolute;
-                    width: 300px;
-                    left: 30px;
-                    box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
-                }
-            }
-            
         }
 
-        h3 {
-            padding: 10px 0;
+        .bookpark-des-flex {
+            margin-bottom: 60px;
+
+            @include flex-box() {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .bookpark-des-box-L {
+            position: relative;
+            
+            // background-color: red;
+
+            @include responsive(large-tablet-screens) {
+                margin-bottom: 800px;
+
+                @include flex-box() {
+                    flex-direction: row;
+                }
+
+                .text {
+                    position: absolute;
+                    top: 300px;
+                    left: 60%;
+                    // background-color: pink;
+                }
+
+                .img-and-square1 {
+                    position: absolute;
+                    // top: 0;
+                    // left: 0;
+    
+                    .square1 {
+                        position: relative;
+                        width: 300px;
+                        height: 400px;
+                        background-color: rgba(0, 148, 214, 0.5);
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 650px;
+                        }
+                    }
+                }
+
+                .img-and-square3 {
+                    margin-bottom: -500px;
+
+                    .square3 {
+                        position: relative;
+                        width: 300px;
+                        height: 300px;
+                        background-color: $point-color;
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 650px;
+                        }
+                    }
+                }
+            } /* (large-tablet-screens) */
+        } /* bookpark-des-box-L */
+
+        .bookpark-des-box-R {
+            position: relative;
+
+            @include responsive(large-tablet-screens) {
+                margin-bottom: 800px;
+
+                @include flex-box() {
+                    flex-direction: row-reverse;
+                }
+
+                .text {
+                    position: absolute;
+                    top: 300px;
+                    right: 60%;
+                    // background-color: pink;
+                }
+
+                .text4 {
+                    position: absolute;
+                    top: 175px;
+                    right: 60%;
+                    // background-color: pink;
+                }
+
+                .img-and-square2 {
+                    position: absolute;
+                    // top: 0;
+                    // left: 0;
+    
+                    .square2 {
+                        position: relative;
+                        width: 200px;
+                        height: 600px;
+                        background-color: $point-color;
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        right: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 650px;
+                        }
+                    }
+                }
+
+                .img-and-square4 {
+                    position: absolute;
+                    top: 0;
+
+                    .square4 {
+                        position: relative;
+                        width: 300px;
+                        height: 300px;
+                        background-color: $point-color;
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        right: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 350px;
+                        }
+                    }
+                }
+
+            } /* (large-tablet-screens) */
         }
     } //bookpark-des
 
+
+
+    //========= sodam ==========//
+    .sodam {
+        .container {
+            .sodam-intro {
+                text-align: center;
+
+                h2 {
+                    font-weight: 400;
+                    line-height: 32px;
+                    margin-bottom: 60px;
+
+                    strong {
+                        display: inline-block;
+                    }
+                }
+
+                p {
+                    line-height: 28px;
+
+                    &:last-child {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+
+        .container {
+            
+            .blue-container,
+            .nemo-container {
+                @include flex-box() {
+                    flex-direction: column;
+                }
+
+                margin-top: 50px;
+
+                @include responsive (large-tablet-screens) {
+                    flex-direction: row-reverse;
+                }
+
+                .blue-info,
+                .nemo-info {
+                    order: 2;
+
+                    h3,
+                    h4 {
+                        padding: 10px 0;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    order: 1;
+
+                    @include responsive (large-tablet-screens) {
+                        width: 700px;
+                        height: 500px;
+                    }
+                }
+            }
+
+            .img-l {
+                @include responsive (large-tablet-screens) {
+                    @include flex-box() {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                    position: relative;
+                    text-align: right;
+
+                    .info {
+                        @include pos-center-y() {
+                            right: 0;
+                        };
+                    }
+
+                    .no1 {
+                        height: 100%;
+                        align-self: baseline;
+                    }
+                }
+            }
+
+            .img-r {
+                @include responsive (large-tablet-screens) {
+                    @include flex-box() {
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                    }
+
+                    position: relative;
+
+                    .info {
+                        @include pos-center-y() {
+                            left: 0;
+                        };
+                    }
+
+                    .no4 { // 텍스트 박스 맨 위로 올리기
+                        height: 100%;
+                        align-self: baseline;
+                    }
+                }
+            }
+
+            .sodam-blue {
+                margin-top: 400px;
+                
+                .circle {
+                    // display: none;
+                    width: 250%;
+                    padding-bottom: 200%;
+                    transform: translate(-50%, -300px);
+                    // margin-top: 0;
+                    // height: 300px;
+                    height: 0;
+                    border-radius: 50%;
+                    border-top: 2px solid #000;
+                    position: absolute;
+                    left: 50%;
+                    z-index: 999;
+                }
+
+                .blue-container {
+                    h3 {
+                        .title-blue {
+                            color: $point-color;
+                        }
+                    }
+                }
+            } /* sodam-blue */
+
+
+            .sodam-nemo {
+                margin-top: 140px;
+
+                .nemo-container {
+
+                    h3 {
+                        .title-nemo {
+                            color: orangered;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .bookpark-guide {
-        margin: 100px 0;
+        margin: 200px 0;
         text-align: center;
 
         h4 {
@@ -410,6 +802,8 @@ main {
 
         
     }
+
+
 }
 
 
