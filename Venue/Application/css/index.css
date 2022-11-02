@@ -79,6 +79,15 @@ footer {
   }
 }
 
+.small-only {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .small-only {
+    display: block;
+  }
+}
+
 .large-only {
   display: none;
 }
@@ -86,6 +95,12 @@ footer {
   .large-only {
     display: block;
   }
+}
+
+ul,
+li {
+  list-style: disc;
+  list-style-position: inside;
 }
 
 html,
@@ -98,16 +113,11 @@ header {
   position: relative;
   width: 100vw;
 }
-header .header-bg {
+header .slides {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-}
-header .header-bg video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background: url(../img/header_bg.png) no-repeat center fixed;
+  background-size: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -233,8 +243,214 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  height: 2000px;
-  background-color: aliceblue;
+  margin-top: 266px;
+  margin-bottom: 266px;
+}
+main h1 {
+  margin-bottom: 58px;
+}
+main h2 {
+  margin-bottom: 58px;
+  position: relative;
+  padding-left: 10px;
+}
+main h2::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 5px;
+  height: 100%;
+  margin-left: -10px;
+  background-color: rgb(0, 148, 214);
+}
+main .venue-process {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 20px;
+  margin-bottom: 234px;
+}
+@media screen and (min-width: 600px) {
+  main .venue-process {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .venue-process {
+    width: 1400px;
+    padding: 0;
+  }
+}
+main .venue-process .process-slides {
+  display: flex;
+  overflow-x: scroll;
+}
+main .venue-process .process-slides::-webkit-scrollbar {
+  width: 100vw;
+  height: 1px;
+  background-color: transparent;
+}
+main .venue-process .process-slides::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+@media screen and (min-width: 1400px) {
+  main .venue-process .process-slides {
+    overflow: hidden;
+  }
+}
+main .venue-process .process-slides .slide-fix {
+  padding-right: 10px;
+  position: relative;
+  width: 100%;
+}
+main .venue-process .process-slides .slide-fix:last-child {
+  padding-right: 0;
+}
+main .venue-process .process-slides .slide-fix div {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+main .venue-process .process-slides .slide-fix div img {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+}
+main .venue-process .process-slides .slide-fix div strong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 80%;
+}
+main .venue-process .slide-btn {
+  position: absolute;
+  bottom: 90px;
+  width: 20px;
+  height: 20px;
+  margin-top: 85px;
+  border-top: 4px solid rgb(0, 148, 214);
+  border-right: 4px solid rgb(0, 148, 214);
+  border-radius: 4px;
+  cursor: pointer;
+}
+main .venue-process .slide-btn-left {
+  transform: rotate(-135deg);
+}
+main .venue-process .slide-btn-right {
+  right: 0;
+  transform: rotate(45deg);
+}
+main .venue-space {
+  margin-bottom: 234px;
+}
+main .venue-space ul {
+  display: flex;
+  justify-content: space-between;
+}
+main .venue-space ul li {
+  width: 32%;
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  main .venue-space ul li {
+    font-size: 16px;
+  }
+}
+main .venue-space ul li ul {
+  width: 100%;
+}
+main .venue-space ul li ul li {
+  width: 100%;
+  font-size: 14px;
+  padding-top: 10px;
+}
+@media screen and (min-width: 600px) {
+  main .venue-space ul li ul li {
+    font-size: 16px;
+  }
+}
+main .application-time {
+  margin-bottom: 234px;
+}
+main .application-time ul {
+  display: flex;
+  justify-content: space-between;
+}
+main .application-time ul li {
+  width: 32%;
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  main .application-time ul li {
+    font-size: 16px;
+  }
+}
+main .application-time ul li ul {
+  width: 100%;
+}
+main .application-time ul li ul li {
+  width: 100%;
+  font-size: 14px;
+  padding-top: 10px;
+}
+@media screen and (min-width: 600px) {
+  main .application-time ul li ul li {
+    font-size: 16px;
+  }
+}
+main .venue-inquiry {
+  word-break: break-all;
+  margin-bottom: 234px;
+}
+main .venue-inquiry ul {
+  display: flex;
+  justify-content: space-between;
+}
+main .venue-inquiry ul li {
+  width: 32%;
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  main .venue-inquiry ul li {
+    font-size: 16px;
+  }
+}
+main .venue-inquiry ul li ul {
+  width: 100%;
+}
+main .venue-inquiry ul li ul li {
+  width: 100%;
+  font-size: 14px;
+  padding-top: 10px;
+}
+@media screen and (min-width: 600px) {
+  main .venue-inquiry ul li ul li {
+    font-size: 16px;
+  }
+}
+main .submit-document ul li {
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  main .submit-document ul li {
+    font-size: 16px;
+  }
+}
+main .submit-document ul li:last-child {
+  padding-top: 10px;
+}
+main .submit-document ul li a {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 13px;
+  color: #fff;
+  padding: 4px 10px;
+  background-color: rgb(0, 148, 214);
 }
 
 footer {
@@ -405,4 +621,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}

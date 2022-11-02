@@ -22,12 +22,26 @@
     }
 }
 
+.small-only {
+    display: none;
+
+        @include responsive(small-tablet-screens) {
+            display: block;
+        }
+}
+
 .large-only {    
         display: none;
 
         @include responsive(large-tablet-screens) {
             display: block;
         }
+}
+
+ul,
+li {
+    list-style: disc;
+    list-style-position: inside;
 }
 
 html,
@@ -42,16 +56,18 @@ header {
     position: relative;
     width: 100vw;
 
-    .header-bg {
+    .slides {
         width: 100%; 
         height: 100vh;
-        overflow: hidden;
+        // overflow: hidden;
+        background: url(../img/header_bg.png) no-repeat center fixed;
+        background-size: cover;
 
-        video {
-            width: 100%; 
-            height: 100%;
-            object-fit: cover;
-        }
+        // img {
+        //     width: 100%; 
+        //     height: 100%;
+        //     object-fit: cover;
+        // }
     } // header-bg
 
     .logo-menu-box {
@@ -191,9 +207,164 @@ header {
 // * ===================== main ===================== *
 
 main {
-    height: 2000px;
-    background-color: aliceblue;
-}
+
+    margin-top: 266px;
+    margin-bottom: 266px;
+
+    h1 {
+        margin-bottom: 58px;
+    }
+
+    h2 {
+        margin-bottom: 58px;
+        position: relative;
+        padding-left: 10px;
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 5px;
+            height: 100%;
+            margin-left: -10px;
+            background-color: $point-color;
+        }
+
+    }
+
+    .venue-process {
+        position: relative;
+        margin: 0 auto; 
+        padding-left: 20px;
+        @include div-margin();
+
+        @include responsive(small-tablet-screens) {
+            padding: 0 20px;
+        }
+
+        @include responsive(desktop-screens) {
+            width: 1400px; //
+            padding: 0;
+        }
+        
+
+        .process-slides {
+            display: flex;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                width: 100vw;
+                height: 1px;
+                background-color: transparent;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background-color: transparent;
+            }
+
+            @include responsive(desktop-screens) {
+                overflow: hidden;
+            }        
+            
+            .slide-fix {
+                padding-right: 10px;
+                position: relative;
+                width: 100%;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                div {
+                    position: relative;
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid $gray-border;
+                    border-radius: 50%;                   
+
+                    img {
+                        width: 100px;
+                        @include pos-center() {
+                            top: 40%;
+                        }
+                    }
+
+                    strong {
+                        @include pos-center() {
+                            top: 80%;
+                        }
+                    }
+
+                }
+
+            } // .slide-fix
+        } // .process-slides
+
+        .slide-btn {
+            position: absolute;
+            bottom: 90px;
+            width: 20px;
+            height: 20px;
+            margin-top: 85px;
+            border-top: 4px solid $point-color;
+            border-right: 4px solid $point-color;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .slide-btn-left {
+            transform: rotate(-135deg);
+        }
+
+        .slide-btn-right {
+            right: 0;
+            transform: rotate(45deg);
+        }
+
+    } // .venue-process
+
+    .venue-space {
+        @include div-margin();
+        @include list-style();
+    }
+
+    .application-time {
+        @include div-margin();
+        @include list-style();
+    }
+
+    .venue-inquiry {
+        word-break: break-all;
+
+        @include div-margin();
+        @include list-style();
+    }
+
+    .submit-document {
+        ul {
+            li {
+                font-size: 14px;
+                @include responsive(small-tablet-screens) {
+                    font-size: 16px;
+                }
+                
+                &:last-child {
+                    padding-top: 10px;
+                }
+
+
+                a {
+                    display: inline-block;
+                    margin-left: 10px;
+                    font-size: $mini-text-font-size;
+                    color: #fff;
+                    padding: 4px 10px;
+                    background-color: $point-color;
+                }
+            }
+        }
+    }
+
+} //mian
 
 
 // * ===================== footer ===================== *

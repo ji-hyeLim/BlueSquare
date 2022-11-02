@@ -65,3 +65,36 @@
         clear: both;
     }
 }
+
+@mixin div-margin {
+    margin-bottom: 234px;
+}
+
+@mixin list-style {
+        ul {
+            @include flex-box() {
+            }
+            
+            li {
+                width: 32%;
+                font-size: 14px;
+
+                @include responsive(small-tablet-screens) {
+                    font-size: 16px;
+                }
+
+                ul {
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        font-size: 14px;
+                        padding-top: 10px;
+                        
+                        @include responsive(small-tablet-screens) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+}
