@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,14 @@
     <link rel="stylesheet" href="./css/index.css" type="text/css">
     <title>BLUE SQUARE</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
             <div class="header-bg">
                 <video autoplay loop muted>
-                    <source src="video/videoplayback2.mp4" type="video/mp4">
+                    <!---how-to-come.mp4-->
+                    <source src="video/오디오없음.mp4" type="video/mp4">
                     <p>이 브라우저는 HTML5 비디오를 지원하지 않습니다.</p>
                 </video>
             </div> <!-- header-bg -->
@@ -23,7 +26,7 @@
                             <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
                             <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
                         </div>
-    
+
                         <nav class="main-menu">
                             <ul class="gnb">
                                 <li>
@@ -65,11 +68,13 @@
                                 </li>
                             </ul> <!-- gnb -->
                         </nav> <!-- main-menu-->
-    
+
                         <div class="right-menu">
-                            <ul>                                
-                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png" alt="ticket"></a></li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
+                            <ul>
+                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png"
+                                            alt="ticket"></a></li>
+                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png"
+                                            alt="menu"></a></li>
                                 <li class="large-only"><a href="#">TICKET</a></li>
                                 <li class="large-only"><a href="#">LOG IN</a></li>
                                 <li class="large-only"><a href="#">JOIN</a></li>
@@ -82,7 +87,65 @@
 
         <main>
             <div class="container">
-                <h1>Main</h1>
+                <h1>오시는길</h1>
+                <ul class="tap-menu">
+                    <li><a href="#">교통 안내</a></li>
+                    <li><a href="#">주차 안내</a></li>
+                </ul>
+                <section class="map-txt">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.6018931188514!2d127.0002520508947!3d37.54088077970359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3ae767cc747%3A0xf39a61c7a1ca7171!2z67iU66Oo7Iqk7YCY7Ja0!5e0!3m2!1sko!2skr!4v1667457012773!5m2!1sko!2skr"
+                            width="710" height="786" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="txt">
+                        <div class="area">
+                            <img src="./img/map ic.png" alt="icon">
+                            <p>서울특별시 용산구 이태원로 294 블루스퀘어</p>
+                        </div>
+                        <div class="call">
+                            <img src="./img/call ic.png" alt="icon">
+                            <p>1544-1591</p>
+                        </div>
+                        <div class="load1">
+                            <p class="car">지하철</p>
+                            <p class="c-txt">6호선 한강진역 2번 출구와 3번 출구 사이 지하철역 연결 통로 이용</p>
+                        </div>
+                        <div class="load2">
+                            <p class="car">버스</p>
+                            <p class="c-txt">한강진역 하차 (1번 출구 방면)<br>
+                                간선 : 110A, 405, 400<br>
+                                한강진역 하차(2번 출구 방면)<br>
+                                간선 : 110B, 405, 400<br>
+                                순환 : 03<br>
+                                공항 : 6030<br>
+                                서울시중부기술교육원/블루스퀘어 하차<br>
+                                지선 : 3011, 6211<br>
+                                간선 : 110B, 142, 144, 402, 407, 420, N13<br>
+                            </p>
+                        </div>
+                        <div class="load3">
+                            <p class="car">자동차</p>
+                            <p class="c-txt"><span>강남 방면에서 오실 경우</span><br>
+                                한남대교 진입 → 한남대로 직진 → 북한남 삼거리에서 좌회전 → 첫번째 신호
+                                등에서 좌회전하여 한강진역 2번 출구와 3번 출구 사이 우측 지하주차장 입구
+                                로 진입<br>
+                                <span>장충동 방면에서 오실 경우</span><br>
+                                한남대로 진입하여 직진 → 북한남 삼거리 지나 이태원로 진입 → 좌회전하여
+                                한강진역 2번 출구와 3번 출구 사이 우측 지하주차장 입구로 진입<br>
+                                <span>이태원동 방면에서 오실 경우</span><br>
+                                이태원로 진입하여 북한남 삼거리 방향으로 직진 → 한강진역 2번 출구와 3번
+                                출구 사이 우측 지하주차장 입구로 진입
+                            </p>            
+                        </div>
+                    </div>
+                </section>
+
+                <section class="parking"> 
+
+                </section>
+
 
             </div> <!-- container -->
         </main> <!-- main -->
@@ -94,11 +157,12 @@
                         <h2>Let's Blue Square Together</h2>
                         <br>
                         <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
+                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail.
+                                bluesquare@interpark.com</span>
                         </address>
                         <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
                     </div> <!-- left-contents -->
-    
+
                     <div class="right-contents">
                         <ul class="footer-menu">
                             <li>Menu
@@ -135,11 +199,11 @@
                             </li>
                         </ul> <!-- footer-menu -->
                     </div> <!-- right-contents -->
-                    
+
                     <div class="large-only footer-title">
                         <h1>Blue&ZeroWidthSpace; Square</h1>
                     </div>
-                </div> <!-- flex-box -->                
+                </div> <!-- flex-box -->
             </div> <!-- container -->
 
             <div class="large-only line">
@@ -148,4 +212,5 @@
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
 </body>
+
 </html>

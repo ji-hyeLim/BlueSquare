@@ -106,7 +106,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -232,8 +233,273 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  height: 2000px;
-  background-color: aliceblue;
+  padding-bottom: 140px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    padding-bottom: 300px;
+  }
+}
+main h1 {
+  font-size: 0;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main h1 {
+    font-size: 36px;
+    margin-top: 130px;
+  }
+}
+main ul.tap-menu {
+  width: 60%;
+  margin-top: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  main ul.tap-menu {
+    margin-top: 140px;
+    width: 40%;
+  }
+}
+main ul.tap-menu li {
+  flex: 50%;
+  width: 30%;
+}
+main ul.tap-menu li a {
+  font-size: 16px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main ul.tap-menu li a {
+    font-size: 18px;
+  }
+}
+main ul.tap-menu li a:hover {
+  font-weight: 600;
+}
+main ul.tap-menu li a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+main ul.tap-menu li a:hover::after {
+  transform: scale(0.4);
+}
+@media screen and (min-width: 1024px) {
+  main ul.tap-menu li a:hover::after {
+    transform: scale(0.3);
+  }
+}
+main .map-txt {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt {
+    flex-direction: row;
+  }
+}
+main .map-txt .map {
+  margin-top: 190px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .map {
+    margin-top: 300px;
+  }
+}
+main .map-txt .map iframe {
+  width: 100%;
+  height: 433px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .map iframe {
+    width: 710px;
+    height: 786px;
+  }
+}
+main .map-txt .txt {
+  margin-top: 100px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt {
+    margin-top: 330px;
+    padding-left: 95px;
+  }
+}
+main .map-txt .txt .area {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  margin-bottom: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .area {
+    margin-bottom: 40px;
+  }
+}
+main .map-txt .txt .area img {
+  width: 12px;
+  height: 17px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .area img {
+    width: 16px;
+    height: 23px;
+  }
+}
+main .map-txt .txt .area p {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .area p {
+    font-size: 30px;
+    margin-left: 28px;
+  }
+}
+main .map-txt .txt .call {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .call {
+    margin-bottom: 76px;
+  }
+}
+main .map-txt .txt .call img {
+  width: 17px;
+  height: 18px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .call img {
+    width: 22px;
+    height: 22px;
+  }
+}
+main .map-txt .txt .call p {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .call p {
+    font-size: 30px;
+    margin-left: 28px;
+  }
+}
+main .map-txt .txt .load1 {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  margin-bottom: 26px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load1 {
+    margin-bottom: 35px;
+  }
+}
+main .map-txt .txt .load1 .car {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load1 .car {
+    font-size: 16px;
+    padding-right: 44px;
+  }
+}
+main .map-txt .txt .load1 .c-txt {
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load1 .c-txt {
+    font-size: 16px;
+  }
+}
+main .map-txt .txt .load2 {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  margin-bottom: 26px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load2 {
+    margin-bottom: 35px;
+  }
+}
+main .map-txt .txt .load2 .car {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load2 .car {
+    font-size: 16px;
+    padding-right: 54px;
+  }
+}
+main .map-txt .txt .load2 .c-txt {
+  font-size: 14px;
+  line-height: 18px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load2 .c-txt {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+main .map-txt .txt .load3 {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  margin-bottom: 26px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load3 {
+    margin-bottom: 35px;
+  }
+}
+main .map-txt .txt .load3 .car {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load3 .car {
+    font-size: 16px;
+    padding-right: 44px;
+  }
+}
+main .map-txt .txt .load3 .c-txt {
+  font-size: 14px;
+  line-height: 24px;
+}
+@media screen and (min-width: 1024px) {
+  main .map-txt .txt .load3 .c-txt {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+main .map-txt .txt .load3 .c-txt span {
+  font-weight: 500;
 }
 
 footer {
@@ -404,4 +670,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
