@@ -107,8 +107,7 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -248,11 +247,18 @@ main .detail-main {
 main .detail-main .left-img .ticket-poster {
   text-align: center;
 }
-main .detail-main .left-img .ticket-poster img {
-  width: 50%;
+main .detail-main .left-img .ticket-poster a {
+  margin: 0;
+}
+main .detail-main .left-img .ticket-poster a img {
+  width: 70%;
+  max-width: 500px;
   margin-top: 80px;
   margin-bottom: 40px;
   box-shadow: 8px 8px 3px gray;
+}
+main .detail-main .right-text {
+  width: 100%;
 }
 main .detail-main .right-text .ticket-intro-text .title-box {
   position: relative;
@@ -314,28 +320,28 @@ main .detail-main .right-text .info-booking-button ul {
   justify-content: space-between;
   justify-content: left;
 }
+main .detail-main .right-text .info-booking-button ul li {
+  text-align: center;
+}
 main .detail-main .right-text .info-booking-button ul li a {
-  position: relative;
   padding: 15px 0;
+}
+main .detail-main .right-text .info-booking-button ul li a img {
+  width: 30px;
+  transform: translate(30%, 34%);
 }
 main .detail-main .right-text .info-booking-button ul li:first-child {
   width: 40%;
-  text-align: center;
   background-color: #ccc;
 }
 main .detail-main .right-text .info-booking-button ul li:last-child {
   width: 60%;
-  text-indent: 35%;
   background-color: rgb(0, 148, 214);
 }
 main .detail-main .right-text .info-booking-button ul li:last-child a {
   color: #fff;
-}
-main .detail-main .right-text .info-booking-button ul li:last-child a img {
-  position: absolute;
-  top: 11px;
-  left: 60%;
-  width: 24px;
+  padding: 0 20%;
+  transform: translate(0, -10%);
 }
 @media screen and (min-width: 1024px) {
   main h1 {
@@ -347,9 +353,13 @@ main .detail-main .right-text .info-booking-button ul li:last-child a img {
     display: block;
   }
   main .detail-main {
+    text-align: center;
+    margin-top: 80px;
+  }
+  main .detail-main div.box {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    justify-content: center;
   }
   main .detail-main .left-img {
     display: inline-block;
@@ -357,15 +367,15 @@ main .detail-main .right-text .info-booking-button ul li:last-child a img {
   main .detail-main .left-img .ticket-poster {
     text-align: center;
   }
-  main .detail-main .left-img .ticket-poster img {
-    width: 50%;
-    height: 50%;
+  main .detail-main .left-img .ticket-poster a img {
     margin-top: 0px;
+    margin: 0;
     box-shadow: 10px 10px 3px gray;
   }
   main .detail-main .right-text {
     display: inline-block;
     vertical-align: top;
+    width: 50%;
   }
   main .detail-main .right-text .ticket-intro-text {
     text-align: left;
@@ -389,7 +399,7 @@ main .detail-main .right-text .info-booking-button ul li:last-child a img {
     font-weight: 600;
   }
   main .detail-main .right-text .ticket-intro-text ul li p:last-child {
-    width: 60%;
+    width: 70%;
   }
   main .detail-main .right-text .ticket-intro-text ul li p span {
     color: rgb(0, 148, 214);
@@ -411,33 +421,43 @@ main .detail-main .right-text .info-booking-button ul li:last-child a img {
   }
   main .detail-main .right-text .info-booking-button ul li:last-child {
     width: 160px;
-    text-align: left;
-    text-indent: 40px;
     background-color: black;
   }
   main .detail-main .right-text .info-booking-button ul li:last-child a img {
-    position: absolute;
-    top: 11px;
-    right: 0;
-    width: 20px;
+    transform: translate(20%, 30%);
   }
+}
+main .contents-list .container {
+  padding: 0;
 }
 main .contents-list .container > div {
   margin: 100px 0;
-  padding: 40px 20px;
-  border: 1px solid #000;
 }
 main .contents-list .container > div:first-child {
   border: 0;
 }
 main .contents-list .container > div h3 {
   margin: 0 0 40px 0;
-}
-main .contents-list .container > div img {
-  width: 100%;
+  padding: 0 20px;
 }
 main .contents-list .container > div p {
+  line-height: 30px;
   margin-bottom: 30px;
+  padding: 0 20px;
+}
+main .contents-list .img-contents img {
+  width: 100%;
+}
+main .contents-list .casting .cast-list {
+  overflow-x: scroll;
+}
+main .contents-list .casting .cast-list::-webkit-scrollbar {
+  width: 100vw;
+  height: 3px;
+  background-color: transparent;
+}
+main .contents-list .casting .cast-list::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 main .contents-list .casting .cast-list ul {
   display: flex;
@@ -464,21 +484,31 @@ main .contents-list .casting .cast-list ul li .cast-text .cast-name {
   margin-top: 3px;
   font-weight: 600;
 }
+main .contents-list .notice {
+  padding: 0;
+}
 @media screen and (min-width: 1024px) {
+  main .contents-list .container {
+    padding: 0 20px;
+  }
   main .contents-list .container > div {
     padding: 80px 50px;
+    border: 1px solid #000;
   }
   main .contents-list .container > div h3 {
     margin: 0 0 50px 0;
     font-size: 2vw;
   }
-  main .contents-list .container > div img {
-    width: 60%;
-    margin: 0 20%;
-  }
   main .contents-list .container > div p {
     margin-bottom: 80px;
     line-height: 40px;
+  }
+  main .contents-list .img-contents {
+    text-align: center;
+  }
+  main .contents-list .img-contents img {
+    width: 70%;
+    margin: 0 0%;
   }
 }
 
@@ -650,4 +680,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}

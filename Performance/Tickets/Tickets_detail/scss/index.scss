@@ -207,16 +207,21 @@ main {
         .left-img {
             .ticket-poster {
                 text-align: center;
-                img {
-                    width: 50%; 
-                    margin-top: 80px;
-                    margin-bottom: 40px;
-                    box-shadow: 8px 8px 3px gray;
+                a {
+                    margin: 0;
+                    img {
+                        width: 70%;
+                        max-width: 500px;
+                        margin-top: 80px;
+                        margin-bottom: 40px;
+                        box-shadow: 8px 8px 3px gray;
+                    }
                 }
             } // ticket-poster
         }
 
         .right-text {
+            width: 100%;
             .ticket-intro-text {
                 .title-box {
                     position: relative;
@@ -231,17 +236,14 @@ main {
                         padding: 5px;
                         text-align: center;
                         background-color:crimson;
-                            p {
-                                color: white;
-                                font-size: 14px;
-                                font-weight: 600;
-                            }
+                        p {
+                            color: white;
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
                     }
                 }
-
-                
             }
-        
         
             .ticket-intro-text {
                 text-align: left;
@@ -275,8 +277,6 @@ main {
                                 color: $point-color;
                             }
                         }
-
-                        
                     } // li
                 } // ul
             } // ticket-intro-text
@@ -292,37 +292,35 @@ main {
                         justify-content: left;
                     }
                     li {
+                        text-align: center;
                         a {
-                            position: relative;
                             padding: 15px 0;
+
+                            img {
+                                width: 30px;
+                                transform: translate(30%, 34%);
+                            }
                         }
 
                         &:first-child {
                             width: 40%;
-                            text-align: center;
+                            
                             background-color: $gray-border;
                         }
 
                         &:last-child {
                             width: 60%;
-                            text-indent: 35%;
                             background-color: $point-color;
                             a {
                                 color: #fff;
-                                img {
-                                    position: absolute;
-                                    top: 11px; left: 60%;
-                                    width: 24px;
-                                }
+                                padding: 0 20%;
+                                transform: translate(0, -10%);
                             }
                         } // a
                     } // li
                 } // ul
             } // info-booking-button
         } // right-text
-
-        
-        
     } // detail-main
 
     @include responsive(large-tablet-screens) {
@@ -337,25 +335,30 @@ main {
         }
 
         .detail-main {
-            @include flex-box();
+            text-align: center;
+            div.box {
+                @include flex-box(){
+                    justify-content: center;
+                };
+            }
             margin-top: 80px;
             .left-img {
                 display: inline-block;
                 .ticket-poster {
                     text-align: center;
-                    img {
-                        width: 50%; 
-                        height: 50%;
-                        margin-top: 0px;
-                        box-shadow: 10px 10px 3px gray;
+                    a {
+                        img {
+                            margin-top: 0px;
+                            margin: 0;
+                            box-shadow: 10px 10px 3px gray;
+                        }
                     }
                 } // ticket-poster
             }
-
             .right-text {
                 display: inline-block;
                 vertical-align: top;
-            
+                width: 50%;
             
                 .ticket-intro-text {
                     text-align: left;
@@ -383,7 +386,7 @@ main {
                                     font-weight: 600;
                                 }
                                 &:last-child {
-                                    width: 60%;
+                                    width: 70%;
                                 }
                                 span {
                                     color: $point-color;
@@ -412,15 +415,11 @@ main {
 
                             &:last-child {
                                 width: 160px;
-                                text-align: left;
-                                text-indent: 40px;
                                 background-color: black;
 
                                 a {
                                     img {
-                                        position: absolute;
-                                        top: 11px; right: 0;
-                                        width: 20px;
+                                        transform: translate(20%, 30%);
                                     }
                                 }
                             }  
@@ -433,29 +432,50 @@ main {
 
     // ==== contents-list
     .contents-list {
+        .container {
+            padding: 0;
+        }
         .container > div {
+            // padding: 0;
             margin: 100px 0;
-            padding: 40px 20px;
-            border: $black-line;
+            // 
+            // border: $black-line; 
             &:first-child {
                 border: 0;
             }
 
             h3 {
                 margin: 0 0 40px 0;
-            }
-
-            img {
-                width: 100%;
+                padding: 0 20px;
             }
 
             p {
-                margin-bottom: 30px
+                line-height: 30px;
+                margin-bottom: 30px;
+                padding: 0 20px;
+            }
+        }
+
+        .img-contents {
+            img {
+                width: 100%;
             }
         }
 
         .casting {
             .cast-list {
+                overflow-x: scroll;
+
+                &::-webkit-scrollbar {
+                    width: 100vw;
+                    height: 3px;
+                    background-color: transparent;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    background-color: transparent;
+                }
+
                 ul {
                     @include flex-box();
                     li {
@@ -486,26 +506,41 @@ main {
                     }                        
                 }           
             }         
-        }             
-    }
+        } // casting  
+        
+        .notice {
+            padding: 0;
+        }
+    } // contents-list
 
     @include responsive(large-tablet-screens) {
         .contents-list {
+            .container {
+                padding: 0 20px;
+            }
             .container > div {
                 padding: 80px 50px;
+                border: $black-line;
+                
+
                 h3 {
                     margin: 0 0 50px 0;
                     font-size: 2vw;
                 }
 
-                img {
-                    width: 60%;
-                    margin: 0 20%;
-                }
+                
 
                 p {
                     margin-bottom: 80px;
                     line-height: 40px;
+                }
+            }
+
+            .img-contents {
+                text-align: center;
+                img {
+                    width: 70%;
+                    margin: 0 0%;
                 }
             }
         }
