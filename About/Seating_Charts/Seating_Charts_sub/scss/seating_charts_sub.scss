@@ -38,8 +38,9 @@ body {
 
 .number-of-seat { //공통소스
     width: 100%;
-    // height: ;
+    height: 200px;
     padding: 30px;
+
     margin-bottom: 70px;
     background-color: $gray-bg;
 
@@ -49,6 +50,13 @@ body {
 
     p {
         line-height: 26px;
+    }
+
+    .blue {
+        position: absolute;
+        left: 180px;
+        color: $point-color;
+        font-weight: 600;
     }
 }
 
@@ -67,26 +75,38 @@ body {
 }
 
 .seat-img-tab {
-    flex-direction: column-reverse;
     background-color: green;
+    margin-top: 80px;  
     
     ul {
         width: 100%;
-        display: flex;
+        @include flex-box();
 
-        
+        // @include responsive(large-tablet-screens) {
+        //     @include flex-box() {
+        //         flex-direction: column;
+        //     }
+        // }
+
         li {
             width: 100%;
             // background-color: pink;
             
             img {
-                width: 100%;
+                width: 120px;
+                height: 98px;
                 // height 값 auto 주면 크기 다 달라용
+
+                @include responsive(small-tablet-screens) {
+                    // width: 120px;
+                    width: calc(120px + 20%);
+                    // height: 98px;
+                    height: calc(98px + 30%) ;
+                }
             }
         }
     }
-
-}
+} //seat-img-tab
 
 
 // * ===================== header ===================== *
@@ -300,15 +320,48 @@ main {
         }
     } //ul.tab
 
+    .master-inner-tab {
+        // visibility: hidden;
+
+        @include flex-box() {
+            justify-content: center;
+        }
+
+        li {
+            padding: 0 20px 20px;
+
+            &:first-child {
+                border-right: 1px solid #ccc;
+                height: 14px;
+            }
+
+            a {
+                color: #ccc;
+
+                &:hover {
+                    color: $point-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    } //master-inner-tab
+
     .tab-content {
+        position: relative;
+
         #hall-tab1 {
+
             .floor-tab1 {
-                .number-of-seat {
-                    .blue {
-                        color: $point-color;
-                        font-weight: 600;
+
+                .number-of-seat {  
+
+                    .orange,
+                    .green,
+                    .purple {
+                        position: absolute;
+                        left: 180px;
                     }
-    
+                    
                     .orange {
                         color: #d38b1c;
                         font-weight: 600;
@@ -325,17 +378,17 @@ main {
                     }
                 } //number-of-seat
 
-                .seat-img { 
-                    background-color: yellows;
-                }
+                
+            }
+        } //hall-tab1
+
+        #hall-tab2 {
+            .caution {
+                color: red;
             }
 
-            .seat-img-tab {
-                display: flex;
-            }
-    
-            
-        } //hall-tab1
+
+        }
     } //tab-content
 } /* main */
 
