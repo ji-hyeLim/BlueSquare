@@ -42,6 +42,33 @@
     }
 }
 
+@keyframes fadeUp {
+                0%{
+                    opacity: 0;
+                    transform:translate3d(0, 20px, 0);
+                    // clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+                }
+                
+                100%{
+                    // transform:translatZ(0%);
+                    transform: none;
+                    opacity: 1;
+                    // clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                }
+            }
+
+@keyframes fadeIn { //txt적용
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
 @keyframes text-loop {
     0% {
         -webkit-transform: translate3d(0, 0, 0);
@@ -54,6 +81,7 @@
     }
 
 }
+
 
 html,
 body {
@@ -110,16 +138,43 @@ header {
                 width: 100%;
                 height: 100%;
 
-
                 @include pos-center();
 
-                span {
+                div.p-box {
                     position: relative;
-                    // background-color: red;
+
+                    p {
+                        opacity: 0;
+                        animation: fadeUp 3s;
+                        animation-delay: 2s;
+                        animation-fill-mode: forwards;
+                        
+                        font: {
+                            size: calc(1vw + 30px);
+                            weight: 600;
+                            family: $eng-font;
+                        }
+    
+                        @include responsive(mobile-screens) {
+                            font-size: calc(1vw + 40px);
+                        }
+    
+                        @include responsive(small-tablet-screens) {
+                            font-size: calc(1vw + 50px);
+                        }
+    
+                        @include responsive(large-tablet-screens) {
+                            font-size: calc(1vw + 60px);
+                        }
+    
+                        @include responsive(desktop-screens) {
+                            font-size: calc(1vw + 70px);
+                        }
+                    }
 
                     &::before {
                         position: absolute;
-                        top: -15px;
+                        top: -20px;
                         left: 0px;
                         display: block;
                         content: "";
@@ -131,7 +186,7 @@ header {
 
                     &::after {
                         position: absolute;
-                        bottom: -15px;
+                        bottom: -20px;
                         right: 0;
                         display: block;
                         content: "";
@@ -147,27 +202,6 @@ header {
                     text-align: center;
                     color: #fff;
 
-                    font: {
-                        size: calc(1vw + 30px);
-                        weight: 600;
-                        family: $eng-font;
-                    }
-
-                    @include responsive(mobile-screens) {
-                        font-size: calc(1vw + 40px);
-                    }
-
-                    @include responsive(small-tablet-screens) {
-                        font-size: calc(1vw + 60px);
-                    }
-
-                    @include responsive(large-tablet-screens) {
-                        font-size: calc(1vw + 70px);
-                    }
-
-                    @include responsive(desktop-screens) {
-                        font-size: calc(1vw + 120px);
-                    }
                 }
 
                 //span
@@ -375,8 +409,10 @@ main {
 
         .info-txt {
             // background-color: blueviolet;
+            opacity: 0;
             padding-left: 0;
             margin-bottom: 90px;
+            animation: fadeIn 2s 5s linear forwards;
 
             @include responsive(large-tablet-screens) {
                 padding-top: 80px;
@@ -448,8 +484,10 @@ main {
 
         .info-txt {
             // background-color: blueviolet;
+            opacity: 0;
             padding-left: 0;
             margin-bottom: 90px;
+            animation: fadeIn 2s 7s forwards;
 
             @include responsive(large-tablet-screens) {
                 padding-top: 80px;
@@ -521,9 +559,10 @@ main {
 
         .info-txt {
             // background-color: blueviolet;
+            opacity: 0;
             padding-left: 0px;
             margin-bottom: 90px;
-
+            animation: fadeIn 2s 9s linear forwards;
 
             @include responsive(large-tablet-screens) {
                 padding-top: 80px;
@@ -588,10 +627,12 @@ main {
 
         // 
         p {
+            opacity: 0;
             text-align: center;
             width: 100%;
             font-size: 16px;
             line-height: 26px;
+            animation: fadeIn 3s 10s linear forwards;
 
             .bold-txt {
                 font-weight: bold;
