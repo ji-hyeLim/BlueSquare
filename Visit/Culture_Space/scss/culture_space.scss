@@ -1,0 +1,1018 @@
+@import './style.scss';
+@import './reset.scss';
+@import './mixin.scss';
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    // background-color: skyblue;
+
+    @include responsive(desktop-screens) {
+        width: 1400px;
+        padding: 0;
+    }
+}
+
+.mobile-only {    
+    display: block;
+
+    @include responsive(large-tablet-screens) {
+        display: none;
+    }
+}
+
+.large-only {    
+        display: none;
+
+        @include responsive(large-tablet-screens) {
+            display: block;
+        }
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// * ===================== header ===================== *
+
+header {
+    position: relative;
+    width: 100vw;
+
+    .header-bg-bookpark {
+        display: none;
+
+
+        width: 100%; 
+        height: 100vh;
+    
+        img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .square{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            color: white;
+            font-size: 38px;
+            font-weight: 600;
+            // border: 5px solid red;
+            @include pos-center();
+
+            .square-liner {
+                position: absolute;
+                background-color: white;
+                height: 5px;
+            }
+
+            .sqare-line1 {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 5px;
+            }
+
+            .sqare-line2 {
+                right: 0;
+                top: 0;
+                width: 5px;
+                height: 100%;
+            }
+
+            .sqare-line3 {
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 5px;
+            }
+
+            .sqare-line4 {
+                left: 0;
+                bottom: 0;
+                width: 5px;
+                height: 100%;
+            }
+
+            .square-title {
+                position: relative;
+                padding: 20px;
+                height: 100%;
+                // background-color: red;
+
+                span {
+                    position: absolute;
+                    &:nth-child(1) {
+                        top: 10%;
+                        left: 10%;
+                    }
+
+                    &:nth-child(2) {
+                        @include pos-center-x();
+                        top: 10%;
+                    }
+
+                    &:nth-child(3) {
+                        top: 10%;
+                        right: 10%;
+                    }
+                    
+                    &:nth-child(4) {
+                        bottom: 10%;
+                        left: 10%;
+                    }
+
+                    &:nth-child(5) {
+                        @include pos-center-x();
+                        bottom: 10%;
+
+                    }
+
+                    &:nth-child(6) {
+                        bottom: 10%;
+                        right: 10%;
+                    }
+                }   
+            }
+        }
+    } // header-bg-bookpark 
+
+    .header-bg-sodam {
+
+        width: 100%; 
+        height: 100vh;
+    
+        img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .square{
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            color: white;
+            font-size: 38px;
+            font-weight: 600;
+            // border: 5px solid red;
+            @include pos-center();
+
+            .square-liner {
+                position: absolute;
+                background-color: white;
+                height: 5px;
+            }
+
+            .sqare-line1 {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 5px;
+            }
+
+            .sqare-line2 {
+                right: 0;
+                top: 0;
+                width: 5px;
+                height: 100%;
+            }
+
+            .sqare-line3 {
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 5px;
+            }
+
+            .sqare-line4 {
+                left: 0;
+                bottom: 0;
+                width: 5px;
+                height: 100%;
+            }
+
+            .square-title {
+                position: relative;
+                padding: 20px;
+                height: 100%;
+                // background-color: red;
+
+                span {
+                    position: absolute;
+                    &:nth-child(1) {
+                        top: 10%;
+                        left: 10%;
+                    }
+
+                    &:nth-child(2) {
+                        top: 10%;
+                        right: 10%;
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 10%;
+                        left: 10%;
+                    }
+                    
+                    &:nth-child(4) {
+                        bottom: 10%;
+                        right: 10%;
+                    }
+                } //span
+            } //square-title
+        } //square
+    } // header-bg-sodam 
+
+    .logo-menu-box {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        
+        .flex-box {
+            position: relative;
+            display: flex;
+            height: 80px;
+
+            @include responsive(large-tablet-screens) {     
+                height: 100px;
+            }
+
+            .header-logo {
+                width: 15%;
+
+                a {
+                    img {
+                        width: 48px;
+                        display: block;
+                        @include pos-center-y();
+
+                        @include responsive(large-tablet-screens) {     
+                            width: 132px;
+                        }
+                    }
+                }
+            } // header-logo
+
+            nav.main-menu {
+                display: none;
+                width: 504px;
+
+                @include responsive(large-tablet-screens) {
+                    display: block;
+                }
+
+                .gnb {
+                    width: inherit;
+                    display: flex;
+                    justify-content: space-between;
+                    @include pos-center-y();
+
+                    li {
+                        a {
+                            font-size: $sub-title-font-size;
+                            color: #fff;
+
+                            &::after {
+                                display: block;
+                                content: "";
+                                width: 100%;
+                                height: 2px;
+                                margin-top: 5px;
+                                background-color: #fff;
+                                transform: scale(0);
+                                transition: all 0.4s;
+                            }
+
+                            &:hover::after {
+                                transform: scale(1);
+                            }
+                        }
+
+                        .lnb {
+                            display: none;
+                        }
+                    }
+                } // gnb
+            } // nav.main-menu
+
+            .right-menu {
+                width: 80px;
+                @include pos-center-y() {
+                    right: 0;
+                }
+                
+                @include responsive(small-tablet-screens) {
+                    width: 110px;
+                }
+                
+                @include responsive(large-tablet-screens) {
+                    width: 188px;
+                }
+
+                @include responsive(desktop-screens) {
+                    right: 0;
+                }
+
+                ul {
+                    width: 100%;
+                    @include flex-box();
+                    
+                    li {
+                        a {
+                            color: #fff;
+                            font: {
+                                family: $eng-font;
+                                // weight: 500;
+                            }
+
+                            &::after { 
+                                display: block;
+                                content: "";
+                                width: 100%;
+                                height: 2px;
+                                margin-top: 5px;
+                                background-color: #fff;
+                                transform: scale(0);
+                                transition: all 0.4s;
+                            }
+
+                            @include responsive(large-tablet-screens) {
+                                &:hover::after {
+                                    transform: scale(1);
+                                }
+                            }
+
+                            img {
+                                width: 30px;
+
+                                @include responsive(small-tablet-screens) {
+                                    width: 40px;
+                                }
+                            }
+                        } // a
+                    } // li
+                } // ul
+            } // right-menu
+        } // flex-box
+    } // logo-menu-box    
+} // header
+
+
+// * ===================== main ===================== *
+
+main {
+    //================================================
+
+    .bookpark {
+        display: none;
+    }
+    //================================================
+
+    position: relative;
+    
+    h1 {
+        font-size: 0;
+    }
+
+    ul.tab {
+        margin-top: 200px;
+        margin-bottom: 200px;
+        @include flex-box() {
+            justify-content: center;
+        }
+
+        li {
+            padding: 0 20px;
+
+            @include responsive(large-tablet-screens) {
+                padding: 0 50px;
+            }
+
+            a {
+                &::after {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    margin-top: 5px;
+                    background-color: #000;
+                    transform: scale(0);
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    font-weight: 600;
+                }
+
+                &:hover::after {
+                    transform: scale(1);
+                }
+            }
+        }
+    } //ul.tab
+
+    .bookpark-intro {
+        text-align: center;
+
+        h2 {
+            font-size: 32px;
+        }
+        
+        p {
+            margin-top: 50px;
+            margin-bottom: 120px;
+            line-height: 26px;
+        }
+    } //bookpark-intro
+
+
+    .bookpark-des {
+        // background-color: pink;
+
+        h3 {
+            padding: 10px 0;
+        }
+
+        p {
+            line-height: 24px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .bookpark-des-flex {
+            margin-bottom: 60px;
+
+            @include flex-box() {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .bookpark-des-box-L {
+            position: relative;
+            
+            // background-color: red;
+
+            @include responsive(large-tablet-screens) {
+                margin-bottom: 800px;
+
+                @include flex-box() {
+                    flex-direction: row;
+                }
+
+                .text {
+                    position: absolute;
+                    top: 300px;
+                    left: 60%;
+                    // background-color: pink;
+                }
+
+                .img-and-square1 {
+                    position: absolute;
+                    // top: 0;
+                    // left: 0;
+    
+                    .square1 {
+                        position: relative;
+                        width: 300px;
+                        height: 400px;
+                        background-color: rgba(0, 148, 214, 0.5);
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 650px;
+                        }
+                    }
+                }
+
+                .img-and-square3 {
+                    margin-bottom: -500px;
+
+                    .square3 {
+                        position: relative;
+                        width: 300px;
+                        height: 300px;
+                        background-color: $point-color;
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 650px;
+                        }
+                    }
+                }
+            } /* (large-tablet-screens) */
+        } /* bookpark-des-box-L */
+
+        .bookpark-des-box-R {
+            position: relative;
+
+            @include responsive(large-tablet-screens) {
+                margin-bottom: 800px;
+
+                @include flex-box() {
+                    flex-direction: row-reverse;
+                }
+
+                .text {
+                    position: absolute;
+                    top: 300px;
+                    right: 60%;
+                    // background-color: pink;
+                }
+
+                .text4 {
+                    position: absolute;
+                    top: 175px;
+                    right: 60%;
+                    // background-color: pink;
+                }
+
+                .img-and-square2 {
+                    position: absolute;
+                    // top: 0;
+                    // left: 0;
+    
+                    .square2 {
+                        position: relative;
+                        width: 200px;
+                        height: 600px;
+                        background-color: $point-color;
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        right: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 650px;
+                        }
+                    }
+                }
+
+                .img-and-square4 {
+                    position: absolute;
+                    top: 0;
+
+                    .square4 {
+                        position: relative;
+                        width: 300px;
+                        height: 300px;
+                        background-color: $point-color;
+                    }
+
+                    .frontimg {
+                        position: absolute;
+                        top: 30px;
+                        right: 30px;
+                        // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
+    
+                        img {
+                            width: 500px;
+                            height: 350px;
+                        }
+                    }
+                }
+
+            } /* (large-tablet-screens) */
+        }
+    } //bookpark-des
+
+
+
+    //========= sodam ==========//
+    .sodam {
+        .container {
+            .sodam-intro {
+                text-align: center;
+
+                h2 {
+                    font-weight: 400;
+                    line-height: 32px;
+                    margin-bottom: 60px;
+
+                    strong {
+                        display: inline-block;
+                    }
+                }
+
+                p {
+                    line-height: 28px;
+
+                    &:last-child {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+
+        .container {
+            
+            .blue-container,
+            .nemo-container {
+                @include flex-box() {
+                    flex-direction: column;
+                }
+
+                margin-top: 50px;
+
+                @include responsive (large-tablet-screens) {
+                    flex-direction: row-reverse;
+                }
+
+                .blue-info,
+                .nemo-info {
+                    order: 2;
+
+                    h3,
+                    h4 {
+                        padding: 10px 0;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    order: 1;
+
+                    @include responsive (large-tablet-screens) {
+                        width: 700px;
+                        height: 500px;
+                    }
+                }
+            }
+
+            .img-l {
+                @include responsive (large-tablet-screens) {
+                    @include flex-box() {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                    position: relative;
+                    text-align: right;
+
+                    .info {
+                        @include pos-center-y() {
+                            right: 0;
+                        };
+                    }
+
+                    .no1 {
+                        height: 100%;
+                        align-self: baseline;
+                    }
+                }
+            }
+
+            .img-r {
+                @include responsive (large-tablet-screens) {
+                    @include flex-box() {
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                    }
+
+                    position: relative;
+
+                    .info {
+                        @include pos-center-y() {
+                            left: 0;
+                        };
+                    }
+
+                    .no4 { // 텍스트 박스 맨 위로 올리기
+                        height: 100%;
+                        align-self: baseline;
+                    }
+                }
+            }
+
+            .sodam-blue {
+                margin-top: 400px;
+                
+                .circle {
+                    // display: none;
+                    width: 250%;
+                    padding-bottom: 200%;
+                    transform: translate(-50%, -300px);
+                    // margin-top: 0;
+                    // height: 300px;
+                    height: 0;
+                    border-radius: 50%;
+                    border-top: 2px solid #000;
+                    position: absolute;
+                    left: 50%;
+                    z-index: 999;
+                }
+
+                .blue-container {
+                    h3 {
+                        .title-blue {
+                            color: $point-color;
+                        }
+                    }
+                }
+            } /* sodam-blue */
+
+
+            .sodam-nemo {
+                margin-top: 140px;
+
+                .nemo-container {
+
+                    h3 {
+                        .title-nemo {
+                            color: orangered;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .bookpark-guide {
+        margin: 200px 0;
+        text-align: center;
+
+        h4 {
+            padding-bottom: 10px;
+        }
+
+        div:nth-child(2) {
+            padding: 30px 0;
+        }
+
+        p {
+            padding-bottom: 5px;
+        }
+
+        
+    }
+
+
+}
+
+
+// * ===================== footer ===================== *
+
+footer {
+    color: #fff;
+    background-color: #000;
+    
+    @include responsive(large-tablet-screens) {
+        height: 800px;
+    }
+    
+    .flex-box {
+        position: relative;
+        @include flex-box() {
+            flex-direction: column-reverse;
+        }
+        
+        @include responsive(large-tablet-screens) {
+            flex-direction: row;
+            height: 800px;
+        }
+        
+        .left-contents {
+            padding-top: 55px;
+            padding-bottom: 60px;
+
+            @include responsive(large-tablet-screens) {
+                padding-top: 52px;
+                padding-bottom: 0;
+            }
+
+            h2 {
+                margin-left: -2px;
+                font: {
+                    size: 1.250em;
+                    family: $eng-font;
+                    weight: normal;
+                }
+
+                @include responsive(large-tablet-screens) {
+                    margin-left: -3px;
+                    font-size: 1.875em;
+                }
+            }
+
+            address {
+                line-height: 2;
+                font: {
+                    style: normal;
+                    size: $mini-text-font-size;
+                }
+
+                span {
+                    font: {
+                        size: $mini-text-font-size;
+                        family: $eng-font;
+                    }
+                    letter-spacing: -0.0769230769em;
+                }
+            }
+
+            p {
+                line-height: 2;
+                font: {
+                    size: $mini-text-font-size;
+                    family: $eng-font;
+                }
+                letter-spacing: -0.0769230769em;
+            }
+
+        } // left-contents
+
+        .right-contents {
+            width: 33%;
+            
+            @include responsive(large-tablet-screens) {
+                width: 28%;
+            }
+
+            .footer-menu {
+                width: 100%;
+                @include flex-box() {
+                    flex-direction: column;
+                }
+
+                @include responsive(large-tablet-screens) {
+                    flex-direction: row;
+                }
+
+                & > li {
+                    padding-top: 56px;
+                }
+                
+                li {                                 
+                    color: #fff;
+                    font: {
+                        family: $eng-font;
+                        weight: 500;
+                    }
+
+                    &:last-child {
+                        width: 62px;
+                        font-family: $eng-font;
+                    }
+                    
+                    &:last-child > .social-menu {
+                        margin-top: 34px;
+                    }
+                    
+                    .menu-contents {
+                        margin-top: 35px;
+
+                        li {     
+                            a {
+                                padding-bottom: 12px;
+                                color: #fff;
+                                font: {
+                                    size: $mini-text-font-size;
+                                    family: $kor-font;
+                                }
+
+                                
+                                &:hover {
+                                    font-weight: bold;
+                                }
+                            }
+                            
+                            &:last-child > a {
+                                padding-bottom: 0;
+                            }
+
+                            form {
+                                position: relative;
+                                margin-top: -3px;
+
+                                select {
+                                    width: 92px;
+                                    height: 100%;
+                                    border: none;
+                                    color: #fff;
+                                    font: {
+                                        size: $mini-text-font-size;
+                                        family: $kor-font;
+                                    }
+                                    background-color: transparent;
+                                    -webkit-appearance: none;
+                                       -moz-appearance: none;
+                                            appearance: none;
+                                    &::-ms-expand {
+                                        display: none;
+                                    }                                    
+                                
+                                    option {
+                                        color: #fff;
+                                        background-color: black;
+                                    }
+                                    
+                                } // select
+
+                                span {
+                                    width: 18px;
+                                    position: absolute;
+                                    top: 2px; right: -28px;
+
+                                    img {
+                                        width: 100%;
+                                        transition: all 0.3s;
+                                    }
+                                }
+
+                                select:focus + span > img {
+                                    transform: rotate(180deg);
+                                }
+                            } // form
+                        } // li                                            
+                    } // ul.menu-contents                    
+                } // li
+            } // footer-menu
+        } // right-contents
+        
+        .footer-title {
+            position: absolute;
+            top: 65%; right: 0; left: 0;
+            transform: translate(0, -50%);
+            text-align: center;
+            
+            h1 {
+                font: {
+                    size: calc(38px + 9.8vw);
+                    family: $eng-font;
+                    weight: 500;
+                }
+            }
+        } // footer-title
+
+    } // flex-box
+
+    .line {
+        position: relative;
+        span {
+            position: absolute;
+            bottom: 280px;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+        }        
+    } // div.line
+} // footer
