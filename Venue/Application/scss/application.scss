@@ -38,11 +38,6 @@
         }
 }
 
-ul,
-li {
-    list-style: disc;
-    list-style-position: inside;
-}
 
 html,
 body {
@@ -212,20 +207,22 @@ main {
     margin-bottom: 266px;
 
     h1 {
-        margin-bottom: 58px;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $gray-border;
     }
 
     h2 {
-        margin-bottom: 58px;
+        margin-bottom: 38px;
         position: relative;
-        padding-left: 10px;
+        padding-left: 13px;
         &::before {
             position: absolute;
             display: block;
             content: "";
             width: 5px;
             height: 100%;
-            margin-left: -10px;
+            margin-left: -13px;
             background-color: $point-color;
         }
 
@@ -242,7 +239,7 @@ main {
         }
 
         @include responsive(desktop-screens) {
-            width: 1400px; //
+            width: 1400px;
             padding: 0;
         }
         
@@ -274,6 +271,10 @@ main {
                     padding-right: 0;
                 }
 
+                @include responsive(large-tablet-screens) {
+                    padding-right: 20px;
+                }
+
                 div {
                     position: relative;
                     width: 200px;
@@ -289,8 +290,13 @@ main {
                     }
 
                     strong {
+                        font-size: 14px;
                         @include pos-center() {
                             top: 80%;
+                        }
+
+                        @include responsive(small-tablet-screens) {
+                            font-size: 16px;
                         }
                     }
 
@@ -312,6 +318,7 @@ main {
         }
         
         .slide-btn-left {
+            left: 0;
             transform: rotate(-135deg);
         }
 
