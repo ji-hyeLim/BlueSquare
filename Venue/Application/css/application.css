@@ -346,8 +346,8 @@ main .venue-process .slide-btn {
   cursor: pointer;
 }
 main .venue-process .slide-btn-left {
-  transform: rotate(-135deg);
   left: 0;
+  transform: rotate(-135deg);
 }
 main .venue-process .slide-btn-right {
   right: 0;
