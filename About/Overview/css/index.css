@@ -88,6 +88,15 @@ footer {
   }
 }
 
+@-webkit-keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @keyframes mover {
   from {
     width: 0%;
@@ -96,13 +105,59 @@ footer {
     width: 100%;
   }
 }
-@keyframes text-loop {
+@-webkit-keyframes fadeUp {
   0% {
-    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes text-loop {
+  0% {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes text-loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
     transform: translate3d(-100%, 0, 0);
   }
 }
@@ -149,7 +204,7 @@ header .ov-header .hd-img .line-box {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-header .ov-header .hd-img .line-box span {
+header .ov-header .hd-img .line-box div.p-box {
   position: relative;
   position: absolute;
   left: 50%;
@@ -157,51 +212,62 @@ header .ov-header .hd-img .line-box span {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+}
+header .ov-header .hd-img .line-box div.p-box p {
+  opacity: 0;
+  -webkit-animation: fadeUp 3s;
+          animation: fadeUp 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   font-size: calc(1vw + 30px);
   font-weight: 600;
   font-family: "Montserrat", sans-serif, Arial;
 }
-header .ov-header .hd-img .line-box span::before {
+@media screen and (min-width: 320px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 40px);
+  }
+}
+@media screen and (min-width: 600px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 50px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 60px);
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 70px);
+  }
+}
+header .ov-header .hd-img .line-box div.p-box::before {
   position: absolute;
-  top: -15px;
+  top: -20px;
   left: 0px;
   display: block;
   content: "";
   width: 100%;
   height: 5px;
   background-color: white;
-  animation: mover 2s;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
-header .ov-header .hd-img .line-box span::after {
+header .ov-header .hd-img .line-box div.p-box::after {
   position: absolute;
-  bottom: -15px;
+  bottom: -20px;
   right: 0;
   display: block;
   content: "";
   width: 100%;
   height: 5px;
   background-color: white;
-  animation: mover 2s;
-}
-@media screen and (min-width: 320px) {
-  header .ov-header .hd-img .line-box span {
-    font-size: calc(1vw + 40px);
-  }
-}
-@media screen and (min-width: 600px) {
-  header .ov-header .hd-img .line-box span {
-    font-size: calc(1vw + 60px);
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .ov-header .hd-img .line-box span {
-    font-size: calc(1vw + 70px);
-  }
-}
-@media screen and (min-width: 1400px) {
-  header .ov-header .hd-img .line-box span {
-    font-size: calc(1vw + 120px);
-  }
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
 header .logo-menu-box {
   position: absolute;
@@ -357,8 +423,11 @@ main .page-info1 .info-img img {
   }
 }
 main .page-info1 .info-txt {
+  opacity: 0;
   padding-left: 0;
   margin-bottom: 90px;
+  -webkit-animation: fadeIn 2s 3s linear forwards;
+          animation: fadeIn 2s 3s linear forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info1 .info-txt {
@@ -423,8 +492,11 @@ main .page-info2 .info-img img {
   }
 }
 main .page-info2 .info-txt {
+  opacity: 0;
   padding-left: 0;
   margin-bottom: 90px;
+  -webkit-animation: fadeIn 2s 5s forwards;
+          animation: fadeIn 2s 5s forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info2 .info-txt {
@@ -489,8 +561,11 @@ main .page-info3 .info-img img {
   }
 }
 main .page-info3 .info-txt {
+  opacity: 0;
   padding-left: 0px;
   margin-bottom: 90px;
+  -webkit-animation: fadeIn 2s 7s linear forwards;
+          animation: fadeIn 2s 7s linear forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info3 .info-txt {
@@ -549,10 +624,13 @@ main .bottom-txt {
   }
 }
 main .bottom-txt p {
+  opacity: 0;
   text-align: center;
   width: 100%;
   font-size: 16px;
   line-height: 26px;
+  -webkit-animation: fadeIn 3s 9s linear forwards;
+          animation: fadeIn 3s 9s linear forwards;
 }
 main .bottom-txt p .bold-txt {
   font-weight: bold;
@@ -582,7 +660,8 @@ main .flow-txt-wrap div {
 }
 main .flow-txt-wrap div .flow-txt {
   padding-right: 22px;
-  animation: text-loop 10s linear infinite;
+  -webkit-animation: text-loop 10s linear infinite;
+          animation: text-loop 10s linear infinite;
 }
 
 footer {
@@ -753,4 +832,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
