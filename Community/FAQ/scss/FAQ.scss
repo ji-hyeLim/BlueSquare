@@ -30,6 +30,10 @@
         }
 }
 
+h2 {
+    font-size: 0;
+}
+
 html,
 body {
     max-width: 100%;
@@ -41,18 +45,7 @@ body {
 header {
     position: relative;
     width: 100vw;
-
-    .header-bg {
-        width: 100%; 
-        height: 100vh;
-        overflow: hidden;
-
-        video {
-            width: 100%; 
-            height: 100%;
-            object-fit: cover;
-        }
-    } // header-bg
+    height: 250px;
 
     .logo-menu-box {
         position: absolute;
@@ -100,7 +93,7 @@ header {
                     li {
                         a {
                             font-size: $sub-title-font-size;
-                            color: #fff;
+                            color: #000;
 
                             &::after {
                                 display: block;
@@ -108,7 +101,7 @@ header {
                                 width: 100%;
                                 height: 2px;
                                 margin-top: 5px;
-                                background-color: #fff;
+                                background-color: #000;
                                 transform: scale(0);
                                 transition: all 0.4s;
                             }
@@ -149,7 +142,7 @@ header {
                     
                     li {
                         a {
-                            color: #fff;
+                            color: #000;
                             font: {
                                 family: $eng-font;
                                 // weight: 500;
@@ -161,7 +154,7 @@ header {
                                 width: 100%;
                                 height: 2px;
                                 margin-top: 5px;
-                                background-color: #fff;
+                                background-color: #000;
                                 transform: scale(0);
                                 transition: all 0.4s;
                             }
@@ -191,9 +184,74 @@ header {
 // * ===================== main ===================== *
 
 main {
-    height: 2000px;
-    background-color: aliceblue;
-}
+    width: 100vw;
+    margin-bottom: 266px;
+
+    h1 {
+        margin-bottom: 58px;
+    }
+
+    .tab-menu {
+        overflow-x: scroll;
+        white-space: nowrap;
+        margin-left: 20px;
+        border-bottom: 2px solid $gray-border;
+        @include flex-box() {
+            justify-content: left;
+        }
+        
+        @include responsive(desktop-screens) {
+            margin-left: 0;
+        }
+        
+        li {
+            padding-right: 50px;
+
+            &:first-child > a::after {
+                transform: scale(1); // 기본값 -> 다른 것 입력 시 0으로 바꾸는 기능 필요
+            }
+            
+            a {
+                font-size: calc($tab-font-size + 6px);
+                
+                &::after {
+                    margin-top: 10px;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 8px;
+                    border-radius: 5px 5px 0 0;
+                    background-color: #000;
+                    transform: scale(0);
+                    transition: all 0.4s;
+                }
+
+                &:hover::after {
+                    transform: scale(1);
+                }
+            }
+
+        } // li
+    } // ul.tab-menu
+
+    section.tab-menu1 {
+        ul {
+            li {
+                position: relative;
+                height: 80px;
+                border-bottom: 1px solid $gray-border;
+                
+                // background-color: red;
+
+                a {
+                    font-size: 18px;
+                    @include pos-center-y();
+                }
+            }
+        }
+    } // section.tab-menu1
+
+} // main
 
 
 // * ===================== footer ===================== *
