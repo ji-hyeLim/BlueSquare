@@ -292,13 +292,11 @@ main .detail-main .left-img .ticket-poster .topWrap .content a .poster {
 main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
   position: sticky;
   position: absolute;
-  left: 10px;
-  bottom: 1.2rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  left: 12px;
+  bottom: 0.5rem;
 }
 main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn img {
-  width: 4rem;
+  width: 3rem;
 }
 main .detail-main .right-text {
   width: 100%;
@@ -429,11 +427,11 @@ main .detail-main .right-text .info-booking-button ul li:last-child a {
     box-shadow: 10px 10px 3px gray;
   }
   main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
-    left: 20px;
-    bottom: 2rem;
+    left: 15px;
+    bottom: 1rem;
   }
   main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn img {
-    width: 4.5rem;
+    width: 3rem;
   }
   main .detail-main .right-text {
     display: inline-block;
@@ -508,9 +506,6 @@ main .contents-list .container > div p {
   margin-bottom: 30px;
   padding: 0 20px;
 }
-main .contents-list .img-contents img {
-  width: 100%;
-}
 main .contents-list .casting .cast-list {
   overflow-x: scroll;
 }
@@ -547,8 +542,64 @@ main .contents-list .casting .cast-list ul li .cast-text .cast-name {
   margin-top: 3px;
   font-weight: 600;
 }
+main .contents-list .toggled-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #b2b2b2;
+}
+main .contents-list .toggled-btn div {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  cursor: pointer;
+}
+main .contents-list .toggled-btn div span {
+  display: block;
+}
+main .contents-list .toggled-btn div span.on {
+  display: none;
+}
+main .contents-list .toggled-btn div img {
+  width: 18px;
+  margin-left: 15px;
+}
+main .contents-list .toggled-btn div img.rotate {
+  transform: rotate(180deg);
+}
+main .contents-list .img-contents {
+  height: 800px;
+  overflow: hidden;
+}
+main .contents-list .img-contents img {
+  width: 100%;
+  display: none;
+}
 main .contents-list .notice {
   padding: 0;
+}
+main .contents-list .notice .img-contents {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/notice.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+main .contents-list .sale .img-contents {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/sale.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+main .contents-list .schedule .img-contents {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/schedule.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+main .contents-list .introduce .img-contents {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/introduce.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+main .contents-list .event .box {
+  text-align: center;
 }
 @media screen and (min-width: 1024px) {
   main .contents-list .container {
@@ -572,6 +623,38 @@ main .contents-list .notice {
   main .contents-list .img-contents img {
     width: 70%;
     margin: 0 0%;
+  }
+  main .contents-list .casting .cast-list {
+    overflow-x: hidden;
+  }
+  main .contents-list .casting .cast-list ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 880px;
+    margin: 0 auto;
+  }
+  main .contents-list .casting .cast-list ul li {
+    margin: 30px 18px;
+  }
+  main .contents-list .casting .cast-list ul li .cast-img img {
+    width: 110px;
+    height: 110px;
+  }
+  main .contents-list .casting .cast-list ul li .cast-text {
+    margin-top: 10px;
+  }
+  main .contents-list .casting .cast-list ul li .cast-text .cast-role {
+    font-size: 3px;
+  }
+  main .contents-list .casting .cast-list ul li .cast-text .cast-name {
+    font-size: 13px;
+  }
+  main .contents-list .casting .cast-list ul .cast-hidden {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 

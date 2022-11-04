@@ -8,6 +8,16 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>BLUE SQUARE</title>
     <script>
+        $(function() {
+            $(".cast-hidden").hide();
+            $(".toggled-btn").on("click", function() {
+				$(".cast-hidden").slideToggle(300, "linear");
+                $('.toggled-btn div span').toggleClass('on');
+                $('.toggled-btn div img').toggleClass('rotate');
+                $(".img-contents img display").toggleClass("block");
+                $(".img-contents img display").toggleClass("block");
+			});
+        });
     </script> 
 </head>
 <body>
@@ -231,18 +241,124 @@
                                             <div class="cast-name">이해준</div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="cast-img">
-                                            <img src="./img/elisabeth/cast/이지훈.png" alt="이지훈">
+                                    <div class="cast-hidden">
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/이지훈.png" alt="이지훈">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">루이지 루케니</div>
+                                                <div class="cast-name">이지훈</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/박은태.png" alt="박은태">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">루이지 루케니</div>
+                                                <div class="cast-name">박은태</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/민영기.png" alt="민영기">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">프란츠 요제프</div>
+                                                <div class="cast-name">민영기</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/길병민.png" alt="길병민">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">프란츠 요제프</div>
+                                                <div class="cast-name">길병민</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/임은영.png" alt="임은영">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">대공비 소피</div>
+                                                <div class="cast-name">임은영</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/주아.png" alt="주아">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">대공비 소피</div>
+                                                <div class="cast-name">주아</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/진태화.png" alt="진태화">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">황태자 루돌프</div>
+                                                <div class="cast-name">진태화</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/이석준.png" alt="이석준">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">황태자 루돌프</div>
+                                                <div class="cast-name">이석준</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/문성혁.png" alt="문성혁">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">막스 공작</div>
+                                                <div class="cast-name">문성혁</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/김지선.png" alt="김지선">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">루도비카</div>
+                                                <div class="cast-name">김지선</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/김한결.png" alt="김한결">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">앙상블</div>
+                                                <div class="cast-name">김한결</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cast-img">
+                                                <img src="./img/elisabeth/cast/지원선.png" alt="지원선">
+                                            </div>
+                                            <div class="cast-text">
+                                                <div class="cast-role">앙상블</div>
+                                                <div class="cast-name">지원선</div>
+                                            </div>
+                                        </li>
+                                    </div> <!-- cast-hidden -->
+                                    <div class="toggled-btn">
+                                        <div>
+                                            <span>출연진 더보기</span><span class="on">접기</span>
+                                            <img src="./img/arrow_down.png" alt="arrow">
                                         </div>
-                                        <div class="cast-text">
-                                            <div class="cast-role">루이지 루케니</div>
-                                            <div class="cast-name">이지훈</div>
-                                        </div>
-                                    </li>
+                                    </div>
                                 </ul>
                             </div> <!-- cast-list -->
-                            <a href="#" class="toggled-btn"></a>
                         </div> <!-- box -->
                     </div> <!-- casting -->
 
@@ -255,9 +371,14 @@
                                 * 11월 5일(토) 2시30분, 7시30분 / 11월 10일(목) 7시30분 회차는 사전 판매 마감되었습니다.
                             </p>
                             <div class="img-contents">
-                                <img src="./img/elisabeth/notice.png" alt="notice">
+                                <img src="./img/elisabeth/notice.png" alt="notice" class="notice-img">
                             </div>
-                            <a href="#" class="toggled-btn"></a>
+                            <div class="toggled-btn">
+                                <div>
+                                    <span>공지사항 더보기</span><span class="on">접기</span>
+                                    <img src="./img/arrow_down.png" alt="arrow">
+                                </div>
+                            </div>
                         </div> <!-- box -->
                     </div> <!-- notice -->
 
@@ -267,7 +388,12 @@
                             <div class="img-contents">
                                 <img src="./img/elisabeth/sale.png" alt="sale">
                             </div>
-                            <a href="#" class="toggled-btn"></a>
+                            <div class="toggled-btn">
+                                <div>
+                                    <span>할인정보 더보기</span><span class="on">접기</span>
+                                    <img src="./img/arrow_down.png" alt="arrow">
+                                </div>
+                            </div>
                         </div> <!-- box -->
                     </div> <!-- sale -->
 
@@ -277,7 +403,12 @@
                             <div class="img-contents">
                                 <img src="./img/elisabeth/schedule.png" alt="schedule">
                             </div>
-                            <a href="#" class="toggled-btn"></a>
+                            <div class="toggled-btn">
+                                <div>
+                                    <span>캐스팅 스케줄 더보기</span><span class="on">접기</span>
+                                    <img src="./img/arrow_down.png" alt="arrow">
+                                </div>
+                            </div>
                         </div> <!-- box -->
                     </div> <!-- schedule -->
 
@@ -288,7 +419,12 @@
                                 <img src="./img/elisabeth/introduce.png" alt="introduce">
                                 <img src="./img/elisabeth/introduce2.png" alt="introduce2">
                             </div>
-                            <a href="#" class="toggled-btn"></a>
+                            <div class="toggled-btn">
+                                <div>
+                                    <span>공연소개 더보기</span><span class="on">접기</span>
+                                    <img src="./img/arrow_down.png" alt="arrow">
+                                </div>
+                            </div>
                         </div> <!-- box -->
                     </div> <!-- introduce -->
 
@@ -296,7 +432,6 @@
                         <h3>이벤트</h3>
                         <div class="box">
                             <img src="./img/elisabeth/event.png" alt="event">
-                            <a href="#" class="toggled-btn"></a>
                         </div> <!-- box -->
                     </div> <!-- event -->
                 </div> <!-- container -->
