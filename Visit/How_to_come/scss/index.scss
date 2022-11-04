@@ -192,10 +192,10 @@ header {
 
 main {
     // background-color: aliceblue;
-    padding-bottom: 140px;
+    padding-bottom: 120px;
 
     @include responsive(large-tablet-screens) {
-        padding-bottom: 300px;
+        padding-bottom: 204px;
     }
     h1 {
         // background-color: aquamarine;
@@ -261,14 +261,14 @@ main {
         } //li
     } // tap-menu
 
-    .map-txt{
+    section.map-txt{
+
         @include flex-box();
         flex-direction: column;
 
         @include responsive(large-tablet-screens) {
             flex-direction: row;
         }
-
 
         .map {
             margin-top: 190px;
@@ -459,10 +459,197 @@ main {
             } //load3
 
         }
-    }
-    
-}
+    } //section.map-txt
+    //===============tap2!!!================//
+    section.parking {
+        display: none;
+        padding-top: 80px;
 
+        @include responsive(large-tablet-screens) {
+            padding-top: 150px;
+        }
+        .top-txt {
+            margin-bottom: 32px;
+
+            @include responsive(large-tablet-screens) {
+                margin-bottom: 72px;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 22px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+        } //top-txt
+        .elec-info {
+            background-color: #eee;
+            padding: 14px 10px;
+            margin-bottom: 32px;
+            @include responsive(large-tablet-screens) {
+                padding: 50px 99px;
+                margin-bottom: 68px;
+                width: 690px;
+            }
+
+            .elecTxt {
+                font-size: 14px;
+                line-height: 20px;
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+
+                span {
+                    font-weight: 600;
+                }
+
+                .txt2 {
+                    margin-top: 20px;
+                    font-weight: 500;
+                    @include responsive(large-tablet-screens) {
+                        margin-top: 30px;
+                    }
+                }
+            } //elecTxt
+        } //elec-info   
+        .info1 {
+            p.sub {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+            }
+            p.txt1 {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 32px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    margin-bottom:45px;
+                }
+
+                span {
+                    font-weight: 600;
+                }
+            }
+            p.txt2 {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 45px;
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    line-height: 30px;
+                    margin-bottom: 70px;
+                }
+            }
+        } //info1   
+        
+        .info2 {
+            p.sub {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+            }
+            p.txt1 {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 20px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    margin-bottom:25px;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+            table {
+                margin-bottom: 20px ;
+                @include responsive(large-tablet-screens) {
+                    width: 810px;
+                    margin-bottom: 35px;
+                }
+                
+                .t-sub {
+                    background: #eee;
+                }
+                th:first-child {
+                    border-left: 0;
+                    min-width: 50px;
+                }
+                th:nth-child(2) {
+                    min-width: 150px;
+                }
+                td:last-child {
+                    border-right: 0;
+                }
+            } //table
+            p.txt2 {
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 45px;
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    line-height: 30px;
+                    margin-bottom: 70px;
+                }
+            }
+        } //info2
+        .info3 {
+            p.sub {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+            }
+            p.txt1 {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 50px;
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    margin-bottom:84px;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+            p.txt2 {
+                font-size: 14px;
+                line-height: 22px;
+                
+                @include responsive(large-tablet-screens) {
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        } //info3
+    } //section.parking
+} //main
 
 // * ===================== footer ===================== *
 

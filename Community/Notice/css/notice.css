@@ -88,6 +88,17 @@ footer {
   }
 }
 
+h2 {
+  font-size: 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 html,
 body {
   max-width: 100%;
@@ -97,16 +108,7 @@ body {
 header {
   position: relative;
   width: 100vw;
-}
-header .header-bg {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-header .header-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 250px;
 }
 header .logo-menu-box {
   position: absolute;
@@ -158,7 +160,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
-  color: #fff;
+  color: #000;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   display: block;
@@ -166,7 +168,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: #fff;
+  background-color: #000;
   transform: scale(0);
   transition: all 0.4s;
 }
@@ -204,7 +206,7 @@ header .logo-menu-box .flex-box .right-menu ul {
   justify-content: space-between;
 }
 header .logo-menu-box .flex-box .right-menu ul li a {
-  color: #fff;
+  color: #000;
   font-family: "Montserrat", sans-serif, Arial;
 }
 header .logo-menu-box .flex-box .right-menu ul li a::after {
@@ -213,7 +215,7 @@ header .logo-menu-box .flex-box .right-menu ul li a::after {
   width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: #fff;
+  background-color: #000;
   transform: scale(0);
   transition: all 0.4s;
 }
@@ -232,8 +234,71 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  height: 2000px;
-  background-color: aliceblue;
+  position: relative;
+  width: 100vw;
+  margin-bottom: 266px;
+}
+main h1 {
+  margin-bottom: 58px;
+}
+main .notice-wrap .notices {
+  margin-bottom: 102px;
+}
+main .notice-wrap .notices div {
+  border-top: 1px solid #ccc;
+}
+main .notice-wrap .notices div:first-child {
+  border-top: 2px solid #ccc;
+}
+main .notice-wrap .notices div:last-child {
+  border-bottom: 2px solid #ccc;
+}
+main .notice-wrap .notices div a {
+  margin-top: 16px;
+  padding: 12px 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .notice-wrap .notices div a {
+    font-size: 18px;
+  }
+}
+main .notice-wrap .notices div a:hover {
+  font-weight: 600;
+}
+main .notice-wrap .notices div time {
+  display: block;
+  padding: 0px 20px 28px;
+  font-size: 13px;
+  color: #b2b2b2;
+}
+@media screen and (min-width: 1024px) {
+  main .notice-wrap .notices div time {
+    font-size: 14px;
+  }
+}
+main .notice-wrap .pagination {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .notice-wrap .pagination a {
+  padding: 4px 10px;
+  margin: 0 5px;
+}
+@media screen and (min-width: 1024px) {
+  main .notice-wrap .pagination a {
+    margin: 0 8px;
+  }
+}
+main .notice-wrap .pagination a.on {
+  font-weight: 600;
+  border-radius: 50%;
+  background-color: #eee;
+}
+main .notice-wrap .pagination a:hover {
+  font-weight: 600;
 }
 
 footer {

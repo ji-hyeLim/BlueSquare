@@ -94,6 +94,29 @@ body {
   overflow-x: hidden;
 }
 
+.caution {
+  color: red;
+}
+
+.seat-img {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .seat-img {
+    width: 70%;
+  }
+}
+.seat-img img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .seat-img img {
+    width: 100%;
+  }
+}
+
 .number-of-seat {
   width: 100%;
   height: 200px;
@@ -107,48 +130,15 @@ body {
 .number-of-seat p {
   line-height: 26px;
 }
-.number-of-seat .blue {
-  position: absolute;
-  left: 180px;
+
+.blue {
   color: #0094d6;
   font-weight: 600;
 }
 
-.seat-img {
-  width: 100%;
-  text-align: center;
-}
-.seat-img img {
-  width: 100%;
-  padding-bottom: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .seat-img img {
-    width: 70%;
-  }
-}
-
-.seat-img-tab {
-  background-color: green;
-  margin-top: 80px;
-}
-.seat-img-tab ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.seat-img-tab ul li {
-  width: 100%;
-}
-.seat-img-tab ul li img {
-  width: 120px;
-  height: 98px;
-}
-@media screen and (min-width: 600px) {
-  .seat-img-tab ul li img {
-    width: calc(120px + 20%);
-    height: calc(98px + 30%);
-  }
+.gray {
+  color: rgb(138, 138, 138);
+  font-weight: 600;
 }
 
 header {
@@ -159,12 +149,6 @@ header .header-bg {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin-bottom: 140px;
-}
-@media screen and (min-width: 1024px) {
-  header .header-bg {
-    margin-bottom: 280px;
-  }
 }
 header .header-bg img {
   width: 100%;
@@ -295,34 +279,27 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main h1 {
-  font-size: 0;
-}
-main h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
+  font-size: 38px;
+  margin-top: 140px;
 }
 @media screen and (min-width: 1024px) {
-  main h2 {
-    font-size: 38px;
-    margin-bottom: 100px;
+  main h1 {
+    margin-top: 280px;
   }
 }
-main ul.tab {
-  margin-top: 100px;
-  margin-bottom: 50px;
+main h2 {
+  font-size: 0;
+}
+main .tab-menu ul {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   justify-content: center;
 }
-main ul.tab li {
+main .tab-menu ul li {
   padding: 0 20px;
 }
-@media screen and (min-width: 1024px) {
-  main ul.tab li {
-    padding: 0 50px;
-  }
-}
-main ul.tab li a::after {
+main .tab-menu ul li a::after {
   display: block;
   content: "";
   width: 100%;
@@ -332,54 +309,128 @@ main ul.tab li a::after {
   transform: scale(0);
   transition: all 0.5s;
 }
-main ul.tab li a:hover {
+main .tab-menu ul li a:hover {
   font-weight: 600;
 }
-main ul.tab li a:hover::after {
+main .tab-menu ul li a:hover::after {
   transform: scale(1);
 }
-main .master-inner-tab {
+main .sub-tab-menu ul {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   justify-content: center;
 }
-main .master-inner-tab li {
+main .sub-tab-menu ul li {
   padding: 0 20px 20px;
 }
-main .master-inner-tab li:first-child {
+main .sub-tab-menu ul li:first-child {
   border-right: 1px solid #ccc;
   height: 14px;
 }
-main .master-inner-tab li a {
+main .sub-tab-menu ul li a {
   color: #ccc;
 }
-main .master-inner-tab li a:hover {
+main .sub-tab-menu ul li a:hover {
   color: #0094d6;
   font-weight: 600;
 }
-main .tab-content {
-  position: relative;
+main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 {
+  display: none;
 }
-main .tab-content #hall-tab1 .floor-tab1 .number-of-seat .orange,
-main .tab-content #hall-tab1 .floor-tab1 .number-of-seat .green,
-main .tab-content #hall-tab1 .floor-tab1 .number-of-seat .purple {
-  position: absolute;
-  left: 180px;
+@media screen and (min-width: 1024px) {
+  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 {
+    display: block;
+  }
 }
-main .tab-content #hall-tab1 .floor-tab1 .number-of-seat .orange {
+main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 div {
+    padding-right: 20px;
+    position: static;
+  }
+}
+main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .orange {
   color: #d38b1c;
   font-weight: 600;
 }
-main .tab-content #hall-tab1 .floor-tab1 .number-of-seat .green {
+main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .green {
   color: #b1b77b;
   font-weight: 600;
 }
-main .tab-content #hall-tab1 .floor-tab1 .number-of-seat .purple {
+main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .purple {
   color: #b377b5;
   font-weight: 600;
 }
-main .tab-content #hall-tab2 .caution {
-  color: red;
+main .shinhan-hall .seat-img-tab {
+  margin-top: 80px;
+}
+main .shinhan-hall .seat-img-tab ul {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  main .shinhan-hall .seat-img-tab ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+main .shinhan-hall .seat-img-tab ul li {
+  width: 30%;
+}
+main .shinhan-hall .seat-img-tab ul li img {
+  display: block;
+  width: 100%;
+}
+main .master-hall .master-standing .standing-firstF {
+  background-color: skyblue;
+}
+main .master-hall .master-standing .standing-secondF .gray {
+  color: gray;
+  position: absolute;
+  left: 180px;
+}
+main .master-hall .master-standing .seat-img-tab {
+  margin-top: 80px;
+}
+main .master-hall .master-standing .seat-img-tab ul {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  main .master-hall .master-standing .seat-img-tab ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+main .master-hall .master-standing .seat-img-tab ul li {
+  width: 30%;
+}
+main .master-hall .master-standing .seat-img-tab ul li img {
+  display: block;
+  width: 100%;
+}
+main .master-ground .ground-secondF .number-of-seat .gray {
+  color: gray;
+  position: absolute;
+  left: 180px;
+}
+main .master-ground .ground-secondF .master-img img {
+  width: 50px;
 }
 
 /* main */

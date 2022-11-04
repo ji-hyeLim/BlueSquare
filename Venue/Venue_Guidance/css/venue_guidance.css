@@ -103,10 +103,11 @@ header .header-bg {
   height: 100vh;
   overflow: hidden;
 }
-header .header-bg video {
+header .header-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -234,6 +235,70 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 main {
   height: 2000px;
   background-color: aliceblue;
+}
+main h1 {
+  font-size: 0;
+}
+main ul.tab {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-start;
+}
+main ul.tab::-webkit-scrollbar {
+  display: none;
+}
+main ul.tab li {
+  margin-right: 60px;
+}
+main ul.tab li:first-child {
+  background-color: yellow;
+}
+main ul.tab li:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 1024px) {
+  main ul.tab li {
+    margin-right: 120px;
+  }
+}
+main ul.tab li a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+main ul.tab li a:hover {
+  font-weight: 600;
+}
+main ul.tab li a:hover::after {
+  transform: scale(1);
+}
+main .inner-tab {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+main .inner-tab li {
+  padding: 0 20px 20px;
+}
+main .inner-tab li:first-child {
+  border-right: 1px solid #ccc;
+  height: 14px;
+}
+main .inner-tab li a {
+  color: #ccc;
+}
+main .inner-tab li a:hover {
+  color: #0094d6;
+  font-weight: 600;
 }
 
 footer {
@@ -404,4 +469,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=venue_guidance.css.map */

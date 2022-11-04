@@ -79,129 +79,164 @@
 
         <main>
             <div class="container">
-                <h1>Main</h1>
-                <h2>좌석배치도</h2>
-                <ul class="tab">
-                    <li><a href="#hall-tab1">신한카드홀</a></li>
-                    <li><a href="#hall-tab2">마스터카드홀</a></li>
-                </ul>
+                <h1>좌석배치도</h1>
+                <div class="tab-menu">
+                    <ul>
+                        <li><a href="#">신한카드홀</a></li>
+                        <li>
+                            <a href="#">마스터카드홀</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub-tab-menu">
+                    <ul>
+                        <li><a href="#">스탠딩형</a></li>
+                        <li><a href="#">그라운드형</a></li>
+                    </ul>
+                </div>
 
-                <ul class="master-inner-tab">
-                    <li><a href="#">스탠딩형</a></li>
-                    <li><a href="#">그라운드형</a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div id="hall-tab1" class="hall-tap-pos">
-                        <div class="floor-tab1 floor-tab-pos">
-                            <div class="number-of-seat">
-                                <h3>신한카드홀 1층 좌석배치도</h3>
-                                    <p>1층 객석 좌석수 <span class="blue">총 1,066석</span></p>
-                                    <p>오케스트라 피트석 <span class="orange">76석</span></p>
-                                    <p>휠체어석 <span class="green">18석</span></p>
-                                    <p>모자동반석 <span class="purple">14석</span></p>
+                <section class="shinhan-hall">
+                    <h2>신한카드홀</h2>
+                    <div class="shinhan-firstF">
+                        <div class="number-of-seat">
+                            <h3>신한카드홀 1층 좌석배치도</h3>
+                            <div class="number-wrap1">
+                                <div class="title">
+                                    <div>1층 객석 좌석수</div>
+                                    <div>오케스트라 피트석</div>
+                                    <div>휠체어석</div>
+                                    <div>모자동반석</div>
                                 </div>
-                            </div> <!-- number-of-seat -->
-                            <div class="seat-img">
-                                <img src="./img/shinhan/shinhan-seat01.png" alt="좌석배치도">
-                                <div>1층</div>
+                                <div class="content">
+                                    <div class="blue">총 1,066석</div>
+                                    <div class="orange">76석</div>
+                                    <div class="green">18석</div>
+                                    <div class="purple">14석</div>
+                                </div>
                             </div>
-                        </div> <!-- floor-tab1 -->
 
-                        <div class="floor-tab2 floor-tab-pos">
-                            <div class="number-of-seat">
-                                <h3>신한카드홀 2층 좌석배치도</h3>
-                                <p>2층 객석 좌석수 <span class="blue">총 430석</span></p>
+                            <div class="number-wrap2">              
+                                <div>1층 객석 좌석수</div>
+                                <div class="blue">총 1,066석</div>
+                                <div>오케스트라 피트석</div>
+                                <div class="orange">76석</div>
+                                <div>휠체어석</div>
+                                <div class="green">18석</div>
+                                <div>모자동반석</div>
+                                <div class="purple">14석</div>
                             </div>
-                            <div class="seat-img">
-                                <img src="./img/shinhan/shinhan-seat02.png" alt="좌석배치도">
-                                <div>2층</div>
-                            </div>
-                        </div> <!-- floor-tab2 -->
+                        </div> <!-- number-of-seat -->
+                        <div class="seat-img">
+                            <img src="./img/shinhan/shinhan-seat01.png" alt="좌석배치도">
+                            <div>1층</div>
+                        </div>
+                    </div>
 
-                        <div class="floor-tab3 floor-tab-pos">
-                            <div class="number-of-seat">
-                                <h3>신한카드홀 3층 좌석배치도</h3>
-                                <p>2층 객석 좌석수<span class="blue">총 430석</span></p>
+                    <div class="shinhan-secondF">
+                        <div class="number-of-seat">
+                            <h3>신한카드홀 2층 좌석배치도</h3>
+                            <div>
+                                <div>2층 객석 좌석수 <span class="blue">총 430석</span></div>
                             </div>
-                            <div class="seat-img">
-                                <img src="./img/shinhan/shinhan-seat03.png" alt="좌석배치도">
-                                <div>3층</div>
+                        </div> <!-- number-of-seat -->
+                        <div class="seat-img">
+                            <img src="./img/shinhan/shinhan-seat02.png" alt="좌석배치도">
+                            <div>2층</div>
+                        </div>
+                    </div> <!-- shinhan-secondF -->
+
+                    <div class="shinhan-thirdF">
+                        <div class="number-of-seat">
+                            <h3>신한카드홀 3층 좌석배치도</h3>
+                            <div>
+                                <div>3층 객석 좌석수<span class="blue">총 430석</span></div>
                             </div>
-                        </div> <!-- floor-tab3 -->
+                        </div> <!-- number-of-seat -->
+                        <div class="seat-img">
+                            <img src="./img/shinhan/shinhan-seat03.png" alt="좌석배치도">
+                            <div>3층</div>
+                        </div>
+                    </div> <!-- shinhan-thirdF -->
 
-                        <div class="seat-img-tab">
-                            <ul>
-                                <li><img src="./img/shinhan/shinhan-seat01.png" alt="좌석배치도"></li>
-                                <li><img src="./img/shinhan/shinhan-seat02.png" alt="좌석배치도"></li>
-                                <li><img src="./img/shinhan/shinhan-seat03.png" alt="좌석배치도"></li>
-                            </ul>
-                        </div> <!-- seat-img-tab -->
-                    </div> <!-- hall-tab1 -->
+                    <div class="seat-img-tab">
+                        <ul>
+                            <li><img src="./img/shinhan/shinhan-seat01.png" alt="좌석배치도"></li>
+                            <li><img src="./img/shinhan/shinhan-seat02.png" alt="좌석배치도"></li>
+                            <li><img src="./img/shinhan/shinhan-seat03.png" alt="좌석배치도"></li>
+                        </ul>
+                    </div> <!-- seat-img-tab -->
+                </section> <!-- shinhan-hall (신한카드홀 탭)-->
 
-                    <div id="hall-tab2" class="hall-tap-pos">
-                        <p class="caution">
-                            * 마스터카드홀의 좌석은 가변형이므로 대관시 담당자에게 문의 및 확인하시기 바랍니다.
-                        </p>
-                        <div class="master-standing floor-tab-pos">
+
+                <section class="master-hall">
+                    <h2>마스터카드홀</h2>
+                    <div class="master-standing">
+                        <div class="standing-firstF">
+                            <p class="caution">
+                                * 마스터카드홀의 좌석은 가변형이므로 대관시 담당자에게 문의 및 확인하시기 바랍니다.
+                            </p>
                             <div class="number-of-seat">
                                 <h3>마스터카드홀 스탠딩형 1층 좌석배치도</h3>
                                     <p>1층 객석 좌석수 <span class="blue">최대 2,400명 수용</span></p>
-                                </div>
                             </div>
                             <div class="seat-img">
                                 <img src="./img/master/standing-seat01.png" alt="좌석배치도">
                                 <div>1층</div>
                             </div>
+                        </div> <!-- standing-firstF -->
+
+                        <div class="standing-secondF">
+                            <p class="caution">
+                                * 마스터카드홀의 좌석은 가변형이므로 대관시 담당자에게 문의 및 확인하시기 바랍니다.
+                            </p>
                             <div class="number-of-seat">
                                 <h3>마스터카드홀 스탠딩형 2층 좌석배치도</h3>
                                 <p>2층 객석 좌석수 <span class="blue">371석</span></p>
                                 <p>휠체어석<span class="gray">10석</span></p>
-                                </div>
                             </div>
                             <div class="seat-img">
                                 <img src="./img/master/standing-ground-seat02.png" alt="좌석배치도">
                                 <div>2층</div>
                             </div>
-                            <div class="seat-img-tab standing-img-tab">
-                                <ul>
-                                    <li><img src="./img/master/standing-seat01.png" alt="좌석배치도"></li>
-                                    <li><img src="./img/master/standing-ground-seat02.png" alt="좌석배치도"></li>
-                                </ul>
-                            </div> <!-- seat-img-tab -->
-                        </div> <!-- master-standing -->
+                        </div> <!-- standing-secondF -->
+                        
+                    </div> <!-- master-standing -->
 
-                        <div class="master-ground floor-tab-pos">
+                    <div class="master-ground">
+                        <div class="ground-firstF">
+                            <div class="caution">
+                                * 마스터카드홀의 좌석은 가변형이므로 대관시 담당자에게 문의 및 확인하시기 바랍니다.
+                            </div>
                             <div class="number-of-seat">
                                 <h3>마스터카드홀 그라운드형 1층 좌석배치도</h3>
                                     <p>1층 객석 좌석수 <span class="blue">992석</span></p>
-                                </div>
+
                             </div>
                             <div class="seat-img">
                                 <img src="./img/master/ground-seat01.png" alt="좌석배치도">
                                 <div>1층</div>
                             </div>
+                        </div> <!-- ground-firstF -->
 
+                        <div class="ground-scondF">
+                            <p class="caution">
+                                * 마스터카드홀의 좌석은 가변형이므로 대관시 담당자에게 문의 및 확인하시기 바랍니다.
+                            </p>
                             <div class="number-of-seat">
                                 <h3>마스터카드홀 그라운드형 2층 좌석배치도</h3>
-                                    <p>2층 객석 좌석수 <span class="blue">371석</span></p>
-                                    <p>휠체어석<span class="gray">10석</span></p>
-                                </div>
+                                <p>2층 객석 좌석수 <span class="blue">371석</span></p>
+                                <p>휠체어석<span class="gray">10석</span></p>
                             </div>
+                        
                             <div class="seat-img">
                                 <img src="./img/master/standing-ground-seat02.png" alt="좌석배치도">
                                 <div>2층</div>
                             </div>
-                            
-                            <div class="seat-img-tab ground-img-tab">
-                                <ul>
-                                    <li><img src="./img/master/ground-seat01.png" alt="좌석배치도"></li>
-                                    <li><img src="./img/master/standing-ground-seat02.png" alt="좌석배치도"></li>
-                                </ul>
-                            </div> <!-- seat-img-tab -->
-                        </div> <!-- master-ground -->
-                    </div> <!-- hall-tab1 -->
-                </div> <!-- tab-content -->
+                        </div> <!-- ground-scondF -->
+
+                        
+                    </div> <!-- master-ground -->
+                </section> <!-- master-hall (마스터카드홀 탭)-->
             </div> <!-- container -->
         </main> <!-- main -->
 
@@ -212,7 +247,7 @@
                         <h2>Let's Blue Square Together</h2>
                         <br>
                         <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
+                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span>. 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
                         </address>
                         <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
                     </div> <!-- left-contents -->
