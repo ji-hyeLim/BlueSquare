@@ -34,6 +34,14 @@ h2 {
     font-size: 0;
 }
 
+table, 
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+
 html,
 body {
     max-width: 100%;
@@ -212,22 +220,20 @@ main {
         }
         
         @include responsive(desktop-screens) {
-            margin-left: 0;
+            width: 1400px;
+            margin: 0 auto;
         }
         
         li {
             padding-right: 50px;
             z-index: 1;
             
-            &:first-child > a::after {
-                transform: scale(1); // 기본값 -> 다른 것 입력 시 0으로 바꾸는 기능 필요
-            }
             
             a {
                 font-size: calc($tab-font-size + 6px);
                 
                 &::after {
-                    margin-top: 15px;
+                    margin-top: 10px;
                     display: block;
                     content: "";
                     width: 100%;
@@ -237,17 +243,27 @@ main {
                     transform: scale(0);
                     transition: all 0.4s;
                 }
+                
+                // &:hover::after {
+                //     transform: scale(1);
+                // }
 
-                &:hover::after {
+                &.underline::after {
                     transform: scale(1);
                 }
             }
         } // li
     } // ul.tab-menu
 
-    section.tab-menu1 {
-        margin-top: -2px;
+    section {
+        display: none;
+        margin-top: -3px;
+        border-top: 2px solid $gray-border;
         
+        &.show {
+            display: block;
+        }
+
         .accord-wrap {
             // background-color: red;
             position: relative; 
@@ -262,7 +278,7 @@ main {
                 
                 a {
                     margin-left: 20px;
-                    margin-right: 20px;
+                    margin-right: 40px;
                     padding: 25px 0;
                     padding-left: 20px;
                     text-indent: -20px;
@@ -277,9 +293,15 @@ main {
                         display: inline-block;
                         content: 'Q';
                         padding: 0 10px;
-                        font-size: 18px;
-                        color: $point-color;
+                        font: {
+                            size: $text-font-size;
+                            family: $kor-font;
+                        }
+                        color: $point-color;    
                         
+                        @include responsive(large-tablet-screens) {
+                            font-size: 18px;
+                        }
                     }
                 }
 
@@ -290,31 +312,26 @@ main {
                 .arrow-wrap {
                     cursor: pointer;
                     @include pos-center-y() {
-                        right: 0;
+                        right: 10px;
                     }
 
-                    .arrow-top {
-                        display: none;
+                    
+                    i {
+                        transition: all 0.4s;
                     }
-
-                    .arrow-down {
-                        display: block;
-                    }
-
                 }
-
-                &.on div .arrow-down {
-                    display: none;
+                
+                &.on div i {
+                    transform: rotate(180deg);
                 }
+                
 
-                &.on div .arrow-top {
-                    display: block;
-                }
+
             } // .btn-open
 
             .last-border {
-                border-bottom: 2px solid $gray-border;                    
-            }
+                border-bottom: 1px solid $gray-border;                    
+            } // .last-border
 
             .accord-content {
                 overflow: hidden;
@@ -326,7 +343,60 @@ main {
                 p {
                     line-height: 1.5;
                     font-size: 16px;
-                }                
+
+                    @include responsive(large-tablet-screens) {
+                        font-size: 18px;
+                    }
+                    
+                    .go-to {
+                        display: inline-block;
+                        font-weight: 600;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .link {
+                        display: inline-block;
+                        margin-left: 10px;
+                        font-size: $mini-text-font-size;
+                        color: #fff;
+                        padding: 2px 5px;
+                        background-color: $point-color;
+
+                        i {
+                            padding-left: 5px;
+                        }
+                    } 
+                    
+                } // p           
+
+                .parking-table {
+                    tr {
+                        th,
+                        td {
+                            padding: 5px;
+                            line-height: 1.5;
+                            font-size: $mini-text-font-size;
+
+                            @include responsive(small-tablet-screens) {
+                                font-size: 14px;
+                            }
+
+                            @include responsive(large-tablet-screens) {
+                                font-size: $text-font-size;
+                            }
+                        }
+
+                        td {
+                            span {
+                                font-family: $eng-font;
+                                letter-spacing: -0.0769230769em;
+                            }
+                        }
+                    }
+                }
             } //.accord-content 
 
         } // .accord-wrap
