@@ -247,15 +247,58 @@ main .detail-main {
 main .detail-main .left-img .ticket-poster {
   text-align: center;
 }
-main .detail-main .left-img .ticket-poster a {
+main .detail-main .left-img .ticket-poster .topWrap {
+  position: relative;
+  margin-bottom: 150px;
+}
+main .detail-main .left-img .ticket-poster .topWrap .container {
+  padding: 0;
+}
+main .detail-main .left-img .ticket-poster .topWrap .bg {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+main .detail-main .left-img .ticket-poster .topWrap .bg img {
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  object-fit: cover;
+}
+main .detail-main .left-img .ticket-poster .topWrap .content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  height: 400px;
+  padding: 2.2rem 2.5rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .detail-main .left-img .ticket-poster .topWrap .content a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  width: 250px;
   margin: 0;
 }
-main .detail-main .left-img .ticket-poster a img {
-  width: 70%;
-  max-width: 500px;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  box-shadow: 8px 8px 3px gray;
+main .detail-main .left-img .ticket-poster .topWrap .content a .poster {
+  width: 250px;
+  vertical-align: top;
+  box-shadow: 0px 10px 5px gray;
+}
+main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
+  position: sticky;
+  position: absolute;
+  left: 10px;
+  bottom: 1.2rem;
+  width: 3.8rem;
+  height: 3.8rem;
+}
+main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn img {
+  width: 4rem;
 }
 main .detail-main .right-text {
   width: 100%;
@@ -364,13 +407,33 @@ main .detail-main .right-text .info-booking-button ul li:last-child a {
   main .detail-main .left-img {
     display: inline-block;
   }
-  main .detail-main .left-img .ticket-poster {
+  main .detail-main .left-img .ticket-poster .topWrap {
     text-align: center;
   }
-  main .detail-main .left-img .ticket-poster a img {
+  main .detail-main .left-img .ticket-poster .topWrap .container {
+    padding: 0 20px;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .bg {
+    display: none;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .content {
+    background-color: transparent;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .content a {
+    width: 350px;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .content a .poster {
+    width: 100%;
     margin-top: 0px;
     margin: 0;
     box-shadow: 10px 10px 3px gray;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
+    left: 20px;
+    bottom: 2rem;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn img {
+    width: 4.5rem;
   }
   main .detail-main .right-text {
     display: inline-block;

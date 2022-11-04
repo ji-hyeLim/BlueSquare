@@ -58,6 +58,18 @@ footer {
   display: block;
 }
 
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
 .container {
   position: relative;
   margin: 0 auto;
@@ -233,11 +245,11 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  padding-bottom: 140px;
+  padding-bottom: 120px;
 }
 @media screen and (min-width: 1024px) {
   main {
-    padding-bottom: 300px;
+    padding-bottom: 204px;
   }
 }
 main h1 {
@@ -300,206 +312,402 @@ main ul.tap-menu li a:hover::after {
     transform: scale(0.3);
   }
 }
-main .map-txt {
+main section.map-txt {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt {
+  main section.map-txt {
     flex-direction: row;
   }
 }
-main .map-txt .map {
+main section.map-txt .map {
   margin-top: 190px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .map {
+  main section.map-txt .map {
     margin-top: 300px;
   }
 }
-main .map-txt .map iframe {
+main section.map-txt .map iframe {
   width: 100%;
   height: 433px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .map iframe {
+  main section.map-txt .map iframe {
     width: 710px;
     height: 786px;
   }
 }
-main .map-txt .txt {
+main section.map-txt .txt {
   margin-top: 100px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt {
+  main section.map-txt .txt {
     margin-top: 330px;
     padding-left: 95px;
   }
 }
-main .map-txt .txt .area {
+main section.map-txt .txt .area {
   display: flex;
   justify-content: space-between;
   justify-content: left;
   margin-bottom: 14px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .area {
+  main section.map-txt .txt .area {
     margin-bottom: 40px;
   }
 }
-main .map-txt .txt .area img {
+main section.map-txt .txt .area img {
   width: 12px;
   height: 17px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .area img {
+  main section.map-txt .txt .area img {
     width: 16px;
     height: 23px;
   }
 }
-main .map-txt .txt .area p {
+main section.map-txt .txt .area p {
   margin-left: 10px;
   font-size: 24px;
   font-weight: 600;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .area p {
+  main section.map-txt .txt .area p {
     font-size: 30px;
     margin-left: 28px;
   }
 }
-main .map-txt .txt .call {
+main section.map-txt .txt .call {
   display: flex;
   justify-content: space-between;
   justify-content: left;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .call {
+  main section.map-txt .txt .call {
     margin-bottom: 76px;
   }
 }
-main .map-txt .txt .call img {
+main section.map-txt .txt .call img {
   width: 17px;
   height: 18px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .call img {
+  main section.map-txt .txt .call img {
     width: 22px;
     height: 22px;
   }
 }
-main .map-txt .txt .call p {
+main section.map-txt .txt .call p {
   margin-left: 10px;
   font-size: 16px;
   font-weight: 600;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .call p {
+  main section.map-txt .txt .call p {
     font-size: 30px;
     margin-left: 28px;
   }
 }
-main .map-txt .txt .load1 {
+main section.map-txt .txt .load1 {
   display: flex;
   justify-content: space-between;
   justify-content: left;
   margin-bottom: 26px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load1 {
+  main section.map-txt .txt .load1 {
     margin-bottom: 35px;
   }
 }
-main .map-txt .txt .load1 .car {
+main section.map-txt .txt .load1 .car {
   white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
   padding-right: 10px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load1 .car {
+  main section.map-txt .txt .load1 .car {
     font-size: 16px;
     padding-right: 44px;
   }
 }
-main .map-txt .txt .load1 .c-txt {
+main section.map-txt .txt .load1 .c-txt {
   font-size: 14px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load1 .c-txt {
+  main section.map-txt .txt .load1 .c-txt {
     font-size: 16px;
   }
 }
-main .map-txt .txt .load2 {
+main section.map-txt .txt .load2 {
   display: flex;
   justify-content: space-between;
   justify-content: left;
   margin-bottom: 26px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load2 {
+  main section.map-txt .txt .load2 {
     margin-bottom: 35px;
   }
 }
-main .map-txt .txt .load2 .car {
+main section.map-txt .txt .load2 .car {
   white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
   padding-right: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load2 .car {
+  main section.map-txt .txt .load2 .car {
     font-size: 16px;
     padding-right: 54px;
   }
 }
-main .map-txt .txt .load2 .c-txt {
+main section.map-txt .txt .load2 .c-txt {
   font-size: 14px;
   line-height: 18px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load2 .c-txt {
+  main section.map-txt .txt .load2 .c-txt {
     font-size: 16px;
     line-height: 25px;
   }
 }
-main .map-txt .txt .load3 {
+main section.map-txt .txt .load3 {
   display: flex;
   justify-content: space-between;
   justify-content: left;
   margin-bottom: 26px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load3 {
+  main section.map-txt .txt .load3 {
     margin-bottom: 35px;
   }
 }
-main .map-txt .txt .load3 .car {
+main section.map-txt .txt .load3 .car {
   white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
   padding-right: 10px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load3 .car {
+  main section.map-txt .txt .load3 .car {
     font-size: 16px;
     padding-right: 44px;
   }
 }
-main .map-txt .txt .load3 .c-txt {
+main section.map-txt .txt .load3 .c-txt {
   font-size: 14px;
   line-height: 24px;
 }
 @media screen and (min-width: 1024px) {
-  main .map-txt .txt .load3 .c-txt {
+  main section.map-txt .txt .load3 .c-txt {
     font-size: 16px;
     line-height: 25px;
   }
 }
-main .map-txt .txt .load3 .c-txt span {
+main section.map-txt .txt .load3 .c-txt span {
   font-weight: 500;
+}
+main section.parking {
+  display: none;
+  padding-top: 80px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking {
+    padding-top: 150px;
+  }
+}
+main section.parking .top-txt {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .top-txt {
+    margin-bottom: 72px;
+  }
+}
+main section.parking .top-txt p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .top-txt p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+main section.parking .elec-info {
+  background-color: #eee;
+  padding: 14px 10px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .elec-info {
+    padding: 50px 99px;
+    margin-bottom: 68px;
+    width: 690px;
+  }
+}
+main section.parking .elec-info .elecTxt {
+  font-size: 14px;
+  line-height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .elec-info .elecTxt {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+main section.parking .elec-info .elecTxt span {
+  font-weight: 600;
+}
+main section.parking .elec-info .elecTxt .txt2 {
+  margin-top: 20px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .elec-info .elecTxt .txt2 {
+    margin-top: 30px;
+  }
+}
+main section.parking .info1 p.sub {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info1 p.sub {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+main section.parking .info1 p.txt1 {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info1 p.txt1 {
+    font-size: 16px;
+    margin-bottom: 45px;
+  }
+}
+main section.parking .info1 p.txt1 span {
+  font-weight: 600;
+}
+main section.parking .info1 p.txt2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 45px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info1 p.txt2 {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  }
+}
+main section.parking .info2 p.sub {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info2 p.sub {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+main section.parking .info2 p.txt1 {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info2 p.txt1 {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+main section.parking .info2 p.txt1 span {
+  font-weight: 500;
+}
+main section.parking .info2 table {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info2 table {
+    width: 810px;
+    margin-bottom: 35px;
+  }
+}
+main section.parking .info2 table .t-sub {
+  background: #eee;
+}
+main section.parking .info2 table th:first-child {
+  border-left: 0;
+  min-width: 50px;
+}
+main section.parking .info2 table th:nth-child(2) {
+  min-width: 150px;
+}
+main section.parking .info2 table td:last-child {
+  border-right: 0;
+}
+main section.parking .info2 p.txt2 {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 45px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info2 p.txt2 {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  }
+}
+main section.parking .info3 p.sub {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info3 p.sub {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+main section.parking .info3 p.txt1 {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info3 p.txt1 {
+    font-size: 16px;
+    margin-bottom: 84px;
+  }
+}
+main section.parking .info3 p.txt1 span {
+  font-weight: 500;
+}
+main section.parking .info3 p.txt2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .info3 p.txt2 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+main section.parking .info3 p.txt2 span {
+  font-weight: 600;
 }
 
 footer {

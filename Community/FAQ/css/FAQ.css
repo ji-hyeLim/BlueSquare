@@ -92,6 +92,13 @@ h2 {
   font-size: 0;
 }
 
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 html,
 body {
   max-width: 100%;
@@ -252,21 +259,19 @@ main .tab-menu::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 1400px) {
   main .tab-menu {
-    margin-left: 0;
+    width: 1400px;
+    margin: 0 auto;
   }
 }
 main .tab-menu li {
   padding-right: 50px;
   z-index: 1;
 }
-main .tab-menu li:first-child > a::after {
-  transform: scale(1);
-}
 main .tab-menu li a {
   font-size: 24px;
 }
 main .tab-menu li a::after {
-  margin-top: 15px;
+  margin-top: 10px;
   display: block;
   content: "";
   width: 100%;
@@ -276,25 +281,30 @@ main .tab-menu li a::after {
   transform: scale(0);
   transition: all 0.4s;
 }
-main .tab-menu li a:hover::after {
+main .tab-menu li a.underline::after {
   transform: scale(1);
 }
-main section.tab-menu1 {
-  margin-top: -2px;
-}
-main section.tab-menu1 .accord-wrap {
-  position: relative;
-}
-main section.tab-menu1 .accord-wrap:first-child {
+main section {
+  display: none;
+  margin-top: -3px;
   border-top: 2px solid #ccc;
 }
-main section.tab-menu1 .accord-wrap .btn-open {
+main section.show {
+  display: block;
+}
+main section .accord-wrap {
+  position: relative;
+}
+main section .accord-wrap:first-child {
+  border-top: 2px solid #ccc;
+}
+main section .accord-wrap .btn-open {
   position: relative;
   border-bottom: 1px solid #ccc;
 }
-main section.tab-menu1 .accord-wrap .btn-open a {
+main section .accord-wrap .btn-open a {
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 40px;
   padding: 25px 0;
   padding-left: 20px;
   text-indent: -20px;
@@ -302,52 +312,97 @@ main section.tab-menu1 .accord-wrap .btn-open a {
   font-size: 16px;
 }
 @media screen and (min-width: 1024px) {
-  main section.tab-menu1 .accord-wrap .btn-open a {
+  main section .accord-wrap .btn-open a {
     font-size: 18px;
   }
 }
-main section.tab-menu1 .accord-wrap .btn-open a::before {
+main section .accord-wrap .btn-open a::before {
   display: inline-block;
   content: "Q";
   padding: 0 10px;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: "Pretendard", "Nanum Gothic", "맑은 고딕";
   color: rgb(0, 148, 214);
 }
-main section.tab-menu1 .accord-wrap .btn-open.on > a {
+@media screen and (min-width: 1024px) {
+  main section .accord-wrap .btn-open a::before {
+    font-size: 18px;
+  }
+}
+main section .accord-wrap .btn-open.on > a {
   font-weight: 600;
 }
-main section.tab-menu1 .accord-wrap .btn-open .arrow-wrap {
+main section .accord-wrap .btn-open .arrow-wrap {
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: 10px;
 }
-main section.tab-menu1 .accord-wrap .btn-open .arrow-wrap .arrow-top {
-  display: none;
+main section .accord-wrap .btn-open .arrow-wrap i {
+  transition: all 0.4s;
 }
-main section.tab-menu1 .accord-wrap .btn-open .arrow-wrap .arrow-down {
-  display: block;
+main section .accord-wrap .btn-open.on div i {
+  transform: rotate(180deg);
 }
-main section.tab-menu1 .accord-wrap .btn-open.on div .arrow-down {
-  display: none;
+main section .accord-wrap .last-border {
+  border-bottom: 1px solid #ccc;
 }
-main section.tab-menu1 .accord-wrap .btn-open.on div .arrow-top {
-  display: block;
-}
-main section.tab-menu1 .accord-wrap .last-border {
-  border-bottom: 2px solid #ccc;
-}
-main section.tab-menu1 .accord-wrap .accord-content {
+main section .accord-wrap .accord-content {
   overflow: hidden;
   display: none;
   padding: 25px 40px;
   width: 100%;
   background-color: #eee;
 }
-main section.tab-menu1 .accord-wrap .accord-content p {
+main section .accord-wrap .accord-content p {
   line-height: 1.5;
   font-size: 16px;
+}
+@media screen and (min-width: 1024px) {
+  main section .accord-wrap .accord-content p {
+    font-size: 18px;
+  }
+}
+main section .accord-wrap .accord-content p .go-to {
+  display: inline-block;
+  font-weight: 600;
+}
+main section .accord-wrap .accord-content p .go-to:hover {
+  text-decoration: underline;
+}
+main section .accord-wrap .accord-content p .link {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 13px;
+  color: #fff;
+  padding: 2px 5px;
+  background-color: rgb(0, 148, 214);
+}
+main section .accord-wrap .accord-content p .link i {
+  padding-left: 5px;
+}
+main section .accord-wrap .accord-content .parking-table tr th,
+main section .accord-wrap .accord-content .parking-table tr td {
+  padding: 5px;
+  line-height: 1.5;
+  font-size: 13px;
+}
+@media screen and (min-width: 600px) {
+  main section .accord-wrap .accord-content .parking-table tr th,
+main section .accord-wrap .accord-content .parking-table tr td {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section .accord-wrap .accord-content .parking-table tr th,
+main section .accord-wrap .accord-content .parking-table tr td {
+    font-size: 16px;
+  }
+}
+main section .accord-wrap .accord-content .parking-table tr td span {
+  font-family: "Montserrat", sans-serif, Arial;
+  letter-spacing: -0.0769230769em;
 }
 
 footer {
@@ -518,4 +573,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=FAQ.css.map */
+}
