@@ -62,3 +62,17 @@ section,
 footer {
     display: block;
 }
+
+table,
+th,
+td {
+    
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+
