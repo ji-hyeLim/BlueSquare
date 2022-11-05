@@ -10,14 +10,21 @@
     <script>
         $(function() {
             $(".cast-hidden").hide();
-            $(".toggled-btn").on("click", function() {
+            $("#toggled-btn").on("click", function() {
 				$(".cast-hidden").slideToggle(300, "linear");
                 $('.toggled-btn div span').toggleClass('on');
                 $('.toggled-btn div img').toggleClass('rotate');
-                $(".img-contents img display").toggleClass("block");
-                $(".img-contents img display").toggleClass("block");
-			});
-        });
+            });
+
+            $(".img-contents img").hide();
+            for(i = 1; i <= 4; i++) {
+                $(`#toggled-btn0${i}`).on("click", function() {
+                    $(".hidden").toggle();
+                    $(`.img-contents img`).toggle();
+                });
+            }
+        });    
+ 
     </script> 
 </head>
 <body>
@@ -351,81 +358,78 @@
                                             </div>
                                         </li>
                                     </div> <!-- cast-hidden -->
-                                    <div class="toggled-btn">
-                                        <div>
-                                            <span>출연진 더보기</span><span class="on">접기</span>
-                                            <img src="./img/arrow_down.png" alt="arrow">
-                                        </div>
+                                </ul>    
+                                <div id="toggled-btn" class="toggled-btn">
+                                    <div>
+                                        <span>출연진 더보기</span><span class="on">접기</span>
+                                        <img src="./img/arrow_down.png" alt="arrow">
                                     </div>
-                                </ul>
+                                </div>
                             </div> <!-- cast-list -->
                         </div> <!-- box -->
                     </div> <!-- casting -->
 
                     <div class="notice">
-                        <h3>공지사항</h3>
-                        <div class="box">
+                        <div class="box01">
+                            <h3>공지사항</h3>
                             <p>
                                 * 10월24일(월), 10월31일(월), 11월7일(월) 은 공연이 없습니다.<br>
                                 * 10월18일(화) 7시30분, 10월22일(토) 2시, 10월22일(토) 7시 / 3회차의 1층 전좌석은 사전 판매 마감되었습니다.<br>
                                 * 11월 5일(토) 2시30분, 7시30분 / 11월 10일(목) 7시30분 회차는 사전 판매 마감되었습니다.
                             </p>
-                            <div class="img-contents">
+                            <div id="box01" class="img-contents">
+                                <div class="hidden"></div>
                                 <img src="./img/elisabeth/notice.png" alt="notice" class="notice-img">
+                                
                             </div>
-                            <div class="toggled-btn">
+                            <div id="toggled-btn01" class="toggled-btn">
                                 <div>
                                     <span>공지사항 더보기</span><span class="on">접기</span>
                                     <img src="./img/arrow_down.png" alt="arrow">
                                 </div>
                             </div>
-                        </div> <!-- box -->
+                        </div>
+                        
                     </div> <!-- notice -->
 
                     <div class="sale">
                         <h3>할인정보</h3>
-                        <div class="box">
-                            <div class="img-contents">
-                                <img src="./img/elisabeth/sale.png" alt="sale">
+                        <div class="img-contents">
+                            <img src="./img/elisabeth/sale.png" alt="sale">
+                        </div>
+                        <div id="toggled-btn02" class="toggled-btn">
+                            <div>
+                                <span>할인정보 더보기</span><span class="on">접기</span>
+                                <img src="./img/arrow_down.png" alt="arrow">
                             </div>
-                            <div class="toggled-btn">
-                                <div>
-                                    <span>할인정보 더보기</span><span class="on">접기</span>
-                                    <img src="./img/arrow_down.png" alt="arrow">
-                                </div>
-                            </div>
-                        </div> <!-- box -->
+                        </div>
                     </div> <!-- sale -->
 
                     <div class="schedule">
                         <h3>캐스팅 스케줄</h3>
-                        <div class="box">
-                            <div class="img-contents">
-                                <img src="./img/elisabeth/schedule.png" alt="schedule">
+                        <div class="img-contents">
+                            <img src="./img/elisabeth/schedule.png" alt="schedule">
+                        </div>
+                        <div id="toggled-btn03" class="toggled-btn">
+                            <div>
+                                <span>캐스팅 스케줄 더보기</span><span class="on">접기</span>
+                                <img src="./img/arrow_down.png" alt="arrow">
                             </div>
-                            <div class="toggled-btn">
-                                <div>
-                                    <span>캐스팅 스케줄 더보기</span><span class="on">접기</span>
-                                    <img src="./img/arrow_down.png" alt="arrow">
-                                </div>
-                            </div>
-                        </div> <!-- box -->
+                        </div>
                     </div> <!-- schedule -->
 
                     <div class="introduce">
                         <h3>공연소개</h3>
-                        <div class="box">
-                            <div class="img-contents">
-                                <img src="./img/elisabeth/introduce.png" alt="introduce">
-                                <img src="./img/elisabeth/introduce2.png" alt="introduce2">
+                        <div class="img-contents">
+                            <img src="./img/elisabeth/introduce.png" alt="introduce">
+                            <img src="./img/elisabeth/introduce2.png" alt="introduce2">
+                        </div>
+                        <div id="toggled-btn04" class="toggled-btn">
+                            <div>
+                                <span>공연소개 더보기</span><span class="on">접기</span>
+                                <img src="./img/arrow_down.png" alt="arrow">
                             </div>
-                            <div class="toggled-btn">
-                                <div>
-                                    <span>공연소개 더보기</span><span class="on">접기</span>
-                                    <img src="./img/arrow_down.png" alt="arrow">
-                                </div>
-                            </div>
-                        </div> <!-- box -->
+                        </div>
                     </div> <!-- introduce -->
 
                     <div class="event">

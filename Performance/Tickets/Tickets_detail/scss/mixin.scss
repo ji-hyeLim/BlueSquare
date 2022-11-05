@@ -72,40 +72,6 @@
     }
 }
 
-// toggle 
-@mixin toggle-btn() {
-    
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid $gray-font;
-
-    div {
-        @include flex-box() {
-            justify-content: center;
-        }
-        cursor: pointer;
-
-        span {
-            display: block;
-
-            &.on {
-                display: none;
-            }
-        }
-
-        img {
-            width: 18px;
-            margin-left: 15px;
-            
-            &.rotate {
-                transform: rotate(180deg);
-            }
-        }
-    }
-}
-
-
 // background-gradiunt 넣기
 @mixin background-gradiunt($path:"/Performance/Tickets/Tickets_detail/img/elisabeth/", $name, $format:".png") {
     background: linear-gradient(
@@ -115,4 +81,5 @@
     ), url("#{$path}#{$name}#{$format}");
     background-repeat: no-repeat;
     background-position-x: center;
+    background-size: 100%;
 }

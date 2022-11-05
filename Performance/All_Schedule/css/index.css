@@ -106,7 +106,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -231,9 +232,136 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
   }
 }
 
-main {
-  height: 2000px;
-  background-color: aliceblue;
+main h1 {
+  display: block;
+  margin-top: 137px;
+  font-size: 33px;
+}
+main hr {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+main hr:last-child {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+main .year {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50PX;
+}
+main .year h2 {
+  font-size: 28px;
+}
+main .year a img {
+  width: 10px;
+  height: 10px;
+}
+main .year a:first-child {
+  position: absolute;
+  top: 10px;
+  left: 35%;
+}
+main .year a:last-child {
+  position: absolute;
+  top: 10px;
+  right: 35%;
+}
+main .box ul {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .box ul li {
+  position: relative;
+  width: 47%;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 20px;
+}
+main .box ul li .hover-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main .box ul li .hover-black a {
+  display: none;
+}
+main .box ul li .hover-black:hover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+main .box ul li .hover-black:hover a {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 6em;
+  height: 6em;
+  line-height: 6em;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-weight: 400;
+}
+main .box ul li .poster img {
+  width: 100%;
+  height: 200px;
+}
+main .box ul li .text {
+  position: relative;
+}
+main .box ul li .text strong {
+  margin: 10px 0;
+  font-size: 18px;
+}
+main .box ul li .text p {
+  line-height: 15px;
+  color: #b2b2b2;
+  font-size: 8px;
+}
+main .box ul li .text span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #b2b2b2;
+  font-size: 8px;
+}
+@media screen and (min-width: 600px) {
+  main .box ul li {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 800px) {
+  main .box ul {
+    margin: 0 5%;
+  }
+  main .box ul li {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .box ul li {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .box ul {
+    margin: 0 10%;
+  }
+  main .box ul li {
+    width: 20%;
+  }
 }
 
 footer {
@@ -404,4 +532,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
