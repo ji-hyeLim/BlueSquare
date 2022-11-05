@@ -107,7 +107,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -265,7 +266,8 @@ main .detail-main .left-img .ticket-poster .topWrap .bg img {
   width: 100%;
   height: 100%;
   filter: blur(10px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .detail-main .left-img .ticket-poster .topWrap .content {
   position: relative;
@@ -290,6 +292,7 @@ main .detail-main .left-img .ticket-poster .topWrap .content a .poster {
   box-shadow: 0px 10px 5px gray;
 }
 main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
+  position: -webkit-sticky;
   position: sticky;
   position: absolute;
   left: 12px;
@@ -542,6 +545,12 @@ main .contents-list .casting .cast-list ul li .cast-text .cast-name {
   margin-top: 3px;
   font-weight: 600;
 }
+main .contents-list .casting .cast-list ul .cast-hidden {
+  display: none;
+}
+main .contents-list .casting .cast-list .toggled-btn {
+  display: none;
+}
 main .contents-list .toggled-btn {
   width: 100%;
   margin-top: 30px;
@@ -567,36 +576,40 @@ main .contents-list .toggled-btn div img {
 main .contents-list .toggled-btn div img.rotate {
   transform: rotate(180deg);
 }
-main .contents-list .img-contents {
-  height: 800px;
-  overflow: hidden;
-}
 main .contents-list .img-contents img {
   width: 100%;
-  display: none;
+}
+main .contents-list .img-contents .hidden {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
 }
 main .contents-list .notice {
   padding: 0;
 }
-main .contents-list .notice .img-contents {
+main .contents-list .notice .img-contents .hidden {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/notice.png");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-size: 100%;
 }
-main .contents-list .sale .img-contents {
+main .contents-list s .sale .img-contents {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/sale.png");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-size: 100%;
 }
 main .contents-list .schedule .img-contents {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/schedule.png");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-size: 100%;
 }
 main .contents-list .introduce .img-contents {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/introduce.png");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-size: 100%;
 }
 main .contents-list .event .box {
   text-align: center;
@@ -631,6 +644,7 @@ main .contents-list .event .box {
     text-align: center;
     display: flex;
     justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     width: 880px;
     margin: 0 auto;
@@ -654,7 +668,11 @@ main .contents-list .event .box {
   main .contents-list .casting .cast-list ul .cast-hidden {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+  }
+  main .contents-list .casting .cast-list .toggled-btn {
+    display: block;
   }
 }
 
@@ -826,4 +844,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */

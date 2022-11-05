@@ -11,6 +11,12 @@
         }
     }
 
+    @else if($break-point == medium-tablet-screens) {
+        @media screen and (min-width:$break-medium-tablet) {
+            @content;
+        }
+    }
+
     @else if($break-point == large-tablet-screens) {
         @media screen and (min-width:$break-large-tablet) {
             @content;

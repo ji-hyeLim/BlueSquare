@@ -191,8 +191,177 @@ header {
 // * ===================== main ===================== *
 
 main {
-    height: 2000px;
-    background-color: aliceblue;
+    h1 {
+        display: block;
+        margin-top: 137px;
+        
+        font-size: $title-font-size - 5;
+    }
+
+    hr {
+        margin-top: 30px;
+        margin-bottom: 100px;
+        &:last-child {
+            margin-top: 100px;
+            margin-bottom: 200px;
+        }
+    }
+
+    .year {
+        @include flex-box() {
+            justify-content: center;
+        }
+        position: relative;
+        text-align: center;
+        margin-bottom: 50PX;
+
+        h2 {
+            font-size: $sub-title-font-size + 10;
+        }
+
+        a {
+            img { 
+                width: 10px;
+                height: 10px;   
+            }
+            &:first-child {
+                    position: absolute;
+                    top: 10px; left: 35%;
+                }
+
+            &:last-child {
+                position: absolute;
+                top: 10px; right: 35%;
+            }
+        }
+    }
+
+    .box {
+        ul {
+            @include flex-box() {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            li {
+                position: relative;
+                width: 47%;
+                border: 1px solid black;
+                
+                margin: 5px;
+                padding: 20px;
+
+                .hover-black {
+                    position: absolute;
+                    top: 0; left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    a {
+                        display: none;
+                    }
+
+                    &:hover {
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,.8);
+
+                        a {
+                            display: block;
+                            position: absolute;
+                            top: 30%; left: 30%;
+                            width: 6em;
+                            height: 6em;
+                            line-height: 6em;
+                            text-align: center;
+                            border: 2px solid white;
+                            border-radius: 50%;
+                            color: white;
+                            font-weight: 400;
+                        }
+                    }
+                    
+                }
+
+                .poster {
+                    img {
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+
+                .text {
+                    position: relative;
+
+                    strong {
+                        margin: 10px 0;
+                        font-size: $sub-title-font-size;
+                    }
+
+                    p {
+                        line-height: 15px;
+                        color: $gray-font;
+                        font-size: $mini-text-font-size - 5;
+                    }
+
+                    span {
+                        position: absolute;
+                        bottom: 0; right: 0;
+                        color: $gray-font;
+                        font-size: $mini-text-font-size - 5;
+                    }
+                }
+                
+            } // li
+        } // ul
+    } // box
+
+    @include responsive(small-tablet-screens) {
+        .box {
+            ul {
+                // margin: 0 10%;
+                li {
+                    width: 40%;
+                }
+            }
+            
+        }
+    }
+
+    @include responsive(medium-tablet-screens) {
+        .box {
+            ul {
+                margin: 0 5%;
+                li {
+                    width: 30%;
+                }
+            }
+            
+        }
+    }
+
+    @include responsive(large-tablet-screens) {
+        .box {
+            ul {
+                li {
+                    width: 25%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    @include responsive(desktop-screens) {
+        .box {
+            ul {
+                margin: 0 10%;
+                li {
+                    width: 20%;
+                }
+            }
+        }
+    }
 }
 
 
