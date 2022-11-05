@@ -20,7 +20,7 @@ li {
 }
 
 a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: black;
 }
@@ -106,7 +106,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -232,8 +233,362 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  height: 2000px;
-  background-color: aliceblue;
+  padding-top: 100px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    padding-top: 120px;
+  }
+}
+main h1.title {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 74px;
+}
+@media screen and (min-width: 1024px) {
+  main h1.title {
+    font-size: 38px;
+    margin-bottom: 125px;
+  }
+}
+main .txtBox {
+  display: none;
+  height: 143px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #000;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  main .txtBox {
+    min-width: 560px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .txtBox {
+    min-width: 824px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .txtBox {
+    width: 1166px;
+  }
+}
+main .txtBox div {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+main .txtBox div img {
+  margin-right: 10px;
+  width: 32px;
+  height: 18px;
+}
+main .txtBox div p {
+  margin-top: -2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main .ticketing {
+  margin-top: 73px;
+  margin-bottom: 58px;
+}
+@media screen and (min-width: 600px) {
+  main .ticketing {
+    margin-top: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing {
+    margin-top: 387px;
+  }
+}
+main .ticketing h2 {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing h2 {
+    margin-bottom: 54px;
+    font-size: 30px;
+  }
+}
+main .ticketing .way {
+  margin-bottom: 34px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .way {
+    margin-bottom: 46px;
+  }
+}
+main .ticketing .way h3 {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .way h3 {
+    margin-bottom: 33px;
+    font-size: 18px;
+  }
+}
+main .ticketing .way .internet {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+main .ticketing .way .internet p.bd {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .way .internet p.bd {
+    font-size: 16px;
+  }
+}
+main .ticketing .way .internet p.txt {
+  margin-top: -2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .way .internet p.txt {
+    margin-top: -1px;
+    font-size: 16px;
+  }
+}
+main .ticketing .way .internet p.txt a {
+  width: 87px;
+  color: #fff;
+  padding: 0 3px;
+  font-size: 13px;
+  background-color: #0094d6;
+  margin-left: 5px;
+}
+main .ticketing .way .internet p.txt a i {
+  margin-left: 5px;
+}
+main .ticketing .way .internet p.txt a:hover {
+  font-weight: 600;
+}
+main .ticketing .way .call {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+main .ticketing .way .call p.bd {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 23px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .way .call p.bd {
+    font-size: 16px;
+  }
+}
+main .ticketing .way .call p.txt {
+  margin-top: -2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .way .call p.txt {
+    margin-top: -1px;
+    font-size: 16px;
+  }
+}
+main .ticketing .fee {
+  margin-bottom: 34px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .fee {
+    margin-bottom: 46px;
+  }
+}
+main .ticketing .fee h3 {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .fee h3 {
+    margin-bottom: 33px;
+    font-size: 18px;
+  }
+}
+main .ticketing .fee .internet {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+main .ticketing .fee .internet p.bd {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .fee .internet p.bd {
+    font-size: 16px;
+  }
+}
+main .ticketing .fee .internet p.txt {
+  margin-top: -2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .fee .internet p.txt {
+    margin-top: -1px;
+    font-size: 16px;
+  }
+}
+main .ticketing .fee .call {
+  display: flex;
+  justify-content: space-between;
+  justify-content: left;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+main .ticketing .fee .call p.bd {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 23px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .fee .call p.bd {
+    font-size: 16px;
+  }
+}
+main .ticketing .fee .call p.txt {
+  margin-top: -2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .ticketing .fee .call p.txt {
+    margin-top: -1px;
+    font-size: 16px;
+  }
+}
+main .calloff {
+  margin-top: 58px;
+  margin-bottom: 140px;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff {
+    margin-top: 76px;
+    margin-bottom: 220px;
+  }
+}
+main .calloff h2 {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff h2 {
+    margin-bottom: 54px;
+    font-size: 30px;
+  }
+}
+main .calloff .deadline {
+  margin-bottom: 34px;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .deadline {
+    margin-bottom: 46px;
+  }
+}
+main .calloff .deadline h3 {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .deadline h3 {
+    margin-bottom: 33px;
+    font-size: 18px;
+  }
+}
+main .calloff .deadline p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .deadline p {
+    font-size: 16px;
+  }
+}
+main .calloff .coff-fee {
+  margin-bottom: 34px;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .coff-fee {
+    margin-bottom: 46px;
+  }
+}
+main .calloff .coff-fee h3 {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .coff-fee h3 {
+    margin-bottom: 33px;
+    font-size: 18px;
+  }
+}
+main .calloff .coff-fee p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .coff-fee p {
+    font-size: 16px;
+  }
+}
+main .calloff .coff-fee div.box {
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #eee;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .coff-fee div.box {
+    padding: 20px;
+    max-width: 800px;
+  }
+}
+main .calloff .coff-fee div.box p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1024px) {
+  main .calloff .coff-fee div.box p {
+    font-size: 16px;
+  }
+}
+main .calloff .coff-fee div.box p span {
+  font-weight: 600;
 }
 
 footer {
@@ -404,4 +759,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */

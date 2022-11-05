@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <script src="https://kit.fontawesome.com/02fac5dfa7.js" crossorigin="anonymous"></script>
     <title>BLUE SQUARE</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
             <div class="header-bg">
                 <video autoplay loop muted>
-                    <source src="video/videoplayback2.mp4" type="video/mp4">
+                    <source src="video/이용안내 페이드x.mp4" type="video/mp4">
                     <p>이 브라우저는 HTML5 비디오를 지원하지 않습니다.</p>
                 </video>
             </div> <!-- header-bg -->
@@ -23,7 +26,7 @@
                             <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
                             <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
                         </div>
-    
+
                         <nav class="main-menu">
                             <ul class="gnb">
                                 <li>
@@ -65,11 +68,13 @@
                                 </li>
                             </ul> <!-- gnb -->
                         </nav> <!-- main-menu-->
-    
+
                         <div class="right-menu">
-                            <ul>                                
-                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png" alt="ticket"></a></li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
+                            <ul>
+                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png"
+                                            alt="ticket"></a></li>
+                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png"
+                                            alt="menu"></a></li>
                                 <li class="large-only"><a href="#">TICKET</a></li>
                                 <li class="large-only"><a href="#">LOG IN</a></li>
                                 <li class="large-only"><a href="#">JOIN</a></li>
@@ -82,7 +87,75 @@
 
         <main>
             <div class="container">
-                <h1>Main</h1>
+                <h1 class="title">예매안내</h1>
+                <div class="txtBox">
+                    <div>
+                        <img src="./img/티켓 아이콘.png" alt="티켓모양아이콘">
+                        <p>
+                        블루스퀘어의 모든 공연들은 인터파크 티켓을 통해 예매하실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="ticketing">
+                    <h2>예매</h2>
+                    <div class="way">
+                        <h3>예매방법 안내</h3>
+                        <div class="internet">
+                            <p class="bd">인터넷 예매</p>
+                            <p class="txt">
+                            인터파크 티켓 사이트에서 예매 가능
+                            <a href="#">예매바로가기<i class="fa-solid fa-angle-right"></i></a>
+                            </p>
+                        </div>
+                        <div class="call">
+                            <p class="bd">전화 예매</p>
+                            <p class="txt">고객서비스 센터 1544-1555</p>
+                        </div>
+                    </div> <!-- way -->
+                    <div class="fee">
+                        <h3>예매수수료 안내</h3>
+                        <div class="internet">
+                            <p class="bd">인터넷 예매</p>
+                            <p class="txt">장당 1,000원</p>
+                        </div>
+                        <div class="call">
+                            <p class="bd">전화 예매</p>
+                            <p class="txt">장당 2,000원</p>
+                        </div>
+                    </div> <!-- fee -->
+                </div> <!-- ticketing -->
+                <div class="calloff">
+                    <h2>취소</h2>
+                    <div class="deadline">
+                        <h3>취소 마감 시간</h3>
+                        <p>
+                            관람일 전일 (평일/주말/공휴일 오후 5시, 토요일 오전 11시)<br>
+                            ※ 관람일 전일 오후 5시 이후(토요일은 오전 11시) 또는 관람일 당일 예매하신 건에 대해서는 예매후 취소/변경/환불 불가<br>
+                            ※ 토요일이 공휴일인 경우 토요일 오전 11시 기준으로 적용됩니다.
+                        </p>
+                    </div>
+                    <div class="coff-fee">
+                        <h3>취소 수수료 안내</h3>
+                        <p>
+                            1. 예매 후 7일까지 취소시에는 취소수수료가 없습니다.<br>
+                            2. 관람일 기준은 아래 기준으로 취소수수료가 적용됩니다.<br>
+                            (1번과 2번에 모두 해당되는 경우, 2번 기준이 우선 적용됩니다)
+                        </p>
+                        <div class="box">
+                            <p>
+                                <span>~ 관람일 10일전까지</span>&nbsp;&nbsp; 뮤지컬, 콘서트, 클래식, 무용은 장당 4,000원 그 외 장당 2,000원 (단, 최대 티켓금액의 10% 한도)<br>
+                                <span>관람일 9일전~관람일 7일전까지</span>&nbsp;&nbsp; 티켓금액의 10%<br>
+                                <span>관람일 6일전~관람일 3일전까지</span>&nbsp;&nbsp; 티켓금액의 20%<br>
+                                <span>관람일 2일전~관람일 1일전까지</span>&nbsp;&nbsp; 티켓금액의 30%
+                            </p>
+                        </div>
+                        <p>
+                            위 2번의경우에도 예매 당일 밤 12시 이전 취소시에는 취소 수수료가 없습니다. (취소기간내에 한함)<br>
+                            ※ 상품의 특성에 따라서, 취소수수료 정책이 달라질 수 있습니다. (각 상품 예매시 취소수수료 확인)<br>
+                            ※ 웹취소가능시간 이후에는 취소가 불가합니다. 단, 관람일 당일 취소가능한 상품의 경우 관람일 당일 취소시에는 티켓금액의 90%가 과금됩니다.
+                        </p>
+                    </div> <!-- coff-fee -->
+                </div>
 
             </div> <!-- container -->
         </main> <!-- main -->
@@ -94,11 +167,12 @@
                         <h2>Let's Blue Square Together</h2>
                         <br>
                         <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
+                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span>. 1544-1591&nbsp;&nbsp;<span>E-mail.
+                                bluesquare@interpark.com</span>
                         </address>
                         <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
                     </div> <!-- left-contents -->
-    
+
                     <div class="right-contents">
                         <ul class="footer-menu">
                             <li>Menu
@@ -135,11 +209,11 @@
                             </li>
                         </ul> <!-- footer-menu -->
                     </div> <!-- right-contents -->
-                    
+
                     <div class="large-only footer-title">
                         <h1>Blue&ZeroWidthSpace; Square</h1>
                     </div>
-                </div> <!-- flex-box -->                
+                </div> <!-- flex-box -->
             </div> <!-- container -->
 
             <div class="large-only line">
@@ -148,4 +222,5 @@
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
 </body>
+
 </html>
