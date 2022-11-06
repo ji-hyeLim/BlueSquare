@@ -54,7 +54,7 @@ body {
 }
 
 .gray {
-    color: rgb(138, 138, 138);
+    color: gray;
     font-weight: 600;
 }
 
@@ -211,7 +211,6 @@ header {
 
 
 // * ===================== main ===================== *
-
 main {
     h1 {
         font-size: $title-font-size;
@@ -292,16 +291,25 @@ main {
     } //sub-tab-menu
 
     .shinhan-hall {
+        // display: none;
         .shinhan-firstF {
-            .number-of-seat {
-                .number-wrap2 {
-                    display: none;
+            .on {
+                display: block;
+            }
 
-                    @include responsive (large-tablet-screens) {
-                        display: block;
-                    }
-                }
+            .number-of-seat {
+
                 .number-wrap1 {
+                    width: 390px;
+                    padding-right: 100px;
+
+                    .title,
+                    .content {
+                        div {
+                            padding-bottom: 8px;
+                        }
+                    }
+
                     @include flex-box();
 
                     @include responsive (large-tablet-screens) {
@@ -322,7 +330,39 @@ main {
                         color: #b377b5;
                         font-weight: 600;
                     }
-                } //number-wrap
+                } //number-wrap1
+
+                .number-wrap2 {
+                    display: none;
+
+                    .orange {
+                        color: #d38b1c;
+                        font-weight: 600;
+                    }
+        
+                    .green {
+                        color: #b1b77b;
+                        font-weight: 600;
+                    }
+        
+                    .purple {
+                        color: #b377b5;
+                        font-weight: 600;
+                    }
+
+                    @include responsive (large-tablet-screens) {
+                        display: block;
+                        display: flex;
+                        div {
+                            &:nth-child(odd) {
+                                padding-right: 20px;
+                            }
+                            &:nth-child(even) {
+                                padding-right: 40px;
+                            }
+                        }
+                    }
+                } //number-wrap2
             } //number-of-seat
         } //shinhan-firstF
 
@@ -335,25 +375,46 @@ main {
         } //shinhan-thirdF
 
         .seat-img-tab {
-            // background-color: green;
-            margin-top: 80px;  
+            display: none;
+            margin-top: 80px;
+
+            @include responsive(large-tablet-screens) {
+                width: 20%;
+                position: absolute;
+                right: 0;
+                top: 460px;
+            }
+
             
             ul {
-                background-color: red;
-                width: 100%;
+                // background-color: red;
                 @include flex-box();
 
                 @include responsive(large-tablet-screens) {
                     
-                    @include flex-box() {
+                    @include responsive(large-tablet-screens) {
                         flex-direction: column;
-                        // align-items: flex-start;
+                        align-items: flex-end;
+                        width: 80%;
                     }
                 }
         
                 li {
                     // cursor: pointer;
                     width: 30%;
+                    text-align: center;
+                    color: #ccc;
+
+                    @include responsive(large-tablet-screens) {
+                        width: 100%;
+                        padding-bottom: 20px;
+                    }
+
+                    &:last-child {
+                        @include responsive(large-tablet-screens) {
+                            padding-bottom: 0;
+                        }
+                    }
         
                     img {
                         display: block;
@@ -363,7 +424,7 @@ main {
 
                     }
                 }
-            }
+            } //ul
         } //seat-img-tab
 
     } //shinhan-hall
@@ -371,44 +432,75 @@ main {
     .master-hall {
         .master-standing {
             .standing-firstF {
-                background-color: skyblue;
+                // background-color: skyblue;
+                .number-of-seat {
+                    div {
+                        display: flex;
+                        padding-right: 20px;
+                    }
+                }
             }
             
             .standing-secondF {
-                
-                .gray {
-                    color: gray;
-                    position: absolute;
-                    left: 180px;
+                .number-of-seat {
+                    div {
+                        display: flex;
+                        padding-right: 20px;
+                        &:nth-child(odd) {
+                            padding-right: 20px;
+                        }
+                        &:nth-child(2) {
+                            padding-right: 40px;
+                        }
+                    }
                 }
+                
+
             }
 
             .seat-img-tab {
-                // background-color: green;
-                margin-top: 80px;  
+                margin-top: 80px;
+    
+                @include responsive(large-tablet-screens) {
+                    width: 20%;
+                    position: absolute;
+                    right: 0;
+                    top: 600px;
+                }
                 
                 ul {
-                    background-color: red;
-                    width: 100%;
+                    // background-color: red;
                     @include flex-box();
     
                     @include responsive(large-tablet-screens) {
                         
-                        @include flex-box() {
+                        @include responsive(large-tablet-screens) {
                             flex-direction: column;
-                            // align-items: flex-start;
+                            align-items: flex-end;
+                            width: 80%;
                         }
                     }
             
                     li {
                         // cursor: pointer;
                         width: 30%;
+                        text-align: center;
+                        color: #ccc;
+    
+                        @include responsive(large-tablet-screens) {
+                            width: 100%;
+                            padding-bottom: 20px;
+                        }
+    
+                        &:last-child {
+                            @include responsive(large-tablet-screens) {
+                                padding-bottom: 0;
+                            }
+                        }
             
                         img {
                             display: block;
                             width: 100%;
-                            // height: 98px;
-                            // height 값 auto 주면 크기 다 달라용
                         }
                     }
                 } //ul
@@ -418,19 +510,79 @@ main {
     
     .master-ground {
         .ground-firstF {
-            
-        }
-        
-        .ground-secondF {
             .number-of-seat {
-                .gray {
-                    color: gray;
-                    position: absolute;
-                    left: 180px;
+                div {
+                    display: flex;
+                    padding-right: 20px;
                 }
             }
         }
         
+        .ground-secondF {
+            .number-of-seat {
+                div {
+                    display: flex;
+                    padding-right: 20px;
+                    
+                    &:nth-child(odd) {
+                        padding-right: 20px;
+                    }
+                    &:nth-child(2) {
+                        padding-right: 40px;
+                        background-color: purple;
+                    }
+                }
+            }
+        }
+
+        .seat-img-tab {
+            display: none;
+            margin-top: 80px;
+
+            @include responsive(large-tablet-screens) {
+                width: 20%;
+                position: absolute;
+                right: 0;
+                top: 460px;
+            }
+            
+            ul {
+                // background-color: red;
+                @include flex-box();
+
+                @include responsive(large-tablet-screens) {
+                    
+                    @include responsive(large-tablet-screens) {
+                        flex-direction: column;
+                        align-items: flex-end;
+                        width: 80%;
+                    }
+                }
+        
+                li {
+                    // cursor: pointer;
+                    width: 30%;
+                    text-align: center;
+                    color: #ccc;
+
+                    @include responsive(large-tablet-screens) {
+                        width: 100%;
+                        padding-bottom: 20px;
+                    }
+
+                    &:last-child {
+                        @include responsive(large-tablet-screens) {
+                            padding-bottom: 0;
+                        }
+                    }
+        
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            } //ul
+        } //seat-img-tab
     } //master-hall
 
 } /* main */
