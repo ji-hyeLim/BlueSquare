@@ -88,6 +88,27 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -102,7 +123,7 @@ header {
   header {
     width: 100%;
     height: 936;
-    background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
+    background-image: url(../img/이미지레이어.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -113,54 +134,56 @@ header .header-bg {
   height: 100vh;
   overflow: hidden;
 }
-header .stageb-header {
+header .solos-header {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-header .stageb-header .hd-img img.mb {
+header .solos-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .hd-img img.mb {
+  header .solos-header .hd-img img.mb {
     display: none;
   }
 }
-header .stageb-header .hd-txt {
+header .solos-header .hd-txt {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-header .stageb-header .hd-txt p {
+header .solos-header .hd-txt p {
   color: white;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
   font-weight: 600;
   font-size: 40px;
   font-family: "Montserrat", sans-serif, Arial;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .hd-txt p {
+  header .solos-header .hd-txt p {
     font-size: 50px;
   }
 }
-header .stageb-header .dw-icon {
+header .solos-header .dw-icon {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 40px;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .dw-icon {
+  header .solos-header .dw-icon {
     bottom: 60px;
   }
 }
-header .stageb-header .dw-icon img {
+header .solos-header .dw-icon img {
   width: 45px;
   height: 45px;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .dw-icon img {
+  header .solos-header .dw-icon img {
     width: 54px;
     height: 54px;
   }
@@ -375,7 +398,7 @@ main ul.fnb-menu li a:hover {
     transform: scale(0.55);
   }
 }
-main .stageb-info1 {
+main .solos-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -383,26 +406,26 @@ main .stageb-info1 {
   margin-top: 90px;
 }
 @media screen and (min-width: 1024px) {
-  main .stageb-info1 {
+  main .solos-info1 {
     margin-top: 150px;
     flex-direction: row;
   }
 }
-main .stageb-info1 .info-img img {
+main .solos-info1 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .stageb-info1 .info-img img {
+  main .solos-info1 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .stageb-info1 .info-txt {
+main .solos-info1 .info-txt {
   padding-top: 55px;
   padding-left: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .stageb-info1 .info-txt {
+  main .solos-info1 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -412,26 +435,26 @@ main .stageb-info1 .info-txt {
   }
 }
 @media screen and (min-width: 1400px) {
-  main .stageb-info1 .info-txt {
+  main .solos-info1 .info-txt {
     padding-left: 0;
   }
 }
-main .stageb-info1 .info-txt p.solos-1 {
+main .solos-info1 .info-txt p.solos-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .stageb-info1 .info-txt p.solos-2 {
+main .solos-info1 .info-txt p.solos-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .stageb-info1 .info-txt p.solos-3 {
+main .solos-info1 .info-txt p.solos-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .stageb-info1 .info-txt p.solos-3 .txt-bd {
+main .solos-info1 .info-txt p.solos-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
@@ -470,11 +493,6 @@ main .solos-info2 .info-txt {
     padding-left: 20px;
     border-top: 1px solid #0094d6;
     border-bottom: 1px solid #0094d6;
-  }
-}
-@media screen and (min-width: 1400px) {
-  main .solos-info2 .info-txt {
-    padding-left: 0;
   }
 }
 main .solos-info2 .info-txt p.solos-1 {
@@ -533,11 +551,6 @@ main .solos-info3 .info-txt {
     padding-left: 20px;
     border-top: 1px solid #0094d6;
     border-bottom: 1px solid #0094d6;
-  }
-}
-@media screen and (min-width: 1400px) {
-  main .solos-info3 .info-txt {
-    padding-left: 0;
   }
 }
 main .solos-info3 .info-txt p.solos-1 {
@@ -729,4 +742,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=serve2.css.map */
+}/*# sourceMappingURL=solos.css.map */

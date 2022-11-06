@@ -88,6 +88,27 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -113,54 +134,56 @@ header .header-bg {
   height: 100vh;
   overflow: hidden;
 }
-header .stageb-header {
+header .fnbserve-header {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-header .stageb-header .hd-img img.mb {
+header .fnbserve-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .hd-img img.mb {
+  header .fnbserve-header .hd-img img.mb {
     display: none;
   }
 }
-header .stageb-header .hd-txt {
+header .fnbserve-header .hd-txt {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-header .stageb-header .hd-txt p {
+header .fnbserve-header .hd-txt p {
   color: white;
+  -webkit-animation: fadeIn 3s forwards;
+          animation: fadeIn 3s forwards;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   font-family: "Montserrat", sans-serif, Arial;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .hd-txt p {
+  header .fnbserve-header .hd-txt p {
     font-size: 50px;
   }
 }
-header .stageb-header .dw-icon {
+header .fnbserve-header .dw-icon {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 40px;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .dw-icon {
+  header .fnbserve-header .dw-icon {
     bottom: 60px;
   }
 }
-header .stageb-header .dw-icon img {
+header .fnbserve-header .dw-icon img {
   width: 45px;
   height: 45px;
 }
 @media screen and (min-width: 1024px) {
-  header .stageb-header .dw-icon img {
+  header .fnbserve-header .dw-icon img {
     width: 54px;
     height: 54px;
   }
@@ -375,7 +398,7 @@ main ul.fnb-menu li a:hover {
     transform: scale(0.55);
   }
 }
-main .stageb-info1 {
+main .fnb-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -383,26 +406,26 @@ main .stageb-info1 {
   margin-top: 90px;
 }
 @media screen and (min-width: 1024px) {
-  main .stageb-info1 {
+  main .fnb-info1 {
     margin-top: 150px;
     flex-direction: row;
   }
 }
-main .stageb-info1 .info-img img {
+main .fnb-info1 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .stageb-info1 .info-img img {
+  main .fnb-info1 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .stageb-info1 .info-txt {
+main .fnb-info1 .info-txt {
   padding-top: 55px;
   padding-left: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .stageb-info1 .info-txt {
+  main .fnb-info1 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -412,31 +435,31 @@ main .stageb-info1 .info-txt {
   }
 }
 @media screen and (min-width: 1400px) {
-  main .stageb-info1 .info-txt {
+  main .fnb-info1 .info-txt {
     padding-left: 0;
   }
 }
-main .stageb-info1 .info-txt p.solos-1 {
+main .fnb-info1 .info-txt p.txt-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .stageb-info1 .info-txt p.solos-2 {
+main .fnb-info1 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .stageb-info1 .info-txt p.solos-3 {
+main .fnb-info1 .info-txt p.txt-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .stageb-info1 .info-txt p.solos-3 .txt-bd {
+main .fnb-info1 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
 }
-main .solos-info2 {
+main .fnb-info2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
@@ -444,26 +467,26 @@ main .solos-info2 {
   margin-top: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 {
+  main .fnb-info2 {
     flex-direction: row;
     margin-top: 200px;
   }
 }
-main .solos-info2 .info-img img {
+main .fnb-info2 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-img img {
+  main .fnb-info2 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info2 .info-txt {
+main .fnb-info2 .info-txt {
   padding-top: 51px;
   padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-txt {
+  main .fnb-info2 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -473,31 +496,31 @@ main .solos-info2 .info-txt {
   }
 }
 @media screen and (min-width: 1400px) {
-  main .solos-info2 .info-txt {
+  main .fnb-info2 .info-txt {
     padding-left: 0;
   }
 }
-main .solos-info2 .info-txt p.solos-1 {
+main .fnb-info2 .info-txt p.txt-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info2 .info-txt p.solos-2 {
+main .fnb-info2 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info2 .info-txt p.solos-3 {
+main .fnb-info2 .info-txt p.txt-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .solos-info2 .info-txt p.solos-3 .txt-bd {
+main .fnb-info2 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
 }
-main .solos-info3 {
+main .fnb-info3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -506,27 +529,27 @@ main .solos-info3 {
   margin-bottom: 110px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 {
+  main .fnb-info3 {
     flex-direction: row;
     margin-top: 200px;
     margin-bottom: 300px;
   }
 }
-main .solos-info3 .info-img img {
+main .fnb-info3 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-img img {
+  main .fnb-info3 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info3 .info-txt {
+main .fnb-info3 .info-txt {
   padding-top: 51px;
   padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-txt {
+  main .fnb-info3 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -536,26 +559,26 @@ main .solos-info3 .info-txt {
   }
 }
 @media screen and (min-width: 1400px) {
-  main .solos-info3 .info-txt {
+  main .fnb-info3 .info-txt {
     padding-left: 0;
   }
 }
-main .solos-info3 .info-txt p.solos-1 {
+main .fnb-info3 .info-txt p.txt-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info3 .info-txt p.solos-2 {
+main .fnb-info3 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info3 .info-txt p.solos-3 {
+main .fnb-info3 .info-txt p.txt-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .solos-info3 .info-txt p.solos-3 .txt-bd {
+main .fnb-info3 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
@@ -729,4 +752,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=serve2.css.map */
+}/*# sourceMappingURL=stageb.css.map */
