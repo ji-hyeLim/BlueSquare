@@ -291,6 +291,7 @@ main .venue-process .process-slides::-webkit-scrollbar-thumb {
 @media screen and (min-width: 1400px) {
   main .venue-process .process-slides {
     overflow: hidden;
+    margin: 0 100px;
   }
 }
 main .venue-process .process-slides .slide-fix {
@@ -303,13 +304,13 @@ main .venue-process .process-slides .slide-fix:last-child {
 }
 @media screen and (min-width: 1024px) {
   main .venue-process .process-slides .slide-fix {
-    padding-right: 20px;
+    padding-right: 32px;
   }
 }
 main .venue-process .process-slides .slide-fix div {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 215px;
+  height: 215px;
   border: 1px solid #ccc;
   border-radius: 50%;
 }
@@ -340,9 +341,9 @@ main .venue-process .slide-btn {
   width: 20px;
   height: 20px;
   margin-top: 85px;
-  border-top: 4px solid rgb(0, 148, 214);
-  border-right: 4px solid rgb(0, 148, 214);
-  border-radius: 4px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 2px;
   cursor: pointer;
 }
 main .venue-process .slide-btn-left {
