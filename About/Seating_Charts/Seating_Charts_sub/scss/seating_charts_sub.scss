@@ -290,6 +290,13 @@ main {
         } //ul
     } //sub-tab-menu
 
+    section {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+
     .shinhan-hall {
         // display: none;
         .shinhan-firstF {
@@ -375,7 +382,7 @@ main {
         } //shinhan-thirdF
 
         .seat-img-tab {
-            display: none;
+            // display: none;
             margin-top: 80px;
 
             @include responsive(large-tablet-screens) {
@@ -430,6 +437,14 @@ main {
     } //shinhan-hall
 
     .master-hall {
+        // display: none;
+        & > div {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
         .master-standing {
             .standing-firstF {
                 // background-color: skyblue;

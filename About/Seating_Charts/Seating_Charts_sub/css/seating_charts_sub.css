@@ -336,6 +336,12 @@ main .sub-tab-menu ul li a:hover {
   color: #0094d6;
   font-weight: 600;
 }
+main section {
+  display: none;
+}
+main section.show {
+  display: block;
+}
 main .shinhan-hall .shinhan-firstF .on {
   display: block;
 }
@@ -394,7 +400,6 @@ main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 .purple {
   }
 }
 main .shinhan-hall .seat-img-tab {
-  display: none;
   margin-top: 80px;
 }
 @media screen and (min-width: 1024px) {
@@ -435,6 +440,12 @@ main .shinhan-hall .seat-img-tab ul li {
 main .shinhan-hall .seat-img-tab ul li img {
   display: block;
   width: 100%;
+}
+main .master-hall > div {
+  display: none;
+}
+main .master-hall > div.show {
+  display: block;
 }
 main .master-hall .master-standing .standing-firstF .number-of-seat div {
   display: flex;

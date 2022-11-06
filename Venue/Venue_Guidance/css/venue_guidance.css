@@ -247,12 +247,19 @@ main h2 {
 main ul.tab {
   margin-top: 100px;
   margin-bottom: 50px;
+  margin-left: 20px;
   border-bottom: 1px solid #ccc;
   overflow: auto;
   white-space: nowrap;
   display: flex;
   justify-content: space-between;
   justify-content: flex-start;
+}
+@media screen and (min-width: 1024px) {
+  main ul.tab {
+    width: 1400px;
+    margin: 100px auto 80px;
+  }
 }
 main ul.tab::-webkit-scrollbar {
   display: none;
@@ -269,14 +276,15 @@ main ul.tab li:last-child {
   }
 }
 main ul.tab li a::after {
+  margin-top: 10px;
   display: block;
   content: "";
   width: 100%;
-  height: 1px;
-  margin-top: 5px;
+  height: 8px;
+  border-radius: 5px 5px 0 0;
   background-color: #000;
   transform: scale(0);
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 main ul.tab li a:hover {
   font-weight: 600;
@@ -303,15 +311,13 @@ main .inner-tab li a:hover {
   color: #0094d6;
   font-weight: 600;
 }
-main .venue-guidance .venue-facility .flexbox {
-  background-color: lightsalmon;
-}
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox {
     display: flex;
   }
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap {
+  position: relative;
   background-color: lightseagreen;
 }
 @media screen and (min-width: 1024px) {
@@ -321,17 +327,34 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap {
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
   width: 100%;
+  height: 500px;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
   width: 100%;
+  height: 500px;
   top: 300px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img:first-child {
   opacity: 1;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
-  display: flex;
-  justify-content: space-between;
+  background-color: red;
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
@@ -378,18 +401,25 @@ main .venue-guidance .rental-fee {
   margin-top: 40px;
 }
 main .venue-guidance .rental-fee h2 {
+  position: relative;
   font-size: 28px;
   font-weight: normal;
 }
 main .venue-guidance .rental-fee h2::before {
+  position: absolute;
+  display: block;
   content: "";
-  width: 14px;
-  height: 30px;
+  width: 5px;
+  height: 100%;
+  margin-left: -13px;
   background-color: #0094d6;
 }
 main .venue-guidance .rental-fee h3 {
   font-weight: normal;
   color: #0094d6;
+}
+main .venue-guidance .rental-fee .perform-fee {
+  font-size: 14px;
 }
 main .venue-guidance .rental-fee .perform-fee .flexbox2 {
   margin-top: 40px;

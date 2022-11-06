@@ -207,7 +207,13 @@ main {
     ul.tab {
         margin-top: 100px;
         margin-bottom: 50px;
-        border-bottom: 1px solid #ccc;
+        margin-left: 20px;
+        border-bottom: 1px solid $gray-border;
+
+        @include responsive(large-tablet-screens) {
+            width: 1400px;
+            margin: 100px auto 80px; 
+        }
 
         overflow: auto;
         white-space: nowrap;
@@ -234,19 +240,21 @@ main {
 
             a {
                 &::after {
+                    margin-top: 10px;
                     display: block;
                     content: "";
                     width: 100%;
-                    height: 1px;
-                    margin-top: 5px;
+                    height: 8px;
+                    border-radius: 5px 5px 0 0;
                     background-color: #000;
                     transform: scale(0);
-                    transition: all 0.5s;
+                    transition: all 0.4s;
                 }
 
                 &:hover {
                     font-weight: 600;
                 }
+                
 
                 &:hover::after {
                     transform: scale(1);
@@ -285,13 +293,14 @@ main {
             // display: none;
 
             .flexbox {
-                background-color: lightsalmon;
+                // background-color: lightsalmon;
     
                 @include responsive(large-tablet-screens) {
                     display: flex;
                 }
                 
                 .slide-wrap {
+                    position: relative;
                     background-color: lightseagreen;
     
                     @include responsive(large-tablet-screens) {
@@ -300,15 +309,17 @@ main {
     
                     .slide-img {
                         width: 100%;
-    
+                        height: 500px;
                         
                         img {
                             width: 100%;
+                            height: 500px;
                             top: 300px;
     
-                            // position: absolute;
-                            // opacity: 0;
-                            // transition: all 1s;
+                            position: absolute;
+                            top: 0;
+                            opacity: 0;
+                            transition: all 1s;
     
                             &:first-child {
                                 opacity: 1;
@@ -317,7 +328,19 @@ main {
                     } //slide-img
                     
                     .slide-btn {
-                        @include flex-box();
+                        background-color: red;
+                        .prev {
+                            @include pos-center-y {
+                                left: 0;
+                            }
+                        }
+
+                        .next {
+                            @include pos-center-y {
+                                right: 0;
+                            }
+                        }
+                        // @include flex-box();.
                     }
                 } //slide-wrap
     
@@ -385,13 +408,17 @@ main {
             margin-top: 40px;
     
             h2 {
+                position: relative;
                 font-size: 28px;
                 font-weight: normal;
     
                 &::before {
+                    position: absolute;
+                    display: block;
                     content: '';
-                    width: 14px;
-                    height: 30px;
+                    width: 5px;
+                    height: 100%;
+                    margin-left: -13px;
                     background-color: $point-color;
                 }
             }
@@ -402,6 +429,7 @@ main {
             }
     
             .perform-fee {
+                font-size: 14px; // 
                 .flexbox2 {
                     margin-top: 40px;
     

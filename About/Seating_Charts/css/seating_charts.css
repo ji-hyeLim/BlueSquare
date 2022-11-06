@@ -156,10 +156,14 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.card-hall .hall-img .slide-img .item {
+  top: 300px;
 }
 .card-hall .hall-img .slide-img img {
   width: 100%;
+  background-color: red;
 }
 @media screen and (min-width: 1024px) {
   .card-hall .hall-img .slide-img img {
