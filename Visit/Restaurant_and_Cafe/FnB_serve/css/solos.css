@@ -156,8 +156,8 @@ header .solos-header .hd-txt {
 }
 header .solos-header .hd-txt p {
   color: white;
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s forwards;
+          animation: fadeIn 3s forwards;
   font-weight: 600;
   font-size: 40px;
   font-family: "Montserrat", sans-serif, Arial;
