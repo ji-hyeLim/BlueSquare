@@ -43,8 +43,7 @@ header {
     width: 100vw;
 
     .header-bg-bookpark {
-        display: none;
-
+        // display: none;
 
         width: 100%; 
         height: 100vh;
@@ -55,94 +54,143 @@ header {
             object-fit: cover;
         }
 
+        @keyframes left-right {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+            
+        }
+
+        @keyframes top-down {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: 100%;
+            }
+            
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
         .square{
             position: absolute;
-            width: 180px;
-            height: 180px;
+            width: 280px;
+            height: 280px;
             color: white;
-            font-size: 38px;
+            font-size: 42px;
             font-weight: 600;
-            // border: 5px solid red;
             @include pos-center();
 
             .square-liner {
                 position: absolute;
                 background-color: white;
-                height: 50px;
+                height: 5px;
             }
 
             .sqare-line1 {
                 left: 0;
                 top: 0;
                 width: 100%;
-                height: 5px;
+                height: 4px;
+                animation: left-right 2s;
             }
 
             .sqare-line2 {
                 right: 0;
                 top: 0;
-                width: 5px;
+                width: 4px;
                 height: 100%;
+                animation: top-down 2s;
             }
 
             .sqare-line3 {
                 right: 0;
                 bottom: 0;
                 width: 100%;
-                height: 5px;
+                height: 4px;
+                animation: left-right 2s;
             }
 
             .sqare-line4 {
                 left: 0;
                 bottom: 0;
-                width: 5px;
+                width: 4px;
                 height: 100%;
+                animation: top-down 2s;
             }
 
             .square-title {
                 position: relative;
                 padding: 20px;
                 height: 100%;
-                // background-color: red;
 
                 span {
                     position: absolute;
                     &:nth-child(1) {
                         top: 10%;
                         left: 10%;
+                        opacity: 0;
+                        animation: fadeIn 2s;
+                        animation-fill-mode: forwards;
                     }
 
                     &:nth-child(2) {
                         @include pos-center-x();
                         top: 10%;
+                        opacity: 0;
+                        animation: fadeIn 1s;
+                        animation-fill-mode: forwards;
+
                     }
 
                     &:nth-child(3) {
                         top: 10%;
                         right: 10%;
+                        opacity: 0;
+                        animation: fadeIn 1.6s;
+                        animation-fill-mode: forwards;
                     }
                     
                     &:nth-child(4) {
                         bottom: 10%;
                         left: 10%;
+                        opacity: 0;
+                        animation: fadeIn 1s;
+                        animation-fill-mode: forwards;
                     }
 
                     &:nth-child(5) {
                         @include pos-center-x();
                         bottom: 10%;
-
+                        opacity: 0;
+                        animation: fadeIn 1.2s;
+                        animation-fill-mode: forwards;
                     }
 
                     &:nth-child(6) {
                         bottom: 10%;
                         right: 10%;
+                        opacity: 0;
+                        animation: fadeIn 2.4s;
+                        animation-fill-mode: forwards;
                     }
-                }   
-            }
-        }
+                } //span 
+            } //square-title
+        } //square
     } // header-bg-bookpark 
 
     .header-bg-sodam {
+        display: none;
 
         width: 100%; 
         height: 100vh;
@@ -159,7 +207,6 @@ header {
             }
             100% {
                 width: 100%;
-
             }
         }
 
@@ -169,7 +216,6 @@ header {
             }
             100% {
                 height: 100%;
-
             }
         }
 
@@ -177,25 +223,21 @@ header {
             to {
                 opacity: 1;
                 // transform:translatZ(0%);
-
             }
         }
 
-
         .square{
             position: absolute;
-            width: 180px;
-            height: 180px;
+            width: 280px;
+            height: 280px;
             color: white;
-            font-size: 38px;
+            font-size: 42px;
             font-weight: 600;
-            // border: 5px solid red;
             @include pos-center();
 
             .square-liner {
                 position: absolute;
                 background-color: white;
-                // background-color: red;
                 height: 5px;
             }
 
@@ -231,14 +273,12 @@ header {
                 width: 5px;
                 height: 100%;
                 animation: top-down 2s;
-
             }
 
             .square-title {
                 position: relative;
                 padding: 20px;
                 height: 100%;
-                // background-color: red;
 
                 span {
                     position: absolute;
@@ -248,7 +288,6 @@ header {
                         opacity: 0;
                         animation: fadeIn 2s;
                         animation-fill-mode: forwards;
-
                     }
 
                     &:nth-child(2) {
@@ -419,12 +458,10 @@ header {
 // * ===================== main ===================== *
 
 main {
-    //================================================
-
+    
     .bookpark {
         // display: none;
     }
-    //================================================
 
     position: relative;
     
@@ -435,6 +472,7 @@ main {
     ul.tab {
         margin-top: 200px;
         margin-bottom: 200px;
+
         @include flex-box() {
             justify-content: center;
         }
@@ -479,7 +517,7 @@ main {
         p {
             margin-top: 50px;
             margin-bottom: 120px;
-            line-height: 26px;
+            line-height: 1.5em;
         }
     } //bookpark-intro
 
@@ -488,15 +526,16 @@ main {
         // background-color: pink;
 
         h3 {
-            padding: 10px 0;
+            padding: 20px 0;
         }
 
         p {
-            line-height: 24px;
+            line-height: 1.5em;
         }
 
         img {
             width: 100%;
+            margin-bottom: 30px;
         }
 
         .bookpark-des-flex {
@@ -510,8 +549,6 @@ main {
         .bookpark-des-box-L {
             position: relative;
             
-            // background-color: red;
-
             @include responsive(large-tablet-screens) {
                 margin-bottom: 800px;
 
@@ -533,9 +570,10 @@ main {
     
                     .square1 {
                         position: relative;
-                        width: 300px;
-                        height: 400px;
-                        background-color: rgba(0, 148, 214, 0.5);
+                        width: 440px;
+                        height: 500px;
+                        background-color: $point-color;
+                        opacity: 0.35;
                     }
 
                     .frontimg {
@@ -556,15 +594,16 @@ main {
 
                     .square3 {
                         position: relative;
-                        width: 300px;
-                        height: 300px;
+                        width: 450px;
+                        height: 600px;
                         background-color: $point-color;
+                        opacity: 0.35;
                     }
 
                     .frontimg {
                         position: absolute;
-                        top: 30px;
-                        left: 30px;
+                        top: 40px;
+                        left: 40px;
                         // box-shadow: -20px -20px 0 10px rgba(255, 0, 0, 0.5);
     
                         img {
@@ -607,9 +646,10 @@ main {
     
                     .square2 {
                         position: relative;
-                        width: 200px;
+                        width: 360px;
                         height: 600px;
                         background-color: $point-color;
+                        opacity: 0.35;
                     }
 
                     .frontimg {
@@ -634,6 +674,8 @@ main {
                         width: 300px;
                         height: 300px;
                         background-color: $point-color;
+                        opacity: 0.35;
+
                     }
 
                     .frontimg {
@@ -648,12 +690,9 @@ main {
                         }
                     }
                 }
-
             } /* (large-tablet-screens) */
-        }
+        } //bookpark-des-box-R
     } //bookpark-des
-
-
 
     //========= sodam ==========//
     .sodam {
@@ -672,7 +711,7 @@ main {
                 }
 
                 p {
-                    line-height: 28px;
+                    line-height: 1.5em;
 
                     &:last-child {
                         margin-top: 40px;
@@ -827,33 +866,7 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
