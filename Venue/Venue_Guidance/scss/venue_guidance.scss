@@ -191,6 +191,15 @@ header {
 // * ===================== main ===================== *
 
 main {   
+    h1 {
+        font-size: $title-font-size;
+        margin-top: 140px;
+
+        @include responsive (large-tablet-screens) {
+            margin-top: 280px;
+        }
+    }
+    
     h2 {
         font-size: 0;
     }
@@ -271,105 +280,162 @@ main {
     } //inner-tab
 
     .venue-guidance {
-        .flexbox {
-            // height: 1000px;
-            background-color: lightsalmon;
 
-            @include responsive(large-tablet-screens) {
-                display: flex;
-            }
-            
-            .slide-wrap {
-                background-color: lightseagreen;
+        .venue-facility {
+            // display: none;
 
+            .flexbox {
+                background-color: lightsalmon;
+    
                 @include responsive(large-tablet-screens) {
-                    width: 100%;
+                    display: flex;
                 }
-
-                .slide-img {
-                    width: 100%;
-
-                    
-                    img {
-                        width: 100%;
-                        top: 300px;
-
-                        // position: absolute;
-                        // opacity: 0;
-                        // transition: all 1s;
-
-                        &:first-child {
-                            opacity: 1;
-                        }
-                    }
-
-                } //slide-img
                 
-                .slide-btn {
-                    @include flex-box();
-
-
-                }
-            } //slide-wrap
-
-            .intro-equip-wrap {
-                // position: absolute;
-                // top: 700px;
-                
-                @include responsive(large-tablet-screens) {
-                    width: 100%;
-                    margin-left: 20px;
-                }
-
-                .intro {
-                    line-height: 24px;
-                    // background-color: lightblue;
-
+                .slide-wrap {
+                    background-color: lightseagreen;
+    
                     @include responsive(large-tablet-screens) {
                         width: 100%;
                     }
+    
+                    .slide-img {
+                        width: 100%;
+    
+                        
+                        img {
+                            width: 100%;
+                            top: 300px;
+    
+                            // position: absolute;
+                            // opacity: 0;
+                            // transition: all 1s;
+    
+                            &:first-child {
+                                opacity: 1;
+                            }
+                        }
+                    } //slide-img
+                    
+                    .slide-btn {
+                        @include flex-box();
+                    }
+                } //slide-wrap
+    
+                .intro-equip-wrap {
+                    // position: absolute;
+                    // top: 700px;
+                    
+                    @include responsive(large-tablet-screens) {
+                        width: 100%;
+                        margin-left: 20px;
+                    }
+    
+                    .intro {
+                        line-height: 24px;
+                        // background-color: lightblue;
+    
+                        @include responsive(large-tablet-screens) {
+                            width: 100%;
+                        }
+    
+                    }
+    
+                    .equipment-list {
+                        margin-top: 30px;
+    
+                        h3 {
+                            margin-bottom: 10px;
+                        }
+    
+                        .btn-flex {
+                            display: flex;
+                            line-height: 30px;
+        
+                            div {
+                                width: 120px;
+                                padding-right: 20px;
+                                // margin-bottom: 10px;
+                            }
+    
+                            a {
+                                // background-color: yellow;
+                            }
+        
+                            .download {
+                                width: 120px;
+                                height: 30px;
+                                color: white;
+                                border: 0;
+                                border-radius: 30px;
+                                cursor: pointer;
+                                background-color: $point-color;
+                            }
+                        } //btn-flex
+    
+                        .list1 {
+                            margin-bottom: 10px;
+                        }
+                    } //equipment-list
+                } //venue-info
+            } //flexbox
+        } //venue-facility (대관시설)
 
+        .rental-fee {
+            line-height: 30px;
+            margin-top: 40px;
+    
+            h2 {
+                font-size: 28px;
+                font-weight: normal;
+    
+                &::before {
+                    content: '';
+                    width: 14px;
+                    height: 30px;
+                    background-color: $point-color;
                 }
-
-                .equipment-list {
-                    margin-top: 30px;
-
-                    h3 {
-                        margin-bottom: 10px;
-                    }
-
-                    .btn-flex {
+            }
+    
+            h3 {
+                font-weight: normal;
+                color: $point-color;
+            }
+    
+            .perform-fee {
+                .flexbox2 {
+                    margin-top: 40px;
+    
+                    @include responsive(large-tablet-screens) {
                         display: flex;
-                        line-height: 30px;
-    
-                        div {
-                            width: 120px;
-                            padding-right: 20px;
-                            // margin-bottom: 10px;
-                        }
-
-                        a {
-                            // background-color: yellow;
-                        }
-    
-                        .download {
-                            width: 120px;
-                            height: 30px;
-                            color: white;
-                            border: 0;
-                            border-radius: 30px;
-                            cursor: pointer;
-                            background-color: $point-color;
-                        }
-                    } //btn-flex
-
-                    .list1 {
-                        margin-bottom: 10px;
                     }
-                } //equipment-list
-            } //venue-info
-        } //flexbox
-    } //venue-guidance
+    
+                    h3 {
+                        width: 140px;
+                    }
+                }
+            }
+    
+            .prepare-fee {
+                margin-top: 40px;
+    
+                .flexbox2 {
+                    margin-top: 40px;
+                }
+            }
+    
+            .agreement {
+                margin-top: 80px;
+                padding: 40px;
+                text-align: center;
+                background-color: $gray-bg;
+    
+                a {
+                    display: inline-block;
+                    color: $point-color;
+                }
+            }
+        } //rental-fee (대관료)
+    } //venue-guidance (대관안내)
 } //main
 
 
