@@ -190,7 +190,9 @@ header {
 
 // * ===================== main ===================== *
 
-main {   
+main {
+    margin-bottom: 140px;
+
     h1 {
         font-size: $title-font-size;
         margin-top: 140px;
@@ -231,7 +233,6 @@ main {
 
             &:last-child {
                 margin-right: 0;
-
             }
 
             @include responsive(large-tablet-screens) {
@@ -255,15 +256,16 @@ main {
                     font-weight: 600;
                 }
                 
-
                 &:hover::after {
                     transform: scale(1);
                 }
             }
-        }
+        } //li
     } //ul.tab
 
-    .inner-tab {
+    .sub-tab {
+        margin-bottom: 30px;
+
         @include flex-box() {
             justify-content: center;
         }
@@ -287,6 +289,14 @@ main {
         } //li
     } //inner-tab
 
+    section {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
     .venue-guidance {
 
         .venue-facility {
@@ -298,7 +308,7 @@ main {
                 @include responsive(large-tablet-screens) {
                     display: flex;
                 }
-                
+
                 .slide-wrap {
                     position: relative;
                     background-color: lightseagreen;
@@ -429,7 +439,8 @@ main {
             }
     
             .perform-fee {
-                font-size: 14px; // 
+                font-size: 14px; 
+
                 .flexbox2 {
                     margin-top: 40px;
     
@@ -445,25 +456,42 @@ main {
     
             .prepare-fee {
                 margin-top: 40px;
+                font-size: 14px; 
+
     
                 .flexbox2 {
                     margin-top: 40px;
+
+                    @include responsive(large-tablet-screens) {
+                        display: flex;
+                    }
+
+                    h3 {
+                        width: 140px;
+                    }
                 }
             }
-    
+
             .agreement {
+                width: 100%;
                 margin-top: 80px;
                 padding: 40px;
                 text-align: center;
                 background-color: $gray-bg;
-    
+
+                @include responsive(large-tablet-screens) {
+                    width: 1000px;
+                }
+
                 a {
                     display: inline-block;
                     color: $point-color;
+                    font-weight: 600;
                 }
             }
         } //rental-fee (대관료)
     } //venue-guidance (대관안내)
+
 } //main
 
 

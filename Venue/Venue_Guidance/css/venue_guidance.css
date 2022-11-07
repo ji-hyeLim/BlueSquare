@@ -232,6 +232,9 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
   }
 }
 
+main {
+  margin-bottom: 140px;
+}
 main h1 {
   font-size: 38px;
   margin-top: 140px;
@@ -292,24 +295,31 @@ main ul.tab li a:hover {
 main ul.tab li a:hover::after {
   transform: scale(1);
 }
-main .inner-tab {
+main .sub-tab {
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   justify-content: center;
 }
-main .inner-tab li {
+main .sub-tab li {
   padding: 0 20px 20px;
 }
-main .inner-tab li:first-child {
+main .sub-tab li:first-child {
   border-right: 1px solid #ccc;
   height: 14px;
 }
-main .inner-tab li a {
+main .sub-tab li a {
   color: #ccc;
 }
-main .inner-tab li a:hover {
+main .sub-tab li a:hover {
   color: #0094d6;
   font-weight: 600;
+}
+main section {
+  display: none;
+}
+main section.show {
+  display: block;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox {
@@ -434,19 +444,35 @@ main .venue-guidance .rental-fee .perform-fee .flexbox2 h3 {
 }
 main .venue-guidance .rental-fee .prepare-fee {
   margin-top: 40px;
+  font-size: 14px;
 }
 main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
   margin-top: 40px;
 }
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
+    display: flex;
+  }
+}
+main .venue-guidance .rental-fee .prepare-fee .flexbox2 h3 {
+  width: 140px;
+}
 main .venue-guidance .rental-fee .agreement {
+  width: 100%;
   margin-top: 80px;
   padding: 40px;
   text-align: center;
   background-color: #eee;
 }
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .rental-fee .agreement {
+    width: 1000px;
+  }
+}
 main .venue-guidance .rental-fee .agreement a {
   display: inline-block;
   color: #0094d6;
+  font-weight: 600;
 }
 
 footer {
