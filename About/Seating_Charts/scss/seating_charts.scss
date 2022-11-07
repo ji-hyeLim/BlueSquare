@@ -100,24 +100,26 @@ body {
         position: relative;
         width: 100%;
         height: auto;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
+        // background-color: aqua;
 
         .slide-img {
-            // .item {
-            // top: 300px;
+            .item {
+            top: 300px;
 
-            //     position: absolute;
-            //     opacity: 0;
-            //     transition: all 1s;
+                // position: absolute;
+                // opacity: 0;
+                // transition: all 1s;
 
-            //     &:first-child {
-            //         opacity: 1;
-            //     }
-            // }
+                // &:first-child {
+                //     opacity: 1;
+                // }
+            }
 
             img {
                 // position: absolute;
                 width: 100%;
+                background-color: red;
     
                 @include responsive(large-tablet-screens) {
                     height: auto;
@@ -129,6 +131,9 @@ body {
             }
         } // slide-img
 
+        .slide-btn {
+            // background-color: red;
+        }
         .prev {
             left: 10px;
             @include pos-center-y();
@@ -138,7 +143,6 @@ body {
             right: 10px;
             @include pos-center-y();
         }
-
     } /* hall-img */
 
     @include responsive(large-tablet-screens) {
@@ -325,11 +329,8 @@ main {
 
         .seating-wrap {
             position: relative;
-            // background-color: pink;
 
             .shinhan-card-hall {
-                // background-color: yellow;
-                
                 .info-wrap {
                     .seat-info-box {
                         position: relative;

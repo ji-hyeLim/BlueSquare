@@ -2,8 +2,6 @@
 @import './reset.scss';
 @import './mixin.scss';
 
-// 화살표 아이콘 여백 수정해야함
-
 .container {
     position: relative;
     margin: 0 auto;
@@ -233,10 +231,11 @@ main {
                         display: block;
                         width: 350px;
                         height: 500px;
-                        margin-right: 20px;
+                        margin-right: 30px;
                     }
         
                     .contents {
+                        width: 350px;
                         margin-bottom: 25px;
                         h3 {
                             padding-top: 28px;
@@ -257,7 +256,12 @@ main {
             }
             
             @include responsive(large-tablet-screens) {
-                padding-bottom: 25px;     
+                padding-bottom: 25px; 
+                margin-left: -20px;
+            }
+
+            @include responsive(desktop-screens) {
+                margin-left: 0;
             }
 
             a {

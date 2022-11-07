@@ -232,18 +232,19 @@ main {
         margin: 0 auto; 
         padding-left: 20px;
         @include div-margin();
-
+        
         @include responsive(small-tablet-screens) {
             padding: 0 20px;
         }
-
+        
         @include responsive(desktop-screens) {
             width: 1400px;
             padding: 0;
         }
         
-
+        
         .process-slides {
+            // background-color: red;
             display: flex;
             overflow-x: scroll;
 
@@ -259,6 +260,7 @@ main {
 
             @include responsive(desktop-screens) {
                 overflow: hidden;
+                margin: 0 100px;
             }        
             
             .slide-fix {
@@ -271,13 +273,13 @@ main {
                 }
 
                 @include responsive(large-tablet-screens) {
-                    padding-right: 20px;
+                    padding-right: 32px;
                 }
 
                 div {
                     position: relative;
-                    width: 200px;
-                    height: 200px;
+                    width: 215px;
+                    height: 215px;
                     border: 1px solid $gray-border;
                     border-radius: 50%;                   
 
@@ -310,9 +312,9 @@ main {
             width: 20px;
             height: 20px;
             margin-top: 85px;
-            border-top: 4px solid $point-color;
-            border-right: 4px solid $point-color;
-            border-radius: 4px;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
+            border-radius: 2px;
             cursor: pointer;
         }
         
