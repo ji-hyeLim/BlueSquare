@@ -109,6 +109,34 @@ footer {
     transform: translateY(-10px);
   }
 }
+@-webkit-keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -119,8 +147,18 @@ header {
   position: relative;
   width: 100vw;
 }
+header .header-bg {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+header .fnbserve-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
 @media screen and (min-width: 1024px) {
-  header {
+  header .fnbserve-header {
     width: 100%;
     height: 936;
     background-image: url(../img/이미지레이어.png);
@@ -129,63 +167,66 @@ header {
     background-attachment: fixed;
   }
 }
-header .header-bg {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-header .solos-header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-header .solos-header .hd-img img.mb {
+header .fnbserve-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .hd-img img.mb {
+  header .fnbserve-header .hd-img img.mb {
     display: none;
   }
 }
-header .solos-header .hd-txt {
+header .fnbserve-header .hd-txt {
+  width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-header .solos-header .hd-txt p {
+header .fnbserve-header .hd-txt p {
+  text-align: center;
   color: white;
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
-  font-weight: 600;
+  -webkit-animation: fadeIn 2s forwards;
+          animation: fadeIn 2s forwards;
   font-size: 40px;
   font-family: "Montserrat", sans-serif, Arial;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .hd-txt p {
-    font-size: 50px;
+  header .fnbserve-header .hd-txt p {
+    font-size: 90px;
   }
 }
-header .solos-header .dw-icon {
+header .fnbserve-header .dw-icon {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 40px;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .dw-icon {
+  header .fnbserve-header .dw-icon {
     bottom: 60px;
   }
 }
-header .solos-header .dw-icon img {
-  width: 45px;
-  height: 45px;
+header .fnbserve-header .dw-icon a {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+}
+header .fnbserve-header .dw-icon a i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: updown 3s infinite;
+          animation: updown 3s infinite;
+  color: white;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .dw-icon img {
-    width: 54px;
-    height: 54px;
+  header .fnbserve-header .dw-icon a {
+    width: 65px;
+    height: 65px;
   }
 }
 header .logo-menu-box {
@@ -398,7 +439,7 @@ main ul.fnb-menu li a:hover {
     transform: scale(0.55);
   }
 }
-main .solos-info1 {
+main .fnb-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -406,26 +447,26 @@ main .solos-info1 {
   margin-top: 90px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info1 {
+  main .fnb-info1 {
     margin-top: 150px;
     flex-direction: row;
   }
 }
-main .solos-info1 .info-img img {
+main .fnb-info1 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info1 .info-img img {
+  main .fnb-info1 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info1 .info-txt {
+main .fnb-info1 .info-txt {
   padding-top: 55px;
   padding-left: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info1 .info-txt {
+  main .fnb-info1 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -435,31 +476,31 @@ main .solos-info1 .info-txt {
   }
 }
 @media screen and (min-width: 1400px) {
-  main .solos-info1 .info-txt {
+  main .fnb-info1 .info-txt {
     padding-left: 0;
   }
 }
-main .solos-info1 .info-txt p.solos-1 {
+main .fnb-info1 .info-txt p.txt-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info1 .info-txt p.solos-2 {
+main .fnb-info1 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info1 .info-txt p.solos-3 {
+main .fnb-info1 .info-txt p.txt-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .solos-info1 .info-txt p.solos-3 .txt-bd {
+main .fnb-info1 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
 }
-main .solos-info2 {
+main .fnb-info2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
@@ -467,26 +508,26 @@ main .solos-info2 {
   margin-top: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 {
+  main .fnb-info2 {
     flex-direction: row;
     margin-top: 200px;
   }
 }
-main .solos-info2 .info-img img {
+main .fnb-info2 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-img img {
+  main .fnb-info2 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info2 .info-txt {
+main .fnb-info2 .info-txt {
   padding-top: 51px;
   padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-txt {
+  main .fnb-info2 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -495,27 +536,32 @@ main .solos-info2 .info-txt {
     border-bottom: 1px solid #0094d6;
   }
 }
-main .solos-info2 .info-txt p.solos-1 {
+@media screen and (min-width: 1400px) {
+  main .fnb-info2 .info-txt {
+    padding-left: 0;
+  }
+}
+main .fnb-info2 .info-txt p.txt-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info2 .info-txt p.solos-2 {
+main .fnb-info2 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info2 .info-txt p.solos-3 {
+main .fnb-info2 .info-txt p.txt-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .solos-info2 .info-txt p.solos-3 .txt-bd {
+main .fnb-info2 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
 }
-main .solos-info3 {
+main .fnb-info3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -524,27 +570,27 @@ main .solos-info3 {
   margin-bottom: 110px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 {
+  main .fnb-info3 {
     flex-direction: row;
     margin-top: 200px;
     margin-bottom: 300px;
   }
 }
-main .solos-info3 .info-img img {
+main .fnb-info3 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-img img {
+  main .fnb-info3 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info3 .info-txt {
+main .fnb-info3 .info-txt {
   padding-top: 51px;
   padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-txt {
+  main .fnb-info3 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -553,22 +599,27 @@ main .solos-info3 .info-txt {
     border-bottom: 1px solid #0094d6;
   }
 }
-main .solos-info3 .info-txt p.solos-1 {
+@media screen and (min-width: 1400px) {
+  main .fnb-info3 .info-txt {
+    padding-left: 0;
+  }
+}
+main .fnb-info3 .info-txt p.txt-1 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info3 .info-txt p.solos-2 {
+main .fnb-info3 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info3 .info-txt p.solos-3 {
+main .fnb-info3 .info-txt p.txt-3 {
   font-size: 16px;
   line-height: 28px;
 }
-main .solos-info3 .info-txt p.solos-3 .txt-bd {
+main .fnb-info3 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;

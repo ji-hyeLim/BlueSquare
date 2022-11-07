@@ -570,14 +570,13 @@ main {
             @include flex-box();
             justify-content: left;
             background-color: $gray-bg;
-            padding: 14px 10px;
+            padding: 10px;
             margin-bottom: 32px;
-            max-width: 690px;
+            max-width: 590px;
 
             @include responsive(large-tablet-screens) {
-                padding: 50px 80px;
+                padding: 20px;
                 margin-bottom: 68px;
-                // width: 690px;
             }
 
             i {
@@ -587,33 +586,39 @@ main {
             }
 
             .elecTxt {
-                margin-left: 5px;
-                font-size: 14px;
-                line-height: 1.5;
-
+                margin-left: 10px;
+                
                 @include responsive(large-tablet-screens) {
-                    margin-left: 10px;
-                    font-size: 16px;
-                    white-space: nowrap;
+                    margin-left: 15px;
                 }
-
-                span {
-                    font-weight: 600;
-                }
-
-                .txt2 {
-                    margin-top: 1.5;
-
+                
+                .txt1 {
+                    line-height: 1.5;
+                    font-size: 14px;
+                    
                     span {
-                        font-weight: 500;
+                        font-weight: 600;
+                    }
+
+                    @include responsive(large-tablet-screens) {
+                        font-size: 16px;
+                        white-space: nowrap;
                     }
                 }
-            }
 
-            //elecTxt
-        }
 
-        //elec-info   
+                .txt2 {
+                    line-height: 1.5;
+                    font-size: 14px;
+
+                    @include responsive(large-tablet-screens) {
+                        font-size: 16px;
+                        white-space: nowrap;
+                    }
+                }
+            }//elecTxt
+        }//elec-info   
+        
         .info1 {
             p.sub {
                 font-size: 14px;
@@ -662,19 +667,17 @@ main {
                     font-size: 16px;
                     margin-bottom: 25px;
                 }
-
-                // span {
-                //     font-weight: 500;
-                //     color: $point-color;
-                // }
             }
 
             table {
                 margin-bottom: 20px;
+                font-size: 14px;
 
                 @include responsive(large-tablet-screens) {
                     width: 810px;
                     margin-bottom: 35px;
+                    font-size: $text-font-size;
+
                 }
 
                 .t-sub {
@@ -734,8 +737,7 @@ main {
                 .txtBox {
                     // background-color: $gray-bg;
                     border-collapse: collapse;
-                    min-width: 298px;
-                    max-width: 330px;
+                    min-width: 350px;
                     padding: 10px 5px;
 
                     @include flex-box() {
@@ -744,16 +746,16 @@ main {
 
                     .txt-box1 {
                         background-color: $gray-bg;
-                        padding-left: 5px;
-                        padding-right: 3px;
+                        padding: 10px;
                         border: 1px solid $gray-bg;
                         border-right: 0;
                         text-align: left;
                     }
 
                     .txt-box2 {
-                        padding-right: 5px;
-                        padding-left: 3px;
+                        // padding-right: 5px;
+                        // padding-left: 3px;
+                        padding: 10px;
                         border: 1px solid $gray-bg;
                         border-left: 0;
                     }

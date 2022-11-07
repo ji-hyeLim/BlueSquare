@@ -565,13 +565,13 @@ main section.parking .elec-info {
   justify-content: space-between;
   justify-content: left;
   background-color: #eee;
-  padding: 14px 10px;
+  padding: 10px;
   margin-bottom: 32px;
-  max-width: 690px;
+  max-width: 590px;
 }
 @media screen and (min-width: 1024px) {
   main section.parking .elec-info {
-    padding: 50px 80px;
+    padding: 20px;
     margin-bottom: 68px;
   }
 }
@@ -581,25 +581,35 @@ main section.parking .elec-info i {
   left: 99px;
 }
 main section.parking .elec-info .elecTxt {
-  margin-left: 5px;
-  font-size: 14px;
-  line-height: 1.5;
+  margin-left: 10px;
 }
 @media screen and (min-width: 1024px) {
   main section.parking .elec-info .elecTxt {
-    margin-left: 10px;
+    margin-left: 15px;
+  }
+}
+main section.parking .elec-info .elecTxt .txt1 {
+  line-height: 1.5;
+  font-size: 14px;
+}
+main section.parking .elec-info .elecTxt .txt1 span {
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main section.parking .elec-info .elecTxt .txt1 {
     font-size: 16px;
     white-space: nowrap;
   }
 }
-main section.parking .elec-info .elecTxt span {
-  font-weight: 600;
-}
 main section.parking .elec-info .elecTxt .txt2 {
-  margin-top: 1.5;
+  line-height: 1.5;
+  font-size: 14px;
 }
-main section.parking .elec-info .elecTxt .txt2 span {
-  font-weight: 500;
+@media screen and (min-width: 1024px) {
+  main section.parking .elec-info .elecTxt .txt2 {
+    font-size: 16px;
+    white-space: nowrap;
+  }
 }
 main section.parking .info1 p.sub {
   font-size: 14px;
@@ -650,11 +660,13 @@ main section.parking .info2 p.txt1 {
 }
 main section.parking .info2 table {
   margin-bottom: 20px;
+  font-size: 14px;
 }
 @media screen and (min-width: 1024px) {
   main section.parking .info2 table {
     width: 810px;
     margin-bottom: 35px;
+    font-size: 16px;
   }
 }
 main section.parking .info2 table .t-sub {
@@ -705,8 +717,7 @@ main section.parking .info3 div.txt1 {
 }
 main section.parking .info3 div.txt1 .txtBox {
   border-collapse: collapse;
-  min-width: 298px;
-  max-width: 330px;
+  min-width: 350px;
   padding: 10px 5px;
   display: flex;
   justify-content: space-between;
@@ -714,15 +725,13 @@ main section.parking .info3 div.txt1 .txtBox {
 }
 main section.parking .info3 div.txt1 .txtBox .txt-box1 {
   background-color: #eee;
-  padding-left: 5px;
-  padding-right: 3px;
+  padding: 10px;
   border: 1px solid #eee;
   border-right: 0;
   text-align: left;
 }
 main section.parking .info3 div.txt1 .txtBox .txt-box2 {
-  padding-right: 5px;
-  padding-left: 3px;
+  padding: 10px;
   border: 1px solid #eee;
   border-left: 0;
 }

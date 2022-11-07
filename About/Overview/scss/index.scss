@@ -46,14 +46,12 @@
     0% {
         opacity: 0;
         transform: translate3d(0, 20px, 0);
-        // clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
     }
 
     100% {
-        // transform:translatZ(0%);
         transform: none;
         opacity: 1;
-        // clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        
     }
 }
 
@@ -74,28 +72,36 @@
 @keyframes fadeIn_X {
 
     //txt적용
-    from {
+    0% {
         opacity: 0;
         transform: translatX(0);
     }
 
-    to {
+    50% {
         opacity: 1;
         transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
 @keyframes fadeIn_right {
 
     //txt적용
-    from {
+    0% {
         opacity: 0;
         transform: translatX(0);
     }
-
-    to {
+    50% {
         opacity: 1;
         transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translatX(0);
     }
 }
 
@@ -432,11 +438,16 @@ main {
         .info-img img {
             opacity: 0;
             width: 100%;
-            animation: fadeIn_X 1s 5s linear forwards;
+            animation: fadeIn_X 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
-                width: auto;
+                width:300;
+                height: 300;
+                padding-right: 60px;
+            }
 
+            @include responsive(desktop-screens) {
+                width: 100%;
             }
         }
 
@@ -445,12 +456,18 @@ main {
             opacity: 0;
             padding-left: 0;
             margin-bottom: 90px;
-            animation: fadeIn 1s 6s linear forwards;
+            animation: fadeIn 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
+                margin-top: 10px;
+                padding-top: 40px;
+                width: 358px;
+                height: 454px;
+            }
+
+            @include responsive(desktop-screens) {
                 padding-top: 80px;
                 width: 474px;
-                height: 454px;
             }
 
             p.txt1 {
@@ -489,18 +506,22 @@ main {
                 @include responsive(large-tablet-screens) {
                     font-size: 16px;
                     line-height: 30px;
+                    // background-color: pink;
+                    width: 358px;
+                }
+
+                @include responsive(desktop-screens) {
+                    width: 474px;
                 }
             }
-        }
-
-        //.info-txt
-    }
-
-    //page-info1
+        }//.info-txt
+    }//page-info1
+justify-content: space-between;
+    
     .page-info2 {
         // background-color:aqua;
         @include flex-box();
-        flex-direction: column; //
+        flex-direction: column; 
         margin-bottom: 100px;
 
         @include responsive(large-tablet-screens) {
@@ -510,26 +531,37 @@ main {
         .info-img img {
             opacity: 0;
             width: 100%;
-            animation: fadeIn_right 1s 8s forwards;
-
-
+            animation: fadeIn_right 1s 3s forwards;
 
             @include responsive(large-tablet-screens) {
-                width: auto;
+                min-width:300;
+                height: 300;
+                padding-left: 60px;
+            }
+
+            @include responsive(desktop-screens) {
+                width: 100%;
             }
         }
 
         .info-txt {
             // background-color: blueviolet;
             opacity: 0;
-            padding-left: 0;
             margin-bottom: 90px;
-            animation: fadeIn 1s 7s forwards;
+            animation: fadeIn 1s 3s forwards;
+            
 
             @include responsive(large-tablet-screens) {
+                margin-top: 10px;
+                padding-top: 40px;
+                padding-right: 0;
+                max-width: 374px;
+                height: 454px;
+            }
+            
+            @include responsive(desktop-screens) {
                 padding-top: 80px;
                 width: 474px;
-                height: 454px;
             }
 
             p.txt1 {
@@ -546,6 +578,9 @@ main {
                     font-size: 16px;
                     padding-bottom: 30px;
                 }
+                @include responsive(desktop-screens) {
+                    margin-left: 100px;
+                }
             }
 
             p.txt2 {
@@ -559,6 +594,10 @@ main {
                     padding-bottom: 45px;
                     line-height: 42px;
                 }
+
+                @include responsive(desktop-screens) {
+                    margin-left: 100px;
+                }
             }
 
             p.txt3 {
@@ -566,16 +605,19 @@ main {
                 font-size: 14px;
 
                 @include responsive(large-tablet-screens) {
+                    // background-color: pink;
+                    width:374px;
                     font-size: 16px;
                     line-height: 30px;
                 }
+                @include responsive(desktop-screens) {
+                    margin-left: 100px;
+                }
+
             }
-        }
+        }//.info-txt
+    }//page-info2
 
-        //.info-txt
-    }
-
-    //page-info2
     .page-info3 {
         // background-color:aqua;
         @include flex-box();
@@ -589,10 +631,16 @@ main {
         .info-img img {
             opacity: 0;
             width: 100%;
-            animation: fadeIn_X 1s 9s linear forwards;
+            animation: fadeIn_X 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
-                width: auto;
+                width:300;
+                height: 300;
+                padding-right: 60px;
+            }
+
+            @include responsive(desktop-screens) {
+                width: 100%;
             }
         }
 
@@ -600,14 +648,21 @@ main {
             // background-color: blueviolet;
             opacity: 0;
             padding-left: 0px;
-            margin-bottom: 90px;
-            animation: fadeIn 1s 10s linear forwards;
+            margin-bottom: 60px;
+            animation: fadeIn 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
-                padding-top: 80px;
-                padding-left: 100px;
-                width: 474px;
+                margin-bottom: 80px;
+                padding-top: 40px;
+                width: 370px;
                 height: 454px;
+            }
+
+            @include responsive(desktop-screens) {
+                margin-bottom: 100px;
+                margin-top: 10px;
+                padding-top: 80px;
+                width: 474px;
             }
 
             p.txt1 {
@@ -644,16 +699,20 @@ main {
                 font-size: 14px;
 
                 @include responsive(large-tablet-screens) {
+                    // background-color: pink;
                     font-size: 16px;
                     line-height: 30px;
+                    width: 370px;
+                }
+
+                @include responsive(desktop-screens) {
+                    width: 474px;
                 }
             }
-        }
+        }//.info-txt
+    }//page-info3
 
-        //.info-txt
-    }
-
-    //page-info3
+    
     .bottom-txt {
         // background-color: azure;
         width: 92%;
@@ -664,24 +723,21 @@ main {
             height: 163px;
         }
 
-        // 
         p {
             opacity: 0;
             text-align: center;
             width: 100%;
             font-size: 16px;
             line-height: 26px;
-            animation: fadeIn 3s 11s linear forwards;
+            animation: fadeIn 3s 3s linear forwards;
 
             .bold-txt {
                 font-weight: bold;
             }
 
             @include responsive(large-tablet-screens) {
-
                 font-size: 18px;
                 line-height: 40px;
-                margin-bottom: 200px;
             }
         }
     }
@@ -689,11 +745,23 @@ main {
     //.bottom-txt
 
     .flow-txt-wrap {
-        margin-top: 300px;
-        margin-bottom: 100px;
+        // margin-top: 60px;
+        margin-bottom: 80px;
+        padding-top: 200px;
+
+        @include responsive(small-tablet-screens) {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            font-size: 150px;
+        }
+        @include responsive(large-tablet-screens) {
+            margin-top: 200px; 
+            margin-bottom: 200px;
+        }
 
         div {
             color: $point-color;
+            // color: $gray-bg;
             opacity: 0.5;
             display: flex;
             white-space: nowrap;
