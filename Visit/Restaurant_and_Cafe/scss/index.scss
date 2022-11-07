@@ -68,14 +68,20 @@ header {
 
             width: 100%;
 
+            @include responsive(small-tablet-screens) {
+                flex-direction: row;
+            }
             @include responsive(large-tablet-screens) {
                 white-space: nowrap;
-                flex-direction: row;
+                // flex-direction: row;
                 width: 100%;
                 height: 100vh;
             }
 
             a>div {
+                @include responsive(small-tablet-screens) {
+                    transform: skewX(0deg);
+                }
 
                 @include responsive(large-tablet-screens) {
                     transform: skewX(-10deg);
@@ -126,6 +132,10 @@ header {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
+                        margin-left: -5PX;
+                    }
+
+                    @include responsive(large-tablet-screens) {
                         margin-left: -40PX;
                     }
                 }
@@ -133,6 +143,11 @@ header {
                 &:hover {
                     transform: scale(1.05);
                     transition: all 0.5s;
+
+                    @include responsive(small-tablet-screens) {
+                        scale: none;
+                        width: 130%;
+                    }
 
                     @include responsive(large-tablet-screens) {
                         scale: none;
@@ -178,6 +193,9 @@ header {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
+                        margin-left: -5PX;
+                    }
+                    @include responsive(large-tablet-screens) {
                         margin-left: -30PX;
                     }
                 }
@@ -185,6 +203,11 @@ header {
                 &:hover {
                     scale: 1.05;
                     transition: all 0.5s;
+
+                    @include responsive(small-tablet-screens) {
+                        scale: none;
+                        width: 130%;
+                    }
 
                     @include responsive(large-tablet-screens) {
                         scale: none;
@@ -228,11 +251,24 @@ header {
 
                 .txt {
                     @include txtElement();
+
+                    @include responsive(small-tablet-screens) {
+                        margin-left: -5PX;
+                    }
+
+                    @include responsive(large-tablet-screens) {
+                        margin-left: 0PX;
+                    }
                 }
 
                 &:hover {
                     scale: 1.05;
                     transition: all 0.5s;
+
+                    @include responsive(small-tablet-screens) {
+                        scale: none;
+                        width: 130%;
+                    }
 
                     @include responsive(large-tablet-screens) {
                         scale: none;
@@ -276,20 +312,27 @@ header {
                     }
 
 
-                }
-
-                //.cake
+                }//.cake
                 .txt {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
-                        margin-left: 20PX;
+                        margin-left: -5PX;
+                    }
+
+                    @include responsive(large-tablet-screens) {
+                        margin-left: 0PX;
                     }
                 }
 
                 &:hover {
                     scale: 1.05;
                     transition: all 0.5s;
+
+                    @include responsive(small-tablet-screens) {
+                        scale: none;
+                        width: 130%;
+                    }
 
                     @include responsive(large-tablet-screens) {
                         scale: none;
