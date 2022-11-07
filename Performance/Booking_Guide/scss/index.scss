@@ -274,6 +274,7 @@ main {
         }
         
     } //txtBox
+    
     .ticketing {
         margin-top: 73px;
         margin-bottom: 58px;
@@ -285,17 +286,29 @@ main {
         @include responsive(large-tablet-screens) {
             margin-top: 387px;
         }
-        
-        h2 {
-            margin-bottom: 40px;
-            font-weight: 600;
-            font-size: 28px;
-            
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 54px;
-                font-size: 30px;
+
+        .hall-title {
+                display: flex;
+            .blue-sq {
+                width: 14px;
+                height: 30px;
+                margin-right: 8px;
+                margin-top: 3px;
+                background-color: $point-color;
+
             }
-        }
+            h2 {
+                margin-bottom: 40px;
+                font-weight: 600;
+                font-size: 28px;
+                
+                @include responsive(large-tablet-screens) {
+                    margin-bottom: 54px;
+                    font-size: 30px;
+                }
+            }
+        } //hall-title
+      
 
         .way {
             margin-bottom: 34px;
@@ -344,12 +357,12 @@ main {
 
                     a {
                         // display: inline-block;
-                        width: 87px;
+                        width: 67px;
                         color: #fff;
-                        padding: 0 3px;
+                        padding: 0 4px;
                         font-size: $mini-text-font-size;
                         background-color: $point-color;
-                        margin-left: 5px;
+                        margin-left: 3px;
 
                         i {
                             margin-left: 5px;
@@ -478,18 +491,30 @@ main {
             margin-top: 76px;
             margin-bottom: 220px;
         }
-        
-        h2 {
-            margin-bottom: 40px;
-            font-weight: 600;
-            font-size: 28px;
-            
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 54px;
-                font-size: 30px;
-            }
-        }
 
+        .hall-title {
+            display: flex;
+            .blue-sq {
+                width: 14px;
+                height: 30px;
+                margin-right: 8px;
+                margin-top: 3px;
+                background-color: $point-color;
+            }
+        
+            h2 {
+                margin-bottom: 40px;
+                font-weight: 600;
+                font-size: 28px;
+                
+                @include responsive(large-tablet-screens) {
+                    margin-bottom: 54px;
+                    font-size: 30px;
+                }
+            }
+
+        } //hall-title
+        
         .deadline {
             margin-bottom: 34px;
 
