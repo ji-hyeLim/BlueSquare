@@ -492,6 +492,53 @@ main {
         } //rental-fee (대관료)
     } //venue-guidance (대관안내)
 
+    #master {
+        .rental-fee {
+            h2 {
+
+            }
+            
+            .table-area {
+                margin-top: 30px;
+                margin-bottom: 60px;
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 1.5em;
+
+                    thead {
+                        border-bottom: 3px solid $point-color;
+                    }
+
+                    th,
+                    td {
+                        padding: 10px;
+                        border: 1px solid $gray-border;
+                    }
+
+                    th {
+                        background-color: $gray-bg;
+
+                        &:first-child {
+                            border-left: none;
+                        }
+
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+
+                    td {
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+                }
+            } //table-area
+        } //rental-fee
+    } //master
+
 } //main
 
 
