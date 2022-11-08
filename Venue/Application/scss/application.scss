@@ -22,14 +22,6 @@
     }
 }
 
-.small-only {
-    display: none;
-
-        @include responsive(small-tablet-screens) {
-            display: block;
-        }
-}
-
 .large-only {    
         display: none;
 
@@ -37,7 +29,6 @@
             display: block;
         }
 }
-
 
 html,
 body {
@@ -206,12 +197,13 @@ main {
     margin-bottom: 266px;
 
     h1 {
-        margin-bottom: 80px;
-        padding-bottom: 20px;
+        margin-bottom: 70px;
+        padding-bottom: 58px;
         border-bottom: 2px solid $gray-border;
     }
 
     h2 {
+        font-size: 26px;
         margin-bottom: 38px;
         position: relative;
         padding-left: 13px;
@@ -232,11 +224,12 @@ main {
         margin: 0 auto; 
         padding-left: 20px;
         @include div-margin();
+        // background-color: red;
         
         @include responsive(small-tablet-screens) {
             padding: 0 20px;
         }
-        
+
         @include responsive(desktop-screens) {
             width: 1400px;
             padding: 0;
@@ -244,8 +237,8 @@ main {
         
         
         .process-slides {
-            // background-color: red;
             display: flex;
+            justify-content: space-between;
             overflow-x: scroll;
 
             &::-webkit-scrollbar {
@@ -258,52 +251,60 @@ main {
                 background-color: transparent;
             }
 
-            @include responsive(desktop-screens) {
-                overflow: hidden;
-                margin: 0 100px;
+            @include responsive(large-tablet-screens) {
+                // overflow: hidden;
+                // margin: 0 100px; // width 1200px
             }        
             
-            .slide-fix {
-                padding-right: 10px;
-                position: relative;
+            & > div {
                 width: 100%;
+                display: flex;
+                justify-content: space-between;
 
-                &:last-child {
-                    padding-right: 0;
-                }
-
-                @include responsive(large-tablet-screens) {
-                    padding-right: 32px;
-                }
-
-                div {
+                .slide-fix {
+                    padding-right: 10px;
                     position: relative;
-                    width: 215px;
-                    height: 215px;
-                    border: 1px solid $gray-border;
-                    border-radius: 50%;                   
-
-                    img {
-                        width: 100px;
-                        @include pos-center() {
-                            top: 40%;
-                        }
+                    width: 100%;
+                    background-color: red;
+    
+                    &:last-child {
+                        padding-right: 0;
                     }
-
-                    strong {
-                        font-size: 14px;
-                        @include pos-center() {
-                            top: 80%;
-                        }
-
-                        @include responsive(small-tablet-screens) {
-                            font-size: 16px;
-                        }
+    
+                    @include responsive(large-tablet-screens) {
+                        padding-right: 20px;
                     }
+    
+                    div {
+                        position: relative;
+                        width: 15em;
+                        height: 15em;
+                        border: 1px solid $gray-border;
+                        border-radius: 50%;                   
+    
+                        img {
+                            width: 100px;
+                            @include pos-center() {
+                                top: 40%;
+                            }
+                        }
+    
+                        strong {
+                            font-size: 14px;
+                            @include pos-center() {
+                                top: 80%;
+                            }
+    
+                            @include responsive(large-tablet-screens) {
+                                font-size: 16px;
+                            }
+                        }
+    
+                    }
+    
+                } // .slide-fix
+            } // slide-show-1,2
 
-                }
-
-            } // .slide-fix
         } // .process-slides
 
         .slide-btn {
@@ -319,12 +320,12 @@ main {
         }
         
         .slide-btn-left {
-            left: 0;
+            left: 4px;
             transform: rotate(-135deg);
         }
 
         .slide-btn-right {
-            right: 0;
+            right: 4px;
             transform: rotate(45deg);
         }
 
@@ -333,25 +334,40 @@ main {
     .venue-space {
         @include div-margin();
         @include list-style();
+        
+        @include responsive(large-tablet-screens) {
+            width: calc(1024px - 20px - 20px);
+        }
     }
 
     .application-time {
         @include div-margin();
         @include list-style();
+        
+        @include responsive(large-tablet-screens) {
+            width: calc(1024px - 20px - 20px);
+        }
     }
 
     .venue-inquiry {
         word-break: break-all;
-
         @include div-margin();
         @include list-style();
+
+        @include responsive(large-tablet-screens) {
+            width: calc(1024px - 20px - 20px);
+        }
     }
 
     .submit-document {
+        @include responsive(large-tablet-screens) {
+            width: calc(1024px - 20px - 20px);
+        }
+        
         ul {
             li {
                 font-size: 14px;
-                @include responsive(small-tablet-screens) {
+                @include responsive(large-tablet-screens) {
                     font-size: 16px;
                 }
                 

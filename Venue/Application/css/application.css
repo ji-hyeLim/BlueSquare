@@ -79,15 +79,6 @@ footer {
   }
 }
 
-.small-only {
-  display: none;
-}
-@media screen and (min-width: 600px) {
-  .small-only {
-    display: block;
-  }
-}
-
 .large-only {
   display: none;
 }
@@ -241,11 +232,12 @@ main {
   margin-bottom: 266px;
 }
 main h1 {
-  margin-bottom: 80px;
-  padding-bottom: 20px;
+  margin-bottom: 70px;
+  padding-bottom: 58px;
   border-bottom: 2px solid #ccc;
 }
 main h2 {
+  font-size: 26px;
   margin-bottom: 38px;
   position: relative;
   padding-left: 13px;
@@ -278,6 +270,7 @@ main .venue-process {
 }
 main .venue-process .process-slides {
   display: flex;
+  justify-content: space-between;
   overflow-x: scroll;
 }
 main .venue-process .process-slides::-webkit-scrollbar {
@@ -288,33 +281,33 @@ main .venue-process .process-slides::-webkit-scrollbar {
 main .venue-process .process-slides::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-@media screen and (min-width: 1400px) {
-  main .venue-process .process-slides {
-    overflow: hidden;
-    margin: 0 100px;
-  }
+main .venue-process .process-slides > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-main .venue-process .process-slides .slide-fix {
+main .venue-process .process-slides > div .slide-fix {
   padding-right: 10px;
   position: relative;
   width: 100%;
+  background-color: red;
 }
-main .venue-process .process-slides .slide-fix:last-child {
+main .venue-process .process-slides > div .slide-fix:last-child {
   padding-right: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .venue-process .process-slides .slide-fix {
-    padding-right: 32px;
+  main .venue-process .process-slides > div .slide-fix {
+    padding-right: 20px;
   }
 }
-main .venue-process .process-slides .slide-fix div {
+main .venue-process .process-slides > div .slide-fix div {
   position: relative;
-  width: 215px;
-  height: 215px;
+  width: 15em;
+  height: 15em;
   border: 1px solid #ccc;
   border-radius: 50%;
 }
-main .venue-process .process-slides .slide-fix div img {
+main .venue-process .process-slides > div .slide-fix div img {
   width: 100px;
   position: absolute;
   left: 50%;
@@ -322,7 +315,7 @@ main .venue-process .process-slides .slide-fix div img {
   transform: translate(-50%, -50%);
   top: 40%;
 }
-main .venue-process .process-slides .slide-fix div strong {
+main .venue-process .process-slides > div .slide-fix div strong {
   font-size: 14px;
   position: absolute;
   left: 50%;
@@ -330,8 +323,8 @@ main .venue-process .process-slides .slide-fix div strong {
   transform: translate(-50%, -50%);
   top: 80%;
 }
-@media screen and (min-width: 600px) {
-  main .venue-process .process-slides .slide-fix div strong {
+@media screen and (min-width: 1024px) {
+  main .venue-process .process-slides > div .slide-fix div strong {
     font-size: 16px;
   }
 }
@@ -347,11 +340,11 @@ main .venue-process .slide-btn {
   cursor: pointer;
 }
 main .venue-process .slide-btn-left {
-  left: 0;
+  left: 4px;
   transform: rotate(-135deg);
 }
 main .venue-process .slide-btn-right {
-  right: 0;
+  right: 4px;
   transform: rotate(45deg);
 }
 main .venue-space {
@@ -369,7 +362,7 @@ main .venue-space ul li {
   padding-left: 20px;
   text-indent: -20px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .venue-space ul li {
     font-size: 16px;
   }
@@ -382,9 +375,14 @@ main .venue-space ul li ul li {
   font-size: 14px;
   padding-top: 10px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .venue-space ul li ul li {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .venue-space {
+    width: 984px;
   }
 }
 main .application-time {
@@ -402,7 +400,7 @@ main .application-time ul li {
   padding-left: 20px;
   text-indent: -20px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .application-time ul li {
     font-size: 16px;
   }
@@ -415,9 +413,14 @@ main .application-time ul li ul li {
   font-size: 14px;
   padding-top: 10px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .application-time ul li ul li {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .application-time {
+    width: 984px;
   }
 }
 main .venue-inquiry {
@@ -436,7 +439,7 @@ main .venue-inquiry ul li {
   padding-left: 20px;
   text-indent: -20px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .venue-inquiry ul li {
     font-size: 16px;
   }
@@ -449,15 +452,25 @@ main .venue-inquiry ul li ul li {
   font-size: 14px;
   padding-top: 10px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .venue-inquiry ul li ul li {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .venue-inquiry {
+    width: 984px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .submit-document {
+    width: 984px;
   }
 }
 main .submit-document ul li {
   font-size: 14px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   main .submit-document ul li {
     font-size: 16px;
   }
@@ -642,4 +655,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=application.css.map */
+}
