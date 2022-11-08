@@ -329,9 +329,8 @@ header {
 
 main {
     position: relative;
-    // background-color: aliceblue;
-    margin-top: 266px;
-    
+    // background-color: pink;
+    margin: 266px 0;
         h2 {
             font-size: 0;
         }
@@ -351,7 +350,7 @@ main {
             
             li { 
                 flex: 50%;
-                width: 30%;             
+                width: 30%;
                 border: 1px solid #000;
                 border-right: 0;
                 border-bottom: 0;
@@ -424,16 +423,16 @@ main {
             @include flex-box();
             flex-direction: column;
             // background-color: aqua;
-            margin-top:70px;
+            margin-top:151px;
 
             @include responsive(large-tablet-screens) {
+                margin-top:101px;
                 flex-direction: row;
             }
             .info-img { 
                 
                 img {
                     width: 100%;
-                    
 
                     @include responsive(large-tablet-screens) {
                         min-width: 620px;
@@ -445,8 +444,8 @@ main {
             .info-txt {
                 padding-top: 55px;
                 padding-left: 0;
+
                 @include responsive(large-tablet-screens) {
-                    
                     width: 474px;
                     height: 609px;
                     padding-top: 156px;
@@ -459,7 +458,6 @@ main {
                 @include responsive(desktop-screens) {
                     padding-left: 0;
                 }
-                
 
                 p.txt-1 {
                     font-size: 18px;
@@ -485,6 +483,7 @@ main {
         } //fnb-info1
 
         .fnb-info2 {
+            // background-color: aquamarine;
             @include flex-box();
             flex-direction:column-reverse;
             margin-top: 134px;
@@ -492,6 +491,7 @@ main {
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
             }
+
             .info-img {
                 
                 img {
@@ -543,8 +543,7 @@ main {
             flex-direction:column;
             // background-color: aqua;
             margin-top: 134px;
-            margin-bottom: 266px;
-
+            
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
             }

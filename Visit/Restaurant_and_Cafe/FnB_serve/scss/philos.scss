@@ -330,7 +330,7 @@ header {
 main {
     position: relative;
     // background-color: aliceblue;
-    margin-top: 266px;
+    margin: 266px 0;
     
         h2 {
             font-size: 0;
@@ -424,9 +424,10 @@ main {
             @include flex-box();
             flex-direction: column;
             // background-color: aqua;
-            margin-top:70px;
+            margin-top:151px;
 
             @include responsive(large-tablet-screens) {
+                margin-top:101px;
                 flex-direction: row;
             }
             .info-img { 
@@ -541,7 +542,6 @@ main {
             flex-direction:column;
             // background-color: aqua;
             margin-top: 134px;
-            margin-bottom: 266px;
 
             @include responsive(large-tablet-screens) {
                 flex-direction: row;

@@ -67,18 +67,6 @@ body {
 // * ===================== header ===================== *
 
 header {
-
-    //=====fnbserve header pc!!!=====//
-    @include responsive(large-tablet-screens) {
-        width: 100%;
-        height: 936;
-        background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    //============================//
     position: relative;
     width: 100vw;
 
@@ -102,6 +90,14 @@ header {
         width: 100%;
         height: 100vh;
 
+        @include responsive(small-tablet-screens) {
+            width: 100%;
+            height: 936;
+            background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
 
         .hd-img {
 
@@ -109,7 +105,7 @@ header {
                 width: 100%;
                 height: 100vh;
 
-                @include responsive(large-tablet-screens) {
+                @include responsive(small-tablet-screens) {
                     display: none;
                 }
             }
@@ -329,15 +325,14 @@ header {
 
 main {
     position: relative;
-    // background-color: aliceblue;
-    padding-top: 110px;
+    // background-color: pink;
+    margin: 266px 0;
         h2 {
             font-size: 0;
         }
 
         ul.fnb-menu {
             width: 60%;
-            margin-top: 90px;
             // background-color: red;
             @include flex-box() {
                 justify-content: center;
@@ -399,6 +394,7 @@ main {
                     
                     @include responsive(large-tablet-screens) {
                         padding: 0;
+                        font-size: 18px;
 
                         &::after {
                             display: block;
@@ -423,12 +419,11 @@ main {
             @include flex-box();
             flex-direction: column;
             // background-color: aqua;
-            padding-top: 180px; 
-            margin-top: 90px;
+            margin-top: 151px;
 
             @include responsive(large-tablet-screens) {
-                margin-top: 150px;
                 flex-direction: row;
+                margin-top: 101px;
             }
             .info-img { 
                 
@@ -490,12 +485,10 @@ main {
             @include flex-box();
             flex-direction:column-reverse;
             // background-color: aqua;
-            padding-top: 55px; 
-            margin-top: 20px;
+            margin-top: 134px;
 
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
-                margin-top: 200px;
             }
             .info-img {
                 
@@ -549,14 +542,10 @@ main {
             @include flex-box();
             flex-direction:column;
             // background-color: aqua;
-            padding-top: 55px; 
-            margin-top: 20px;
-            margin-bottom: 110px;
+            margin-top: 134px;
 
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
-                margin-top: 200px;
-                margin-bottom: 300px;
             }
             .info-img {
                 

@@ -354,7 +354,7 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main {
   position: relative;
-  margin-top: 266px;
+  margin: 266px 0;
 }
 main h2 {
   font-size: 0;
@@ -442,10 +442,11 @@ main .fnb-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 151px;
 }
 @media screen and (min-width: 1024px) {
   main .fnb-info1 {
+    margin-top: 101px;
     flex-direction: row;
   }
 }
@@ -556,7 +557,6 @@ main .fnb-info3 {
   justify-content: space-between;
   flex-direction: column;
   margin-top: 134px;
-  margin-bottom: 266px;
 }
 @media screen and (min-width: 1024px) {
   main .fnb-info3 {

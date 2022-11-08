@@ -147,16 +147,6 @@ header {
   position: relative;
   width: 100vw;
 }
-@media screen and (min-width: 1024px) {
-  header {
-    width: 100%;
-    height: 936;
-    background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
 header .header-bg {
   width: 100%;
   height: 100vh;
@@ -167,11 +157,21 @@ header .fnbserve-header {
   width: 100%;
   height: 100vh;
 }
+@media screen and (min-width: 600px) {
+  header .fnbserve-header {
+    width: 100%;
+    height: 936;
+    background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
 header .fnbserve-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   header .fnbserve-header .hd-img img.mb {
     display: none;
   }
@@ -352,14 +352,13 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main {
   position: relative;
-  padding-top: 110px;
+  margin: 266px 0;
 }
 main h2 {
   font-size: 0;
 }
 main ul.fnb-menu {
   width: 60%;
-  margin-top: 90px;
   display: flex;
   justify-content: space-between;
   justify-content: center;
@@ -421,6 +420,7 @@ main ul.fnb-menu li a:hover {
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li a {
     padding: 0;
+    font-size: 18px;
   }
   main ul.fnb-menu li a::after {
     display: block;
@@ -440,13 +440,12 @@ main .fnb-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 180px;
-  margin-top: 90px;
+  margin-top: 151px;
 }
 @media screen and (min-width: 1024px) {
   main .fnb-info1 {
-    margin-top: 150px;
     flex-direction: row;
+    margin-top: 101px;
   }
 }
 main .fnb-info1 .info-img img {
@@ -501,13 +500,11 @@ main .fnb-info2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
-  padding-top: 55px;
-  margin-top: 20px;
+  margin-top: 134px;
 }
 @media screen and (min-width: 1024px) {
   main .fnb-info2 {
     flex-direction: row;
-    margin-top: 200px;
   }
 }
 main .fnb-info2 .info-img img {
@@ -557,15 +554,11 @@ main .fnb-info3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 55px;
-  margin-top: 20px;
-  margin-bottom: 110px;
+  margin-top: 134px;
 }
 @media screen and (min-width: 1024px) {
   main .fnb-info3 {
     flex-direction: row;
-    margin-top: 200px;
-    margin-bottom: 300px;
   }
 }
 main .fnb-info3 .info-img img {
