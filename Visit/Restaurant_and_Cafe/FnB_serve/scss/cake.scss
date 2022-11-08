@@ -30,6 +30,35 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes updown {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 html,
 body {
     max-width: 100%;
@@ -47,14 +76,94 @@ header {
         height: 100vh;
         overflow: hidden;
 
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+        // video {
+        //     width: 100%; 
+        //     height: 100%;
+        //     object-fit: cover;
+        // }
+    }// header-bg
 
-    // header-bg
+    //==========fnbserve header!!============//
+    .fnbserve-header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        @include responsive(small-tablet-screens) {
+            width: 100%;
+            height: 936;
+            background-image: url(../img/케익이미지레이어.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .hd-img {
+
+            img.mb {
+                width: 100%;
+                height: 100vh;
+
+                @include responsive(small-tablet-screens) {
+                    display: none;
+                }
+            }
+        }
+
+        .hd-txt {
+            width: 100%;
+            @include pos-center();
+
+            p {
+                text-align: center;
+                color: white;
+                animation: fadeIn 2s forwards;
+
+                font: {
+                    size: 45px;
+                    family: $eng-font;
+                }
+
+                @include responsive(large-tablet-screens) {
+                    font-size: 90px;
+                }
+            }
+        }
+
+        .dw-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+
+            @include responsive(large-tablet-screens) {
+                bottom: 60px;
+            }
+
+            a {
+                position: relative;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                // background-color: red;
+                width: 54px;
+                height: 54px;
+                // width: 65px;
+                // height: 65px;
+                
+                i {
+                    @include pos-center();
+                    animation: updown 3s infinite;
+                    color: white;
+                }
+
+                @include responsive(large-tablet-screens) {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }//fnbserve-header
+
 
     .logo-menu-box {
         position: absolute;
@@ -217,394 +326,275 @@ header {
 // * ===================== main ===================== *
 
 main {
-    padding-top: 100px;
-
-    @include responsive(large-tablet-screens) {
-        padding-top: 120px;
-    }
-
-    h1.title {
-        font-weight: 600;
-        font-size: 36px;
-        margin-bottom: 74px;
-
-        @include responsive(large-tablet-screens) {
-            font-size: 38px;
-            margin-bottom: 125px;
-        }
-    }
-
-    .txtBox {
-        display: none;
-        height: 143px;
-        @include pos-center-x();
-        border: 1px solid #000;
-        text-align: center;
-
-        @include responsive(small-tablet-screens) {
-            min-width: 560px;
-            display: block;
-        }
-
-        @include responsive(large-tablet-screens) {
-            min-width: 824px;
-            display: block;
-        }
-
-        @include responsive(desktop-screens) {
-            width: 1166px;
-        }
-
-        div {
-            @include flex-box();
-            justify-content: left;
-            @include pos-center();
-            white-space: nowrap;
-
-            img {
-                margin-right: 10px;
-                width: 32px;
-                height: 18px;
-            }
-            p {
-                margin-top: -2px;
-                font-size: $tab-font-size;
-                font-weight: 600;
-            }
-        }
-        
-    } //txtBox
+    position: relative;
+    // background-color: aliceblue;
+    margin-top: 266px;
     
-    .ticketing {
-        margin-top: 73px;
-        margin-bottom: 58px;
-
-        @include responsive(small-tablet-screens) {
-            margin-top: 300px;
+        h2 {
+            font-size: 0;
         }
 
-        @include responsive(large-tablet-screens) {
-            margin-top: 387px;
-        }
-
-        .hall-title {
-                display: flex;
-            .blue-sq {
-                width: 14px;
-                height: 30px;
-                margin-right: 8px;
-                margin-top: 3px;
-                background-color: $point-color;
-
+        ul.fnb-menu {
+            width: 60%;
+            // background-color: red;
+            @include flex-box() {
+                justify-content: center;
+                flex-wrap: wrap
             }
-            h2 {
-                margin-bottom: 40px;
-                font-weight: 600;
-                font-size: 28px;
-                
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 54px;
-                    font-size: 30px;
-                }
-            }
-        } //hall-title
-      
-
-        .way {
-            margin-bottom: 34px;
-
+            @include pos-center-x();
+            
             @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
-
-            h3 {
-                margin-bottom: 25px;
-                font-size: 16px;
-                font-weight: 600;
-
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
-                    font-size: 18px;
-                }
-            }
-
-            .internet {
-                background-color: aqua;
-                @include flex-box() {
-                    justify-content: left;
-                    flex-wrap: nowrap;
-                }
-                margin-bottom: 10px;
-
-                p.bd {
-                    white-space: nowrap;
-                    font-weight: 600;
-                    font-size: 14px;
-                    margin-right: 10px;
-
-                    @include responsive(large-tablet-screens) {
-                        font-size: 16px;
-                    }
-                }
-                p.txt {
-                    margin-top: -2px;
-                    font-size: 14px;
-                    line-height: 20px;
-
-                    @include responsive(large-tablet-screens) {
-                        margin-top: -1px;
-                        font-size: 16px;
-                    }
-
-                    a {
-                        // display: inline-block;
-                        width: 67px;
-                        color: #fff;
-                        padding: 0 4px;
-                        font-size: $mini-text-font-size;
-                        background-color: $point-color;
-                        margin-left: 3px;
-
-                        i {
-                            margin-left: 5px;
-                        }
-
-                        &:hover {
-                            font-weight: 600;
-                        }
-                    }
-                }
-            } //internet
-            .call {
-                @include flex-box() {
-                    justify-content: left;
-                    flex-wrap: nowrap;
-                }
-                margin-bottom: 10px;
-
-                p.bd {
-                    white-space: nowrap;
-                    font-weight: 600;
-                    font-size: 14px;
-                    margin-right: 23px;
-
-                    @include responsive(large-tablet-screens) {
-                        font-size: 16px;
-                    }
-                }
-
-                p.txt {
-                    margin-top: -2px;
-                    font-size: 14px;
-                    line-height: 20px;
-
-                    @include responsive(large-tablet-screens) {
-                        margin-top: -1px;
-                        font-size: 16px;
-                    }
-                }
-            } //call
-        } //way
-
-        .fee {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
-
-            h3 {
-                margin-bottom: 25px;
-                font-size: 16px;
-                font-weight: 600;
-
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
-                    font-size: 18px;
-                }
-            }
-
-            .internet {
-                @include flex-box() {
-                    justify-content: left;
-                    flex-wrap: nowrap;
-                }
-                margin-bottom: 10px;
-
-                p.bd {
-                    white-space: nowrap;
-                    font-weight: 600;
-                    font-size: 14px;
-                    margin-right: 10px;
-
-                    @include responsive(large-tablet-screens) {
-                        font-size: 16px;
-                    }
-                }
-
-                p.txt {
-                    margin-top: -2px;
-                    font-size: 14px;
-                    line-height: 20px;
-
-                    @include responsive(large-tablet-screens) {
-                        margin-top: -1px;
-                        font-size: 16px;
-                    }
-                }
-            } //internet
-
-            .call {
-                @include flex-box() {
-                    justify-content: left;
-                    flex-wrap: nowrap;
-                }
-                margin-bottom: 10px;
-
-                p.bd {
-                    white-space: nowrap;
-                    font-weight: 600;
-                    font-size: 14px;
-                    margin-right: 23px;
-
-                    @include responsive(large-tablet-screens) {
-                        font-size: 16px;
-                    }
-                }
-
-                p.txt {
-                    margin-top: -2px;
-                    font-size: 14px;
-                    line-height: 20px;
-
-                    @include responsive(large-tablet-screens) {
-                        margin-top: -1px;
-                        font-size: 16px;
-                    }
-                }
-            } //call
-        } //fee
-    } //ticketing
-    .calloff {
-        margin-top: 58px;
-        margin-bottom: 140px;
-        @include responsive(large-tablet-screens) {
-            margin-top: 76px;
-            margin-bottom: 220px;
-        }
-
-        .hall-title {
-            display: flex;
-            .blue-sq {
-                width: 14px;
-                height: 30px;
-                margin-right: 8px;
-                margin-top: 3px;
-                background-color: $point-color;
-            }
-        
-            h2 {
-                margin-bottom: 40px;
-                font-weight: 600;
-                font-size: 28px;
-                
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 54px;
-                    font-size: 30px;
-                }
-            }
-
-        } //hall-title
-        
-        .deadline {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
-
-            h3 {
-                margin-bottom: 25px;
-                font-size: 16px;
-                font-weight: 600;
-
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
-                    font-size: 18px;
-                }
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 1.5;
-
-                @include responsive(large-tablet-screens) {
-                    font-size: 16px;
-                }
-            }
-        } //.deadline
-        
-        .coff-fee {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
-
-            h3 {
-                margin-bottom: 25px;
-                font-size: 16px;
-                font-weight: 600;
-
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
-                    font-size: 18px;
-                }
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 1.5;
-
-                @include responsive(large-tablet-screens) {
-                    font-size: 16px;
-                }
+                width: 50%;
             }
             
-            div.box {
-                margin: 10px 0;
-                padding: 5px;
-                background-color: $gray-bg;
+            li { 
+                flex: 50%;
+                width: 30%;             
+                border: 1px solid #000;
+                border-right: 0;
+                border-bottom: 0;
 
-                @include responsive(large-tablet-screens) {
-                    padding: 20px;
-                    max-width: 800px;
-                }
-                
-                p {
-                    font-size: 14px;
-                    line-height: 1.5;
+                &:nth-child(2) {
+                    border-right: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
-                        font-size: 16px;
-                    }
-
-                    span {
-                        font-weight: 600;
+                        border: 0;
                     }
                 }
-            } //div.box
-        } //coff-fee
-    } //.calloff
+                &:last-child {
+                    border-right: 1px solid #000; 
+                    border-bottom: 1px solid #000;
+                    
+                    @include responsive(large-tablet-screens) {
+                        border: 0;
+                    }
+
+                }
+
+                &:nth-child(3) {
+                    border-bottom: 1px solid #000; 
+
+                    @include responsive(large-tablet-screens) {
+                        border: 0;
+                    }
+
+                }
 
 
-}
+                @include responsive(large-tablet-screens) {
+                    flex: 25%;
+                    border: 0;
+                }
+
+                a {
+                    padding: 10px;
+                    text-align: center;
+                    // background-color: red;
+
+                    &:hover {
+                        font-weight: 600;
+                    }
+                    
+                    @include responsive(large-tablet-screens) {
+                        padding: 0;
+                        font-size: 18px;
+
+                        &::after {
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 5px;
+                            margin-top: 5px;
+                            background-color: #000;
+                            transform: scale(0);
+                            transition: all 0.5s;
+                        }
+        
+                        &:hover::after {
+                            transform: scale(0.6);
+                        }
+                    }
+                }
+            }
+        } //ul.fnb-menu
+
+        .fnb-info1 {
+            @include flex-box();
+            flex-direction: column;
+            // background-color: aqua;
+            margin-top:70px;
+
+            @include responsive(large-tablet-screens) {
+                flex-direction: row;
+            }
+            .info-img { 
+                
+                img {
+                    width: 100%;
+                    
+
+                    @include responsive(large-tablet-screens) {
+                        min-width: 620px;
+                        height: 609px;
+                    }
+                }
+            }
+
+            .info-txt {
+                padding-top: 55px;
+                padding-left: 0;
+                @include responsive(large-tablet-screens) {
+                    
+                    width: 474px;
+                    height: 609px;
+                    padding-top: 156px;
+                    padding-left: 20px;
+                    border-top: 1px solid $point-color;
+                    border-bottom: 1px solid $point-color;
+                }
+                
+
+                @include responsive(desktop-screens) {
+                    padding-left: 0;
+                }
+                
+
+                p.txt-1 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    padding-bottom: 40px;
+                }
+                p.txt-2 {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    padding-bottom: 40px;
+                }
+                p.txt-3 {
+                    font-size: 16px;
+                    .txt-bd {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 50px;
+                    }
+                }
+            }
+        } //fnb-info1
+
+        .fnb-info2 {
+            @include flex-box();
+            flex-direction:column-reverse;
+            margin-top: 134px;
+
+            @include responsive(large-tablet-screens) {
+                flex-direction: row;
+            }
+            .info-img {
+                
+                img {
+                    width: 100%;
+                    
+                    @include responsive(large-tablet-screens) {
+                        min-width: 620px;
+                        height: 609px;
+                    }
+                }
+            }
+
+            .info-txt {
+                @include responsive(large-tablet-screens) {
+                    width: 474px;
+                    height: 609px;
+                    padding-top: 156px;
+                    padding-left: 20px;
+                    border-top: 1px solid #0094d6;
+                    border-bottom: 1px solid #0094d6;
+                }
+                padding-top: 51px;
+                padding-left: 0px;
+
+                @include responsive(desktop-screens) {
+                    padding-left: 0;
+                }
+
+                p.txt-1 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    padding-bottom: 40px;
+                }
+                p.txt-3 {
+                    font-size: 16px;
+                    
+                    .txt-bd {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 50px;
+                    }
+                }
+            }
+        } //fnb-info2
+
+        .fnb-info3 {
+            @include flex-box();
+            flex-direction:column;
+            // background-color: aqua;
+            margin-top: 134px;
+            margin-bottom: 266px;
+
+            @include responsive(large-tablet-screens) {
+                flex-direction: row;
+            }
+            .info-img {
+                
+                img {
+                    width: 100%;
+                    
+                    @include responsive(large-tablet-screens) {
+                        min-width: 620px;
+                        height: 609px;
+                    }
+                }
+            }
+
+            .info-txt {
+                
+                @include responsive(large-tablet-screens) {
+                    
+                    width: 474px;
+                    height: 609px;
+                    padding-top: 156px;
+                    padding-left: 20px;
+                    border-top: 1px solid #0094d6;
+                    border-bottom: 1px solid #0094d6;
+                }
+                padding-top: 51px;
+                padding-left: 0px;
+
+                @include responsive(desktop-screens) {
+                    padding-left: 0;
+                }
+
+                p.txt-1 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    padding-bottom: 40px;
+                }
+                p.txt-2 {
+                    font-size: 16px;
+                }
+            }
+        } //fnb-info3
+} //main
+
 
 // * ===================== footer ===================== *
 
 footer {
     color: #fff;
     background-color: #000;
+    margin-top: 266px;
 
     @include responsive(large-tablet-screens) {
         height: 800px;

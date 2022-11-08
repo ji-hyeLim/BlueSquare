@@ -41,6 +41,23 @@
     }
 }
 
+@keyframes updown {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 html,
 body {
     max-width: 100%;
@@ -107,13 +124,12 @@ header {
                 animation: fadeIn 3s forwards;
 
                 font: {
-                    weight: 600;
-                    size: 36px;
+                    size: 45px;
                     family: $eng-font;
                 }
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 50px;
+                    font-size: 90px;
                 }
             }
         }
@@ -128,16 +144,26 @@ header {
                 bottom: 60px;
             }
 
-            img {
-                width: 45px;
-                height: 45px;
+            a {
+                position: relative;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                // background-color: red;
+                width: 54px;
+                height: 54px;
+                
+                i {
+                    @include pos-center();
+                    animation: updown 3s infinite;
+                    color: white;
+                }
 
                 @include responsive(large-tablet-screens) {
-                    width: 54px;
-                    height: 54px;
+                    width: 65px;
+                    height: 65px;
                 }
             }
-        }
+        } //dw-icon
     }//fnbserve-header
     //========== fnbserve-header end!!! ==========//
 
@@ -320,8 +346,7 @@ main {
             @include pos-center-x();
 
             @include responsive(large-tablet-screens) {
-                margin-top: 140px;
-                width: 40%;
+                width: 50%;
             }
             
             li { 
@@ -379,7 +404,7 @@ main {
                             display: block;
                             content: "";
                             width: 100%;
-                            height: 1px;
+                            height: 5px;
                             margin-top: 5px;
                             background-color: #000;
                             transform: scale(0);
@@ -387,7 +412,7 @@ main {
                         }
         
                         &:hover::after {
-                            transform: scale(0.55);
+                            transform: scale(0.6);
                         }
                     }
                 }
@@ -440,18 +465,18 @@ main {
 
                 p.txt-1 {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 600;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
                 p.txt-2 {
                     font-size: 16px;
-                    line-height: 30px;
+                    line-height: 1.5;
                     padding-bottom: 40px;
                 }
                 p.txt-3 {
                     font-size: 16px;
-                    line-height: 28px;
+                    line-height: 1.5;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
@@ -503,18 +528,14 @@ main {
 
                 p.txt-1 {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 600;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                p.txt-2 {
-                    font-size: 16px;
-                    line-height: 30px;
-                    padding-bottom: 40px;
-                }
+                
                 p.txt-3 {
                     font-size: 16px;
-                    line-height: 28px;
+                    line-height: 1.5;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
@@ -566,31 +587,20 @@ main {
                     padding-left: 0;
                 }
                 
-
                 p.txt-1 {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 600;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
                 p.txt-2 {
                     font-size: 16px;
-                    line-height: 30px;
+                    line-height: 1.5px;
                     padding-bottom: 40px;
-                }
-                p.txt-3 {
-                    font-size: 16px;
-                    line-height: 28px;
-                    .txt-bd {
-                        font-size: 18px;
-                        font-weight: 500;
-                        line-height: 50px;
-                    }
                 }
             }
         } //fnb-info3
 } //main
-
 
 // * ===================== footer ===================== *
 

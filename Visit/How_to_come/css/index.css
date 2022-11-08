@@ -361,11 +361,11 @@ main section.map-txt .txt .area {
   display: flex;
   justify-content: space-between;
   justify-content: left;
-  margin-bottom: 14px;
+  line-height: 1.5;
 }
 @media screen and (min-width: 1024px) {
   main section.map-txt .txt .area {
-    margin-bottom: 40px;
+    line-height: 1.5;
   }
 }
 main section.map-txt .txt .area img {
