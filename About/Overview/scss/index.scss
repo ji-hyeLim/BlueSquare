@@ -406,11 +406,11 @@ header {
 main {
     margin: 266px 0;
     .title {
+        margin-bottom: 115px;
         font-weight: 600;
         font-size: 0;
 
         @include responsive(large-tablet-screens) {
-            margin-bottom: 100px;
             font-size: 38px;
         }
     }
@@ -419,7 +419,7 @@ main {
         // background-color:aqua;
         @include flex-box();
         flex-direction: column-reverse;
-        margin-bottom: 100px;
+        margin-top: 70px;
 
         @include responsive(large-tablet-screens) {
             flex-direction: row;
@@ -445,12 +445,10 @@ main {
             // background-color: blueviolet;
             opacity: 0;
             padding-left: 0;
-            margin-bottom: 90px;
+            margin-bottom: 40px;
             animation: fadeIn 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
-                margin-top: 10px;
-                padding-top: 40px;
                 width: 358px;
                 height: 454px;
             }
@@ -466,36 +464,25 @@ main {
                     weight: 600;
                     family: $eng-font;
                 }
-
-                padding-bottom: 15px;
                 color: #0094d6;
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 14px;
-                    padding-bottom: 30px;
+                    margin-top: 40px;
                 }
             }
 
             p.txt2 {
-                font-size: 28px;
+                font-size: 26px;
                 font-weight: 600;
-                line-height: 36px;
-                padding-bottom: 36px;
-
-                @include responsive(large-tablet-screens) {
-                    font-size: 26px;
-                    padding-bottom: 45px;
-                    line-height: 42px;
-                }
+                line-height: 1.5;
+                margin: 40px 0;
             }
 
             p.txt3 {
-                line-height: 24px;
-                font-size: 14px;
+                line-height: 1.5;
+                font-size: 16px;
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 16px;
-                    line-height: 30px;
                     // background-color: pink;
                     width: 358px;
                 }
@@ -506,13 +493,12 @@ main {
             }
         }//.info-txt
     }//page-info1
-justify-content: space-between;
     
     .page-info2 {
         // background-color:aqua;
         @include flex-box();
         flex-direction: column; 
-        margin-bottom: 100px;
+        margin-top: 134px;
 
         @include responsive(large-tablet-screens) {
             flex-direction: row;
@@ -537,15 +523,15 @@ justify-content: space-between;
         .info-txt {
             // background-color: blueviolet;
             opacity: 0;
-            margin-bottom: 90px;
+            margin-bottom: 40px;
             animation: fadeIn 1s 3s forwards;
             
 
             @include responsive(large-tablet-screens) {
-                margin-top: 10px;
-                padding-top: 40px;
+                // margin-top: 10px;
+                // padding-top: 40px;
                 padding-right: 0;
-                max-width: 374px;
+                width: 374px;
                 height: 454px;
             }
             
@@ -561,29 +547,23 @@ justify-content: space-between;
                     family: $eng-font;
                 }
 
-                padding-bottom: 15px;
                 color: #0094d6;
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 16px;
-                    padding-bottom: 30px;
+                    margin-top: 40px;
                 }
+
                 @include responsive(desktop-screens) {
                     margin-left: 100px;
                 }
             }
 
             p.txt2 {
-                font-size: 28px;
+                font-size: 26px;
                 font-weight: 600;
-                line-height: 36px;
-                padding-bottom: 36px;
-
-                @include responsive(large-tablet-screens) {
-                    font-size: 30px;
-                    padding-bottom: 45px;
-                    line-height: 42px;
-                }
+                line-height: 1.5;
+                margin-top: 40px;
+                margin-bottom: 40px;
 
                 @include responsive(desktop-screens) {
                     margin-left: 100px;
@@ -591,14 +571,12 @@ justify-content: space-between;
             }
 
             p.txt3 {
-                line-height: 24px;
-                font-size: 14px;
+                line-height: 1.5;
+                font-size: 16px;
 
                 @include responsive(large-tablet-screens) {
                     // background-color: pink;
                     width:374px;
-                    font-size: 16px;
-                    line-height: 30px;
                 }
                 @include responsive(desktop-screens) {
                     margin-left: 100px;
@@ -612,7 +590,7 @@ justify-content: space-between;
         // background-color:aqua;
         @include flex-box();
         flex-direction: column-reverse;
-        margin-bottom: 100px;
+        margin-top: 134px;
 
         @include responsive(large-tablet-screens) {
             flex-direction: row;
@@ -637,19 +615,17 @@ justify-content: space-between;
         .info-txt {
             // background-color: blueviolet;
             opacity: 0;
-            padding-left: 0px;
-            margin-bottom: 60px;
+            // padding-left: 0px;
+            margin-bottom: 40px;
             animation: fadeIn 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
-                margin-bottom: 80px;
-                padding-top: 40px;
                 width: 370px;
                 height: 454px;
+                margin-bottom: 0px;
             }
 
             @include responsive(desktop-screens) {
-                margin-bottom: 100px;
                 margin-top: 10px;
                 padding-top: 80px;
                 width: 474px;
@@ -662,36 +638,27 @@ justify-content: space-between;
                     family: $eng-font;
                 }
 
-                padding-bottom: 15px;
+                // padding-bottom: 15px;
                 color: #0094d6;
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 16px;
-                    padding-bottom: 30px;
+                    margin-top: 40px;
                 }
             }
 
             p.txt2 {
-                font-size: 28px;
+                font-size: 26px;
                 font-weight: 600;
-                line-height: 36px;
-                padding-bottom: 36px;
-
-                @include responsive(large-tablet-screens) {
-                    font-size: 30px;
-                    padding-bottom: 45px;
-                    line-height: 42px;
-                }
+                line-height: 1.5;
+                margin: 40px 0;
             }
 
             p.txt3 {
-                line-height: 24px;
-                font-size: 14px;
+                line-height: 1.5;
+                font-size: 16px;
 
                 @include responsive(large-tablet-screens) {
                     // background-color: pink;
-                    font-size: 16px;
-                    line-height: 30px;
                     width: 370px;
                 }
 
@@ -706,11 +673,12 @@ justify-content: space-between;
     .bottom-txt {
         // background-color: azure;
         width: 92%;
+        height: 163px;
+        margin: 134px 0;
         @include pos-center-x();
 
         @include responsive(large-tablet-screens) {
             width: 587px;
-            height: 163px;
         }
 
         p {
@@ -722,7 +690,7 @@ justify-content: space-between;
             animation: fadeIn 3s 3s linear forwards;
 
             .bold-txt {
-                font-weight: bold;
+                font-weight: 600;
             }
 
             @include responsive(large-tablet-screens) {
@@ -735,18 +703,14 @@ justify-content: space-between;
     //.bottom-txt
 
     .flow-txt-wrap {
-        // margin-top: 60px;
-        margin-bottom: 80px;
-        padding-top: 200px;
+        margin-top: 350px;
+        font-size: 120px;
 
         @include responsive(small-tablet-screens) {
-            margin-top: 100px;
-            margin-bottom: 100px;
             font-size: 150px;
         }
-        @include responsive(large-tablet-screens) {
-            margin-top: 200px; 
-            margin-bottom: 200px;
+        @include responsive(large-tablet-screens) { 
+            margin-top: 384px;
         }
 
         div {
@@ -758,8 +722,14 @@ justify-content: space-between;
             font-size: 100px;
             font-weight: 600;
 
+            @include responsive(small-tablet-screens) {
+
+                font-size: 150px;
+            }
+
             @include responsive(large-tablet-screens) {
                 font-size: 200px;
+                
             }
 
             .flow-txt {
