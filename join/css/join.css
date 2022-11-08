@@ -235,70 +235,175 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main {
   position: relative;
-  width: 100vw;
-  margin-bottom: 266px;
+  height: 1500px;
+  background-color: #000;
 }
-main h1 {
+main .go-home {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+main .go-home a {
+  color: #fff;
+}
+main .go-home a::before {
+  display: inline-block;
+  content: "\f060";
+  font-family: "FontAwesome";
+  font-weight: 300;
+  margin-right: 10px;
+}
+main .pos-wrap {
+  position: relative;
+  height: 1500px;
+}
+main .pos-wrap .join-wrap {
+  width: 100%;
+  min-width: 350px;
+  padding: 50px 40px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 600px) {
+  main .pos-wrap .join-wrap {
+    margin: 0 auto;
+    width: 550px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .pos-wrap .join-wrap {
+    margin: 0 auto;
+    width: 610px;
+  }
+}
+main .pos-wrap .join-wrap h1 {
   margin-bottom: 58px;
-}
-main .notice-wrap .notices {
-  margin-bottom: 102px;
-}
-main .notice-wrap .notices div {
-  border-top: 1px solid #ccc;
-}
-main .notice-wrap .notices div:first-child {
-  border-top: 2px solid #ccc;
-}
-main .notice-wrap .notices div:last-child {
-  border-bottom: 2px solid #ccc;
-}
-main .notice-wrap .notices div a {
-  margin-top: 16px;
-  padding: 12px 20px;
-}
-@media screen and (min-width: 1024px) {
-  main .notice-wrap .notices div a {
-    font-size: 18px;
-  }
-}
-main .notice-wrap .notices div a:hover {
+  font-family: "Montserrat", sans-serif, Arial;
   font-weight: 600;
 }
-main .notice-wrap .notices div time {
+main .pos-wrap .join-wrap form div {
+  margin-bottom: 24px;
+}
+main .pos-wrap .join-wrap form div:last-of-type {
+  margin-bottom: 0;
+}
+main .pos-wrap .join-wrap form label {
   display: block;
-  padding: 0px 20px 28px;
-  font-size: 13px;
-  color: #b2b2b2;
+  padding-bottom: 13px;
 }
-@media screen and (min-width: 1024px) {
-  main .notice-wrap .notices div time {
-    font-size: 14px;
+main .pos-wrap .join-wrap form label span {
+  color: red;
+}
+main .pos-wrap .join-wrap form input {
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+main .pos-wrap .join-wrap form input:focus {
+  outline: none;
+  border-color: #0094d6;
+  box-shadow: 0 0 2px #0094d6;
+}
+main .pos-wrap .join-wrap form .address-box input {
+  color: #0094d6;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #0094d6;
+  background-color: #fff;
+}
+main .pos-wrap .join-wrap form .gender-box .radio-box {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+main .pos-wrap .join-wrap form .gender-box .radio-box label {
+  display: inline;
+  font-size: 14px;
+}
+main .pos-wrap .join-wrap form .gender-box .radio-box input {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  margin-left: 14%;
+  margin-right: 5px;
+  margin-bottom: -2px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+@media screen and (min-width: 600px) {
+  main .pos-wrap .join-wrap form .gender-box .radio-box input {
+    margin-left: 20%;
   }
 }
-main .notice-wrap .pagination {
-  margin: 0 auto;
+main .pos-wrap .join-wrap form .gender-box .radio-box input:checked::after {
+  display: block;
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: #0094d6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+}
+main .pos-wrap .join-wrap form .gender-box .radio-box input:first-child {
+  margin-left: 0;
+}
+main .pos-wrap .join-wrap form button {
+  margin-top: 40px;
+  width: 100%;
+  height: 55px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  background-color: #000;
+}
+main .pos-wrap .join-wrap .join-agree {
+  margin-top: 25px;
+}
+main .pos-wrap .join-wrap .join-agree .line {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 30px;
+}
+main .pos-wrap .join-wrap .join-agree ul li {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  line-height: 2;
 }
-main .notice-wrap .pagination a {
-  padding: 4px 10px;
-  margin: 0 5px;
-}
-@media screen and (min-width: 1024px) {
-  main .notice-wrap .pagination a {
-    margin: 0 8px;
-  }
-}
-main .notice-wrap .pagination a.on {
+main .pos-wrap .join-wrap .join-agree ul li:first-child > div {
   font-weight: 600;
-  border-radius: 50%;
-  background-color: #eee;
 }
-main .notice-wrap .pagination a:hover {
-  font-weight: 600;
+main .pos-wrap .join-wrap .join-agree ul li div {
+  width: 70%;
+}
+main .pos-wrap .join-wrap .join-agree ul li div input {
+  margin-right: 10px;
+}
+main .pos-wrap .join-wrap .join-agree ul li a {
+  width: 30%;
+  text-align: right;
+  color: #0094d6;
+}
+main .pos-wrap .join-wrap .join-agree ul li a i {
+  padding-left: 5px;
 }
 
 footer {
@@ -469,4 +574,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=join.css.map */

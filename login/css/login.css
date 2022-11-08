@@ -235,70 +235,161 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main {
   position: relative;
-  width: 100vw;
-  margin-bottom: 266px;
+  background-color: #000;
 }
-main h1 {
-  margin-bottom: 58px;
+main .go-home {
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
-main .notice-wrap .notices {
-  margin-bottom: 102px;
+main .go-home a {
+  color: #fff;
 }
-main .notice-wrap .notices div {
-  border-top: 1px solid #ccc;
+main .go-home a::before {
+  display: inline-block;
+  content: "\f060";
+  font-family: "FontAwesome";
+  font-weight: 300;
+  margin-right: 10px;
 }
-main .notice-wrap .notices div:first-child {
-  border-top: 2px solid #ccc;
+main .pos-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
-main .notice-wrap .notices div:last-child {
-  border-bottom: 2px solid #ccc;
+main .pos-wrap .login-wrap {
+  width: 100%;
+  min-width: 350px;
+  padding: 50px 40px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-main .notice-wrap .notices div a {
-  margin-top: 16px;
-  padding: 12px 20px;
-}
-@media screen and (min-width: 1024px) {
-  main .notice-wrap .notices div a {
-    font-size: 18px;
+@media screen and (min-width: 600px) {
+  main .pos-wrap .login-wrap {
+    margin: 0 auto;
+    width: 550px;
   }
 }
-main .notice-wrap .notices div a:hover {
+@media screen and (min-width: 1024px) {
+  main .pos-wrap .login-wrap {
+    margin: 0 auto;
+    width: 610px;
+  }
+}
+main .pos-wrap .login-wrap h1 {
+  margin-bottom: 58px;
+  font-family: "Montserrat", sans-serif, Arial;
   font-weight: 600;
 }
-main .notice-wrap .notices div time {
+main .pos-wrap .login-wrap form label {
   display: block;
-  padding: 0px 20px 28px;
-  font-size: 13px;
-  color: #b2b2b2;
+  padding-bottom: 13px;
 }
-@media screen and (min-width: 1024px) {
-  main .notice-wrap .notices div time {
-    font-size: 14px;
-  }
+main .pos-wrap .login-wrap form input {
+  height: 50px;
+  width: 100%;
+  padding-left: 50px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-main .notice-wrap .pagination {
-  margin: 0 auto;
+main .pos-wrap .login-wrap form input:focus {
+  outline: none;
+  border-color: #0094d6;
+  box-shadow: 0 0 2px #0094d6;
+}
+main .pos-wrap .login-wrap form .id-box {
+  margin-bottom: 24px;
+}
+main .pos-wrap .login-wrap form .id-box input {
+  background: url(../img/email_small.png) 10px center no-repeat;
+  background-size: 25px;
+}
+main .pos-wrap .login-wrap form .id-box input:focus {
+  background: url(../img/email_active.png) 10px center no-repeat;
+  background-size: 25px;
+}
+main .pos-wrap .login-wrap form .pw-box input {
+  background: url(../img/lock_small.png) 13.5px center no-repeat;
+  background-size: 20px;
+}
+main .pos-wrap .login-wrap form .pw-box input:focus {
+  background: url(../img/lock_active.png) 10px center no-repeat;
+  background-size: 20px;
+}
+main .pos-wrap .login-wrap form button {
+  margin-top: 40px;
+  width: 100%;
+  height: 55px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  background-color: #000;
+}
+main .pos-wrap .login-wrap .flex-box {
+  margin-top: 25px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   justify-content: center;
 }
-main .notice-wrap .pagination a {
-  padding: 4px 10px;
-  margin: 0 5px;
+main .pos-wrap .login-wrap .flex-box li {
+  padding: 0 10px;
+  border-right: 1px solid black;
 }
-@media screen and (min-width: 1024px) {
-  main .notice-wrap .pagination a {
-    margin: 0 8px;
-  }
+main .pos-wrap .login-wrap .flex-box li:first-child {
+  padding-left: 0;
 }
-main .notice-wrap .pagination a.on {
-  font-weight: 600;
-  border-radius: 50%;
-  background-color: #eee;
+main .pos-wrap .login-wrap .flex-box li:last-child {
+  padding-right: 0;
+  border-right: 0;
 }
-main .notice-wrap .pagination a:hover {
-  font-weight: 600;
+main .pos-wrap .login-wrap .flex-box li a {
+  font-size: 14px;
+}
+main .pos-wrap .login-wrap .flex-box li a:hover {
+  text-decoration: underline;
+}
+main .pos-wrap .login-wrap .sns-login {
+  margin-top: 30px;
+}
+main .pos-wrap .login-wrap .sns-login div {
+  text-align: center;
+}
+main .pos-wrap .login-wrap .sns-login div::before {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin-bottom: -14px;
+  background-color: #ccc;
+}
+main .pos-wrap .login-wrap .sns-login div span {
+  color: #b2b2b2;
+  padding: 0 10px;
+  background-color: #fff;
+}
+main .pos-wrap .login-wrap .sns-login .sns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+main .pos-wrap .login-wrap .sns-login .sns li {
+  padding-left: 20px;
+}
+main .pos-wrap .login-wrap .sns-login .sns li:first-child {
+  padding-left: 0;
+}
+main .pos-wrap .login-wrap .sns-login .sns li img {
+  width: 50px;
 }
 
 footer {
@@ -469,4 +560,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=login.css.map */
