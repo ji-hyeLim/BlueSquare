@@ -352,6 +352,7 @@ main .ticketing .way h3 {
   }
 }
 main .ticketing .way .internet {
+  background-color: aqua;
   display: flex;
   justify-content: space-between;
   justify-content: left;

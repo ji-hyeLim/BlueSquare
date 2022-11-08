@@ -24,6 +24,9 @@
                 $('.tab-menu li a').eq(idx).addClass('underline');
                 $('section').removeClass('show');
                 $('section').eq(idx).addClass('show');
+                $('.btn-open').next('.accord-content').siblings('.accord-content').slideUp(300);
+                $('.btn-open').toggleClass('on').siblings().removeClass('on');
+
             })
         })
     </script>

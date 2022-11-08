@@ -88,6 +88,55 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -98,11 +147,87 @@ header {
   position: relative;
   width: 100vw;
 }
-header .slides {
+header .header-bg {
   width: 100%;
   height: 100vh;
-  background: url(../img/header_bg.png) no-repeat center fixed;
-  background-size: cover;
+  overflow: hidden;
+}
+header .fnbserve-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 600px) {
+  header .fnbserve-header {
+    width: 100%;
+    height: 936;
+    background-image: url(../img/필로스이미지레이어.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+header .fnbserve-header .hd-img img.mb {
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 600px) {
+  header .fnbserve-header .hd-img img.mb {
+    display: none;
+  }
+}
+header .fnbserve-header .hd-txt {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header .fnbserve-header .hd-txt p {
+  text-align: center;
+  color: white;
+  -webkit-animation: fadeIn 2s forwards;
+          animation: fadeIn 2s forwards;
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif, Arial;
+}
+@media screen and (min-width: 1024px) {
+  header .fnbserve-header .hd-txt p {
+    font-size: 90px;
+  }
+}
+header .fnbserve-header .dw-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  header .fnbserve-header .dw-icon {
+    bottom: 60px;
+  }
+}
+header .fnbserve-header .dw-icon a {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+}
+header .fnbserve-header .dw-icon a i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: updown 3s infinite;
+          animation: updown 3s infinite;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  header .fnbserve-header .dw-icon a {
+    width: 65px;
+    height: 65px;
+  }
 }
 header .logo-menu-box {
   position: absolute;
@@ -228,268 +353,257 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
+  position: relative;
   margin-top: 266px;
-  margin-bottom: 266px;
-}
-main h1 {
-  margin-bottom: 70px;
-  padding-bottom: 58px;
-  border-bottom: 2px solid #ccc;
 }
 main h2 {
-  font-size: 26px;
-  margin-bottom: 38px;
-  position: relative;
-  padding-left: 13px;
+  font-size: 0;
 }
-main h2::before {
+main ul.fnb-menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   position: absolute;
-  display: block;
-  content: "";
-  width: 5px;
-  height: 100%;
-  margin-left: -13px;
-  background-color: rgb(0, 148, 214);
+  left: 50%;
+  transform: translateX(-50%);
 }
-main .venue-process {
-  position: relative;
-  margin: 0 auto;
-  padding-left: 20px;
-  margin-bottom: 134px;
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu {
+    width: 50%;
+  }
 }
-@media screen and (min-width: 600px) {
-  main .venue-process {
-    padding: 0 20px;
+main ul.fnb-menu li {
+  flex: 50%;
+  width: 30%;
+  border: 1px solid #000;
+  border-right: 0;
+  border-bottom: 0;
+}
+main ul.fnb-menu li:nth-child(2) {
+  border-right: 1px solid #000;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:nth-child(2) {
+    border: 0;
+  }
+}
+main ul.fnb-menu li:last-child {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:last-child {
+    border: 0;
+  }
+}
+main ul.fnb-menu li:nth-child(3) {
+  border-bottom: 1px solid #000;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:nth-child(3) {
+    border: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li {
+    flex: 25%;
+    border: 0;
+  }
+}
+main ul.fnb-menu li a {
+  padding: 10px;
+  text-align: center;
+}
+main ul.fnb-menu li a:hover {
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a {
+    padding: 0;
+    font-size: 18px;
+  }
+  main ul.fnb-menu li a::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 5px;
+    margin-top: 5px;
+    background-color: #000;
+    transform: scale(0);
+    transition: all 0.5s;
+  }
+  main ul.fnb-menu li a:hover::after {
+    transform: scale(0.6);
+  }
+}
+main .fnb-info1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 70px;
+}
+@media screen and (min-width: 1024px) {
+  main .fnb-info1 {
+    flex-direction: row;
+  }
+}
+main .fnb-info1 .info-img img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .fnb-info1 .info-img img {
+    min-width: 620px;
+    height: 609px;
+  }
+}
+main .fnb-info1 .info-txt {
+  padding-top: 55px;
+  padding-left: 0;
+}
+@media screen and (min-width: 1024px) {
+  main .fnb-info1 .info-txt {
+    width: 474px;
+    height: 609px;
+    padding-top: 156px;
+    padding-left: 20px;
+    border-top: 1px solid #0094d6;
+    border-bottom: 1px solid #0094d6;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .venue-process {
-    width: 1400px;
-    padding: 0;
+  main .fnb-info1 .info-txt {
+    padding-left: 0;
   }
 }
-main .venue-process .process-slides {
+main .fnb-info1 .info-txt p.txt-1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 40px;
+}
+main .fnb-info1 .info-txt p.txt-2 {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-bottom: 40px;
+}
+main .fnb-info1 .info-txt p.txt-3 {
+  font-size: 16px;
+}
+main .fnb-info1 .info-txt p.txt-3 .txt-bd {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+}
+main .fnb-info2 {
   display: flex;
   justify-content: space-between;
-  overflow-x: scroll;
+  flex-direction: column-reverse;
+  margin-top: 134px;
 }
-main .venue-process .process-slides::-webkit-scrollbar {
-  width: 100vw;
-  height: 1px;
-  background-color: transparent;
+@media screen and (min-width: 1024px) {
+  main .fnb-info2 {
+    flex-direction: row;
+  }
 }
-main .venue-process .process-slides::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
-main .venue-process .process-slides > div {
+main .fnb-info2 .info-img img {
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .fnb-info2 .info-img img {
+    min-width: 620px;
+    height: 609px;
+  }
+}
+main .fnb-info2 .info-txt {
+  padding-top: 51px;
+  padding-left: 0px;
+}
+@media screen and (min-width: 1024px) {
+  main .fnb-info2 .info-txt {
+    width: 474px;
+    height: 609px;
+    padding-top: 156px;
+    padding-left: 20px;
+    border-top: 1px solid #0094d6;
+    border-bottom: 1px solid #0094d6;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .fnb-info2 .info-txt {
+    padding-left: 0;
+  }
+}
+main .fnb-info2 .info-txt p.txt-1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 40px;
+}
+main .fnb-info2 .info-txt p.txt-3 {
+  font-size: 16px;
+}
+main .fnb-info2 .info-txt p.txt-3 .txt-bd {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+}
+main .fnb-info3 {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  margin-top: 134px;
+  margin-bottom: 266px;
 }
-main .venue-process .process-slides > div .slide-fix {
-  padding-right: 10px;
-  position: relative;
+@media screen and (min-width: 1024px) {
+  main .fnb-info3 {
+    flex-direction: row;
+  }
+}
+main .fnb-info3 .info-img img {
   width: 100%;
-  background-color: red;
-}
-main .venue-process .process-slides > div .slide-fix:last-child {
-  padding-right: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .venue-process .process-slides > div .slide-fix {
-    padding-right: 20px;
+  main .fnb-info3 .info-img img {
+    min-width: 620px;
+    height: 609px;
   }
 }
-main .venue-process .process-slides > div .slide-fix div {
-  position: relative;
-  width: 15em;
-  height: 15em;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-}
-main .venue-process .process-slides > div .slide-fix div img {
-  width: 100px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  top: 40%;
-}
-main .venue-process .process-slides > div .slide-fix div strong {
-  font-size: 14px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  top: 80%;
+main .fnb-info3 .info-txt {
+  padding-top: 51px;
+  padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .venue-process .process-slides > div .slide-fix div strong {
-    font-size: 16px;
+  main .fnb-info3 .info-txt {
+    width: 474px;
+    height: 609px;
+    padding-top: 156px;
+    padding-left: 20px;
+    border-top: 1px solid #0094d6;
+    border-bottom: 1px solid #0094d6;
   }
 }
-main .venue-process .slide-btn {
-  position: absolute;
-  bottom: 90px;
-  width: 20px;
-  height: 20px;
-  margin-top: 85px;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-radius: 2px;
-  cursor: pointer;
-}
-main .venue-process .slide-btn-left {
-  left: 4px;
-  transform: rotate(-135deg);
-}
-main .venue-process .slide-btn-right {
-  right: 4px;
-  transform: rotate(45deg);
-}
-main .venue-space {
-  margin-bottom: 134px;
-}
-main .venue-space ul {
-  display: flex;
-  justify-content: space-between;
-}
-main .venue-space ul li {
-  width: 100%;
-  font-size: 14px;
-  list-style: disc;
-  list-style-position: inside;
-  padding-left: 20px;
-  text-indent: -20px;
-}
-@media screen and (min-width: 1024px) {
-  main .venue-space ul li {
-    font-size: 16px;
+@media screen and (min-width: 1400px) {
+  main .fnb-info3 .info-txt {
+    padding-left: 0;
   }
 }
-main .venue-space ul li ul {
-  margin-left: -20px;
+main .fnb-info3 .info-txt p.txt-1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 40px;
 }
-main .venue-space ul li ul li {
-  width: 100%;
-  font-size: 14px;
-  padding-top: 10px;
-}
-@media screen and (min-width: 1024px) {
-  main .venue-space ul li ul li {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .venue-space {
-    width: 984px;
-  }
-}
-main .application-time {
-  margin-bottom: 134px;
-}
-main .application-time ul {
-  display: flex;
-  justify-content: space-between;
-}
-main .application-time ul li {
-  width: 100%;
-  font-size: 14px;
-  list-style: disc;
-  list-style-position: inside;
-  padding-left: 20px;
-  text-indent: -20px;
-}
-@media screen and (min-width: 1024px) {
-  main .application-time ul li {
-    font-size: 16px;
-  }
-}
-main .application-time ul li ul {
-  margin-left: -20px;
-}
-main .application-time ul li ul li {
-  width: 100%;
-  font-size: 14px;
-  padding-top: 10px;
-}
-@media screen and (min-width: 1024px) {
-  main .application-time ul li ul li {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .application-time {
-    width: 984px;
-  }
-}
-main .venue-inquiry {
-  word-break: break-all;
-  margin-bottom: 134px;
-}
-main .venue-inquiry ul {
-  display: flex;
-  justify-content: space-between;
-}
-main .venue-inquiry ul li {
-  width: 100%;
-  font-size: 14px;
-  list-style: disc;
-  list-style-position: inside;
-  padding-left: 20px;
-  text-indent: -20px;
-}
-@media screen and (min-width: 1024px) {
-  main .venue-inquiry ul li {
-    font-size: 16px;
-  }
-}
-main .venue-inquiry ul li ul {
-  margin-left: -20px;
-}
-main .venue-inquiry ul li ul li {
-  width: 100%;
-  font-size: 14px;
-  padding-top: 10px;
-}
-@media screen and (min-width: 1024px) {
-  main .venue-inquiry ul li ul li {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .venue-inquiry {
-    width: 984px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .submit-document {
-    width: 984px;
-  }
-}
-main .submit-document ul li {
-  font-size: 14px;
-}
-@media screen and (min-width: 1024px) {
-  main .submit-document ul li {
-    font-size: 16px;
-  }
-}
-main .submit-document ul li:last-child {
-  padding-top: 10px;
-}
-main .submit-document ul li a {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 13px;
-  color: #fff;
-  padding: 4px 10px;
-  background-color: rgb(0, 148, 214);
+main .fnb-info3 .info-txt p.txt-2 {
+  font-size: 16px;
+  line-height: 30px;
 }
 
 footer {
   color: #fff;
   background-color: #000;
+  margin-top: 266px;
 }
 @media screen and (min-width: 1024px) {
   footer {
@@ -655,4 +769,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=philos.css.map */

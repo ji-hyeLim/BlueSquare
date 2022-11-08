@@ -109,6 +109,34 @@ footer {
     transform: translateY(-10px);
   }
 }
+@-webkit-keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -158,13 +186,12 @@ header .fnbserve-header .hd-txt p {
   color: white;
   -webkit-animation: fadeIn 3s forwards;
           animation: fadeIn 3s forwards;
-  font-weight: 600;
-  font-size: 36px;
+  font-size: 45px;
   font-family: "Montserrat", sans-serif, Arial;
 }
 @media screen and (min-width: 1024px) {
   header .fnbserve-header .hd-txt p {
-    font-size: 50px;
+    font-size: 90px;
   }
 }
 header .fnbserve-header .dw-icon {
@@ -178,14 +205,26 @@ header .fnbserve-header .dw-icon {
     bottom: 60px;
   }
 }
-header .fnbserve-header .dw-icon img {
-  width: 45px;
-  height: 45px;
+header .fnbserve-header .dw-icon a {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+}
+header .fnbserve-header .dw-icon a i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: updown 3s infinite;
+          animation: updown 3s infinite;
+  color: white;
 }
 @media screen and (min-width: 1024px) {
-  header .fnbserve-header .dw-icon img {
-    width: 54px;
-    height: 54px;
+  header .fnbserve-header .dw-icon a {
+    width: 65px;
+    height: 65px;
   }
 }
 header .logo-menu-box {
@@ -331,8 +370,7 @@ main ul.fnb-menu {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu {
-    margin-top: 140px;
-    width: 40%;
+    width: 50%;
   }
 }
 main ul.fnb-menu li {
@@ -388,14 +426,14 @@ main ul.fnb-menu li a:hover {
     display: block;
     content: "";
     width: 100%;
-    height: 1px;
+    height: 5px;
     margin-top: 5px;
     background-color: #000;
     transform: scale(0);
     transition: all 0.5s;
   }
   main ul.fnb-menu li a:hover::after {
-    transform: scale(0.55);
+    transform: scale(0.6);
   }
 }
 main .fnb-info1 {
@@ -441,18 +479,18 @@ main .fnb-info1 .info-txt {
 }
 main .fnb-info1 .info-txt p.txt-1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 30px;
   padding-bottom: 40px;
 }
 main .fnb-info1 .info-txt p.txt-2 {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.5;
   padding-bottom: 40px;
 }
 main .fnb-info1 .info-txt p.txt-3 {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.5;
 }
 main .fnb-info1 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
@@ -502,18 +540,13 @@ main .fnb-info2 .info-txt {
 }
 main .fnb-info2 .info-txt p.txt-1 {
   font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  padding-bottom: 40px;
-}
-main .fnb-info2 .info-txt p.txt-2 {
-  font-size: 16px;
+  font-weight: 600;
   line-height: 30px;
   padding-bottom: 40px;
 }
 main .fnb-info2 .info-txt p.txt-3 {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.5;
 }
 main .fnb-info2 .info-txt p.txt-3 .txt-bd {
   font-size: 18px;
@@ -565,23 +598,14 @@ main .fnb-info3 .info-txt {
 }
 main .fnb-info3 .info-txt p.txt-1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 30px;
   padding-bottom: 40px;
 }
 main .fnb-info3 .info-txt p.txt-2 {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.5px;
   padding-bottom: 40px;
-}
-main .fnb-info3 .info-txt p.txt-3 {
-  font-size: 16px;
-  line-height: 28px;
-}
-main .fnb-info3 .info-txt p.txt-3 .txt-bd {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 50px;
 }
 
 footer {

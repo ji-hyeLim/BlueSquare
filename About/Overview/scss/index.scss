@@ -481,7 +481,7 @@ main {
                 color: #0094d6;
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 16px;
+                    font-size: 14px;
                     padding-bottom: 30px;
                 }
             }
@@ -493,7 +493,7 @@ main {
                 padding-bottom: 36px;
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 30px;
+                    font-size: 26px;
                     padding-bottom: 45px;
                     line-height: 42px;
                 }
