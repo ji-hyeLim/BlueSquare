@@ -154,7 +154,7 @@ header {
                 width: 100%;
                 height: 100vh;
 
-                @include responsive(large-tablet-screens) {
+                @include responsive(small-tablet-screens) {
                     display: none;
                 }
             }
@@ -164,7 +164,7 @@ header {
                 height: 100vh;
                 display: none;
 
-                @include responsive(large-tablet-screens) {
+                @include responsive(small-tablet-screens) {
                     display: block;
                 }
             }
@@ -231,26 +231,16 @@ header {
                         height: 5px;
                         background-color: white;
                         animation: mover 2s;
-                    }
+                    }// width: 100%;
 
-
-                    // width: 100%;
                     @include pos-center();
                     text-align: center;
                     color: #fff;
-
-                }
-
-                //span
-            }
-
-            // line-box
-        }
-
-        //hd-img
-    }
-
-    //.ov-header
+                }//span
+            }// line-box
+        }//hd-img
+    }//.ov-header
+    
     //==========overview header end==========//
 
     .logo-menu-box {
@@ -414,8 +404,8 @@ header {
 // * ===================== main ===================== *
 
 main {
+    margin: 266px 0;
     .title {
-        margin-top: 150px;
         font-weight: 600;
         font-size: 0;
 
