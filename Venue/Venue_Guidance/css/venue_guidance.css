@@ -233,25 +233,26 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  margin-bottom: 140px;
+  margin: 266px 0;
+  line-height: 1.5em;
 }
 main h1 {
-  font-size: 38px;
-  margin-top: 140px;
+  font-size: 26px;
 }
 @media screen and (min-width: 1024px) {
   main h1 {
-    margin-top: 280px;
+    font-size: 38px;
   }
 }
 main h2 {
   font-size: 0;
 }
 main ul.tab {
-  margin-top: 100px;
+  margin-top: 58px;
   margin-bottom: 50px;
   margin-left: 20px;
   border-bottom: 1px solid #ccc;
+  font-size: 18px;
   overflow: auto;
   white-space: nowrap;
   display: flex;
@@ -261,7 +262,7 @@ main ul.tab {
 @media screen and (min-width: 1024px) {
   main ul.tab {
     width: 1400px;
-    margin: 100px auto 80px;
+    margin: 58px auto 50px;
   }
 }
 main ul.tab::-webkit-scrollbar {
@@ -296,24 +297,23 @@ main ul.tab li a:hover::after {
   transform: scale(1);
 }
 main .sub-tab {
-  margin-bottom: 30px;
+  width: 220px;
+  height: 30px;
+  margin: 0 auto;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
-  justify-content: center;
 }
 main .sub-tab li {
-  padding: 0 20px 20px;
-}
-main .sub-tab li:first-child {
-  border-right: 1px solid #ccc;
-  height: 14px;
-}
-main .sub-tab li a {
-  color: #ccc;
+  width: 100px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 30px;
 }
 main .sub-tab li a:hover {
-  color: #0094d6;
   font-weight: 600;
+  border-radius: 30px;
+  background-color: rgba(0, 148, 214, 0.2);
 }
 main section {
   display: none;
@@ -328,7 +328,6 @@ main section.show {
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap {
   position: relative;
-  background-color: lightseagreen;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox .slide-wrap {
@@ -366,10 +365,15 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
   transform: translateY(-50%);
   right: 0;
 }
+main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
+  margin-top: 30px;
+  font-size: 14px;
+}
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
     width: 100%;
     margin-left: 20px;
+    font-size: 16px;
   }
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .intro {
@@ -443,7 +447,6 @@ main .venue-guidance .rental-fee .perform-fee .flexbox2 h3 {
   width: 140px;
 }
 main .venue-guidance .rental-fee .prepare-fee {
-  margin-top: 40px;
   font-size: 14px;
 }
 main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
@@ -474,15 +477,36 @@ main .venue-guidance .rental-fee .agreement a {
   color: #0094d6;
   font-weight: 600;
 }
+main #shinhan > div {
+  display: none;
+}
+main #shinhan > div.active {
+  display: block;
+}
+main #master .rental-fee h2 {
+  margin-bottom: 38px;
+}
 main #master .rental-fee .table-area {
   margin-top: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 134px;
 }
 main #master .rental-fee .table-area table {
   border-collapse: collapse;
   width: 100%;
   text-align: center;
   line-height: 1.5em;
+}
+main #master .rental-fee .table-area table th:first-child {
+  border-left: 0;
+}
+main #master .rental-fee .table-area table th:last-child {
+  border-right: 0;
+}
+main #master .rental-fee .table-area table td:first-child {
+  border-left: 0;
+}
+main #master .rental-fee .table-area table td:last-child {
+  border-right: 0;
 }
 main #master .rental-fee .table-area table thead {
   border-bottom: 3px solid #0094d6;
@@ -493,16 +517,11 @@ main #master .rental-fee .table-area table td {
   border: 1px solid #ccc;
 }
 main #master .rental-fee .table-area table th {
+  font-weight: 500;
   background-color: #eee;
 }
-main #master .rental-fee .table-area table th:first-child {
-  border-left: none;
-}
-main #master .rental-fee .table-area table th:last-child {
-  border-right: none;
-}
-main #master .rental-fee .table-area table td:last-child {
-  border-right: none;
+main #master .rental-fee .attention {
+  padding-top: 20px;
 }
 
 footer {
