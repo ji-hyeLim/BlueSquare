@@ -36,119 +36,7 @@ body {
     overflow-x: hidden;
 }
 
-.card-hall {
-    .info-wrap {
-        .hall-title {
-            display: flex;
 
-            .blue-rec {
-                width: 14px;
-                height: 30px;
-                margin-right: 8px;
-                background-color: $point-color;
-            }
-
-            h3 {
-                font-size: 28px;
-                line-height: 30px;
-                font-weight: normal;
-
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 20px;
-                }
-            }
-        }
-
-        .seating-chart-btn {
-            width: 84px;
-            height: 32px;
-            margin-bottom: 70px;
-            line-height: 32px;
-            text-align: center;
-
-            a {
-                border: 1px solid #000;
-                background-color: white;
-            }
-
-            a:hover {
-                padding: 1px;
-                color: white;
-                border: none;
-                outline: none;
-                background-color: $point-color;
-            }
-        } /* seating-chart-btn */
-
-        @include responsive(large-tablet-screens) {
-            width: 50%;
-        }
-    }
-
-    @include flex-box() {
-        flex-direction: column-reverse;
-    }
-
-    @include responsive(large-tablet-screens) {
-        @include flex-box() {
-            flex-direction: row;
-        }
-    }
-
-
-    .hall-img {
-        position: relative;
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-        // background-color: aqua;
-
-        .slide-img {
-            .item {
-            top: 300px;
-
-                // position: absolute;
-                // opacity: 0;
-                // transition: all 1s;
-
-                // &:first-child {
-                //     opacity: 1;
-                // }
-            }
-
-            img {
-                // position: absolute;
-                width: 100%;
-                background-color: red;
-    
-                @include responsive(large-tablet-screens) {
-                    height: auto;
-                }
-            }
-
-            @include responsive(large-tablet-screens) {
-                width: 100%;
-            }
-        } // slide-img
-
-        .slide-btn {
-            // background-color: red;
-        }
-        .prev {
-            left: 10px;
-            @include pos-center-y();
-        }
-
-        .next {
-            right: 10px;
-            @include pos-center-y();
-        }
-    } /* hall-img */
-
-    @include responsive(large-tablet-screens) {
-        margin-bottom: 200px;
-    }
-}
 
 // * ===================== header ===================== *
 
@@ -309,73 +197,169 @@ header {
 // * ===================== main ===================== *
 
 main {
-    .container {
-        // background-color: yellow;
+    margin: 266px 0;
+    line-height: 1.5em;
 
-        h1 {
-            font-size: 0;
+    h1 {
+        font-size: 26px;
+        margin-bottom: 58px;
+
+        @include responsive(large-tablet-screens) {
+            font-size: $title-font-size;
         }
-    
-        h2 {
-            font-size: 36px;
-            margin-bottom: 50px;
-    
-    
-            @include responsive (large-tablet-screens) {
-                font-size: 38px;
-                margin-bottom: 100px;
+    }
+
+    .hall-wrap {
+        position: relative;
+
+        .card-hall {
+            &>h2 {
+                display: none;
             }
-        }
 
-        .seating-wrap {
-            position: relative;
+            @include flex-box() {
+                flex-direction: column-reverse;
+            }
+        
+            @include responsive(large-tablet-screens) {
+                @include flex-box() {
+                    flex-direction: row;
+                }
+            }
 
-            .shinhan-card-hall {
-                .info-wrap {
-                    .seat-info-box {
-                        position: relative;
-                        margin: 20px 0;
-
-                        .seat-info {
-                            position: relative;
-                            display: flex;
-
-                            p {
-                                padding-bottom: 14px;
-                            }
-
-                            .seat-num {
-                                position: absolute;
-                                left: 50%;
-                            }
-                        }
+            .info-wrap {
+                // @include
+                h2 {
+                    position: relative;
+                    font-size: 20px;
+                    font-weight: normal;
+                    padding-left: 13px;
+        
+                    @include responsive (large-tablet-screens) {
+                        font-size: 30px;
+                        margin-bottom: 30px;
+                    }
+        
+                    &::before {
+                        position: absolute;
+                        top: 0; left: 0;
+                        display: block;
+                        content: '';
+                        width: 5px;
+                        height: 100%;
+                        background-color: $point-color;
                     }
                 }
-            } /* shinhan-card-hall */
-    
-            .master-card-hall {
-                .seat-info-box-m {
+        
+                .seating-chart-btn {
+                    width: 84px;
+                    height: 32px;
+                    margin-bottom: 70px;
+                    line-height: 32px;
+                    text-align: center;
+        
+                    a {
+                        border: 1px solid #000;
+                        background-color: white;
+                    }
+        
+                    a:hover {
+                        padding: 1px;
+                        color: white;
+                        border: none;
+                        outline: none;
+                        background-color: $point-color;
+                    }
+                } /* seating-chart-btn */
+        
+                @include responsive(large-tablet-screens) {
+                    width: 50%;
+                }
+            } // info-wrap
+        
+            .slide-wrap {
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+                // background-color: aqua;
+        
+                .slide-img {        
+                    img {
+                        // position: absolute;
+                        width: 100%;
+                        background-color: red;
+            
+                        @include responsive(large-tablet-screens) {
+                            height: auto;
+                        }
+                    }
+        
+                    @include responsive(large-tablet-screens) {
+                        width: 100%;
+                    }
+                } // slide-img
+        
+                .slide-btn {
+                    // background-color: red;
+                }
+                .prev {
+                    left: 10px;
+                    @include pos-center-y();
+                }
+        
+                .next {
+                    right: 10px;
+                    @include pos-center-y();
+                }
+            } /* slide-wrap */
+        } //card-hall
+
+        #shinhan-card-hall {
+            .info-wrap {
+                .seat-info-box {
                     position: relative;
                     margin: 20px 0;
 
-                    .seat-info-m {
+                    .seat-info {
                         position: relative;
                         display: flex;
-                        height: 80px;
-            
+
                         p {
                             padding-bottom: 14px;
                         }
 
-                        .seat-num-m {
+                        .seat-num {
                             position: absolute;
-                            left: 50%;
+                            left:170px;
                         }
                     }
                 }
-            } /* master-card-hall */
-        } /* seating-wrap */
-    } /* container */
+            }
+        } /* shinhan-card-hall */
+
+        #master-card-hall {
+            .seat-info-box-ms {
+                position: relative;
+                margin: 20px 0;
+
+                .seat-info-ms {
+                    position: relative;
+                    display: flex;
+                    height: 80px;
+        
+                    p {
+                        padding-bottom: 14px;
+                    }
+
+                    .seat-num-ms {
+                        position: absolute;
+                        left: 170px;
+                    }
+                }
+            }
+        } /* master-card-hall */
+    } /* hall-wrap */
 } /* main */
 
 // * ===================== footer ===================== *

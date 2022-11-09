@@ -8,69 +8,8 @@
   <link rel="stylesheet" href="./css/venue_guidance.css" type="text/css">
   <title>BLUE SQUARE</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-  <script>
-    $(function () {
-      $('.next').click(function (e) {
+  <script src="./js/venue_guidance.js"></script>
 
-        e.preventDefault();
-        let imgOn = $('.slide-img').find('.on').index(); // 현재 이미지 위치
-        let imgLen = $('.slide-img .item').length; // 4
-        // console.log(imgLen);
-
-        $(".slide-img .item").eq(imgOn).removeClass("on");
-        $(".slide-img .item").eq(imgOn).css("opacity", 0);
-
-        imgOn = imgOn + 1;
-
-        if (imgOn === imgLen) {
-          $(".slide-img .item").eq(0).css("opacity", 1);
-          $(".slide-img .item").eq(0).addClass("on");
-        } else {
-          $(".slide-img .item").eq(imgOn).css("opacity", 1);
-          $(".slide-img .item").eq(imgOn).addClass("on");
-        }
-      });
-
-      $('.prev').click(function (e) {
-        e.preventDefault();
-        let imgOn = $('.slide-img').find('.on').index(); // 현재 이미지 위치
-        let imgLen = $('.slide-img .item').length;
-        // console.log(imgOn);
-
-        $(".slide-img .item").eq(imgOn).removeClass("on");
-        $(".slide-img .item").eq(imgOn).css("opacity", 0);
-
-        imgOn = imgOn - 1;
-
-        if (imgOn < 0) {
-          $(".slide-img .item").eq(imgLen - 1).css("opacity", 1);
-          $(".slide-img .item").eq(imgLen - 1).addClass("on");
-        } else {
-          $(".slide-img .item").eq(imgOn).css("opacity", 1);
-          $(".slide-img .item").eq(imgOn).addClass("on");
-        }
-      });
-
-      $('.tab li').click(function (e) {
-        e.preventDefault();
-        let idx = $(this).index();
-        $('section').removeClass  ('show');
-        $('section').eq(idx).addClass('show');
-      });
-
-      $('.sub-tab > li').click(function(e) {
-        e.preventDefault();
-        let idx = $(this).index();
-        console.log(idx);
-        $('#shinhan').children('div').removeClass('active');
-        $('#shinhan').children('div').eq(idx).addClass('active');
-      })
-
-
-    });
-
-
-  </script>
 </head>
 
 <body>
@@ -156,12 +95,12 @@
         <li><a href="#shinhan">신한카드홀</a></li>
         <li><a href="#master">마스터카드홀</a></li>
         <li><a href="#practice" class="btn">연습실</a></li>
-        <li><a href="#" class="btn">카오스홀</a></li>
-        <li><a href="#" class="btn">NEMO</a></li>
+        <li><a href="#kaos" class="btn">카오스홀</a></li>
+        <li><a href="#nemo" class="btn">NEMO</a></li>
       </ul>
       <div class="container">
         
-        <section class="venue-guidance show " id="shinhan">
+        <section class="venue-guidance show" id="shinhan">
           <ul class="sub-tab">
             <li><a href="#">대관시설</a></li>
             <li><a href="#">대관료</a></li>
@@ -171,9 +110,9 @@
             <div class="flexbox">
               <div class="slide-wrap">
                 <div class="slide-img">
-                  <img class="on item" src="./img/shinhan/shinhan-hall01.png" alt="">
-                  <img class="on item" src="./img/shinhan/shinhan-hall02.png" alt="">
-                  <img class="on item" src="./img/shinhan/shinhan-hall03.png" alt="">
+                  <img class="item on" src="./img/shinhan/shinhan-hall01.png" alt="">
+                  <img class="item" src="./img/shinhan/shinhan-hall02.png" alt="">
+                  <img class="item" src="./img/shinhan/shinhan-hall03.png" alt="">
                 </div>
                 <div class="slide-btn">
                   <div class="prev"><button>이전</button></div>
@@ -284,15 +223,19 @@
         </section> <!-- venue-guidance 신한카드홀 -->
 
         <section class="venue-guidance" id="master">
-          <div class="venue-facility">
+          <ul class="sub-tab">
+            <li><a href="#">대관시설</a></li>
+            <li><a href="#">대관료</a></li>
+          </ul>
+          <div class="venue-facility cont">
             <h2>대관안내</h2>
             <div class="flexbox">
               <div class="slide-wrap">
                 <div class="slide-img">
-                  <img class="on item" src="./img/master/master-hall01.png" alt="">
-                  <img class="on item" src="./img/master/master-hall02.png" alt="">
-                  <img class="on item" src="./img/master/master-hall03.png" alt="">
-                  <img class="on item" src="./img/master/master-hall04.png" alt="">
+                  <img class="item" src="./img/master/master-hall01.png" alt="">
+                  <img class="item" src="./img/master/master-hall02.png" alt="">
+                  <img class="item" src="./img/master/master-hall03.png" alt="">
+                  <img class="item" src="./img/master/master-hall04.png" alt="">
                 </div>
                 <div class="slide-btn">
                   <div class="prev"><button>이전</button></div>
@@ -331,7 +274,7 @@
             </div> <!-- flexbox -->
           </div> <!-- venue-facility -->
 
-          <div class="rental-fee">
+          <div class="rental-fee cont">
             <div class="perform-fee">
               <h2>공연대관료</h2>
               <div class="table-area">
@@ -452,12 +395,16 @@
         </section> <!-- venue-guidance 마스터카드홀 -->
 
         <section class="venue-guidance" id="practice">
+          <ul class="sub-tab">
+            <li><a href="#">대관시설</a></li>
+            <li><a href="#">대관료</a></li>
+          </ul>
           <div class="venue-facility">
             <h2>대관안내</h2>
             <div class="flexbox">
               <div class="slide-wrap">
                 <div class="slide-img">
-                  <img class="on item" src="./img/practice/practice-room.png" alt="">
+                  <img class="item" src="./img/practice/practice-room.png" alt="">
                 </div>
                 <div class="slide-btn">
                   <div class="prev"><button>이전</button></div>
@@ -469,26 +416,26 @@
                 <div class="intro">
                   블루스퀘어의 연습실은 접근성이 좋고 쾌적한 시설을 겸비하고 있습니다.
                   연습실은 수시대관신청을 받고 있으니 공고를 참고해주세요.
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>면적</h4>
                     <div>약 66.6평 19m * 12m (높이 2.8m)</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>대관기준</h4>
                     <div>공연예술작품의 연습, 리허설, 각종 오디션, 공연관련 워크샵, 행사</div>
                   </div>
                 </div>
                 <div class="about-facility">
                   <h3>시설 구성</h3>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>기본장비</h4>
                     <div>피아노, 사물함, 냉장고, 냉/난방기, 테이블, 의자, 보면대, 음향기기</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>편의시설</h4>
                     <div>화장실, 무선인터넷, 주차장 (단체당 3대 무료)</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>다운로드</h4>
                     <div>www.webhard.co.kr (ID: bluesquare08 / PW: 1234 / 게스트폴더)</div>
                   </div>
@@ -498,7 +445,7 @@
           </div> <!-- venue-facility -->
 
           <div class="rental-fee">
-            <div class="time&fee">
+            <div class="timeandfee">
               <h2>대관시간 및 대관료</h2>
               <div class="table-area">
                 <table>
@@ -549,12 +496,16 @@
         </section> <!-- venue-guidance 연습실 -->
 
         <section class="venue-guidance" id="kaos">
+          <ul class="sub-tab">
+            <li><a href="#">대관시설</a></li>
+            <li><a href="#">대관료</a></li>
+          </ul>
           <div class="venue-facility">
             <h2>대관안내</h2>
             <div class="flexbox">
               <div class="slide-wrap">
                 <div class="slide-img">
-                  <img class="on item" src="./img/kaos/kaos.png" alt="">
+                  <img class="item" src="./img/kaos/kaos.png" alt="">
                 </div>
                 <div class="slide-btn">
                   <div class="prev"><button>이전</button></div>
@@ -567,30 +518,30 @@
                   카오스홀(KAOS홀)은 블루스퀘어 신한카드홀 3층에 위치한 다목적 홀로 각종
                   컨퍼런스와 토크콘서트, 강연회, 박람회, 쇼케이스 등 다방면의 장르를 아우를 수
                   있는 장소입니다.
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>면적</h4>
                     <div>572㎡ (약 173평 / 로비 8평, 백스테이지 8.5평, 행사장 156.5평)</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>수용인원</h4>
                     <div>최대 280명 (기본좌석 266석 / 가변식 좌석 배치)</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>대관기준</h4>
                     <div>강연회, 기자회견, 세미나, 컨퍼런스, 쇼케이스, 워크숍, 토크콘서트, 팬미팅 등</div>
                   </div>
                 </div>
                 <div class="about-facility">
                   <h3>시설 구성</h3>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>기본장비</h4>
                     <div>분장실, 프로젝터, 조명기기, 음향기기, 냉·난방 및 전기 등</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>부대장비</h4>
                     <div>테이블, 의자, 무선 마이크, 그랜드피아노 등</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>다운로드</h4>
                     <div>www.webhard.co.kr (ID: bluesquare08 / PW: 1234 / 게스트폴더)</div>
                   </div>
@@ -600,7 +551,7 @@
           </div> <!-- venue-facility -->
 
           <div class="rental-fee">
-            <div class="time&fee">
+            <div class="timeandfee">
               <h2>대관시간 및 대관료</h2>
               <div class="table-area">
                 <table>
@@ -645,12 +596,16 @@
 
 
         <section class="venue-guidance" id="nemo">
+          <ul class="sub-tab">
+            <li><a href="#">대관시설</a></li>
+            <li><a href="#">대관료</a></li>
+          </ul>
           <div class="venue-facility">
             <h2>대관안내</h2>
             <div class="flexbox">
               <div class="slide-wrap">
                 <div class="slide-img">
-                  <img class="on item" src="./img/nemo/nemo.png" alt="">
+                  <img class="item" src="./img/nemo/nemo.png" alt="">
                 </div>
                 <div class="slide-btn">
                   <div class="prev"><button>이전</button></div>
@@ -664,30 +619,26 @@
                   결합하여 만든 복합문화공간으로 파인아트는 물론 그래픽 디자인, 영상, 건축
                   등의 예술 분야 전시를 비롯해 아트페어, 심포지움, 세미나 등의 문화 행사들을
                   유치하고 있습니다.
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>총면적</h4>
                     <div> 382.5㎡</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>층별면적</h4>
                     <div>1F : 314.8㎡ / 2F : 228.4㎡ / 3F : 139.3㎡</div>
                   </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>대관기준</h4>
                     <div>쇼케이스, 전시, 행사, 컨퍼런스, 기자회견, 교육 등</div>
                   </div>
                 </div>
                 <div class="about-facility">
                   <h3>시설 구성</h3>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>기본장비</h4>
                     <div>조명기기, 음향기기, 냉 난방 및 전기 등</div>
                   </div>
-                  <div class="flex-box">
-                    <h4>부대장비</h4>
-                    <div>www.webhard.co.kr (ID: bluesquare08 / PW: 1234 / 게스트폴더)</div>
-                  </div>
-                  <div class="flex-box">
+                  <div class="flexbox2">
                     <h4>다운로드</h4>
                     <div>www.webhard.co.kr (ID: bluesquare08 / PW: 1234 / 게스트폴더)</div>
                   </div>
@@ -697,7 +648,7 @@
           </div> <!-- venue-facility -->
 
           <div class="rental-fee">
-            <div class="time&fee">
+            <div class="timeandfee">
               <h2>대관시간 및 대관료</h2>
               <div class="table-area">
                 <table>
@@ -725,14 +676,23 @@
                       <td>10:00 ~ 22:00 사이</td>
                       <td>6,000,000</td>
                       <td>일</td>
-                      <td rowspan="2">준비, 철수시간 포함</td>
+                      <td>준비, 철수시간 포함</td>
                     </tr>
                     <tr>
-                      <th colspan="4">순수예술 및 전시대관(* 별도 협의)</th>
+                      <td>추가대관료</td>
+                      <td>1시간</td>
+                      <td>1,000,000</td>
+                      <td>시간당</td>
+                      <td></td>
+                    </tr>
+
+
+                    <tr>
+                      <th colspan="5">순수예술 및 전시대관(* 별도 협의)</th>
                     </tr>
                     <tr>
-                      <td colspan="2">이행보증예치금</ㅅ>
-                      <td>6,000,000</td>
+                      <td colspan="2">이행보증예치금</td>
+                      <td>3,000,000</td>
                       <td colspan="2">원상복구 후 반납</td>
                     </tr>
                     <tr>

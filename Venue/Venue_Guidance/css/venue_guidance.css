@@ -244,9 +244,6 @@ main h1 {
     font-size: 38px;
   }
 }
-main h2 {
-  font-size: 0;
-}
 main ul.tab {
   margin-top: 58px;
   margin-bottom: 50px;
@@ -300,6 +297,7 @@ main .sub-tab {
   width: 220px;
   height: 30px;
   margin: 0 auto;
+  margin-bottom: 70px;
   font-size: 16px;
   display: flex;
   justify-content: space-between;
@@ -320,6 +318,9 @@ main section {
 }
 main section.show {
   display: block;
+}
+main .venue-guidance > h2 {
+  display: none;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox {
@@ -373,6 +374,7 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
   main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
     width: 100%;
     margin-left: 20px;
+    margin-top: 0;
     font-size: 16px;
   }
 }
@@ -395,12 +397,14 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list 
   line-height: 30px;
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .btn-flex div {
-  width: 120px;
+  width: 110px;
   padding-right: 20px;
+  margin-bottom: 10px;
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .btn-flex .download {
   width: 120px;
-  height: 30px;
+  height: 28px;
+  font-size: 14px;
   color: white;
   border: 0;
   border-radius: 30px;
@@ -416,16 +420,18 @@ main .venue-guidance .rental-fee {
 }
 main .venue-guidance .rental-fee h2 {
   position: relative;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: normal;
+  padding-left: 13px;
 }
 main .venue-guidance .rental-fee h2::before {
   position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   content: "";
   width: 5px;
   height: 100%;
-  margin-left: -13px;
   background-color: #0094d6;
 }
 main .venue-guidance .rental-fee h3 {
@@ -477,10 +483,10 @@ main .venue-guidance .rental-fee .agreement a {
   color: #0094d6;
   font-weight: 600;
 }
-main #shinhan > div {
+main #shinhan div {
   display: none;
 }
-main #shinhan > div.active {
+main #shinhan div.active {
   display: block;
 }
 main #master .rental-fee h2 {
@@ -522,6 +528,147 @@ main #master .rental-fee .table-area table th {
 }
 main #master .rental-fee .attention {
   padding-top: 20px;
+}
+main #practice,
+main #kaos,
+main #nemo {
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main #practice,
+main #kaos,
+main #nemo {
+    font-size: 16px;
+  }
+}
+main #practice .venue-facility .flexbox .intro-about-wrap,
+main #kaos .venue-facility .flexbox .intro-about-wrap,
+main #nemo .venue-facility .flexbox .intro-about-wrap {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  main #practice .venue-facility .flexbox .intro-about-wrap,
+main #kaos .venue-facility .flexbox .intro-about-wrap,
+main #nemo .venue-facility .flexbox .intro-about-wrap {
+    margin: 0 0 0 20px;
+  }
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .intro .flexbox2,
+main #kaos .venue-facility .flexbox .intro-about-wrap .intro .flexbox2,
+main #nemo .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 {
+  display: flex;
+  margin-top: 10px;
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .intro .flexbox2:first-child,
+main #kaos .venue-facility .flexbox .intro-about-wrap .intro .flexbox2:first-child,
+main #nemo .venue-facility .flexbox .intro-about-wrap .intro .flexbox2:first-child {
+  margin-top: 20px;
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 h4,
+main #kaos .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 h4,
+main #nemo .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 h4 {
+  width: 80px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main #practice .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 h4,
+main #kaos .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 h4,
+main #nemo .venue-facility .flexbox .intro-about-wrap .intro .flexbox2 h4 {
+    font-size: 16px;
+  }
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .about-facility,
+main #kaos .venue-facility .flexbox .intro-about-wrap .about-facility,
+main #nemo .venue-facility .flexbox .intro-about-wrap .about-facility {
+  margin-top: 40px;
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .about-facility h3,
+main #kaos .venue-facility .flexbox .intro-about-wrap .about-facility h3,
+main #nemo .venue-facility .flexbox .intro-about-wrap .about-facility h3 {
+  font-size: 16px;
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2,
+main #kaos .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2,
+main #nemo .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 {
+  display: flex;
+  margin-top: 10px;
+}
+main #practice .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 h4,
+main #kaos .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 h4,
+main #nemo .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 h4 {
+  width: 80px;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  main #practice .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 h4,
+main #kaos .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 h4,
+main #nemo .venue-facility .flexbox .intro-about-wrap .about-facility .flexbox2 h4 {
+    font-size: 16px;
+  }
+}
+main #practice .rental-fee .timeandfee .table-area,
+main #kaos .rental-fee .timeandfee .table-area,
+main #nemo .rental-fee .timeandfee .table-area {
+  margin-top: 30px;
+  margin-bottom: 134px;
+}
+main #practice .rental-fee .timeandfee .table-area table,
+main #kaos .rental-fee .timeandfee .table-area table,
+main #nemo .rental-fee .timeandfee .table-area table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5em;
+}
+main #practice .rental-fee .timeandfee .table-area table th:first-child,
+main #kaos .rental-fee .timeandfee .table-area table th:first-child,
+main #nemo .rental-fee .timeandfee .table-area table th:first-child {
+  border-left: 0;
+}
+main #practice .rental-fee .timeandfee .table-area table th:last-child,
+main #kaos .rental-fee .timeandfee .table-area table th:last-child,
+main #nemo .rental-fee .timeandfee .table-area table th:last-child {
+  border-right: 0;
+}
+main #practice .rental-fee .timeandfee .table-area table td:first-child,
+main #kaos .rental-fee .timeandfee .table-area table td:first-child,
+main #nemo .rental-fee .timeandfee .table-area table td:first-child {
+  border-left: 0;
+}
+main #practice .rental-fee .timeandfee .table-area table td:last-child,
+main #kaos .rental-fee .timeandfee .table-area table td:last-child,
+main #nemo .rental-fee .timeandfee .table-area table td:last-child {
+  border-right: 0;
+}
+main #practice .rental-fee .timeandfee .table-area table thead,
+main #kaos .rental-fee .timeandfee .table-area table thead,
+main #nemo .rental-fee .timeandfee .table-area table thead {
+  border-bottom: 3px solid #0094d6;
+}
+main #practice .rental-fee .timeandfee .table-area table th,
+main #practice .rental-fee .timeandfee .table-area table td,
+main #kaos .rental-fee .timeandfee .table-area table th,
+main #kaos .rental-fee .timeandfee .table-area table td,
+main #nemo .rental-fee .timeandfee .table-area table th,
+main #nemo .rental-fee .timeandfee .table-area table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+main #practice .rental-fee .timeandfee .table-area table th,
+main #kaos .rental-fee .timeandfee .table-area table th,
+main #nemo .rental-fee .timeandfee .table-area table th {
+  font-weight: 500;
+  background-color: #eee;
+}
+main #practice .rental-fee .timeandfee .attention,
+main #kaos .rental-fee .timeandfee .attention,
+main #nemo .rental-fee .timeandfee .attention {
+  padding-top: 20px;
+  color: #0094d6;
 }
 
 footer {

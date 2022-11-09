@@ -207,10 +207,6 @@ main {
     }
   }
 
-  h2 {
-    font-size: 0;
-  }
-
   ul.tab {
     margin-top: 58px;
     margin-bottom: 50px;
@@ -273,10 +269,11 @@ main {
     width: 220px;
     height: 30px;
     margin: 0 auto;
+    margin-bottom: 70px;
     font-size: $sub-tab-font-size;
-    // background-color: aliceblue;
 
     @include flex-box();
+
     li {
       width: 100px;
       text-align: center;
@@ -284,7 +281,6 @@ main {
       border-radius: 30px;
       
       a {
-
         &:hover {
           font-weight: 600;
           border-radius: 30px;
@@ -303,8 +299,12 @@ main {
     }
   }
 
+
   .venue-guidance {
-    
+    &>h2 {
+      display: none;
+    }
+
     .venue-facility {
       // display: none;
 
@@ -363,11 +363,12 @@ main {
           // position: absolute;
           // top: 700px;
           margin-top: 30px;
-          font-size: $text-font-size - 2px;
+          font-size: 14px;
 
           @include responsive(large-tablet-screens) {
             width: 100%;
             margin-left: 20px;
+            margin-top: 0;
             font-size: $text-font-size;
           }
 
@@ -392,14 +393,15 @@ main {
               line-height: 30px;
 
               div {
-                width: 120px;
+                width: 110px;
                 padding-right: 20px;
-                // margin-bottom: 10px;
+                margin-bottom: 10px;
               }
 
               .download {
                 width: 120px;
-                height: 30px;
+                height: 28px;
+                font-size: 14px;
                 color: white;
                 border: 0;
                 border-radius: 30px;
@@ -422,16 +424,17 @@ main {
 
       h2 {
         position: relative;
-        font-size: 28px;
+        font-size: 26px;
         font-weight: normal;
+        padding-left: 13px;
 
         &::before {
           position: absolute;
+          top: 0; left: 0;
           display: block;
           content: '';
           width: 5px;
           height: 100%;
-          margin-left: -13px;
           background-color: $point-color;
         }
       }
@@ -495,7 +498,7 @@ main {
     } //rental-fee (대관료)
   } //venue-guidance (대관안내)
 
-  #shinhan > div {
+  #shinhan div {
     display: none;
 
     &.active {
@@ -543,6 +546,216 @@ main {
       }
     } //rental-fee
   } //master 
+
+  #practice,
+  #kaos,
+  #nemo {
+    font-size: 14px;
+
+    @include responsive(large-tablet-screens) {
+      font-size: $text-font-size;
+    }
+
+    .venue-facility {
+      .flexbox {
+        .slide-wrap {
+
+        }
+
+        .intro-about-wrap {
+          margin-top: 30px;
+
+          @include flex-box() {
+            flex-direction: column;
+          }
+
+          @include responsive(large-tablet-screens) {
+            margin: 0 0 0 20px;
+          }
+
+          .intro {
+            .flexbox2 {
+              display: flex;
+              margin-top: 10px;
+
+              &:first-child {
+                margin-top: 20px;
+              }
+
+              h4 {
+                width: 80px;
+                font-size: 14px;
+
+                @include responsive(large-tablet-screens) {
+                  font-size: $text-font-size;
+                }
+              }
+            }
+          } //intro
+
+          .about-facility {
+            margin-top: 40px;
+
+            h3 {
+              font-size: 16px;
+            }
+
+            .flexbox2 {
+              display: flex;
+              margin-top: 10px;
+
+              h4 {
+                width: 80px;
+                font-size: 14px;
+                font-weight: 500;
+
+                @include responsive(large-tablet-screens) {
+                  font-size: $text-font-size;
+                }
+              }
+            }
+          } //about-facility
+        } //intro-about-wrap
+      } //flexbox
+    } //venue-facility
+
+    .rental-fee {
+      .timeandfee {
+        .table-area {
+          margin-top: 30px;
+          margin-bottom: 134px;
+  
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            line-height: 1.5em;
+  
+            @include left-right-border-none();
+  
+            thead {
+              border-bottom: 3px solid $point-color;
+            }
+  
+            th,
+            td {
+              padding: 10px;
+              border: 1px solid $gray-border;
+            }
+  
+            th {
+              font-weight: 500;
+              background-color: $gray-bg;
+            }
+          } //table
+        } //table-area
+  
+        .attention {
+          padding-top: 20px;
+          color: $point-color;
+        }
+      }//timeandfee
+    } //rental-fee
+  } //practice(연습실)
+
+  // #kaos {
+  //   font-size: 14px;
+
+  //   .venue-facility {
+  //     .flexbox {
+  //       .slide-wrap {
+
+  //       }
+
+  //       .intro-about-wrap {
+  //         margin-top: 30px;
+
+  //         @include flex-box() {
+  //           flex-direction: column;
+  //         }
+
+  //         @include responsive(large-tablet-screens) {
+  //           margin: 0 0 0 20px;
+  //         }
+
+  //         .intro {
+  //           .flexbox2 {
+  //             display: flex;
+  //             margin-top: 10px;
+
+  //             &:first-child {
+  //               margin-top: 20px;
+  //             }
+
+  //             h4 {
+  //               width: 80px;
+  //               font-size: 14px;
+  //               font-weight: 500;
+
+  //             }
+  //           }
+  //         }
+
+  //         .about-facility {
+  //           margin-top: 40px;
+
+  //           h3 {
+  //             font-size: 16px;
+  //           }
+
+  //           .flexbox2 {
+  //             display: flex;
+  //             margin-top: 10px;
+
+
+  //             h4 {
+  //               width: 80px;
+  //               font-size: 14px;
+  //               font-weight: 500;
+  //             }
+  //           }
+  //         } //about-facility
+  //       } //intro-about-wrap
+  //     } //flexbox
+  //   } //venue-facility
+
+  //   .rental-fee {
+  //     .timeandfee {
+  //       .table-area {
+  //         margin-top: 30px;
+  //         margin-bottom: 134px;
+  
+  //         table {
+  //           border-collapse: collapse;
+  //           width: 100%;
+  //           text-align: center;
+  //           line-height: 1.5em;
+  
+  //           @include left-right-border-none();
+  
+  //           thead {
+  //             border-bottom: 3px solid $point-color;
+  //           }
+  
+  //           th,
+  //           td {
+  //             padding: 10px;
+  //             border: 1px solid $gray-border;
+  //           }
+  
+  //           th {
+  //             font-weight: 500;
+  //             background-color: $gray-bg;
+  //           }
+  //         } //table
+  //       } //table-area
+  
+  //       .attention {
+  //         padding-top: 20px;
+  //       }
+  //     }//timeandfee
+  //   } //rental-fee
+  // } //kaos(카오스홀)
 
 
 } //main
