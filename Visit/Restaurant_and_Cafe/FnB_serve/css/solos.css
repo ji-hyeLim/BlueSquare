@@ -88,17 +88,6 @@ footer {
   }
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -107,20 +96,6 @@ footer {
   to {
     opacity: 1;
     transform: translateY(-10px);
-  }
-}
-@-webkit-keyframes updown {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    opacity: 0;
-    transform: translate(-50%, -10%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
   }
 }
 @keyframes updown {
@@ -186,8 +161,7 @@ header .fnbserve-header .hd-txt {
 header .fnbserve-header .hd-txt p {
   text-align: center;
   color: white;
-  -webkit-animation: fadeIn 2s forwards;
-          animation: fadeIn 2s forwards;
+  animation: fadeIn 2s forwards;
   font-size: 45px;
   font-family: "Montserrat", sans-serif, Arial;
 }
@@ -219,8 +193,7 @@ header .fnbserve-header .dw-icon a i {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  -webkit-animation: updown 3s infinite;
-          animation: updown 3s infinite;
+  animation: updown 3s infinite;
   color: white;
 }
 @media screen and (min-width: 1024px) {
@@ -371,7 +344,8 @@ main ul.fnb-menu {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu {
-    width: 50%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 main ul.fnb-menu li {
@@ -381,11 +355,18 @@ main ul.fnb-menu li {
   border-right: 0;
   border-bottom: 0;
 }
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:first-child {
+    margin-right: 120px;
+    border: 0;
+  }
+}
 main ul.fnb-menu li:nth-child(2) {
   border-right: 1px solid #000;
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(2) {
+    margin-right: 120px;
     border: 0;
   }
 }
@@ -395,6 +376,7 @@ main ul.fnb-menu li:last-child {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:last-child {
+    margin-right: 0px;
     border: 0;
   }
 }
@@ -403,6 +385,7 @@ main ul.fnb-menu li:nth-child(3) {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(3) {
+    margin-right: 120px;
     border: 0;
   }
 }
@@ -415,9 +398,18 @@ main ul.fnb-menu li:nth-child(3) {
 main ul.fnb-menu li a {
   padding: 10px;
   text-align: center;
+  white-space: nowrap;
 }
 main ul.fnb-menu li a:hover {
   font-weight: 600;
+  background-color: rgba(0, 148, 214, 0.2);
+  color: #000;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a:hover {
+    background-color: transparent;
+  }
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li a {
@@ -428,14 +420,20 @@ main ul.fnb-menu li a:hover {
     display: block;
     content: "";
     width: 100%;
-    height: 5px;
-    margin-top: 5px;
+    height: 8px;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
     background-color: #000;
     transform: scale(0);
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
   main ul.fnb-menu li a:hover::after {
-    transform: scale(0.6);
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1400px) {
+  main ul.fnb-menu li a:hover::after {
+    transform: scale(0.8, 1);
   }
 }
 main .fnb-info1 {
@@ -446,7 +444,7 @@ main .fnb-info1 {
 }
 @media screen and (min-width: 1024px) {
   main .fnb-info1 {
-    margin-top: 101px;
+    margin-top: 104px;
     flex-direction: row;
   }
 }
@@ -489,14 +487,14 @@ main .fnb-info1 .info-txt p.txt-2 {
   line-height: 1.5;
   padding-bottom: 40px;
 }
-main .fnb-info1 .info-txt p.txt-3 {
+main .fnb-info1 .info-txt div.txt-3 {
   font-size: 16px;
   line-height: 1.5;
 }
-main .fnb-info1 .info-txt p.txt-3 .txt-bd {
+main .fnb-info1 .info-txt div.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
-  line-height: 50px;
+  margin-bottom: 10px;
 }
 main .fnb-info2 {
   display: flex;
@@ -543,14 +541,14 @@ main .fnb-info2 .info-txt p.txt-1 {
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .fnb-info2 .info-txt p.txt-3 {
+main .fnb-info2 .info-txt div.txt-3 {
   font-size: 16px;
   line-height: 1.5;
 }
-main .fnb-info2 .info-txt p.txt-3 .txt-bd {
+main .fnb-info2 .info-txt div.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
-  line-height: 50px;
+  margin-bottom: 10px;
 }
 main .fnb-info3 {
   display: flex;
@@ -600,7 +598,6 @@ main .fnb-info3 .info-txt p.txt-1 {
 main .fnb-info3 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 1.5;
-  padding-bottom: 40px;
 }
 
 footer {
@@ -772,4 +769,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=solos.css.map */
+}

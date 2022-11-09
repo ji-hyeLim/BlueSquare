@@ -81,6 +81,7 @@
                 list-style: disc;
                 list-style-position: inside;
                 padding-left: 20px;
+                margin-right: 5px;
                 text-indent: -20px;
                 
                 @include responsive(large-tablet-screens) {

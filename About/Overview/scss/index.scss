@@ -406,11 +406,11 @@ header {
 main {
     margin: 266px 0;
     .title {
-        margin-bottom: 115px;
         font-weight: 600;
         font-size: 0;
 
         @include responsive(large-tablet-screens) {
+            margin-bottom: 100px;
             font-size: 38px;
         }
     }
