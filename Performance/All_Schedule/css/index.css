@@ -106,7 +106,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -233,54 +234,66 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main h1 {
   display: block;
-  margin-top: 137px;
-  font-size: 33px;
+  margin-top: 266px;
+  font-size: 38px;
 }
 main hr {
-  margin-top: 30px;
-  margin-bottom: 100px;
+  margin-top: 58px;
+  margin-bottom: 50px;
+  border: 0;
+  border: 0.5px solid #ccc;
 }
 main hr:last-child {
-  margin-top: 100px;
-  margin-bottom: 200px;
+  margin-top: 50px;
+  margin-bottom: 266px;
 }
 main .year {
   display: flex;
   justify-content: space-between;
   justify-content: center;
-  position: relative;
   text-align: center;
-  margin-bottom: 50PX;
 }
-main .year h2 {
-  font-size: 28px;
-}
-main .year a img {
-  width: 10px;
-  height: 10px;
-}
-main .year a:first-child {
-  position: absolute;
-  top: 10px;
-  left: 35%;
-}
-main .year a:last-child {
-  position: absolute;
-  top: 10px;
-  right: 35%;
-}
-main .box ul {
+main .year ul li {
   display: flex;
   justify-content: space-between;
-  justify-content: center;
+}
+main .year ul li h2 {
+  font-size: 28px;
+}
+main .year ul li a {
+  display: block;
+  margin: 0 60px;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 16px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: 15px;
+}
+main .year ul li .prev_arrow {
+  background-image: url(../img/left_button.png);
+}
+main .year ul li .next_arrow {
+  background-image: url(../img/right_button.png);
+}
+main .box {
+  margin-top: 50px;
+}
+main .box ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 main .box ul li {
   position: relative;
-  width: 47%;
+  width: 48%;
   border: 1px solid black;
-  margin: 5px;
-  padding: 20px;
+  margin-bottom: 10px;
+}
+main .box ul li:nth-child(2n) {
+  margin-right: 0;
 }
 main .box ul li .hover-black {
   position: absolute;
@@ -296,13 +309,14 @@ main .box ul li .hover-black a {
 main .box ul li .hover-black:hover {
   width: 100%;
   height: 100%;
+  transform: scale(100%);
+  transition: all 0.3s;
   background: rgba(0, 0, 0, 0.8);
 }
 main .box ul li .hover-black:hover a {
   display: block;
   position: absolute;
   top: 30%;
-  left: 30%;
   width: 6em;
   height: 6em;
   line-height: 6em;
@@ -311,6 +325,13 @@ main .box ul li .hover-black:hover a {
   border-radius: 50%;
   color: white;
   font-weight: 400;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .box ul li .poster {
+  width: 100%;
 }
 main .box ul li .poster img {
   width: 100%;
@@ -318,6 +339,7 @@ main .box ul li .poster img {
 }
 main .box ul li .text {
   position: relative;
+  margin: 5px;
 }
 main .box ul li .text strong {
   margin: 10px 0;
@@ -337,32 +359,67 @@ main .box ul li .text span {
 }
 @media screen and (min-width: 600px) {
   main .box ul li {
-    width: 40%;
+    width: 32%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  main .box ul li:nth-child(2n) {
+    margin-right: 10px;
+  }
+  main .box ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  main .box ul li .poster img {
+    height: 250px;
   }
 }
 @media screen and (min-width: 800px) {
-  main .box ul {
-    margin: 0 5%;
-  }
   main .box ul li {
-    width: 30%;
+    width: 32%;
+  }
+  main .box ul li .poster img {
+    height: 300px;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .box ul li {
-    width: 25%;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 1400px) {
   main .box ul {
-    margin: 0 10%;
+    width: 100%;
   }
   main .box ul li {
-    width: 20%;
+    width: 24%;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+  main .box ul li:nth-child(2n) {
+    margin-right: 10px;
+  }
+  main .box ul li:nth-child(3n) {
+    margin-right: 10px;
+  }
+  main .box ul li:nth-child(4n) {
+    margin-right: 0;
+  }
+  main .box ul li .poster img {
+    height: 38vh;
+  }
+  main .box ul li .text {
+    position: relative;
+    margin: 5px;
+  }
+  main .box ul li .text strong {
+    font-size: 20px;
+  }
+  main .box ul li .text p {
+    line-height: 20px;
+    color: #b2b2b2;
+    font-size: 13px;
+  }
+  main .box ul li .text span {
+    margin: 4px 0;
+    font-size: 13px;
   }
 }
-
 footer {
   color: #fff;
   background-color: #000;
@@ -531,4 +588,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */

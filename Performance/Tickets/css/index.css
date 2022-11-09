@@ -58,18 +58,28 @@ footer {
   display: block;
 }
 
-@keyframes bannermove {
+@-webkit-keyframes bannermove {
   0% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 .container {
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: skyblue;
 }
 @media screen and (min-width: 1400px) {
   .container {
@@ -114,7 +124,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -240,30 +251,56 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 header .intro-text {
   position: absolute;
-  top: 100px;
-  left: 0;
+  top: 150px;
+  left: 0px;
   color: white;
-  line-height: 30px;
+  line-height: 40px;
 }
 header .intro-text h1 {
-  line-height: 55px;
-  margin-bottom: 20px;
-  font-size: 38px;
+  line-height: 50px;
+  margin-bottom: 40px;
+  font-size: 33px;
 }
 header .intro-text h1 span {
   font-size: 50px;
 }
 header .intro-text a {
-  margin-top: 50px;
+  margin-top: 5vh;
   color: white;
-  font-size: 18px;
+  font-size: 21px;
 }
 header .intro-text p {
-  font-size: 16px;
+  font-size: 14px;
 }
 header .intro-text p:last-child {
-  margin-top: 180px;
+  margin-top: 10px;
   font-size: 13px;
+}
+@media screen and (min-width: 600px) {
+  header .intro-text {
+    top: 120px;
+    left: 20px;
+  }
+  header .intro-text h1 {
+    line-height: 55px;
+    margin-bottom: 20px;
+    font-size: 38px;
+  }
+  header .intro-text h1 span {
+    font-size: 80px;
+  }
+  header .intro-text p {
+    font-size: 16px;
+  }
+  header .intro-text p:last-child {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .intro-text {
+    top: 180px;
+    left: 50px;
+  }
 }
 
 main {
@@ -273,121 +310,78 @@ main {
 main h1 {
   font-size: 0;
 }
-main hr {
-  margin-top: 100px;
-}
 main h2 {
+  margin-top: 266px;
+  width: 100%;
   position: absolute;
-  top: 80px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 34px;
+  font-size: calc(24px + 2vw);
   font-weight: 200;
+  font-family: "Montserrat", sans-serif, Arial;
+  letter-spacing: -1px;
+}
+main h2::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
 }
 main h2 span {
   font-weight: 600;
 }
 main #flow {
   overflow: hidden;
-  width: 600px;
-}
-@media screen and (min-width: 1400px) {
-  main #flow {
-    width: 100%;
-  }
+  width: 100%;
+  margin-top: 240px;
+  margin-bottom: 50px;
 }
 main #flow .flow-img {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
-  width: 1600px;
-  animation: bannermove 10s linear infinite;
-}
-@media screen and (min-width: 1400px) {
-  main #flow .flow-img {
-    width: 1860px;
-  }
+  width: 685px;
+  -webkit-animation: bannermove 10s linear infinite;
+          animation: bannermove 10s linear infinite;
 }
 main #flow .flow-img li {
   padding-left: 10px;
-}
-@media screen and (min-width: 1400px) {
-  main #flow .flow-img li {
-    padding-left: 40px;
-  }
 }
 main #flow .flow-img li img {
   width: 122px;
   height: 175px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1024px) {
+  main #flow {
+    width: 100%;
+  }
+  main #flow .flow-img {
+    width: 100%;
+  }
+  main #flow .flow-img li {
+    padding-left: 40px;
+  }
   main #flow .flow-img li img {
     width: 290px;
     height: 400px;
   }
 }
 main .ticket-intro {
-  margin-bottom: 100px;
-}
-@media screen and (min-width: 1400px) {
-  main .ticket-intro {
-    margin-bottom: 300px;
-  }
-  main .ticket-intro .left-img {
-    border-bottom: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-around;
-  }
-  main .ticket-intro .left-img .first-content {
-    width: 55%;
-  }
-  main .ticket-intro .left-img .last-content {
-    border-left: 1px solid #000;
-    width: 45%;
-  }
-  main .ticket-intro .right-img {
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-around;
-    border-bottom: 1px solid #000;
-  }
-  main .ticket-intro .right-img .last-content {
-    border-left: 1px solid #000;
-    width: 55%;
-    order: 2;
-  }
-  main .ticket-intro .right-img .first-content {
-    width: 45%;
-    order: 1;
-  }
-}
-main .ticket-intro .ticket-poster {
-  margin-top: 80px;
+  margin-bottom: 266px;
 }
 main .ticket-intro .ticket-poster img {
   width: 270px;
   height: 380px;
+  margin-top: 80px;
   margin-bottom: 40px;
   box-shadow: 8px 8px 3px gray;
 }
-@media screen and (min-width: 1400px) {
-  main .ticket-intro .ticket-poster img {
-    width: 580px;
-    height: 810px;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    box-shadow: 8px 8px 3px gray;
-  }
-}
 main .ticket-intro .ticket-text {
   border-bottom: 1px solid #000;
-}
-@media screen and (min-width: 1400px) {
-  main .ticket-intro .ticket-text {
-    border-bottom: 0;
-    margin: 200px 120px;
-  }
 }
 main .ticket-intro .ticket-text .show-info-ing {
   width: 60px;
@@ -427,33 +421,16 @@ main .ticket-intro .ticket-text .ticket-intro-text ul li {
   line-height: 30px;
 }
 main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(1) p:last-child, main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(2) p:last-child {
-  padding-left: 87px;
+  padding-left: 67px;
 }
 main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(3) p:last-child, main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(4) p:last-child {
-  padding-left: 60px;
+  padding-left: 40px;
 }
 main .ticket-intro .ticket-text .ticket-intro-text ul li p:first-child {
   font-weight: 600;
 }
-@media screen and (min-width: 1400px) {
-  main .ticket-intro .ticket-text .ticket-intro-text h3 {
-    margin: 20px 0;
-    font-size: 42px;
-  }
-  main .ticket-intro .ticket-text .ticket-intro-text .date {
-    font-size: 17px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-  main .ticket-intro .ticket-text .ticket-intro-text ul li {
-    padding: 10px 0;
-  }
-  main .ticket-intro .ticket-text .ticket-intro-text ul li:last-child {
-    margin-bottom: 100px;
-  }
-}
 main .ticket-intro .ticket-text .detail-booking-button {
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 80px;
 }
 main .ticket-intro .ticket-text .detail-booking-button ul {
@@ -462,7 +439,7 @@ main .ticket-intro .ticket-text .detail-booking-button ul {
   justify-content: left;
 }
 main .ticket-intro .ticket-text .detail-booking-button ul li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 main .ticket-intro .ticket-text .detail-booking-button ul li:last-child {
   background-color: #000;
@@ -480,9 +457,174 @@ main .ticket-intro .ticket-text .detail-booking-button ul li a {
 }
 main .ticket-intro .ticket-text .detail-booking-button ul li a img {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 15px;
   width: 20px;
+}
+main .ticket-intro .ticket-text .detail-booking-button ul li a .ticket {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 25px;
+}
+@media screen and (min-width: 600px) {
+  main .ticket-intro .left-img {
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    justify-content: right;
+  }
+  main .ticket-intro .left-img .first-content {
+    position: absolute;
+    left: 0;
+    width: 50%;
+  }
+  main .ticket-intro .left-img .last-content {
+    border-left: 1px solid #000;
+    width: 50%;
+  }
+  main .ticket-intro .right-img {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    position: relative;
+  }
+  main .ticket-intro .right-img .last-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #000;
+    width: 50%;
+    order: 2;
+  }
+  main .ticket-intro .right-img .first-content {
+    width: 50%;
+    order: 1;
+  }
+  main .ticket-intro .ticket-poster a {
+    margin-bottom: 0px;
+  }
+  main .ticket-intro .ticket-poster img {
+    width: 250px;
+    height: 350px;
+    margin-top: 20px;
+    box-shadow: 8px 8px 3px gray;
+  }
+  main .ticket-intro .ticket-text {
+    border-bottom: 0;
+    margin: 5vw 0 0 2vw;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text h3 {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text .date {
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li:last-child {
+    margin-bottom: 50px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(1) p:last-child, main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(2) p:last-child {
+    padding-left: 47px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(3) p:last-child, main .ticket-intro .ticket-text .ticket-intro-text ul li:nth-child(4) p:last-child {
+    padding-left: 20px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li p {
+    font-size: 14px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li p:first-child {
+    font-weight: 600;
+  }
+  main .ticket-intro .ticket-text .detail-booking-button {
+    margin-bottom: 50px;
+  }
+  main .ticket-intro .ticket-text .detail-booking-button ul li {
+    margin-right: 10px;
+  }
+  main .ticket-intro .ticket-text .detail-booking-button ul li a {
+    width: 110px;
+    text-indent: 15px;
+  }
+  main .ticket-intro .ticket-text .detail-booking-button ul li a img {
+    top: 12px;
+    right: 15px;
+    width: 16px;
+  }
+  main .ticket-intro .ticket-text .detail-booking-button ul li a .ticket {
+    top: 11px;
+    right: 12px;
+    width: 18px;
+  }
+}
+@media screen and (min-width: 800px) {
+  main .ticket-intro .left-img .first-content {
+    width: 55%;
+  }
+  main .ticket-intro .left-img .last-content {
+    width: 45%;
+  }
+  main .ticket-intro .right-img {
+    position: relative;
+  }
+  main .ticket-intro .right-img .last-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+  }
+  main .ticket-intro .right-img .first-content {
+    width: 45%;
+  }
+  main .ticket-intro .ticket-poster img {
+    margin-top: 0;
+    width: 350px;
+    height: 510px;
+    box-shadow: 10px 10px 3px gray;
+  }
+  main .ticket-intro .ticket-text {
+    margin: 10vw 4vw 0 5vw;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text h3 {
+    margin: 20px 0;
+    font-size: 30px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text .date {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li {
+    margin: 10px 0;
+  }
+  main .ticket-intro .ticket-text .ticket-intro-text ul li p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .ticket-intro .ticket-poster {
+    margin-top: 5%;
+  }
+  main .ticket-intro .ticket-poster img {
+    width: 350px;
+    height: 500px;
+    box-shadow: 15px 15px 3px gray;
+  }
+  main .ticket-intro .ticket-intro-text h3 {
+    margin: 20px 0;
+    font-size: 48px;
+  }
+  main .ticket-intro .ticket-intro-text .date {
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
+  main .ticket-intro .ticket-intro-text ul li {
+    margin: 0px 0;
+  }
+  main .ticket-intro .ticket-intro-text ul li p {
+    font-size: 24px;
+  }
 }
 
 footer {
@@ -653,4 +795,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */

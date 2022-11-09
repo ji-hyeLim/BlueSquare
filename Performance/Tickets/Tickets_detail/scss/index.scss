@@ -41,12 +41,17 @@ body {
 header {
     position: relative;
     width: 100vw;
-    height: 100px;
+    height: 80px; 
+    
+    @include responsive(large-tablet-screens) {  
+        height: 250px;
+    }
 
     .header-bg {
         width: 100%; 
         height: 100vh;
         overflow: hidden;
+        
 
         video {
             width: 100%; 
@@ -202,8 +207,6 @@ main {
 
     // ==== detail-main ==== //
     .detail-main {
-        margin-bottom: 100px;
-
         // == left-img == //
         .left-img {
             .ticket-poster {
@@ -238,7 +241,7 @@ main {
                         padding: 2.2rem 2.5rem 0;
                         background-color: rgba(0, 0, 0, 0.5);
 
-                        a {
+                        .main-poster {
                             @include pos-center-x();
                             position: relative;
                             width: 250px;
@@ -256,9 +259,10 @@ main {
                                 img {
                                     width: 3rem;
                                 }
-                            }
-                        } // a
-                    } // content
+                            } 
+                        } // main-poster
+
+                    } // content      
                 } // topWrap
             } // ticket-poster
         } // left-img
@@ -321,6 +325,74 @@ main {
                                 color: $point-color;
                             }
                         }
+
+                        .all-price {
+                            width: 60%;
+                            // background-color: aqua;
+                            p {
+                                span {
+                                    color: $point-color;
+                                }
+                            }
+
+                            #price_modal {
+                                width: 60vw; 
+                                min-width: 580px;
+                                height: 45vh;
+                                min-height: 340px;
+                                z-index: 10;
+                                border-radius: 10px;
+                                border: 1px solid $gray-border;
+                                position: fixed;
+                                top: 50%; left: 50%;
+                                transform: translate(-50%, -50%);
+                
+                                transition: all 1s;
+                                background-color: #fff;
+                            }
+
+                            .price_modal_header {
+                                position: relative;
+                                width: 100%;
+                                height: 10%;
+                                border-bottom: 1px solid $gray-border;
+                
+                                .price-del-btn {
+                                    cursor: pointer;
+                
+                                    &::before,
+                                    &::after {
+                                        position: absolute;
+                                        top: 10px; right: 25px;
+                                        content:''; 
+                                        height: 20px; 
+                                        width:1px; 
+                                        background-color: #222;
+                                    }
+                
+                                    &::before {
+                                        transform: rotate(45deg);
+                                    }
+                
+                                    &::after {
+                                        transform: rotate(-45deg);
+                                    }
+                                } // del-btn   
+                            } // price_modal_header
+                
+                            .price_title {
+                                font-size: 20px;
+                                position: absolute;
+                                left: 20px; top: 10px;
+                            }
+                
+                            // .price_modal {
+                            //     position: relative;
+                            //     width: 100%; 
+                            //     height: 90%;
+                            //     /* background-color: red; */
+                            // }
+                        } // all-price
                     } // li
                 } // ul
             } // ticket-intro-text
@@ -338,17 +410,16 @@ main {
                     li {
                         text-align: center;
                         a {
-                            padding: 15px 0;
+                            padding: 20px 0;
 
                             img {
                                 width: 30px;
-                                transform: translate(30%, 34%);
+                                transform: translate(35%, 30%);
                             }
                         }
 
                         &:first-child {
                             width: 40%;
-                            
                             background-color: $gray-border;
                         }
 
@@ -358,7 +429,7 @@ main {
                             a {
                                 color: #fff;
                                 padding: 0 20%;
-                                transform: translate(0, -10%);
+                                transform: translate(0, 10%);
                             }
                         } // a
                     } // li
@@ -367,21 +438,92 @@ main {
         } // right-text
     } // detail-main
 
+    @include responsive(small-tablet-screens) {
+        .content {
+            #modal {
+                width: 60vw; 
+                min-width: 580px;
+                height: 45vh;
+                min-height: 340px;
+                z-index: 10;
+                border-radius: 10px;
+                border: 1px solid $gray-border;
+                position: fixed;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+
+                transition: all 1s;
+                background-color: #fff;
+            }
+
+            .modal_header {
+                position: relative;
+                width: 100%;
+                height: 10%;
+                border-bottom: 1px solid $gray-border;
+
+                .del-btn {
+                    cursor: pointer;
+
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        top: 10px; right: 25px;
+                        content:''; 
+                        height: 20px; 
+                        width:1px; 
+                        background-color: #222;
+                    }
+
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                } // del-btn   
+            } // modal_header
+
+            .txt {
+                font-size: 20px;
+                position: absolute;
+                left: 20px; top: 8px;
+            }
+
+            .video-wrap {
+                position: relative;
+                width: 100%; 
+                height: 90%;
+                /* background-color: red; */
+            }
+            
+            video {
+                position: absolute;	
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                width: 800px; height: 300px;
+            }
+        } // content
+    } // small-tablet-screens
+
     @include responsive(large-tablet-screens) {
         h1 {
             display: block;
-            margin-top: 137px;
-            margin-bottom: 30px;
+            // margin-top: 137px;
+            margin-bottom: 58px;
         }
     
         hr {
             display: block;
+            border: 0;
+            border: 1px solid $gray-border;
         }
 
         // ==== detail-main ==== //
         .detail-main {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 70px;
 
             div.box {
                 @include flex-box(){
@@ -392,8 +534,8 @@ main {
             // == right-img == // 
             .left-img {
                 display: inline-block;
+                
                 .ticket-poster {
-                    
                     .topWrap {
                         text-align: center;
                         .container {
@@ -403,15 +545,19 @@ main {
                             display: none;
                         } 
                         .content {
+                            padding-top: 0;
                             background-color: transparent;
-                            a {
+
+                            .main-poster {
                                 width: 350px;
+
                                 .poster {
                                     width: 100%;
                                     margin-top: 0px;
                                     margin: 0;
                                     box-shadow: 10px 10px 3px gray;
                                 }
+
                                 .posterBoxPlayBtn {
                                     left: 15px;
                                     bottom: 1rem;
@@ -419,7 +565,14 @@ main {
                                         width: 3rem;
                                     }
                                 }
-                            } // a
+
+                                #modal {
+                                    width: 50vw; 
+                                    min-width: 560px;
+                                    height: 50vh;
+                                    min-height: 315px;
+                                }
+                            } // main-poster
                         } // content
                     } // topWrap
                 } // ticket-poster
@@ -429,14 +582,16 @@ main {
             .right-text {
                 display: inline-block;
                 vertical-align: top;
-                width: 50%;
+                width: 40%;
+                // margin-left: 5%;
             
                 .ticket-intro-text {
                     text-align: left;
     
                     h3 {
                         margin: 10px 0;
-                        font-size: $title-font-size;
+                        font-size: 26px;
+                        // background-color: aqua;
                     }
     
                     .date {
@@ -462,7 +617,23 @@ main {
                                 span {
                                     color: $point-color;
                                 }
+
+
                             }
+
+                            // div {
+                            //     width: 100%;
+                            //     font-weight: 600;
+                                
+                            //     p {background-color: aqua;
+                            //         width: 100%;
+                            //         span {
+                            //         color: $point-color;
+                            //     }
+                            // }
+                            //     }
+                                
+                                
                         } // li
                     } // ul
                 } // ticket-intro-text
@@ -477,29 +648,64 @@ main {
 
                             a {
                                 position: relative;
-                                padding: 15px 0;
+                                padding: 14px 0;
                             }
 
                             &:first-child {
-                                width: 160px;
+                                width: 150px;
                             }
 
                             &:last-child {
-                                width: 160px;
+                                width: 150px;
                                 background-color: black;
 
                                 a {
+                                    transform: translate(0%, -10%);
                                     img {
                                         transform: translate(20%, 30%);
                                     }
                                 }
-                            }  
+                            } // a 
                         } // li
                     } // ul
-                } // info-booking-button 
+                } // info-booking-button
             } // right-text
         } // detail-main
     } // large-tablet-screens
+
+    @include responsive(desktop-screens) {
+        .info-booking-button {
+            // position: static;
+            ul {
+                li {
+                    // margin-top: 50px;
+                    // margin-left: 0px;
+                    // margin-right: 20px;
+
+                    a {
+                        position: relative;
+                        padding: 14px 0;
+                    }
+
+                    &:first-child {
+                        width: 160px;
+                    }
+
+                    &:last-child {
+                        width: 160px;
+                        background-color: black;
+
+                        a {
+                            transform: translate(0%, -10%);
+                            img {
+                                transform: translate(20%, 30%);
+                            }
+                        }
+                    } // a 
+                } // li
+            } // ul
+        } // info-booking-button
+    }
 
 
     // ==== contents-list ==== //
@@ -509,7 +715,7 @@ main {
             
         }
         .container > div {
-            margin: 100px 0;
+            margin: 150px 0;
 
             &:first-child {
                 border: 0;
@@ -581,8 +787,10 @@ main {
             } // cast-list       
         } // casting  
 
+        .click-btn,
         .toggled-btn {
-            width: 100%;
+            width: 80%;
+            margin: 0 auto;
             margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid $gray-font;
@@ -596,7 +804,11 @@ main {
                 span {
                     display: block;
 
-                    &.on {
+                    // &.on {
+                    //     display: none;
+                    // }
+
+                    &.off {
                         display: none;
                     }
                 }
@@ -613,45 +825,39 @@ main {
         } // toggled-btn
 
         .img-contents {
-            // width: 100%;
+            width: 100%;
             img {
                 width: 100%;
-                // display: none;
-                
             }
 
             .hidden {
-                width: 100%;
                 height: 500px;
-                // display: none;
                 overflow: hidden;
             }
         }
-
         
 
         .notice {
             padding: 0;
-
-            .img-contents .hidden {
+            .hidden {
                 @include background-gradiunt($name:'notice');
             }
         }
-s
+
         .sale {
-            .img-contents {
+            .hidden {
                 @include background-gradiunt($name:'sale');
             }
         }
 
         .schedule {
-            .img-contents {
+            .hidden {
                 @include background-gradiunt($name:'schedule');
             }
         }
 
         .introduce {
-            .img-contents {
+            .hidden {
                 @include background-gradiunt($name:'introduce');
             }
         }
@@ -659,10 +865,11 @@ s
         .event {
             .box {
                 text-align: center;
+                img {
+                    width: 100%;
+                }
             }
         }
-
-        
     } // contents-list
     
 
@@ -672,18 +879,17 @@ s
                 padding: 0 20px;
             }
             .container > div {
-                padding: 80px 50px;
+                padding: 80px 0px;
                 border: $black-line;
-                
 
                 h3 {
                     margin: 0 0 50px 0;
-                    font-size: 2vw;
+                    font-size: 26px;
                 }
 
                 p {
                     margin-bottom: 80px;
-                    line-height: 40px;
+                    line-height: 2;
                 }
             }
 
@@ -691,62 +897,213 @@ s
                 text-align: center;
                 img {
                     width: 70%;
-                    margin: 0 0%;
+                    margin: 0;
+                }
+
+                .hidden {
+                    width: 70%;
+                    margin: 0 auto;
                 }
             }
 
             // == casting == // 
-        .casting {
-            .cast-list {
-                overflow-x: hidden;
+            .casting {
+                .cast-list {
+                    overflow-x:visible;
 
-                ul {
-                    text-align: center;
-                    @include flex-box() {
-                        justify-content: center;
-                        flex-wrap : wrap;
-                    }
-                    width: 880px;
-                    margin: 0 auto;
-
-                    li {
-                        
-                        margin: 30px 18px;
-                        .cast-img {
-                            img {
-                                width: 110px; 
-                                height: 110px;
-                            }
-                        }
-            
-                        .cast-text { 
-                            margin-top: 10px;
-                            
-                            .cast-role {
-                                font-size: $mini-text-font-size - 10;
-                            }
-                            .cast-name {
-                                font-size: $mini-text-font-size;
-                            }
-                        }    
-                    }
-
-                    .cast-hidden {    
+                    ul {
+                        text-align: center;
                         @include flex-box() {
                             justify-content: center;
                             flex-wrap : wrap;
                         }
+                        width: 800px;
+                        margin: 0 auto;
+
+                        li {
+                            margin: 30px 16px;
+                            .cast-img {
+                                img {
+                                    width: 100px; 
+                                    height: 100px;
+                                }
+                            }
+                
+                            .cast-text { 
+                                margin-top: 10px;
+                                
+                                .cast-role {
+                                    font-size: calc($mini-text-font-size);
+                                }
+                                .cast-name {
+                                    font-size: $mini-text-font-size;
+                                }
+                            }    
+                        }
+
+                        .cast-hidden {    
+                            @include flex-box() {
+                                justify-content: center;
+                                flex-wrap : wrap;
+                            }
+                        }
+                    } // ul 
+                    .toggled-btn {
+                            display: block;
+                        }        
+                } // cast-list       
+            } // casting
+            
+            .event {
+                .box {
+                    img {
+                        width: 70%;
                     }
-                } // ul 
-                .toggled-btn {
-                        display: block;
-                    }        
-            } // cast-list       
-        } // casting  
+                }
+            }
         } // contents-list
     } // large-tablet-screens
 
+    @include responsive(desktop-screens) {
+        ul {
+            li {
+                margin: 0 15px;
+                .cast-img {
+                    img {
+                        width: 120px; 
+                        height: 120px;
+                        border-radius: 50%;
+                        margin: 0;
+                    }
+                }
+    
+                .cast-text { 
+                    margin-top: 15px;
+                    text-align: center;
+                    
+                    .cast-role {
+                        color: $gray-font;
+                        font-size: $mini-text-font-size;
+                    }
+                    .cast-name {
+                        margin-top: 3px;
+                        font-weight: 600;
+                    }
+                }
+            } // li 
+            
+            .cast-hidden {
+                display: none;
+            }
+        } // ul
+    } // desktop-screens
+
+    
+    // ==== price-wrap ==== //
+    .price-wrap {
+        .titleWrap {
+            position: relative;
+            h2 {
+                display: block;
+                padding: 20px 0;
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 300;
+            }
+
+            .closeButton {
+                font-size: 0;
+                cursor: pointer;
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    top: 25px; right: 30px;
+                    content:''; 
+                    height: 20px; 
+                    width:1px; 
+                    background-color: #000;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        } // titleWrap
+
+        .priceContents {
+            ul {
+                li {
+                    .priceGrade {
+                        font-size: 1.3rem;
+                        padding: 20px 0;
+                        background-color: #f3f3f3;
+                        color: #000;
+                        text-indent: 2rem;
+                    } // priceGrade
+
+                    .basicPriceWrap {
+                        // display: table;
+                        position: relative;
+                        width: 100%;
+                        padding: 1.5rem 2rem;
+                        // box-sizing: border-box;
+
+                        span {
+                            font-weight: 600;
+                            font-size: 1.6rem;
+                        }
+
+                        p {
+                            margin-top: 0.8rem;
+                            padding-left: 0.2rem ;
+                            font-size: 1.2rem;
+                            line-height: 1.6rem;
+                            color: $gray-font;
+                        }
+
+                        .basicPrice {
+                            font-size: 1.8rem;
+                            line-height: 2rem;
+                            font-weight: 700;
+                            text-align: right;
+                            color: #000;
+                        }
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 0.1rem;
+                            background-color: #eee;
+                        }
+                    } // basicPriceWrap
+
+                    .discountList {
+                        padding: 1.5rem 2rem 1.5rem;
+                        .discountBasic {
+                            li {
+                                .discountBasicTitle {
+                                    font-weight: 600;
+                                }
+                                font-size: 1rem;
+                                line-height: 1.8rem;
+                                color: #000;
+                            }
+                        }
+                    } // discountList
+                } // li
+            } // ul
+        } // priceContents
+    } // price-wrap
 } // main
+
 
 
 // * ===================== footer ===================== *

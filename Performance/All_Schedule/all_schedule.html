@@ -8,6 +8,58 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>BLUE SQUARE</title>
     <script>
+        $(function() {
+            $(".year a").removeAttr("href");
+            $(".2021").hide();
+            $(".2020").hide();
+            $(".2021_title").hide();
+            $(".2020_title").hide();
+
+            // 2022
+            $("#prev_arrow22").click(function() {
+                $(".2021_title").show();
+                $(".2022_title").hide();
+                $(".2021").show();
+                $(".2022").hide();
+            });
+
+            $("#next_arrow22").click(function() {
+                $(".2020_title").show();
+                $(".2022_title").hide();
+                $(".2020").show();
+                $(".2022").hide();
+            });
+
+            // 2021
+            $("#prev_arrow21").click(function() {
+                $(".2020_title").show();
+                $(".2021_title").hide();
+                $(".2020").show();
+                $(".2021").hide();
+            });
+
+            $("#next_arrow21").click(function() {
+                $(".2022_title").show();
+                $(".2021_title").hide();
+                $(".2022").show();
+                $(".2021").hide();
+            });
+
+            // 2020
+            $("#prev_arrow20").click(function() {
+                $(".2022_title").show();
+                $(".2020_title").hide();
+                $(".2022").show();
+                $(".2020").hide();
+            });
+
+            $("#next_arrow20").click(function() {
+                $(".2021_title").show();
+                $(".2020_title").hide();
+                $(".2021").show();
+                $(".2020").hide();
+            });
+        });
     </script>
 </head>
 <body>
@@ -15,7 +67,7 @@
         <header>
             <div class="header-bg">
                 <video autoplay loop muted>
-                    <source src="video/videoplayback2.mp4" type="video/mp4">
+                    <source src="video/all_schedule_main.mp4" type="video/mp4">
                     <p>이 브라우저는 HTML5 비디오를 지원하지 않습니다.</p>
                 </video>
             </div> <!-- header-bg -->
@@ -88,289 +140,863 @@
                 <h1>공연일정</h1>
                 <hr>
                 <div class="year">
-                    <a href="#"><img src="./img/left_button.png" alt=""></a> 
-                    <h2>2022</h2>
-                    <a href="#"><img src="./img/right_button2.png" alt=""></a> 
-                </div>
-                <div class="box">
                     <ul>
-                        <li>        
-                            <div class="poster">
-                                <img src="./img/2022/물랑루즈.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>물랑루즈</strong>
-                                <p>
-                                    블루스퀘어 신한카드홀<br>
-                                    2022.12.20 - 2023.03.05
-                                </p>
-                                <span>뮤지컬</span>
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
+                        <li class="2022_title">
+                            <a href="#" id="prev_arrow22" class="prev_arrow">이전</a> 
+                            <h2>2022</h2>
+                            <a href="#" id="next_arrow22" class="next_arrow" >다음</a> 
                         </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/로이킴.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>로이킴 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.11.19 - 2022.11.20 
-                                </p>
-                                <span>콘서트</span>
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
+                        <li class="2021_title">
+                            <a href="#" id="prev_arrow21" class="prev_arrow">이전</a> 
+                            <h2>2021</h2>
+                            <a href="#" id="next_arrow21" class="next_arrow">다음</a> 
                         </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/데이먼스이어.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>데이먼스이어 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.11.05 - 2022.11.06 
-                                </p>
-                                <span>콘서트</span>
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/원어스.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>원어스 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.10.29 - 2022.10.30 
-                                </p>
-                                <span>콘서트</span>
-                            </div> 
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/빅톤.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>빅톤 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.10.15 - 2022.10.16  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/검정치마.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>검정치마 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.10.08 - 2022.10.09  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/엘르.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>엘르 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.10.06  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/정선아.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>정선아 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.10.03  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/심규선.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>심규선 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.10.01 - 2022.10.02  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>        
-                            <div class="poster">
-                                <img src="./img/2022/그랜드 엑스패디션.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>그랜드 엑스페디션</strong>
-                                <p>
-                                    블루스퀘어 카오스홀<br>
-                                    2022.09.30 - 2023.03.01 
-                                </p>
-                                <span>뮤지컬</span>
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/데이먼스이어.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>희노애락</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.09.23 - 2022.09.25  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/김재중.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>김재중 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.09.17 - 2022.09.18  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/이종석.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>이종석 팬미팅</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.09.12  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/조정석.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>조정석 쇼</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.09.03 - 2022.09.04  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>        
-                            <div class="poster">
-                                <img src="./img/2022/엘리자벳.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>엘리자벳</strong>
-                                <p>
-                                    블루스퀘어 신한카드홀<br>
-                                    2022.08.30 - 2022.11.13  
-                                </p>
-                                <span>뮤지컬</span>
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="poster">
-                                <img src="./img/2022/정세운.png" alt="">
-                            </div>
-                            <div class="text">
-                                <strong>정세운 콘서트</strong>
-                                <p>
-                                    블루스퀘어 마스터카드홀<br>
-                                    2022.08.27 - 2022.08.28  
-                                </p>
-                                <span>콘서트</span>   
-                            </div>
-                            <div class="hover-black">
-                                <a href="#">상세보기</a>
+                        <li class="2020_title">
+                            <div class="year">
+                                <a href="#" id="prev_arrow20" class="prev_arrow">이전</a> 
+                                <h2>2020</h2>
+                                <a href="#" id="next_arrow20" class="next_arrow">다음</a> 
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div class="box">
+                    <div class="2022">
+                        <ul>
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2022/물랑루즈.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>물랑루즈</strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2022.12.20 - 2023.03.05
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/로이킴.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>로이킴 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.11.19 - 2022.11.20 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/데이먼스이어.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>데이먼스이어 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.11.05 - 2022.11.06 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/원어스.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>원어스 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.10.29 - 2022.10.30 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div> 
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/빅톤.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>빅톤 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.10.15 - 2022.10.16  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/검정치마.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>검정치마 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.10.08 - 2022.10.09  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/엘르.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>엘르 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.10.06  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/정선아.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>정선아 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.10.03  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/심규선.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>심규선 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.10.01 - 2022.10.02  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2022/그랜드 엑스패디션.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>그랜드 엑스페디션</strong>
+                                    <p>
+                                        블루스퀘어 카오스홀<br>
+                                        2022.09.30 - 2023.03.01 
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/희노애락.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>희노애락</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.09.23 - 2022.09.25  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/김재중.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>김재중 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.09.17 - 2022.09.18  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/이종석.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>이종석 팬미팅</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.09.12  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/조정석.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>조정석 쇼</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.09.03 - 2022.09.04  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2022/엘리자벳.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>엘리자벳</strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2022.08.30 - 2022.11.13  
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/정세운.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>정세운 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.08.27 - 2022.08.28  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div> <!-- 2022 -->
+
+                    <div class="2021">
+                        <ul>
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2021/김필.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>김필 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.12.31 - 2022.01.01
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/10cm.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>10cm 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.12.17 - 2022.12.26 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/페퍼톤스.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>페퍼톤스 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2022.12.11 - 2022.12.12 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/루시.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>루시 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.12.03 - 2021.12.04  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/프랑켄슈타인.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>프랑켄슈타인</strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2021.11.24 - 2022.02.20 
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2022/빅톤.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>크래비티 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.11.20 - 2021.11.21 
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/포르테디콰트로.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>포르테디콰트로 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.11.14 - 2021.11.14  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/강형호.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>강형호 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.11.12 - 2021.11.13
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/k-on.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>아카이브K-ON</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.10.22 - 2021.10.23  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2021/하동균.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>하동균 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.10.15 - 2021.10.17 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/조강태.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>조강태 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.10.11 - 2021.10.11  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/키썸.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>키썸 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.09.12 - 2021.09.12 
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/먼데이키즈.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>먼데이키즈 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.09.11 - 2021.09.11 
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/알리.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>알리 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.09.10 - 2021.09.10  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2021/아도이.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>아도이, 도시 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2021.08.21 - 2021.08.21
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2021/엑스칼리버.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>엑스칼리버</strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2021.08.17 - 2021.11.07  
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- 2021 -->
+                    
+                    <div class="2020">
+                        <ul>
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2020/세종.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>세종, 1446</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.11.29 - 2020.11.30  
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/노트르담 드 파리.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>노트르담 드 파리</strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2020.11.10 - 2021.01.03 
+                                    </p>
+                                    <span>뮤지컬</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/빅톤.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>빅톤 팬미팅</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.11.08 - 2022.11.08 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/조명섭.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>조명섭 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.10.31 - 2020.11.01  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/혁오.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>혁오 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.10.16 - 2020.10.18  
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/킹키부츠.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>킹키부츠 </strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2020.08.21 - 2020.11.01  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/벤.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>벤 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.08.02 - 2020.08.02  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/렌트.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>렌트 쇼케이스</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.06.01 - 2020.06.01
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/오페라의유령.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>오페라의 유령 내한공연</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.03.14 - 2020.08.07   
+                                    </p>
+                                    <span>뮤지컬</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2020/정재일.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>정재일 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.02.15 - 2020.02.15 
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/혁오1.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>혁오 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.02.08 - 2020.02.09   
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/판타스틱 뮤지컬.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>판타스틱 뮤지컬 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.02.01 - 2020.02.02 
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/한국뮤지컬어워즈.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>제4회 한국뮤지컬어워즈</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.01.20 - 2020.01.20  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/골든차일드.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>골든 차일드 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.01.18 - 2020.01.19  
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="poster">
+                                    <img src="./img/2020/정세운.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>정세운 팬미팅</strong>
+                                    <p>
+                                        블루스퀘어 마스터카드홀<br>
+                                        2020.01.11 - 2020.01.12
+                                    </p>
+                                    <span>콘서트</span>   
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+
+                            
+                            <li>        
+                                <div class="poster">
+                                    <img src="./img/2020/손호영 김태우.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <strong>손호영,김태우 콘서트</strong>
+                                    <p>
+                                        블루스퀘어 신한카드홀<br>
+                                        2020.01.04 - 2020.01.05  
+                                    </p>
+                                    <span>콘서트</span>
+                                </div>
+                                <div class="hover-black">
+                                    <a href="#">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- 2020 -->
                 </div> <!-- box -->
                 <hr>
             </div> <!-- container -->
         </main> <!-- main -->
 
+        
         <footer>
             <div class="container">
                 <div class="flex-box">

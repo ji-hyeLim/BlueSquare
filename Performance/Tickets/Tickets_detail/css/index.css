@@ -97,7 +97,12 @@ body {
 header {
   position: relative;
   width: 100vw;
-  height: 100px;
+  height: 80px;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 250px;
+  }
 }
 header .header-bg {
   width: 100%;
@@ -107,7 +112,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -241,9 +247,6 @@ main h1 {
 main hr {
   display: none;
 }
-main .detail-main {
-  margin-bottom: 100px;
-}
 main .detail-main .left-img .ticket-poster {
   text-align: center;
 }
@@ -265,7 +268,8 @@ main .detail-main .left-img .ticket-poster .topWrap .bg img {
   width: 100%;
   height: 100%;
   filter: blur(10px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .detail-main .left-img .ticket-poster .topWrap .content {
   position: relative;
@@ -276,7 +280,7 @@ main .detail-main .left-img .ticket-poster .topWrap .content {
   padding: 2.2rem 2.5rem 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-main .detail-main .left-img .ticket-poster .topWrap .content a {
+main .detail-main .left-img .ticket-poster .topWrap .content .main-poster {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -284,18 +288,19 @@ main .detail-main .left-img .ticket-poster .topWrap .content a {
   width: 250px;
   margin: 0;
 }
-main .detail-main .left-img .ticket-poster .topWrap .content a .poster {
+main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .poster {
   width: 250px;
   vertical-align: top;
   box-shadow: 0px 10px 5px gray;
 }
-main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
+main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .posterBoxPlayBtn {
+  position: -webkit-sticky;
   position: sticky;
   position: absolute;
   left: 12px;
   bottom: 0.5rem;
 }
-main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn img {
+main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .posterBoxPlayBtn img {
   width: 3rem;
 }
 main .detail-main .right-text {
@@ -349,6 +354,57 @@ main .detail-main .right-text .ticket-intro-text ul li p:last-child {
 main .detail-main .right-text .ticket-intro-text ul li p span {
   color: rgb(0, 148, 214);
 }
+main .detail-main .right-text .ticket-intro-text ul li .all-price {
+  width: 60%;
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price p span {
+  color: rgb(0, 148, 214);
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price #price_modal {
+  width: 60vw;
+  min-width: 580px;
+  height: 45vh;
+  min-height: 340px;
+  z-index: 10;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  background-color: #fff;
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price .price_modal_header {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid #ccc;
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price .price_modal_header .price-del-btn {
+  cursor: pointer;
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price .price_modal_header .price-del-btn::before, main .detail-main .right-text .ticket-intro-text ul li .all-price .price_modal_header .price-del-btn::after {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  content: "";
+  height: 20px;
+  width: 1px;
+  background-color: #222;
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price .price_modal_header .price-del-btn::before {
+  transform: rotate(45deg);
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price .price_modal_header .price-del-btn::after {
+  transform: rotate(-45deg);
+}
+main .detail-main .right-text .ticket-intro-text ul li .all-price .price_title {
+  font-size: 20px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
 main .detail-main .right-text .info-booking-button {
   position: fixed;
   left: 0;
@@ -365,11 +421,11 @@ main .detail-main .right-text .info-booking-button ul li {
   text-align: center;
 }
 main .detail-main .right-text .info-booking-button ul li a {
-  padding: 15px 0;
+  padding: 20px 0;
 }
 main .detail-main .right-text .info-booking-button ul li a img {
   width: 30px;
-  transform: translate(30%, 34%);
+  transform: translate(35%, 30%);
 }
 main .detail-main .right-text .info-booking-button ul li:first-child {
   width: 40%;
@@ -382,20 +438,82 @@ main .detail-main .right-text .info-booking-button ul li:last-child {
 main .detail-main .right-text .info-booking-button ul li:last-child a {
   color: #fff;
   padding: 0 20%;
-  transform: translate(0, -10%);
+  transform: translate(0, 10%);
+}
+@media screen and (min-width: 600px) {
+  main .content #modal {
+    width: 60vw;
+    min-width: 580px;
+    height: 45vh;
+    min-height: 340px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    background-color: #fff;
+  }
+  main .content .modal_header {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #ccc;
+  }
+  main .content .modal_header .del-btn {
+    cursor: pointer;
+  }
+  main .content .modal_header .del-btn::before, main .content .modal_header .del-btn::after {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    content: "";
+    height: 20px;
+    width: 1px;
+    background-color: #222;
+  }
+  main .content .modal_header .del-btn::before {
+    transform: rotate(45deg);
+  }
+  main .content .modal_header .del-btn::after {
+    transform: rotate(-45deg);
+  }
+  main .content .txt {
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 8px;
+  }
+  main .content .video-wrap {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    /* background-color: red; */
+  }
+  main .content video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 300px;
+  }
 }
 @media screen and (min-width: 1024px) {
   main h1 {
     display: block;
-    margin-top: 137px;
-    margin-bottom: 30px;
+    margin-bottom: 58px;
   }
   main hr {
     display: block;
+    border: 0;
+    border: 1px solid #ccc;
   }
   main .detail-main {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 70px;
   }
   main .detail-main div.box {
     display: flex;
@@ -415,35 +533,42 @@ main .detail-main .right-text .info-booking-button ul li:last-child a {
     display: none;
   }
   main .detail-main .left-img .ticket-poster .topWrap .content {
+    padding-top: 0;
     background-color: transparent;
   }
-  main .detail-main .left-img .ticket-poster .topWrap .content a {
+  main .detail-main .left-img .ticket-poster .topWrap .content .main-poster {
     width: 350px;
   }
-  main .detail-main .left-img .ticket-poster .topWrap .content a .poster {
+  main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .poster {
     width: 100%;
     margin-top: 0px;
     margin: 0;
     box-shadow: 10px 10px 3px gray;
   }
-  main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn {
+  main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .posterBoxPlayBtn {
     left: 15px;
     bottom: 1rem;
   }
-  main .detail-main .left-img .ticket-poster .topWrap .content a .posterBoxPlayBtn img {
+  main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .posterBoxPlayBtn img {
     width: 3rem;
+  }
+  main .detail-main .left-img .ticket-poster .topWrap .content .main-poster #modal {
+    width: 50vw;
+    min-width: 560px;
+    height: 50vh;
+    min-height: 315px;
   }
   main .detail-main .right-text {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 40%;
   }
   main .detail-main .right-text .ticket-intro-text {
     text-align: left;
   }
   main .detail-main .right-text .ticket-intro-text h3 {
     margin: 10px 0;
-    font-size: 38px;
+    font-size: 26px;
   }
   main .detail-main .right-text .ticket-intro-text .date {
     font-size: 13px;
@@ -475,16 +600,38 @@ main .detail-main .right-text .info-booking-button ul li:last-child a {
   }
   main .detail-main .right-text .info-booking-button ul li a {
     position: relative;
-    padding: 15px 0;
+    padding: 14px 0;
   }
   main .detail-main .right-text .info-booking-button ul li:first-child {
-    width: 160px;
+    width: 150px;
   }
   main .detail-main .right-text .info-booking-button ul li:last-child {
+    width: 150px;
+    background-color: black;
+  }
+  main .detail-main .right-text .info-booking-button ul li:last-child a {
+    transform: translate(0%, -10%);
+  }
+  main .detail-main .right-text .info-booking-button ul li:last-child a img {
+    transform: translate(20%, 30%);
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .info-booking-button ul li a {
+    position: relative;
+    padding: 14px 0;
+  }
+  main .info-booking-button ul li:first-child {
+    width: 160px;
+  }
+  main .info-booking-button ul li:last-child {
     width: 160px;
     background-color: black;
   }
-  main .detail-main .right-text .info-booking-button ul li:last-child a img {
+  main .info-booking-button ul li:last-child a {
+    transform: translate(0%, -10%);
+  }
+  main .info-booking-button ul li:last-child a img {
     transform: translate(20%, 30%);
   }
 }
@@ -492,7 +639,7 @@ main .contents-list .container {
   padding: 0;
 }
 main .contents-list .container > div {
-  margin: 100px 0;
+  margin: 150px 0;
 }
 main .contents-list .container > div:first-child {
   border: 0;
@@ -548,61 +695,70 @@ main .contents-list .casting .cast-list ul .cast-hidden {
 main .contents-list .casting .cast-list .toggled-btn {
   display: none;
 }
+main .contents-list .click-btn,
 main .contents-list .toggled-btn {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #b2b2b2;
 }
+main .contents-list .click-btn div,
 main .contents-list .toggled-btn div {
   display: flex;
   justify-content: space-between;
   justify-content: center;
   cursor: pointer;
 }
+main .contents-list .click-btn div span,
 main .contents-list .toggled-btn div span {
   display: block;
 }
-main .contents-list .toggled-btn div span.on {
+main .contents-list .click-btn div span.off,
+main .contents-list .toggled-btn div span.off {
   display: none;
 }
+main .contents-list .click-btn div img,
 main .contents-list .toggled-btn div img {
   width: 18px;
   margin-left: 15px;
 }
+main .contents-list .click-btn div img.rotate,
 main .contents-list .toggled-btn div img.rotate {
   transform: rotate(180deg);
+}
+main .contents-list .img-contents {
+  width: 100%;
 }
 main .contents-list .img-contents img {
   width: 100%;
 }
 main .contents-list .img-contents .hidden {
-  width: 100%;
   height: 500px;
   overflow: hidden;
 }
 main .contents-list .notice {
   padding: 0;
 }
-main .contents-list .notice .img-contents .hidden {
+main .contents-list .notice .hidden {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/notice.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: 100%;
 }
-main .contents-list s .sale .img-contents {
+main .contents-list .sale .hidden {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/sale.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: 100%;
 }
-main .contents-list .schedule .img-contents {
+main .contents-list .schedule .hidden {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/schedule.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: 100%;
 }
-main .contents-list .introduce .img-contents {
+main .contents-list .introduce .hidden {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%), url("/Performance/Tickets/Tickets_detail/img/elisabeth/introduce.png");
   background-repeat: no-repeat;
   background-position-x: center;
@@ -611,31 +767,38 @@ main .contents-list .introduce .img-contents {
 main .contents-list .event .box {
   text-align: center;
 }
+main .contents-list .event .box img {
+  width: 100%;
+}
 @media screen and (min-width: 1024px) {
   main .contents-list .container {
     padding: 0 20px;
   }
   main .contents-list .container > div {
-    padding: 80px 50px;
+    padding: 80px 0px;
     border: 1px solid #000;
   }
   main .contents-list .container > div h3 {
     margin: 0 0 50px 0;
-    font-size: 2vw;
+    font-size: 26px;
   }
   main .contents-list .container > div p {
     margin-bottom: 80px;
-    line-height: 40px;
+    line-height: 2;
   }
   main .contents-list .img-contents {
     text-align: center;
   }
   main .contents-list .img-contents img {
     width: 70%;
-    margin: 0 0%;
+    margin: 0;
+  }
+  main .contents-list .img-contents .hidden {
+    width: 70%;
+    margin: 0 auto;
   }
   main .contents-list .casting .cast-list {
-    overflow-x: hidden;
+    overflow-x: visible;
   }
   main .contents-list .casting .cast-list ul {
     text-align: center;
@@ -643,21 +806,21 @@ main .contents-list .event .box {
     justify-content: space-between;
     justify-content: center;
     flex-wrap: wrap;
-    width: 880px;
+    width: 800px;
     margin: 0 auto;
   }
   main .contents-list .casting .cast-list ul li {
-    margin: 30px 18px;
+    margin: 30px 16px;
   }
   main .contents-list .casting .cast-list ul li .cast-img img {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
   }
   main .contents-list .casting .cast-list ul li .cast-text {
     margin-top: 10px;
   }
   main .contents-list .casting .cast-list ul li .cast-text .cast-role {
-    font-size: 3px;
+    font-size: 13px;
   }
   main .contents-list .casting .cast-list ul li .cast-text .cast-name {
     font-size: 13px;
@@ -671,6 +834,114 @@ main .contents-list .event .box {
   main .contents-list .casting .cast-list .toggled-btn {
     display: block;
   }
+  main .contents-list .event .box img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main ul li {
+    margin: 0 15px;
+  }
+  main ul li .cast-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0;
+  }
+  main ul li .cast-text {
+    margin-top: 15px;
+    text-align: center;
+  }
+  main ul li .cast-text .cast-role {
+    color: #b2b2b2;
+    font-size: 13px;
+  }
+  main ul li .cast-text .cast-name {
+    margin-top: 3px;
+    font-weight: 600;
+  }
+  main ul .cast-hidden {
+    display: none;
+  }
+}
+main .price-wrap .titleWrap {
+  position: relative;
+}
+main .price-wrap .titleWrap h2 {
+  display: block;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+main .price-wrap .titleWrap .closeButton {
+  font-size: 0;
+  cursor: pointer;
+}
+main .price-wrap .titleWrap .closeButton::before, main .price-wrap .titleWrap .closeButton::after {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  content: "";
+  height: 20px;
+  width: 1px;
+  background-color: #000;
+}
+main .price-wrap .titleWrap .closeButton::before {
+  transform: rotate(45deg);
+}
+main .price-wrap .titleWrap .closeButton::after {
+  transform: rotate(-45deg);
+}
+main .price-wrap .priceContents ul li .priceGrade {
+  font-size: 1.3rem;
+  padding: 20px 0;
+  background-color: #f3f3f3;
+  color: #000;
+  text-indent: 2rem;
+}
+main .price-wrap .priceContents ul li .basicPriceWrap {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+main .price-wrap .priceContents ul li .basicPriceWrap span {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+main .price-wrap .priceContents ul li .basicPriceWrap p {
+  margin-top: 0.8rem;
+  padding-left: 0.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #b2b2b2;
+}
+main .price-wrap .priceContents ul li .basicPriceWrap .basicPrice {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: right;
+  color: #000;
+}
+main .price-wrap .priceContents ul li .basicPriceWrap:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #eee;
+}
+main .price-wrap .priceContents ul li .discountList {
+  padding: 1.5rem 2rem 1.5rem;
+}
+main .price-wrap .priceContents ul li .discountList .discountBasic li {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  color: #000;
+}
+main .price-wrap .priceContents ul li .discountList .discountBasic li .discountBasicTitle {
+  font-weight: 600;
 }
 
 footer {
@@ -841,4 +1112,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
