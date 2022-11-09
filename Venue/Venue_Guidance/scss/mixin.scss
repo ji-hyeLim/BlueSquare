@@ -65,3 +65,27 @@
         clear: both;
     }
 }
+
+@mixin left-right-border-none() {
+    th {
+        &:first-child {
+            border-left: 0;
+        }
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    td {
+        &:first-child {
+            border-left: 0;
+        }
+        
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    @content;
+}

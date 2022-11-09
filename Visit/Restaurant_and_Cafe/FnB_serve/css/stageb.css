@@ -88,7 +88,7 @@ footer {
   }
 }
 
-@-webkit-keyframes fadeIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(0);
@@ -98,15 +98,18 @@ footer {
     transform: translateY(-10px);
   }
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
+@keyframes updown {
+  0% {
     opacity: 1;
-    transform: translateY(-10px);
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 @-webkit-keyframes updown {
@@ -184,8 +187,12 @@ header .fnbserve-header .hd-txt {
 }
 header .fnbserve-header .hd-txt p {
   color: white;
+<<<<<<< HEAD
   -webkit-animation: fadeIn 3s forwards;
           animation: fadeIn 3s forwards;
+=======
+  animation: fadeIn 3s forwards;
+>>>>>>> 7a58e710f4411abed8f05aa8258614e9e84e472a
   font-size: 45px;
   font-family: "Montserrat", sans-serif, Arial;
 }
@@ -217,8 +224,12 @@ header .fnbserve-header .dw-icon a i {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   -webkit-animation: updown 3s infinite;
           animation: updown 3s infinite;
+=======
+  animation: updown 3s infinite;
+>>>>>>> 7a58e710f4411abed8f05aa8258614e9e84e472a
   color: white;
 }
 @media screen and (min-width: 1024px) {
@@ -794,4 +805,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=stageb.css.map */
+}

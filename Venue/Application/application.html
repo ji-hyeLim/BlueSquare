@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/application.css" type="text/css">
     <title>BLUE SQUARE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="./js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/application.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="slides">
-                <!-- <div class="slide-img"><img src="./img/img5.png" alt=""></div> -->
-            </div> <!-- slides -->
+            <div class="header-bg">
+            </div> <!-- header-bg -->
             <div class="logo-menu-box">
                 <div class="container">
                     <div class="flex-box">
@@ -82,68 +85,63 @@
                 <h1>대관신청</h1>
             </div>
             <div class="venue-process">
-                <h2>대관절차</h2>
-                <div class="process-slides">
-                    <div class="slide-fix">
-                        <div class="preocess-1">
-                            <img src="./img/resume.png" alt="resume">
-                            <strong>01. 대관신청</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-2">
-                            <img src="./img/audit.png" alt="audit">
-                            <strong>02. 대관심의</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-3">
-                            <img src="./img/file.png" alt="file">
-                            <strong>03. 승인통보</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-4">
-                            <img src="./img/contract.png" alt="contract">
-                            <strong>04. 대관계약<br>(계약금 납부)</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-5">
-                            <img src="./img/megaphone.png" alt="megaphone">
-                            <strong>05. 극장홍보</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-6">
-                            <img src="./img/examine.png" alt="examine">
-                            <strong>06. 입장권검인</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-7">
-                            <img src="./img/meeting.png" alt="meeting">
-                            <strong>07. 스태프회의</strong>
-                        </div>
-                    </div>
-
-                    <div class="slide-fix">
-                        <div class="preocess-8">
-                            <img src="./img/movie-theater.png" alt="movie-theater">
-                            <strong>08. 공연시작</strong>
-                        </div>
-                    </div>
-                </div> <!-- process-slides -->
                 <div class="container">
-                    <div class="small-only slide-btn slide-btn-left"></div>
-                    <div class="small-only slide-btn slide-btn-right"></div>
+                    <h2>대관절차</h2>
                 </div>
+                <div class="swiper">                    
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/resume.png" alt="resume">
+                                <strong>01. 대관신청</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/audit.png" alt="audit">
+                                <strong>02. 대관심의</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/approve.png" alt="approve">
+                                <strong>03. 승인통보</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/contract.png" alt="contract">
+                                <strong>04. 대관계약<br>(계약금 납부)</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/megaphone.png" alt="megaphone">
+                                <strong>05. 극장홍보</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/examine.png" alt="examine">
+                                <strong>06. 입장권검인</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix">
+                                <img src="./img/meeting.png" alt="meeting">
+                                <strong>07. 스태프회의</strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-fix last-line">
+                                <img src="./img/movie-theater.png" alt="movie-theater">
+                                <strong>08. 공연시작</strong>
+                            </div>
+                        </div>
+                    </div> <!-- swiper-wrapper -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div> <!-- swiper -->
             </div> <!-- venue-process -->
 
             <div class="container">

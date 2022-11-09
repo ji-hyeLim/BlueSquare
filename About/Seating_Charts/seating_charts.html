@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/seating_charts.css" type="text/css">
     <title>BLUE SQUARE</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="./js/seating_charts.js"></script>
     <script>
         // $(function() {
 		// 	$('.next').click(function(e) {
@@ -125,15 +126,12 @@
 
         <main>
             <div class="container">
-                <h1>Main</h1>
-                <h2>좌석배치도</h2>
-                <div class="seating-wrap">
-                    <div class="shinhan-card-hall card-hall">
+                <h1>좌석배치도</h1>
+                <div class="hall-wrap">
+                    <section class="card-hall" id="shinhan-card-hall">
+                        <h2>shinhan-card-hall</h2>
                         <div class="info-wrap">
-                            <div class="hall-title">
-                                <div class="blue-rec"></div>
-                                <h3>신한카드홀</h3>
-                            </div>
+                            <h2>신한카드홀</h2>
                             <div class="seat-info-box">
                                 <div class="seat-info">
                                     <p>관람석</p>
@@ -156,36 +154,36 @@
                                 <a href="#">좌석배치도</a>
                             </div>
                         </div>
-                        <div class="hall-img">
+                        <div class="slide-wrap">
                             <div class="slide-img">
-                                <img class="on item" src="./img/shinhan/shinhan-hall01.png"> 
-                                <!-- <img class="on item" src="./img/shinhan/shinhan-hall02.png">  
-                                <img class="on item" src="./img/shinhan/shinhan-hall03.png">   -->
+                                <img class="item on" src="./img/shinhan/shinhan-hall01.png"> 
+                                <!-- <img class="item" src="./img/shinhan/shinhan-hall02.png">  
+                                <img class="item" src="./img/shinhan/shinhan-hall03.png">   -->
                             </div>
                             <div class="slide-btn">
                                 <button class="btn prev">이전</button>
                                 <button class="btn next">다음<button>   
                             </div>
-                        </div> <!-- hall-img -->
-                    </div> <!-- shinhan-card-hall -->
+                        </div> <!-- img-wrap -->
+                    </section> <!-- shinhan-card-hall -->
 
-                    <div class="master-card-hall card-hall">
+                    <section class="card-hall" id="master-card-hall">
+                        <h2>master-card-hall</h2>
                         <div class="info-wrap">
                             <div class="hall-title">
-                                <div class="blue-rec"></div>
-                                <h3>마스터카드홀</h3>
+                                <h2>마스터카드홀</h2>
                             </div>
-                            <div class="seat-info-box-m">
-                                <div class="seat-info-m">
+                            <div class="seat-info-box-ms">
+                                <div class="seat-info-ms">
                                     <p>스탠딩형</p>
-                                    <div class="seat-num-m info-m1">
+                                    <div class="seat-num-ms info-ms1">
                                         <p>1층 최대 2,400명 수용</p>
                                         <p>2층 381석 (휠체어석 10석)</p>
                                     </div>
                                 </div>
-                                <div class="seat-info-m info-m2">
+                                <div class="seat-info-ms info-ms2">
                                     <p>그라운드형</p>
-                                    <div class="seat-num-m ">
+                                    <div class="seat-num-ms">
                                         <p>1층 992석</p>
                                         <p>2층 381석 (휠체어석 10석)</p>
                                     </div>
@@ -195,7 +193,7 @@
                                 <a href="#">좌석배치도</a>
                             </div>
                         </div>
-                        <div class="hall-img">
+                        <div class="slide-wrap">
                             <div class="slide-img">
                                 <img class="on item" src="./img/master/master-hall01.png">  
                                 <!-- <img class="item" src="./img/master/master-hall02.png">  
@@ -206,9 +204,9 @@
                                 <button class="btn prev">이전</button>
                                 <button class="btn next">다음<button>   
                             </div>
-                        </div>  <!-- hall-img -->
-                    </div> <!-- master-card-hall -->
-                </div>
+                        </div>  <!-- img-wrap -->
+                    </section> <!-- master-card-hall -->
+                </div> <!-- hall-wrap -->
             </div> <!-- container -->
         </main> <!-- main -->
 

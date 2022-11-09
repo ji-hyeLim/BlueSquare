@@ -81,9 +81,10 @@
                 list-style: disc;
                 list-style-position: inside;
                 padding-left: 20px;
+                margin-right: 5px;
                 text-indent: -20px;
                 
-                @include responsive(small-tablet-screens) {
+                @include responsive(large-tablet-screens) {
                     font-size: 16px;
                 }
 
@@ -94,9 +95,9 @@
                         font-size: 14px;
                         padding-top: 10px;
                         
-                        @include responsive(small-tablet-screens) {
+                        @include responsive(large-tablet-screens) {
                             font-size: 16px;
-                        }
+                        }   
                     }
                 }
             }
