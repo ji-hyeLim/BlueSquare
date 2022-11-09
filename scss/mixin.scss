@@ -65,3 +65,8 @@
         clear: both;
     }
 }
+
+@mixin lnb-pos-center() {
+    width: 130%;
+    transform: translateX(-18px);
+}
