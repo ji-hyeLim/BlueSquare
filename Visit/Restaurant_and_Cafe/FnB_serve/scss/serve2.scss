@@ -30,34 +30,6 @@
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes updown {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-
-    50% {
-        opacity: 0;
-        transform: translate(-50%, -10%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
 html,
 body {
     max-width: 100%;
@@ -67,6 +39,18 @@ body {
 // * ===================== header ===================== *
 
 header {
+
+    //=====stageb header pc!!!=====//
+    @include responsive(large-tablet-screens) {
+        width: 100%;
+        height: 936;
+        background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    //============================//
     position: relative;
     width: 100vw;
 
@@ -84,20 +68,12 @@ header {
 
     // header-bg
 
-    //========== fnbserve-header!!! ============//
-    .fnbserve-header {
+    //==========solos header!!============//
+    .solos-header {
         position: relative;
         width: 100%;
         height: 100vh;
 
-        @include responsive(small-tablet-screens) {
-            width: 100%;
-            height: 936;
-            background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
 
         .hd-img {
 
@@ -105,7 +81,7 @@ header {
                 width: 100%;
                 height: 100vh;
 
-                @include responsive(small-tablet-screens) {
+                @include responsive(large-tablet-screens) {
                     display: none;
                 }
             }
@@ -117,15 +93,15 @@ header {
 
             p {
                 color: white;
-                animation: fadeIn 3s forwards;
 
                 font: {
-                    size: 45px;
+                    weight: 600;
+                    size: 40px;
                     family: $eng-font;
                 }
 
                 @include responsive(large-tablet-screens) {
-                    font-size: 90px;
+                    font-size: 50px;
                 }
             }
         }
@@ -140,28 +116,19 @@ header {
                 bottom: 60px;
             }
 
-            a {
-                position: relative;
-                border: 1px solid #fff;
-                border-radius: 50%;
-                // background-color: red;
-                width: 54px;
-                height: 54px;
-                
-                i {
-                    @include pos-center();
-                    animation: updown 3s infinite;
-                    color: white;
-                }
+            img {
+                width: 45px;
+                height: 45px;
 
                 @include responsive(large-tablet-screens) {
-                    width: 65px;
-                    height: 65px;
+                    width: 54px;
+                    height: 54px;
                 }
             }
-        } //dw-icon
-    }//fnbserve-header
-    //========== fnbserve-header end!!! ==========//
+        }
+    }
+
+    //solos-header
 
     .logo-menu-box {
         position: absolute;
@@ -325,49 +292,38 @@ header {
 
 main {
     position: relative;
-    // background-color: pink;
-    margin: 266px 0;
+    // background-color: aliceblue;
+    padding-top: 110px;
         h2 {
             font-size: 0;
         }
 
         ul.fnb-menu {
             width: 60%;
+            margin-top: 90px;
             // background-color: red;
             @include flex-box() {
-                
                 justify-content: center;
                 flex-wrap: wrap
             }
             @include pos-center-x();
-            
+
             @include responsive(large-tablet-screens) {
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                // width: 100%
+                margin-top: 140px;
+                width: 40%;
             }
             
             li { 
-                
                 flex: 50%;
-                width: 30%;
+                width: 30%;             
                 border: 1px solid #000;
                 border-right: 0;
                 border-bottom: 0;
-
-                &:first-child {
-
-                    @include responsive(large-tablet-screens) {
-                        margin-right: 120px;
-                        border: 0;
-                    }
-                }
 
                 &:nth-child(2) {
                     border-right: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
-                        margin-right: 120px;
                         border: 0;
                     }
                 }
@@ -376,7 +332,6 @@ main {
                     border-bottom: 1px solid #000;
                     
                     @include responsive(large-tablet-screens) {
-                        margin-right: 0px;
                         border: 0;
                     }
 
@@ -386,10 +341,11 @@ main {
                     border-bottom: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
-                        margin-right: 120px;
                         border: 0;
                     }
+
                 }
+
 
                 @include responsive(large-tablet-screens) {
                     flex: 25%;
@@ -399,58 +355,44 @@ main {
                 a {
                     padding: 10px;
                     text-align: center;
-                    white-space: nowrap;
                     // background-color: red;
 
                     &:hover {
                         font-weight: 600;
-                        background-color: rgba($color: #0094d6, $alpha: 0.2);
-                        // color: #fff;
-                        color: #000;
-                        transition: all 0.5s;
-
-                        @include responsive(large-tablet-screens) {
-                            background-color: transparent;
-                            // color: #000;
-                        }
                     }
+                    
                     @include responsive(large-tablet-screens) {
                         padding: 0;
-                        font-size: 18px;
 
                         &::after {
                             display: block;
                             content: "";
                             width: 100%;
-                            height: 8px;
-                            margin-top: 10px;
-                            border-radius: 5px 5px 0 0;
+                            height: 1px;
+                            margin-top: 5px;
                             background-color: #000;
                             transform: scale(0);
-                            transition: all 0.4s;
+                            transition: all 0.5s;
                         }
         
                         &:hover::after {
-                            transform: scale(1);
-
-                            @include responsive(desktop-screens) {
-                                transform: scale(0.8, 1);
-                            }
+                            transform: scale(0.55);
                         }
                     }
                 }
             }
-        } //ul.fnb-menu
+        }
 
-        .fnb-info1 {
+        .stageb-info1 {
             @include flex-box();
             flex-direction: column;
             // background-color: aqua;
-            margin-top: 151px;
+            padding-top: 180px; 
+            margin-top: 90px;
 
             @include responsive(large-tablet-screens) {
+                margin-top: 150px;
                 flex-direction: row;
-                margin-top: 104px;
             }
             .info-img { 
                 
@@ -485,37 +427,39 @@ main {
                 }
                 
 
-                p.txt-1 {
+                p.solos-1 {
                     font-size: 18px;
-                    font-weight: 600;
+                    font-weight: bold;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                p.txt-2 {
+                p.solos-2 {
                     font-size: 16px;
-                    line-height: 1.5;
+                    line-height: 30px;
                     padding-bottom: 40px;
                 }
-                div.txt-3 {
+                p.solos-3 {
                     font-size: 16px;
-                    line-height: 1.5;
+                    line-height: 28px;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
-                        margin-bottom: 10px; 
+                        line-height: 50px;
                     }
                 }
             }
-        } //fnb-info1
+        } //solos-info1
 
-        .fnb-info2 {
+        .solos-info2 {
             @include flex-box();
             flex-direction:column-reverse;
             // background-color: aqua;
-            margin-top: 134px;
+            padding-top: 55px; 
+            margin-top: 20px;
 
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
+                margin-top: 200px;
             }
             .info-img {
                 
@@ -546,33 +490,41 @@ main {
                 }
                 
 
-                p.txt-1 {
+                p.solos-1 {
                     font-size: 18px;
-                    font-weight: 600;
+                    font-weight: bold;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                
-                div.txt-3 {
+                p.solos-2 {
                     font-size: 16px;
-                    line-height: 1.5;
+                    line-height: 30px;
+                    padding-bottom: 40px;
+                }
+                p.solos-3 {
+                    font-size: 16px;
+                    line-height: 28px;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
-                        margin-bottom: 10px; 
+                        line-height: 50px;
                     }
                 }
             }
-        } //fnb-info2
+        } //solos-info2
 
-        .fnb-info3 {
+        .solos-info3 {
             @include flex-box();
             flex-direction:column;
             // background-color: aqua;
-            margin-top: 134px;
+            padding-top: 55px; 
+            margin-top: 20px;
+            margin-bottom: 110px;
 
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
+                margin-top: 200px;
+                margin-bottom: 300px;
             }
             .info-img {
                 
@@ -603,20 +555,31 @@ main {
                     padding-left: 0;
                 }
                 
-                p.txt-1 {
+
+                p.solos-1 {
                     font-size: 18px;
-                    font-weight: 600;
+                    font-weight: bold;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                p.txt-2 {
+                p.solos-2 {
                     font-size: 16px;
-                    line-height: 1.5px;
+                    line-height: 30px;
                     padding-bottom: 40px;
                 }
+                p.solos-3 {
+                    font-size: 16px;
+                    line-height: 28px;
+                    .txt-bd {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 50px;
+                    }
+                }
             }
-        } //fnb-info3
+        } //solos-info3
 } //main
+
 
 // * ===================== footer ===================== *
 

@@ -340,26 +340,39 @@ main {
             width: 60%;
             // background-color: red;
             @include flex-box() {
+                
                 justify-content: center;
                 flex-wrap: wrap
             }
             @include pos-center-x();
             
             @include responsive(large-tablet-screens) {
-                width: 50%;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                // width: 100%
             }
             
             li { 
+                
                 flex: 50%;
-                width: 30%;             
+                width: 30%;
                 border: 1px solid #000;
                 border-right: 0;
                 border-bottom: 0;
+
+                &:first-child {
+
+                    @include responsive(large-tablet-screens) {
+                        margin-right: 120px;
+                        border: 0;
+                    }
+                }
 
                 &:nth-child(2) {
                     border-right: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
+                        margin-right: 120px;
                         border: 0;
                     }
                 }
@@ -368,6 +381,7 @@ main {
                     border-bottom: 1px solid #000;
                     
                     @include responsive(large-tablet-screens) {
+                        margin-right: 0px;
                         border: 0;
                     }
 
@@ -377,11 +391,10 @@ main {
                     border-bottom: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
+                        margin-right: 120px;
                         border: 0;
                     }
-
                 }
-
 
                 @include responsive(large-tablet-screens) {
                     flex: 25%;
@@ -391,12 +404,21 @@ main {
                 a {
                     padding: 10px;
                     text-align: center;
+                    white-space: nowrap;
                     // background-color: red;
 
                     &:hover {
                         font-weight: 600;
+                        background-color: rgba($color: #0094d6, $alpha: 0.2);
+                        // color: #fff;
+                        color: #000;
+                        transition: all 0.5s;
+
+                        @include responsive(large-tablet-screens) {
+                            background-color: transparent;
+                            // color: #000;
+                        }
                     }
-                    
                     @include responsive(large-tablet-screens) {
                         padding: 0;
                         font-size: 18px;
@@ -405,15 +427,21 @@ main {
                             display: block;
                             content: "";
                             width: 100%;
-                            height: 5px;
-                            margin-top: 5px;
+                            height: 8px;
+                            margin-top: 10px;
+                            border-radius: 5px 5px 0 0;
                             background-color: #000;
                             transform: scale(0);
-                            transition: all 0.5s;
+                            transition: all 0.4s;
                         }
         
                         &:hover::after {
-                            transform: scale(0.6);
+                            transform: scale(1);
+
+                            @include responsive(desktop-screens) {
+                                transform: scale(0.8, 1);
+                            }
+                            
                         }
                     }
                 }
@@ -427,7 +455,7 @@ main {
             margin-top:151px;
 
             @include responsive(large-tablet-screens) {
-                margin-top:101px;
+                margin-top:104px;
                 flex-direction: row;
             }
             .info-img { 
@@ -473,12 +501,14 @@ main {
                     line-height: 1.5;
                     padding-bottom: 40px;
                 }
-                p.txt-3 {
+                div.txt-3 {
+                    padding: 0;
                     font-size: 16px;
+                    line-height: 1.5;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
-                        line-height: 50px;
+                        margin-bottom: 10px; 
                     }
                 }
             }
@@ -526,12 +556,14 @@ main {
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                p.txt-3 {
+                div.txt-3 {
+                    padding: 0;
                     font-size: 16px;
+                    line-height: 1.5;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
-                        line-height: 50px;
+                        margin-bottom: 10px; 
                     }
                 }
             }

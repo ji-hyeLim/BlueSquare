@@ -106,6 +106,8 @@ header {
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/솔로스확대.png) no-repeat;
                         @include img();
 
 
@@ -141,11 +143,11 @@ header {
                 }
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.05,1);
                     transition: all 0.5s;
 
                     @include responsive(small-tablet-screens) {
-                        scale: none;
+                        transform: scale(1.05,1);
                         width: 130%;
                     }
 
@@ -172,6 +174,8 @@ header {
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/스테이지비.png) no-repeat;
                         @include img();
                     }
 
@@ -232,6 +236,8 @@ header {
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/카페필로스.png) no-repeat;
                         @include img();
                     }
 
@@ -294,6 +300,8 @@ header {
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/케익맞춤.png) no-repeat;
                         @include img();
                     }
 
