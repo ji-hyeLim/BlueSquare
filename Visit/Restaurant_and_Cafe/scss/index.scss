@@ -101,11 +101,13 @@ header {
                     width: 100%;
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -90px;
+                        margin-left: -100px;
                         width: 120%;
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/솔로스확대.png) no-repeat;
                         @include img();
 
 
@@ -132,20 +134,20 @@ header {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
-                        margin-left: -5PX;
+                        margin-left: 0PX;
                     }
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -40PX;
+                        margin-left: -30PX;
                     }
                 }
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.05,1);
                     transition: all 0.5s;
 
                     @include responsive(small-tablet-screens) {
-                        scale: none;
+                        transform: scale(1.05,1);
                         width: 130%;
                     }
 
@@ -172,6 +174,8 @@ header {
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/스테이지비.png) no-repeat;
                         @include img();
                     }
 
@@ -193,7 +197,7 @@ header {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
-                        margin-left: -5PX;
+                        margin-left: 0PX;
                     }
                     @include responsive(large-tablet-screens) {
                         margin-left: -30PX;
@@ -227,11 +231,13 @@ header {
                 .philos {
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -5px;
+                        margin-left: 0px;
                         width: 120%;
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/카페필로스.png) no-repeat;
                         @include img();
                     }
 
@@ -253,11 +259,11 @@ header {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
-                        margin-left: -5PX;
+                        margin-left: 0PX;
                     }
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: 0PX;
+                        margin-left: 10PX;
                     }
                 }
 
@@ -289,11 +295,13 @@ header {
                     width: 100%;
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: 30px;
+                        margin-left: 50px;
                         width: 120%;
                     }
 
                     img {
+                        display: none;
+                        background-image: url(../img/케익맞춤.png) no-repeat;
                         @include img();
                     }
 
@@ -317,11 +325,11 @@ header {
                     @include txtElement();
 
                     @include responsive(small-tablet-screens) {
-                        margin-left: -5PX;
+                        margin-left: 0px;
                     }
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: 0PX;
+                        margin-left: 10px;
                     }
                 }
 

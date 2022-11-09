@@ -41,6 +41,7 @@
     }
 }
 
+
 @keyframes updown {
     0% {
         opacity: 1;
@@ -80,11 +81,9 @@ header {
         //     height: 100%;
         //     object-fit: cover;
         // }
-    }
+    }// header-bg
 
-    // header-bg
-
-    //========== fnbserve-header!!! ============//
+    //==========fnbserve header!!============//
     .fnbserve-header {
         position: relative;
         width: 100%;
@@ -93,7 +92,7 @@ header {
         @include responsive(small-tablet-screens) {
             width: 100%;
             height: 936;
-            background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
+            background-image: url(../img/케익이미지레이어.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -112,12 +111,13 @@ header {
         }
 
         .hd-txt {
-
+            width: 100%;
             @include pos-center();
 
             p {
+                text-align: center;
                 color: white;
-                animation: fadeIn 3s forwards;
+                animation: fadeIn 2s forwards;
 
                 font: {
                     size: 45px;
@@ -147,6 +147,8 @@ header {
                 // background-color: red;
                 width: 54px;
                 height: 54px;
+                // width: 65px;
+                // height: 65px;
                 
                 i {
                     @include pos-center();
@@ -159,9 +161,9 @@ header {
                     height: 65px;
                 }
             }
-        } //dw-icon
+        }
     }//fnbserve-header
-    //========== fnbserve-header end!!! ==========//
+
 
     .logo-menu-box {
         position: absolute;
@@ -325,8 +327,9 @@ header {
 
 main {
     position: relative;
-    // background-color: pink;
+    // background-color: aliceblue;
     margin: 266px 0;
+    
         h2 {
             font-size: 0;
         }
@@ -446,11 +449,11 @@ main {
             @include flex-box();
             flex-direction: column;
             // background-color: aqua;
-            margin-top: 151px;
+            margin-top:151px;
 
             @include responsive(large-tablet-screens) {
-                flex-direction: row;
                 margin-top: 104px;
+                flex-direction: row;
             }
             .info-img { 
                 
@@ -468,17 +471,16 @@ main {
             .info-txt {
                 padding-top: 55px;
                 padding-left: 0;
-
                 @include responsive(large-tablet-screens) {
                     
                     width: 474px;
-                    // min-width: 356px;
                     height: 609px;
                     padding-top: 156px;
                     padding-left: 20px;
                     border-top: 1px solid $point-color;
                     border-bottom: 1px solid $point-color;
                 }
+                
 
                 @include responsive(desktop-screens) {
                     padding-left: 0;
@@ -497,6 +499,7 @@ main {
                     padding-bottom: 40px;
                 }
                 div.txt-3 {
+                    padding: 0;
                     font-size: 16px;
                     line-height: 1.5;
                     .txt-bd {
@@ -511,7 +514,6 @@ main {
         .fnb-info2 {
             @include flex-box();
             flex-direction:column-reverse;
-            // background-color: aqua;
             margin-top: 134px;
 
             @include responsive(large-tablet-screens) {
@@ -530,8 +532,6 @@ main {
             }
 
             .info-txt {
-                padding-top: 51px;
-                padding-left: 0px;
                 @include responsive(large-tablet-screens) {
                     width: 474px;
                     height: 609px;
@@ -540,11 +540,12 @@ main {
                     border-top: 1px solid #0094d6;
                     border-bottom: 1px solid #0094d6;
                 }
+                padding-top: 51px;
+                padding-left: 0px;
 
                 @include responsive(desktop-screens) {
                     padding-left: 0;
                 }
-                
 
                 p.txt-1 {
                     font-size: 18px;
@@ -552,8 +553,8 @@ main {
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                
                 div.txt-3 {
+                    padding: 0;
                     font-size: 16px;
                     line-height: 1.5;
                     .txt-bd {
@@ -587,10 +588,9 @@ main {
             }
 
             .info-txt {
-                padding-top: 51px;
-                padding-left: 0px;
                 
                 @include responsive(large-tablet-screens) {
+                    
                     width: 474px;
                     height: 609px;
                     padding-top: 156px;
@@ -598,11 +598,13 @@ main {
                     border-top: 1px solid #0094d6;
                     border-bottom: 1px solid #0094d6;
                 }
+                padding-top: 51px;
+                padding-left: 0px;
 
                 @include responsive(desktop-screens) {
                     padding-left: 0;
                 }
-                
+
                 p.txt-1 {
                     font-size: 18px;
                     font-weight: 600;
@@ -611,18 +613,18 @@ main {
                 }
                 p.txt-2 {
                     font-size: 16px;
-                    line-height: 1.5px;
-                    padding-bottom: 40px;
                 }
             }
         } //fnb-info3
 } //main
+
 
 // * ===================== footer ===================== *
 
 footer {
     color: #fff;
     background-color: #000;
+    margin-top: 266px;
 
     @include responsive(large-tablet-screens) {
         height: 800px;

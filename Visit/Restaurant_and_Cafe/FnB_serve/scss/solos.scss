@@ -68,18 +68,6 @@ body {
 // * ===================== header ===================== *
 
 header {
-
-    //=====solos header pc!!!=====//
-    // @include responsive(large-tablet-screens) {
-    //     width: 100%;
-    //     height: 936;
-    //     background-image: url(../img/이미지레이어.png);
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     background-attachment: fixed;
-    // }
-
-    //============================//
     position: relative;
     width: 100vw;
 
@@ -103,7 +91,7 @@ header {
         width: 100%;
         height: 100vh;
 
-        @include responsive(large-tablet-screens) {
+        @include responsive(small-tablet-screens) {
             width: 100%;
             height: 936;
             background-image: url(../img/이미지레이어.png);
@@ -112,14 +100,13 @@ header {
             background-attachment: fixed;
         }
 
-
         .hd-img {
 
             img.mb {
                 width: 100%;
                 height: 100vh;
 
-                @include responsive(large-tablet-screens) {
+                @include responsive(small-tablet-screens) {
                     display: none;
                 }
             }
@@ -135,8 +122,7 @@ header {
                 animation: fadeIn 2s forwards;
 
                 font: {
-                    // weight: 600;
-                    size: 40px;
+                    size: 45px;
                     family: $eng-font;
                 }
 
@@ -175,24 +161,11 @@ header {
                 @include responsive(large-tablet-screens) {
                     width: 65px;
                     height: 65px;
-                    // width: 54px;
-                    // height: 54px;
                 }
             }
-
-            // img {
-            //     width: 45px;
-            //     height: 45px;
-
-            //     @include responsive(large-tablet-screens) {
-            //         width: 54px;
-            //         height: 54px;
-            //     }
-            // }
         }
-    }
+    }//fnbserve-header
 
-    //solos-header
 
     .logo-menu-box {
         position: absolute;
@@ -356,38 +329,49 @@ header {
 
 main {
     position: relative;
-    // background-color: aliceblue;
-    padding-top: 110px;
+    // background-color: pink;
+    margin: 266px 0;
         h2 {
             font-size: 0;
         }
 
         ul.fnb-menu {
             width: 60%;
-            margin-top: 90px;
             // background-color: red;
             @include flex-box() {
+                
                 justify-content: center;
                 flex-wrap: wrap
             }
             @include pos-center-x();
-
+            
             @include responsive(large-tablet-screens) {
-                margin-top: 140px;
-                width: 40%;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                // width: 100%
             }
             
             li { 
+                
                 flex: 50%;
-                width: 30%;             
+                width: 30%;
                 border: 1px solid #000;
                 border-right: 0;
                 border-bottom: 0;
+
+                &:first-child {
+
+                    @include responsive(large-tablet-screens) {
+                        margin-right: 120px;
+                        border: 0;
+                    }
+                }
 
                 &:nth-child(2) {
                     border-right: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
+                        margin-right: 120px;
                         border: 0;
                     }
                 }
@@ -396,6 +380,7 @@ main {
                     border-bottom: 1px solid #000;
                     
                     @include responsive(large-tablet-screens) {
+                        margin-right: 0px;
                         border: 0;
                     }
 
@@ -405,11 +390,10 @@ main {
                     border-bottom: 1px solid #000; 
 
                     @include responsive(large-tablet-screens) {
+                        margin-right: 120px;
                         border: 0;
                     }
-
                 }
-
 
                 @include responsive(large-tablet-screens) {
                     flex: 25%;
@@ -419,50 +403,63 @@ main {
                 a {
                     padding: 10px;
                     text-align: center;
+                    white-space: nowrap;
                     // background-color: red;
 
                     &:hover {
                         font-weight: 600;
+                        background-color: rgba($color: #0094d6, $alpha: 0.2);
+                        // color: #fff;
+                        color: #000;
+                        transition: all 0.5s;
+
+                        @include responsive(large-tablet-screens) {
+                            background-color: transparent;
+                            // color: #000;
+                        }
                     }
-                    
                     @include responsive(large-tablet-screens) {
                         padding: 0;
+                        font-size: 18px;
 
                         &::after {
                             display: block;
                             content: "";
                             width: 100%;
-                            height: 1px;
-                            margin-top: 5px;
+                            height: 8px;
+                            margin-top: 10px;
+                            border-radius: 5px 5px 0 0;
                             background-color: #000;
                             transform: scale(0);
-                            transition: all 0.5s;
+                            transition: all 0.4s;
                         }
         
                         &:hover::after {
-                            transform: scale(0.55);
+                            transform: scale(1);
+
+                            @include responsive(desktop-screens) {
+                                transform: scale(0.8, 1);
+                            }
                         }
                     }
                 }
             }
-        }
+        } //ul.fnb-menu
 
         .fnb-info1 {
             @include flex-box();
             flex-direction: column;
             // background-color: aqua;
-            padding-top: 180px; 
-            margin-top: 90px;
+            margin-top:151px;
 
             @include responsive(large-tablet-screens) {
-                margin-top: 150px;
+                margin-top:104px;
                 flex-direction: row;
             }
             .info-img { 
                 
                 img {
                     width: 100%;
-                    
 
                     @include responsive(large-tablet-screens) {
                         min-width: 620px;
@@ -474,10 +471,9 @@ main {
             .info-txt {
                 padding-top: 55px;
                 padding-left: 0;
+
                 @include responsive(large-tablet-screens) {
-                    
                     width: 474px;
-                    // min-width: 356px;
                     height: 609px;
                     padding-top: 156px;
                     padding-left: 20px;
@@ -489,42 +485,40 @@ main {
                 @include responsive(desktop-screens) {
                     padding-left: 0;
                 }
-                
 
                 p.txt-1 {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 600;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
                 p.txt-2 {
                     font-size: 16px;
-                    line-height: 30px;
+                    line-height: 1.5;
                     padding-bottom: 40px;
                 }
-                p.txt-3 {
+                div.txt-3 {
                     font-size: 16px;
-                    line-height: 28px;
+                    line-height: 1.5;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
-                        line-height: 50px;
+                        margin-bottom: 10px; 
                     }
                 }
-            }
-        } //solos-info1
+            } 
+        } //fnb-info1
 
         .fnb-info2 {
+            // background-color: aquamarine;
             @include flex-box();
             flex-direction:column-reverse;
-            // background-color: aqua;
-            padding-top: 55px; 
-            margin-top: 20px;
+            margin-top: 134px;
 
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
-                margin-top: 200px;
             }
+
             .info-img {
                 
                 img {
@@ -539,7 +533,6 @@ main {
 
             .info-txt {
                 @include responsive(large-tablet-screens) {
-                    
                     width: 474px;
                     height: 609px;
                     padding-top: 156px;
@@ -556,22 +549,17 @@ main {
 
                 p.txt-1 {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 600;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
-                p.txt-2 {
+                div.txt-3 {
                     font-size: 16px;
-                    line-height: 30px;
-                    padding-bottom: 40px;
-                }
-                p.txt-3 {
-                    font-size: 16px;
-                    line-height: 28px;
+                    line-height: 1.5;
                     .txt-bd {
                         font-size: 18px;
                         font-weight: 500;
-                        line-height: 50px;
+                        margin-bottom: 10px; 
                     }
                 }
             }
@@ -581,14 +569,10 @@ main {
             @include flex-box();
             flex-direction:column;
             // background-color: aqua;
-            padding-top: 55px; 
-            margin-top: 20px;
-            margin-bottom: 110px;
-
+            margin-top: 134px;
+            
             @include responsive(large-tablet-screens) {
                 flex-direction: row;
-                margin-top: 200px;
-                margin-bottom: 300px;
             }
             .info-img {
                 
@@ -622,26 +606,16 @@ main {
 
                 p.txt-1 {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 600;
                     line-height: 30px;
                     padding-bottom: 40px;
                 }
                 p.txt-2 {
                     font-size: 16px;
-                    line-height: 30px;
-                    padding-bottom: 40px;
-                }
-                p.txt-3 {
-                    font-size: 16px;
-                    line-height: 28px;
-                    .txt-bd {
-                        font-size: 18px;
-                        font-weight: 500;
-                        line-height: 50px;
-                    }
-                }
+                    line-height: 1.5;
             }
-        } //fnb-info3
+        }
+    } //fnb-info3
 } //main
 
 
@@ -650,6 +624,7 @@ main {
 footer {
     color: #fff;
     background-color: #000;
+    margin-top: 266px;
 
     @include responsive(large-tablet-screens) {
         height: 800px;

@@ -217,20 +217,15 @@ header {
 // * ===================== main ===================== *
 
 main {
-    padding-top: 100px;
-
-    @include responsive(large-tablet-screens) {
-        padding-top: 120px;
-    }
+    margin: 266px 0;
 
     h1.title {
         font-weight: 600;
         font-size: 36px;
-        margin-bottom: 74px;
+        margin-bottom: 58px;
 
         @include responsive(large-tablet-screens) {
             font-size: 38px;
-            margin-bottom: 125px;
         }
     }
 
@@ -276,59 +271,46 @@ main {
     } //txtBox
     
     .ticketing {
-        margin-top: 73px;
-        margin-bottom: 58px;
+        margin-bottom: 70px;
 
         @include responsive(small-tablet-screens) {
-            margin-top: 300px;
+            margin-top: 212px;
         }
-
-        @include responsive(large-tablet-screens) {
-            margin-top: 387px;
-        }
-
+        
         .hall-title {
                 display: flex;
+                padding-top: 70px;
+                margin-bottom: 38px;
+
             .blue-sq {
-                width: 14px;
+                width: 5px;
                 height: 30px;
                 margin-right: 8px;
                 margin-top: 3px;
                 background-color: $point-color;
-
             }
             h2 {
-                margin-bottom: 40px;
                 font-weight: 600;
-                font-size: 28px;
-                
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 54px;
-                    font-size: 30px;
-                }
+                font-size: 26px;
             }
         } //hall-title
-      
+    
 
         .way {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
+            margin-bottom: 38px;
 
             h3 {
-                margin-bottom: 25px;
+                margin-bottom: 20px;
                 font-size: 16px;
                 font-weight: 600;
 
                 @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
                     font-size: 18px;
                 }
             }
 
             .internet {
+                // background-color: aqua;
                 @include flex-box() {
                     justify-content: left;
                     flex-wrap: nowrap;
@@ -406,11 +388,6 @@ main {
         } //way
 
         .fee {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
 
             h3 {
                 margin-bottom: 25px;
@@ -418,7 +395,6 @@ main {
                 font-weight: 600;
 
                 @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
                     font-size: 18px;
                 }
             }
@@ -485,17 +461,13 @@ main {
         } //fee
     } //ticketing
     .calloff {
-        margin-top: 58px;
-        margin-bottom: 140px;
-        @include responsive(large-tablet-screens) {
-            margin-top: 76px;
-            margin-bottom: 220px;
-        }
+        margin-bottom: 266px;
 
         .hall-title {
             display: flex;
+            margin-bottom: 38px;
             .blue-sq {
-                width: 14px;
+                width: 5px;
                 height: 30px;
                 margin-right: 8px;
                 margin-top: 3px;
@@ -503,32 +475,22 @@ main {
             }
         
             h2 {
-                margin-bottom: 40px;
+                // margin-bottom: 20px;
                 font-weight: 600;
-                font-size: 28px;
-                
-                @include responsive(large-tablet-screens) {
-                    margin-bottom: 54px;
-                    font-size: 30px;
-                }
+                font-size: 26px;
             }
 
         } //hall-title
         
         .deadline {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
+            margin-bottom: 38px;
 
             h3 {
-                margin-bottom: 25px;
+                margin-bottom: 20px;
                 font-size: 16px;
                 font-weight: 600;
 
                 @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
                     font-size: 18px;
                 }
             }
@@ -544,19 +506,13 @@ main {
         } //.deadline
         
         .coff-fee {
-            margin-bottom: 34px;
-
-            @include responsive(large-tablet-screens) {
-                margin-bottom: 46px;
-            }
 
             h3 {
-                margin-bottom: 25px;
+                margin-bottom: 20px;
                 font-size: 16px;
                 font-weight: 600;
 
                 @include responsive(large-tablet-screens) {
-                    margin-bottom: 33px;
                     font-size: 18px;
                 }
             }

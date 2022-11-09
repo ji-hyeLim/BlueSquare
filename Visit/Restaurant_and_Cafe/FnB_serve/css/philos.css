@@ -88,6 +88,55 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -98,71 +147,86 @@ header {
   position: relative;
   width: 100vw;
 }
-@media screen and (min-width: 1024px) {
-  header {
-    width: 100%;
-    height: 936;
-    background-image: url(../img/이미지레이어.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
 header .header-bg {
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-header .solos-header {
+header .fnbserve-header {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-header .solos-header .hd-img img.mb {
+@media screen and (min-width: 600px) {
+  header .fnbserve-header {
+    width: 100%;
+    height: 936;
+    background-image: url(../img/필로스이미지레이어.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+header .fnbserve-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
 }
-@media screen and (min-width: 1024px) {
-  header .solos-header .hd-img img.mb {
+@media screen and (min-width: 600px) {
+  header .fnbserve-header .hd-img img.mb {
     display: none;
   }
 }
-header .solos-header .hd-txt {
+header .fnbserve-header .hd-txt {
+  width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-header .solos-header .hd-txt p {
+header .fnbserve-header .hd-txt p {
+  text-align: center;
   color: white;
-  font-weight: 600;
-  font-size: 40px;
+  -webkit-animation: fadeIn 2s forwards;
+          animation: fadeIn 2s forwards;
+  font-size: 45px;
   font-family: "Montserrat", sans-serif, Arial;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .hd-txt p {
-    font-size: 50px;
+  header .fnbserve-header .hd-txt p {
+    font-size: 90px;
   }
 }
-header .solos-header .dw-icon {
+header .fnbserve-header .dw-icon {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 40px;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .dw-icon {
+  header .fnbserve-header .dw-icon {
     bottom: 60px;
   }
 }
-header .solos-header .dw-icon img {
-  width: 45px;
-  height: 45px;
+header .fnbserve-header .dw-icon a {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+}
+header .fnbserve-header .dw-icon a i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: updown 3s infinite;
+          animation: updown 3s infinite;
+  color: white;
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .dw-icon img {
-    width: 54px;
-    height: 54px;
+  header .fnbserve-header .dw-icon a {
+    width: 65px;
+    height: 65px;
   }
 }
 header .logo-menu-box {
@@ -290,14 +354,13 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 
 main {
   position: relative;
-  padding-top: 110px;
+  margin: 266px 0;
 }
 main h2 {
   font-size: 0;
 }
 main ul.fnb-menu {
   width: 60%;
-  margin-top: 90px;
   display: flex;
   justify-content: space-between;
   justify-content: center;
@@ -308,8 +371,8 @@ main ul.fnb-menu {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu {
-    margin-top: 140px;
-    width: 40%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 main ul.fnb-menu li {
@@ -319,11 +382,18 @@ main ul.fnb-menu li {
   border-right: 0;
   border-bottom: 0;
 }
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:first-child {
+    margin-right: 120px;
+    border: 0;
+  }
+}
 main ul.fnb-menu li:nth-child(2) {
   border-right: 1px solid #000;
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(2) {
+    margin-right: 120px;
     border: 0;
   }
 }
@@ -333,6 +403,7 @@ main ul.fnb-menu li:last-child {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:last-child {
+    margin-right: 0px;
     border: 0;
   }
 }
@@ -341,6 +412,7 @@ main ul.fnb-menu li:nth-child(3) {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(3) {
+    margin-right: 120px;
     border: 0;
   }
 }
@@ -353,56 +425,71 @@ main ul.fnb-menu li:nth-child(3) {
 main ul.fnb-menu li a {
   padding: 10px;
   text-align: center;
+  white-space: nowrap;
 }
 main ul.fnb-menu li a:hover {
   font-weight: 600;
+  background-color: rgba(0, 148, 214, 0.2);
+  color: #000;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a:hover {
+    background-color: transparent;
+  }
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li a {
     padding: 0;
+    font-size: 18px;
   }
   main ul.fnb-menu li a::after {
     display: block;
     content: "";
     width: 100%;
-    height: 1px;
-    margin-top: 5px;
+    height: 8px;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
     background-color: #000;
     transform: scale(0);
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
   main ul.fnb-menu li a:hover::after {
-    transform: scale(0.55);
+    transform: scale(1);
   }
 }
-main .solos-info1 {
+@media screen and (min-width: 1024px) and (min-width: 1400px) {
+  main ul.fnb-menu li a:hover::after {
+    transform: scale(0.8, 1);
+  }
+}
+main .fnb-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 180px;
-  margin-top: 90px;
+  margin-top: 151px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info1 {
-    margin-top: 150px;
+  main .fnb-info1 {
+    margin-top: 104px;
     flex-direction: row;
   }
 }
-main .solos-info1 .info-img img {
+main .fnb-info1 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info1 .info-img img {
+  main .fnb-info1 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info1 .info-txt {
+main .fnb-info1 .info-txt {
   padding-top: 55px;
   padding-left: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info1 .info-txt {
+  main .fnb-info1 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -411,54 +498,58 @@ main .solos-info1 .info-txt {
     border-bottom: 1px solid #0094d6;
   }
 }
-main .solos-info1 .info-txt p.solos-1 {
+@media screen and (min-width: 1400px) {
+  main .fnb-info1 .info-txt {
+    padding-left: 0;
+  }
+}
+main .fnb-info1 .info-txt p.txt-1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info1 .info-txt p.solos-2 {
+main .fnb-info1 .info-txt p.txt-2 {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.5;
   padding-bottom: 40px;
 }
-main .solos-info1 .info-txt p.solos-3 {
+main .fnb-info1 .info-txt div.txt-3 {
+  padding: 0;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.5;
 }
-main .solos-info1 .info-txt p.solos-3 .txt-bd {
+main .fnb-info1 .info-txt div.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
-  line-height: 50px;
+  margin-bottom: 10px;
 }
-main .solos-info2 {
+main .fnb-info2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
-  padding-top: 55px;
-  margin-top: 20px;
+  margin-top: 134px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 {
+  main .fnb-info2 {
     flex-direction: row;
-    margin-top: 200px;
   }
 }
-main .solos-info2 .info-img img {
+main .fnb-info2 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-img img {
+  main .fnb-info2 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info2 .info-txt {
+main .fnb-info2 .info-txt {
   padding-top: 51px;
   padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-txt {
+  main .fnb-info2 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -467,56 +558,53 @@ main .solos-info2 .info-txt {
     border-bottom: 1px solid #0094d6;
   }
 }
-main .solos-info2 .info-txt p.solos-1 {
+@media screen and (min-width: 1400px) {
+  main .fnb-info2 .info-txt {
+    padding-left: 0;
+  }
+}
+main .fnb-info2 .info-txt p.txt-1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info2 .info-txt p.solos-2 {
+main .fnb-info2 .info-txt div.txt-3 {
+  padding: 0;
   font-size: 16px;
-  line-height: 30px;
-  padding-bottom: 40px;
+  line-height: 1.5;
 }
-main .solos-info2 .info-txt p.solos-3 {
-  font-size: 16px;
-  line-height: 28px;
-}
-main .solos-info2 .info-txt p.solos-3 .txt-bd {
+main .fnb-info2 .info-txt div.txt-3 .txt-bd {
   font-size: 18px;
   font-weight: 500;
-  line-height: 50px;
+  margin-bottom: 10px;
 }
-main .solos-info3 {
+main .fnb-info3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 55px;
-  margin-top: 20px;
-  margin-bottom: 110px;
+  margin-top: 134px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 {
+  main .fnb-info3 {
     flex-direction: row;
-    margin-top: 200px;
-    margin-bottom: 300px;
   }
 }
-main .solos-info3 .info-img img {
+main .fnb-info3 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-img img {
+  main .fnb-info3 .info-img img {
     min-width: 620px;
     height: 609px;
   }
 }
-main .solos-info3 .info-txt {
+main .fnb-info3 .info-txt {
   padding-top: 51px;
   padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-txt {
+  main .fnb-info3 .info-txt {
     width: 474px;
     height: 609px;
     padding-top: 156px;
@@ -525,30 +613,26 @@ main .solos-info3 .info-txt {
     border-bottom: 1px solid #0094d6;
   }
 }
-main .solos-info3 .info-txt p.solos-1 {
+@media screen and (min-width: 1400px) {
+  main .fnb-info3 .info-txt {
+    padding-left: 0;
+  }
+}
+main .fnb-info3 .info-txt p.txt-1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 30px;
   padding-bottom: 40px;
 }
-main .solos-info3 .info-txt p.solos-2 {
+main .fnb-info3 .info-txt p.txt-2 {
   font-size: 16px;
   line-height: 30px;
-  padding-bottom: 40px;
-}
-main .solos-info3 .info-txt p.solos-3 {
-  font-size: 16px;
-  line-height: 28px;
-}
-main .solos-info3 .info-txt p.solos-3 .txt-bd {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 50px;
 }
 
 footer {
   color: #fff;
   background-color: #000;
+  margin-top: 266px;
 }
 @media screen and (min-width: 1024px) {
   footer {
@@ -714,4 +798,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=philos.css.map */
