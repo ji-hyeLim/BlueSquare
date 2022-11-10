@@ -105,7 +105,16 @@ header .header-bg-bookpark {
 header .header-bg-bookpark img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@-webkit-keyframes left-right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 @keyframes left-right {
   0% {
@@ -115,12 +124,25 @@ header .header-bg-bookpark img {
     width: 100%;
   }
 }
+@-webkit-keyframes top-down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
 @keyframes top-down {
   0% {
     height: 0;
   }
   100% {
     height: 100%;
+  }
+}
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 @keyframes fadeIn {
@@ -150,28 +172,32 @@ header .header-bg-bookpark .square .sqare-line1 {
   top: 0;
   width: 100%;
   height: 4px;
-  animation: left-right 2s;
+  -webkit-animation: left-right 2s;
+          animation: left-right 2s;
 }
 header .header-bg-bookpark .square .sqare-line2 {
   right: 0;
   top: 0;
   width: 4px;
   height: 100%;
-  animation: top-down 2s;
+  -webkit-animation: top-down 2s;
+          animation: top-down 2s;
 }
 header .header-bg-bookpark .square .sqare-line3 {
   right: 0;
   bottom: 0;
   width: 100%;
   height: 4px;
-  animation: left-right 2s;
+  -webkit-animation: left-right 2s;
+          animation: left-right 2s;
 }
 header .header-bg-bookpark .square .sqare-line4 {
   left: 0;
   bottom: 0;
   width: 4px;
   height: 100%;
-  animation: top-down 2s;
+  -webkit-animation: top-down 2s;
+          animation: top-down 2s;
 }
 header .header-bg-bookpark .square .square-title {
   position: relative;
@@ -185,8 +211,10 @@ header .header-bg-bookpark .square .square-title span:nth-child(1) {
   top: 10%;
   left: 10%;
   opacity: 0;
-  animation: fadeIn 2s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(2) {
   position: absolute;
@@ -194,22 +222,28 @@ header .header-bg-bookpark .square .square-title span:nth-child(2) {
   transform: translateX(-50%);
   top: 10%;
   opacity: 0;
-  animation: fadeIn 1s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(3) {
   top: 10%;
   right: 10%;
   opacity: 0;
-  animation: fadeIn 1.6s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 1.6s;
+          animation: fadeIn 1.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(4) {
   bottom: 10%;
   left: 10%;
   opacity: 0;
-  animation: fadeIn 1s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(5) {
   position: absolute;
@@ -217,15 +251,19 @@ header .header-bg-bookpark .square .square-title span:nth-child(5) {
   transform: translateX(-50%);
   bottom: 10%;
   opacity: 0;
-  animation: fadeIn 1.2s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 1.2s;
+          animation: fadeIn 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(6) {
   bottom: 10%;
   right: 10%;
   opacity: 0;
-  animation: fadeIn 2.4s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 2.4s;
+          animation: fadeIn 2.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-sodam {
   display: none;
@@ -235,7 +273,8 @@ header .header-bg-sodam {
 header .header-bg-sodam img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @keyframes left-right {
   0% {
@@ -280,28 +319,32 @@ header .header-bg-sodam .square .sqare-line1 {
   top: 0;
   width: 100%;
   height: 5px;
-  animation: left-right 2s;
+  -webkit-animation: left-right 2s;
+          animation: left-right 2s;
 }
 header .header-bg-sodam .square .sqare-line2 {
   right: 0;
   top: 0;
   width: 5px;
   height: 100%;
-  animation: top-down 2s;
+  -webkit-animation: top-down 2s;
+          animation: top-down 2s;
 }
 header .header-bg-sodam .square .sqare-line3 {
   right: 0;
   bottom: 0;
   width: 100%;
   height: 5px;
-  animation: left-right 2s;
+  -webkit-animation: left-right 2s;
+          animation: left-right 2s;
 }
 header .header-bg-sodam .square .sqare-line4 {
   left: 0;
   bottom: 0;
   width: 5px;
   height: 100%;
-  animation: top-down 2s;
+  -webkit-animation: top-down 2s;
+          animation: top-down 2s;
 }
 header .header-bg-sodam .square .square-title {
   position: relative;
@@ -315,32 +358,43 @@ header .header-bg-sodam .square .square-title span:nth-child(1) {
   top: 10%;
   left: 10%;
   opacity: 0;
-  animation: fadeIn 2s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .header-bg-sodam .square .square-title span:nth-child(2) {
   top: 10%;
   right: 10%;
   opacity: 0;
-  animation: fadeIn 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.3s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 header .header-bg-sodam .square .square-title span:nth-child(3) {
   bottom: 10%;
   left: 10%;
   opacity: 0;
-  animation: fadeIn 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 header .header-bg-sodam .square .square-title span:nth-child(4) {
   bottom: 10%;
   right: 10%;
   opacity: 0;
-  animation: fadeIn 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.7s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 header .logo-menu-box {
   position: absolute;
@@ -466,14 +520,13 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  position: relative;
+  margin: 266px 0;
 }
 main h1 {
-  font-size: 0;
+  display: none;
 }
 main ul.tab {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 70px;
   display: flex;
   justify-content: space-between;
   justify-content: center;
@@ -502,308 +555,425 @@ main ul.tab li a:hover {
 main ul.tab li a:hover::after {
   transform: scale(1);
 }
-main .bookpark-intro {
+main .bookpark {
+  display: none;
+}
+main .bookpark .bookpark-intro {
+  margin-bottom: 120px;
   text-align: center;
 }
-main .bookpark-intro h2 {
-  font-size: 32px;
+main .bookpark .bookpark-intro h2 {
+  font-size: 38px;
 }
-main .bookpark-intro p {
+main .bookpark .bookpark-intro p {
   margin-top: 50px;
-  margin-bottom: 120px;
-  line-height: 1.5em;
+  line-height: 2em;
 }
-main .bookpark-des {
+main .bookpark .bookpark-des-wrap {
+  font-size: 16px;
   /* bookpark-des-box-L */
 }
-main .bookpark-des h3 {
-  padding: 20px 0;
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap {
+    font-size: 18px;
+  }
 }
-main .bookpark-des p {
+main .bookpark .bookpark-des-wrap h3 {
+  font-size: 24px;
+  padding: 30px 0 10px;
+}
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap h3 {
+    padding: 0 0 10px;
+  }
+}
+main .bookpark .bookpark-des-wrap p {
   line-height: 1.5em;
 }
-main .bookpark-des img {
+main .bookpark .bookpark-des-wrap img {
   width: 100%;
-  margin-bottom: 30px;
 }
-main .bookpark-des .bookpark-des-flex {
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap img {
+    margin-bottom: 0;
+  }
+}
+main .bookpark .bookpark-des-wrap .bookpark-des-flex {
   margin-bottom: 60px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
 }
-main .bookpark-des .bookpark-des-box-L {
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap .bookpark-des-flex:last-child {
+    height: 440px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap .bookpark-des-flex {
+    height: 690px;
+    margin-bottom: 0;
+  }
+}
+main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
   position: relative;
   /* (large-tablet-screens) */
 }
 @media screen and (min-width: 1024px) {
-  main .bookpark-des .bookpark-des-box-L {
-    margin-bottom: 800px;
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
   }
-  main .bookpark-des .bookpark-des-box-L .text {
+}
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .text {
     position: absolute;
-    top: 300px;
-    left: 60%;
+    right: 0;
+    width: calc(100% - 540px);
+    height: 100%;
+    background-color: azure;
   }
-  main .bookpark-des .bookpark-des-box-L .img-and-square1 {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .text div {
+    display: inline-block;
+    background-color: pink;
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
-  main .bookpark-des .bookpark-des-box-L .img-and-square1 .square1 {
+}
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square1 {
+    position: absolute;
+    width: 540px;
+    height: 690px;
+  }
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square1 .square1 {
     position: relative;
     width: 440px;
     height: 500px;
     background-color: #0094d6;
-    opacity: 0.35;
+    opacity: 0.2;
   }
-  main .bookpark-des .bookpark-des-box-L .img-and-square1 .frontimg {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-  }
-  main .bookpark-des .bookpark-des-box-L .img-and-square1 .frontimg img {
-    width: 500px;
-    height: 650px;
-  }
-  main .bookpark-des .bookpark-des-box-L .img-and-square3 {
-    margin-bottom: -500px;
-  }
-  main .bookpark-des .bookpark-des-box-L .img-and-square3 .square3 {
-    position: relative;
-    width: 450px;
-    height: 600px;
-    background-color: #0094d6;
-    opacity: 0.35;
-  }
-  main .bookpark-des .bookpark-des-box-L .img-and-square3 .frontimg {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square1 .frontimg {
     position: absolute;
     top: 40px;
     left: 40px;
   }
-  main .bookpark-des .bookpark-des-box-L .img-and-square3 .frontimg img {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square1 .frontimg img {
     width: 500px;
     height: 650px;
   }
 }
-main .bookpark-des .bookpark-des-box-R {
+@media screen and (min-width: 1024px) {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square3 {
+    position: absolute;
+    width: 540px;
+    height: 690px;
+  }
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square3 .square3 {
+    position: relative;
+    width: 450px;
+    height: 600px;
+    background-color: #0094d6;
+    opacity: 0.8;
+  }
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square3 .frontimg {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square3 .frontimg img {
+    width: 500px;
+    height: 650px;
+  }
+}
+main .bookpark .bookpark-des-wrap .bookpark-des-box-R {
   position: relative;
   /* (large-tablet-screens) */
 }
 @media screen and (min-width: 1024px) {
-  main .bookpark-des .bookpark-des-box-R {
-    margin-bottom: 800px;
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R {
+    margin-bottom: 120px;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
   }
-  main .bookpark-des .bookpark-des-box-R .text {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .text {
     position: absolute;
-    top: 300px;
-    right: 60%;
+    left: 0;
+    width: calc(100% - 540px);
+    height: 100%;
   }
-  main .bookpark-des .bookpark-des-box-R .text4 {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .text div {
+    display: inline-block;
     position: absolute;
-    top: 175px;
-    right: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square2 {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square2 {
     position: absolute;
+    width: 540px;
+    height: 690px;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square2 .square2 {
-    position: relative;
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square2 .square2 {
+    position: absolute;
+    right: 0;
     width: 360px;
     height: 600px;
     background-color: #0094d6;
     opacity: 0.35;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square2 .frontimg {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square2 .frontimg {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 40px;
+    right: 40px;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square2 .frontimg img {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square2 .frontimg img {
     width: 500px;
     height: 650px;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square4 {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square4 {
     position: absolute;
-    top: 0;
+    width: 560px;
+    height: 440px;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square4 .square4 {
-    position: relative;
-    width: 300px;
-    height: 300px;
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square4 .square4 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 480px;
+    height: 320px;
     background-color: #0094d6;
-    opacity: 0.35;
+    opacity: 0.2;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square4 .frontimg {
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square4 .frontimg {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
   }
-  main .bookpark-des .bookpark-des-box-R .img-and-square4 .frontimg img {
-    width: 500px;
-    height: 350px;
+  main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square4 .frontimg img {
+    width: 520px;
+    height: 360px;
   }
 }
-main .sodam .container .sodam-intro {
+main .bookpark .use-guide {
+  margin: 200px 0;
   text-align: center;
 }
-main .sodam .container .sodam-intro h2 {
-  font-weight: 400;
-  line-height: 32px;
+main .bookpark .use-guide h4 {
+  padding-bottom: 10px;
+}
+main .bookpark .use-guide div:nth-child(2) {
+  padding: 30px 0;
+}
+main .bookpark .use-guide p {
+  padding-bottom: 5px;
+}
+main .sodam .sodam-intro {
+  margin-bottom: 300px;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .sodam-intro {
+    margin-bottom: 400px;
+  }
+}
+main .sodam .sodam-intro h2 {
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 1.5em;
   margin-bottom: 60px;
 }
-main .sodam .container .sodam-intro h2 strong {
+main .sodam .sodam-intro h2 strong {
   display: inline-block;
 }
-main .sodam .container .sodam-intro p {
-  line-height: 1.5em;
+main .sodam .sodam-intro p {
+  line-height: 2em;
 }
-main .sodam .container .sodam-intro p:last-child {
+main .sodam .sodam-intro p:last-child {
   margin-top: 40px;
 }
-main .sodam .container {
-  /* sodam-blue */
+main .sodam .blue-nemo-wrap {
+  font-size: 14px;
+  line-height: 1.5em;
 }
-main .sodam .container .blue-container,
-main .sodam .container .nemo-container {
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap {
+    font-size: 18px;
+  }
+}
+main .sodam .blue-nemo-wrap .sodam-blue {
+  position: relative;
+}
+main .sodam .blue-nemo-wrap .sodam-blue .circle {
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  width: 280%;
+  height: 0;
+  padding-bottom: 200%;
+  border-radius: 50%;
+  border-top: 2px solid #000;
+  transform: translate(-50%, -800px);
+  z-index: 999;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .sodam-blue .circle {
+    top: 500px;
+  }
+}
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-top: 50px;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .container .blue-container,
-main .sodam .container .nemo-container {
+  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap {
     flex-direction: row-reverse;
   }
 }
-main .sodam .container .blue-container .blue-info,
-main .sodam .container .blue-container .nemo-info,
-main .sodam .container .nemo-container .blue-info,
-main .sodam .container .nemo-container .nemo-info {
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info {
   order: 2;
+  margin-bottom: 40px;
 }
-main .sodam .container .blue-container .blue-info h3,
-main .sodam .container .blue-container .blue-info h4,
-main .sodam .container .blue-container .nemo-info h3,
-main .sodam .container .blue-container .nemo-info h4,
-main .sodam .container .nemo-container .blue-info h3,
-main .sodam .container .nemo-container .blue-info h4,
-main .sodam .container .nemo-container .nemo-info h3,
-main .sodam .container .nemo-container .nemo-info h4 {
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info h3 {
+  font-size: 24px;
   padding: 10px 0;
 }
-main .sodam .container .blue-container img,
-main .sodam .container .nemo-container img {
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info h4 {
+  font-size: 18px;
+  padding: 10px 0;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info .title h3 {
+    font-size: 38px;
+  }
+}
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info .title h3 .title-blue {
+  color: #0094d6;
+}
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info .blue-desc {
+  width: 100%;
+}
+main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap img {
   width: 100%;
   order: 1;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .container .blue-container img,
-main .sodam .container .nemo-container img {
+  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap img {
     width: 700px;
     height: 500px;
+    margin-bottom: 0;
+  }
+}
+main .sodam .blue-nemo-wrap .sodam-nemo {
+  margin-top: 140px;
+}
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap {
+    flex-direction: row-reverse;
+  }
+}
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info {
+  order: 2;
+  margin-bottom: 40px;
+}
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info h3,
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info h4 {
+  padding: 10px 0;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .container .img-l {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    justify-content: space-between;
+  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info .title h3 {
+    font-size: 38px;
+  }
+}
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info .title h3 .title-nemo {
+  color: orangered;
+}
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info .blue-desc {
+  width: 100%;
+}
+main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap img {
+  width: 100%;
+  order: 1;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap img {
+    width: 700px;
+    height: 500px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .img-l {
     position: relative;
     text-align: right;
+    display: flex;
+    justify-content: space-between;
   }
-  main .sodam .container .img-l .info {
+  main .sodam .img-l .info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
   }
-  main .sodam .container .img-l .no1 {
-    height: 100%;
-    align-self: baseline;
+  main .sodam .img-l .left {
+    justify-content: start;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .container .img-r {
+  main .sodam .img-r {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    position: relative;
   }
-  main .sodam .container .img-r .info {
+  main .sodam .img-r .info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
   }
-  main .sodam .container .img-r .no4 {
-    height: 100%;
-    align-self: baseline;
-  }
 }
-main .sodam .container .sodam-blue {
-  margin-top: 400px;
-}
-main .sodam .container .sodam-blue .circle {
-  width: 250%;
-  padding-bottom: 200%;
-  transform: translate(-50%, -300px);
-  height: 0;
-  border-radius: 50%;
-  border-top: 2px solid #000;
-  position: absolute;
-  left: 50%;
-  z-index: 999;
-}
-main .sodam .container .sodam-blue .blue-container .info {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 1024px) {
-  main .sodam .container .sodam-blue .blue-container .info {
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .sodam .container .sodam-blue .blue-container .info .blue-title h3 {
-    font-size: 38px;
-  }
-}
-main .sodam .container .sodam-blue .blue-container .info .blue-title h3 .title-blue {
-  color: #0094d6;
-}
-main .sodam .container .sodam-blue .blue-container .info .blue-desc {
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: red;
-}
-main .sodam .container .sodam-nemo {
-  margin-top: 140px;
-}
-main .sodam .container .sodam-nemo .nemo-container h3 .title-nemo {
-  color: orangered;
-}
-main .bookpark-guide {
+main .sodam .use-guide {
   margin: 200px 0;
   text-align: center;
 }
-main .bookpark-guide h4 {
+main .sodam .use-guide h4 {
   padding-bottom: 10px;
 }
-main .bookpark-guide div:nth-child(2) {
-  padding: 30px 0;
+main .sodam .use-guide div:nth-child(2) {
+  padding: 40px 0;
 }
-main .bookpark-guide p {
-  padding-bottom: 5px;
+main .sodam .use-guide p {
+  line-height: 2em;
 }
 
 footer {
@@ -974,4 +1144,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=culture_space.css.map */
