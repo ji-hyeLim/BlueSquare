@@ -312,12 +312,56 @@ main .pos-wrap .join-wrap form input:focus {
   border-color: #0094d6;
   box-shadow: 0 0 2px #0094d6;
 }
-main .pos-wrap .join-wrap form .address-box input {
+main .pos-wrap .join-wrap form #user-id.novalid {
+  border: 1px solid red;
+  box-shadow: 0 0 2px red;
+}
+main .pos-wrap .join-wrap form #user-id.valid {
+  border: 1px solid green;
+  box-shadow: 0 0 2px green;
+}
+main .pos-wrap .join-wrap form #user-pw.novalid {
+  border: 1px solid red;
+  box-shadow: 0 0 2px red;
+}
+main .pos-wrap .join-wrap form #user-pw.valid {
+  border: 1px solid green;
+  box-shadow: 0 0 2px green;
+}
+main .pos-wrap .join-wrap form #user-pw-check.novalid {
+  border: 1px solid red;
+  box-shadow: 0 0 2px red;
+}
+main .pos-wrap .join-wrap form #user-pw-check.valid {
+  border: 1px solid green;
+  box-shadow: 0 0 2px green;
+}
+main .pos-wrap .join-wrap form #user-phone.novalid {
+  border: 1px solid red;
+  box-shadow: 0 0 2px red;
+}
+main .pos-wrap .join-wrap form #user-phone.valid {
+  border: 1px solid green;
+  box-shadow: 0 0 2px green;
+}
+main .pos-wrap .join-wrap form .address-box input[type=button] {
+  margin-top: 14px;
   color: #0094d6;
   font-weight: 600;
   cursor: pointer;
   border: 1px solid #0094d6;
   background-color: #fff;
+}
+main .pos-wrap .join-wrap form .pw-box div {
+  position: relative;
+}
+main .pos-wrap .join-wrap form .pw-box div i {
+  color: #b2b2b2;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
 }
 main .pos-wrap .join-wrap form .gender-box .radio-box {
   width: 100%;

@@ -265,6 +265,7 @@ main {
                     }
                 } // label(공통)
         
+                
                 input {
                     height: 50px;
                     width: 100%;
@@ -272,27 +273,84 @@ main {
                     font-size: 14px;
                     border: 1px solid $gray-border;
                     border-radius: 5px;
-        
+                    
                     &:focus {
                         outline: none;
                         border-color: $point-color;
                         box-shadow: 0 0 2px $point-color;
                     }
-
+                    
                 } // input(공통)
+                
+                #user-id.novalid {
+                    border: 1px solid red;
+                    box-shadow: 0 0 2px red;
+                }
+
+                #user-id.valid {
+                    border: 1px solid green;
+                    box-shadow: 0 0 2px green;
+                }
+
+                #user-pw.novalid {
+                    border: 1px solid red;
+                    box-shadow: 0 0 2px red;
+                }
+
+                #user-pw.valid {
+                    border: 1px solid green;
+                    box-shadow: 0 0 2px green;
+                }
+                
+                #user-pw-check.novalid {
+                    border: 1px solid red;
+                    box-shadow: 0 0 2px red;
+                }
+                
+                #user-pw-check.valid {
+                    border: 1px solid green;
+                    box-shadow: 0 0 2px green;
+                }
+
+                #user-phone.novalid {
+                    border: 1px solid red;
+                    box-shadow: 0 0 2px red;
+                }
+
+                #user-phone.valid {
+                    border: 1px solid green;
+                    box-shadow: 0 0 2px green;
+                }
+                
+
 
                 .address-box {                        
-                        input {
+                        input[type=button] {
                             // position: relative;
+                            margin-top: 14px;
                             color: $point-color;
                             font-weight: 600;
                             cursor: pointer;
                             border: 1px solid $point-color;
                             background-color: #fff;
+
                         }
-    
-                    
                 } // address-box
+
+                .pw-box {
+                    
+                    div {
+                        position: relative;
+
+                        i {
+                            color: $gray-font;
+                            cursor: pointer;
+                            @include pos-center-y() {
+                                right: 10px;
+                            }
+                        }
+                    }
+                } // pw-box
 
                 .gender-box {
                     .radio-box {

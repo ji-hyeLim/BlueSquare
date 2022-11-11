@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nanum+Gothic:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -94,6 +94,14 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes motion {
+  0% {
+    transform: translateY(-61px);
+  }
+  100% {
+    transform: translateY(183px);
+  }
+}
 header {
   position: relative;
   width: 100vw;
@@ -108,11 +116,118 @@ header .header-bg video {
   height: 100%;
   object-fit: cover;
 }
+header .header-bg .bg-content {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+}
+header .header-bg .bg-content .text-wrap {
+  margin-top: -120px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .bg-content .text-wrap {
+    margin-top: -10px;
+  }
+}
+header .header-bg .bg-content .text-wrap span {
+  padding: 0 10px;
+}
+header .header-bg .bg-content .text-wrap span em {
+  display: inline-block;
+  letter-spacing: -0.0769230769em;
+  letter-spacing: -0.05em;
+  color: #fff;
+  font-size: 3.75em;
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .bg-content .text-wrap span em {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .bg-content .text-wrap span em {
+    font-size: 10em;
+  }
+}
+header .header-bg .bg-content .text-wrap .we {
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .bg-content .text-wrap .we {
+    display: inline-block;
+  }
+}
+header .header-bg .bg-content .text-wrap .inspire {
+  font-family: "Lora", serif;
+}
+header .header-bg .bg-content .text-wrap .inspire em:nth-child(1), header .header-bg .bg-content .text-wrap .inspire em:nth-child(2), header .header-bg .bg-content .text-wrap .inspire em:nth-child(5), header .header-bg .bg-content .text-wrap .inspire em:nth-child(6) {
+  font-family: serif;
+  font-weight: 600;
+}
+header .header-bg .bg-content .text-wrap .art {
+  letter-spacing: 0.45em;
+}
+header .header-bg .bg-content .scroll-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -310px;
+}
+header .header-bg .bg-content .scroll-wrap span {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 1px;
+  height: 183px;
+  margin: 0 auto 26px;
+  background-color: rgb(255, 255, 255);
+}
+header .header-bg .bg-content .scroll-wrap span::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 61px;
+  margin: 0 auto;
+  background-color: #fff;
+  animation: motion 2s infinite;
+}
+header .header-bg .bg-content .scroll-wrap p {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif, Arial;
+  font-weight: 600;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .bg-content .scroll-wrap p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .bg-content .scroll-wrap p {
+    font-size: 18px;
+  }
+}
 header .logo-menu-box {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+}
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 }
 header .logo-menu-box .flex-box {
   position: relative;
@@ -141,7 +256,7 @@ header .logo-menu-box .flex-box .header-logo a img {
 }
 header .logo-menu-box .flex-box nav.main-menu {
   display: none;
-  width: 600px;
+  width: 590px;
 }
 @media screen and (min-width: 1024px) {
   header .logo-menu-box .flex-box nav.main-menu {
@@ -150,6 +265,7 @@ header .logo-menu-box .flex-box nav.main-menu {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb {
   width: inherit;
+  height: 100px;
   display: flex;
   position: absolute;
   top: 50%;
@@ -157,16 +273,18 @@ header .logo-menu-box .flex-box nav.main-menu .gnb {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li {
   width: 20%;
+  line-height: 100px;
   text-align: center;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li::after {
+  line-height: 0;
   display: block;
   content: "";
   margin: 0 auto;
   width: 60%;
   height: 2px;
-  margin-top: 5px;
-  background-color: #fff;
+  margin-top: -34px;
+  background-color: #000;
   transform: scale(0);
   transition: all 0.4s;
 }
@@ -182,18 +300,20 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li a {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
   position: absolute;
-  top: 28px;
+  top: 101px;
   width: 100%;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li {
+  line-height: 1;
   display: none;
-  background-color: rgba(0, 148, 214, 0.6);
-  background-color: rgba(255, 165, 0, 0.6);
+  margin-top: -1px;
+  background-color: rgb(0, 148, 214);
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li::after {
   display: none;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li a {
+  font-size: 16px;
   width: 100%;
   padding: 10px 20px;
 }
@@ -238,6 +358,16 @@ header .logo-menu-box .flex-box .right-menu ul {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box .flex-box .right-menu ul {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box .flex-box .right-menu ul li {
+    line-height: 100px;
+  }
+}
 header .logo-menu-box .flex-box .right-menu ul li a {
   color: #fff;
   font-family: "Montserrat", sans-serif, Arial;
@@ -247,10 +377,14 @@ header .logo-menu-box .flex-box .right-menu ul li a::after {
   content: "";
   width: 100%;
   height: 2px;
-  margin-top: 5px;
-  background-color: #fff;
+  background-color: black;
   transform: scale(0);
   transition: all 0.4s;
+}
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box .flex-box .right-menu ul li a::after {
+    margin-top: -34px;
+  }
 }
 @media screen and (min-width: 1024px) {
   header .logo-menu-box .flex-box .right-menu ul li a:hover::after {
@@ -285,29 +419,51 @@ header .overlay .close-btn {
   top: 0px;
   right: 20px;
   font-size: 55px;
-  font-weight: 300;
-  color: #818181;
-}
-header .overlay .close-btn:hover, header .overlay .close-btn:focus {
+  font-weight: 100;
   color: #f1f1f1;
 }
 header .overlay .overlay-menu {
   position: relative;
-  top: 25%;
+  top: 22%;
   text-align: center;
-  margin-top: 30px;
 }
 header .overlay .overlay-menu ul li a {
   font-size: 26px;
-  color: #818181;
+  font-weight: 400;
+  color: #fff;
   padding: 15px 0;
 }
-header .overlay .overlay-menu ul li a:hover, header .overlay .overlay-menu ul li a:focus {
-  color: #f1f1f1;
+header .overlay .overlay-menu ul li a.on {
+  color: rgb(0, 148, 214);
   transform: skew(-15deg);
 }
-header .overlay .overlay-menu ul li ul {
+header .overlay .overlay-menu ul li ul li {
   display: none;
+}
+header .overlay .overlay-menu ul li ul li.on {
+  display: block;
+}
+header .overlay .overlay-menu ul li ul li a {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+}
+header .overlay .overlay-menu ul li ul li a:hover, header .overlay .overlay-menu ul li ul li a:focus {
+  transform: skew(0);
+}
+header .overlay .overlay-menu ul li ul li a::after {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.4s;
+}
+header .overlay .overlay-menu ul li ul li a:hover::after {
+  width: 100%;
 }
 
 main {
@@ -321,46 +477,50 @@ main section h2 {
   font-size: 38px;
   margin-bottom: 58px;
 }
-main section.performance .slides {
+main section.performance .slide-wrap {
   margin-left: 20px;
+  padding-bottom: 20px;
   overflow-x: scroll;
 }
-main section.performance .slides::-webkit-scrollbar {
+main section.performance .slide-wrap::-webkit-scrollbar {
   width: 100vw;
   height: 3px;
   background-color: #ccc;
 }
-main section.performance .slides::-webkit-scrollbar-thumb {
+main section.performance .slide-wrap::-webkit-scrollbar-thumb {
   background-color: #000;
 }
 @media screen and (min-width: 1400px) {
-  main section.performance .slides {
+  main section.performance .slide-wrap {
     width: 1400px;
     margin: 0 auto;
   }
 }
-main section.performance .slides .flex-box {
+main section.performance .slide-wrap .slides {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
-main section.performance .slides .flex-box div img {
+main section.performance .slide-wrap .slides img {
   display: block;
   width: 350px;
   height: 500px;
   margin-right: 30px;
 }
-main section.performance .slides .flex-box div .contents {
+main section.performance .slide-wrap .slides .contents {
   width: 350px;
   margin-bottom: 25px;
 }
-main section.performance .slides .flex-box div .contents h3 {
+main section.performance .slide-wrap .slides .contents h3 {
   padding-top: 28px;
   padding-bottom: 14px;
 }
-main section.performance .slides .flex-box div .contents p {
+main section.performance .slide-wrap .slides .contents p {
   font-size: 13px;
 }
 main section.performance .slide-btn {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   justify-content: left;
@@ -368,12 +528,6 @@ main section.performance .slide-btn {
 @media screen and (min-width: 1024px) {
   main section.performance .slide-btn {
     padding-bottom: 25px;
-    margin-left: -20px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  main section.performance .slide-btn {
-    margin-left: 0;
   }
 }
 main section.performance .slide-btn a {
@@ -653,6 +807,7 @@ footer .flex-box .left-contents {
 }
 footer .flex-box .left-contents h2 {
   margin-left: -2px;
+  letter-spacing: -0.0769230769em;
   font-size: 1.25em;
   font-family: "Montserrat", sans-serif, Arial;
   font-weight: normal;
@@ -773,8 +928,8 @@ footer .flex-box .footer-title {
   text-align: center;
 }
 footer .flex-box .footer-title h1 {
-  font-size: calc(38px + 9.8vw);
-  font-family: "Montserrat", sans-serif, Arial;
+  font-size: calc(38px + 11.2vw);
+  font-family: "Lora";
   font-weight: 500;
 }
 footer .line {
@@ -782,7 +937,7 @@ footer .line {
 }
 footer .line span {
   position: absolute;
-  bottom: 280px;
+  bottom: 275px;
   display: block;
   content: "";
   width: 100%;
