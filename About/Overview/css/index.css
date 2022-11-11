@@ -88,12 +88,31 @@ footer {
   }
 }
 
+@-webkit-keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @keyframes mover {
   from {
     width: 0%;
   }
   to {
     width: 100%;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
   }
 }
 @keyframes fadeUp {
@@ -106,51 +125,19 @@ footer {
     opacity: 1;
   }
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-}
-@keyframes fadeIn_X {
+@-webkit-keyframes text-loop {
   0% {
-    opacity: 0;
-    transform: translatX(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(10px);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeIn_right {
-  0% {
-    opacity: 0;
-    transform: translatX(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translatX(0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 @keyframes text-loop {
   0% {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
 }
@@ -208,9 +195,12 @@ header .ov-header .hd-img .line-box div.p-box {
 }
 header .ov-header .hd-img .line-box div.p-box p {
   opacity: 0;
-  animation: fadeUp 3s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeUp 3s;
+          animation: fadeUp 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   font-size: calc(1vw + 30px);
   font-weight: 600;
   font-family: "Montserrat", sans-serif, Arial;
@@ -244,7 +234,8 @@ header .ov-header .hd-img .line-box div.p-box::before {
   width: 100%;
   height: 5px;
   background-color: white;
-  animation: mover 2s;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
 header .ov-header .hd-img .line-box div.p-box::after {
   position: absolute;
@@ -255,7 +246,8 @@ header .ov-header .hd-img .line-box div.p-box::after {
   width: 100%;
   height: 5px;
   background-color: white;
-  animation: mover 2s;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
 header .logo-menu-box {
   position: absolute;
@@ -405,9 +397,7 @@ main .page-info1 {
   }
 }
 main .page-info1 .info-img img {
-  opacity: 0;
   width: 100%;
-  animation: fadeIn_X 1s 3s linear forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info1 .info-img img {
@@ -422,15 +412,10 @@ main .page-info1 .info-img img {
   }
 }
 main .page-info1 .info-txt {
-  opacity: 0;
   padding-left: 0;
   margin-bottom: 40px;
-<<<<<<< HEAD
   -webkit-animation: fadeIn 1s 3s linear forwards;
           animation: fadeIn 1s 3s linear forwards;
-=======
-  animation: fadeIn 1s 3s linear forwards;
->>>>>>> 7a58e710f4411abed8f05aa8258614e9e84e472a
 }
 @media screen and (min-width: 1024px) {
   main .page-info1 .info-txt {
@@ -487,9 +472,7 @@ main .page-info2 {
   }
 }
 main .page-info2 .info-img img {
-  opacity: 0;
   width: 100%;
-  animation: fadeIn_right 1s 3s forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info2 .info-img img {
@@ -504,14 +487,7 @@ main .page-info2 .info-img img {
   }
 }
 main .page-info2 .info-txt {
-  opacity: 0;
   margin-bottom: 40px;
-<<<<<<< HEAD
-  -webkit-animation: fadeIn 1s 3s forwards;
-          animation: fadeIn 1s 3s forwards;
-=======
-  animation: fadeIn 1s 3s forwards;
->>>>>>> 7a58e710f4411abed8f05aa8258614e9e84e472a
 }
 @media screen and (min-width: 1024px) {
   main .page-info2 .info-txt {
@@ -580,9 +556,7 @@ main .page-info3 {
   }
 }
 main .page-info3 .info-img img {
-  opacity: 0;
   width: 100%;
-  animation: fadeIn_X 1s 3s linear forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info3 .info-img img {
@@ -597,14 +571,7 @@ main .page-info3 .info-img img {
   }
 }
 main .page-info3 .info-txt {
-  opacity: 0;
   margin-bottom: 40px;
-<<<<<<< HEAD
-  -webkit-animation: fadeIn 1s 3s linear forwards;
-          animation: fadeIn 1s 3s linear forwards;
-=======
-  animation: fadeIn 1s 3s linear forwards;
->>>>>>> 7a58e710f4411abed8f05aa8258614e9e84e472a
 }
 @media screen and (min-width: 1024px) {
   main .page-info3 .info-txt {
@@ -652,47 +619,44 @@ main .page-info3 .info-txt p.txt3 {
   }
 }
 main .bottom-txt {
-  width: 92%;
+  max-width: 587px;
   height: 163px;
-  margin: 134px 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 134px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   main .bottom-txt {
-    width: 587px;
+    position: absolute;
+    left: 50%;
+    margin-left: -293.5px;
   }
 }
-main .bottom-txt p {
-  opacity: 0;
+main .bottom-txt div.b-txt {
   text-align: center;
   width: 100%;
   font-size: 16px;
   line-height: 26px;
-  animation: fadeIn 3s 3s linear forwards;
 }
-main .bottom-txt p .bold-txt {
+main .bottom-txt div.b-txt .bold-txt {
   font-weight: 600;
 }
 @media screen and (min-width: 1024px) {
-  main .bottom-txt p {
+  main .bottom-txt div.b-txt {
     font-size: 18px;
     line-height: 40px;
   }
 }
 main .flow-txt-wrap {
-  margin-top: 350px;
+  margin-top: 134px;
   font-size: 120px;
 }
 @media screen and (min-width: 600px) {
   main .flow-txt-wrap {
-    font-size: 150px;
+    padding-top: 238px;
   }
 }
 @media screen and (min-width: 1024px) {
   main .flow-txt-wrap {
-    margin-top: 384px;
+    padding-top: 297px;
   }
 }
 main .flow-txt-wrap div {
@@ -715,7 +679,8 @@ main .flow-txt-wrap div {
 }
 main .flow-txt-wrap div .flow-txt {
   padding-right: 22px;
-  animation: text-loop 10s linear infinite;
+  -webkit-animation: text-loop 10s linear infinite;
+          animation: text-loop 10s linear infinite;
 }
 
 footer {
@@ -886,4 +851,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */

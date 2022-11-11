@@ -55,55 +55,55 @@
     }
 }
 
-@keyframes fadeIn {
+// @keyframes fadeIn {
 
-    //txt적용
-    from {
-        opacity: 0;
-        transform: translateY(0);
-    }
+//     //txt적용
+//     from {
+//         opacity: 0;
+//         transform: translateY(0);
+//     }
 
-    to {
-        opacity: 1;
-        transform: translateY(-10px);
-    }
-}
+//     to {
+//         opacity: 1;
+//         transform: translateY(-10px);
+//     }
+// }
 
-@keyframes fadeIn_X {
+// @keyframes fadeIn_X {
 
-    //txt적용
-    0% {
-        opacity: 0;
-        transform: translatX(0);
-    }
+//     //txt적용
+//     0% {
+//         opacity: 0;
+//         transform: translatX(0);
+//     }
 
-    50% {
-        opacity: 1;
-        transform: translateX(10px);
-    }
+//     50% {
+//         opacity: 1;
+//         transform: translateX(10px);
+//     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+// }
 
-@keyframes fadeIn_right {
+// @keyframes fadeIn_right {
 
-    //txt적용
-    0% {
-        opacity: 0;
-        transform: translatX(0);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translatX(0);
-    }
-}
+//     //txt적용
+//     0% {
+//         opacity: 0;
+//         transform: translatX(0);
+//     }
+//     50% {
+//         opacity: 1;
+//         transform: translateX(-10px);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translatX(0);
+//     }
+// }
 
 
 @keyframes text-loop {
@@ -231,8 +231,7 @@ header {
                         height: 5px;
                         background-color: white;
                         animation: mover 2s;
-                    }// width: 100%;
-
+                    }
                     @include pos-center();
                     text-align: center;
                     color: #fff;
@@ -426,9 +425,9 @@ main {
         }
 
         .info-img img {
-            opacity: 0;
+            // opacity: 0;
             width: 100%;
-            animation: fadeIn_X 1s 3s linear forwards;
+            // animation: fadeIn_X 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
                 width:300;
@@ -443,7 +442,7 @@ main {
 
         .info-txt {
             // background-color: blueviolet;
-            opacity: 0;
+            // opacity: 0;
             padding-left: 0;
             margin-bottom: 40px;
             animation: fadeIn 1s 3s linear forwards;
@@ -505,9 +504,9 @@ main {
         }
 
         .info-img img {
-            opacity: 0;
+            // opacity: 0;
             width: 100%;
-            animation: fadeIn_right 1s 3s forwards;
+            // animation: fadeIn_right 1s 3s forwards;
 
             @include responsive(large-tablet-screens) {
                 min-width:300;
@@ -522,9 +521,9 @@ main {
 
         .info-txt {
             // background-color: blueviolet;
-            opacity: 0;
+            // opacity: 0;
             margin-bottom: 40px;
-            animation: fadeIn 1s 3s forwards;
+            // animation: fadeIn 1s 3s forwards;
             
 
             @include responsive(large-tablet-screens) {
@@ -597,9 +596,9 @@ main {
         }
 
         .info-img img {
-            opacity: 0;
+            // opacity: 0;
             width: 100%;
-            animation: fadeIn_X 1s 3s linear forwards;
+            // animation: fadeIn_X 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
                 width:300;
@@ -614,10 +613,10 @@ main {
 
         .info-txt {
             // background-color: blueviolet;
-            opacity: 0;
+            // opacity: 0;
             // padding-left: 0px;
             margin-bottom: 40px;
-            animation: fadeIn 1s 3s linear forwards;
+            // animation: fadeIn 1s 3s linear forwards;
 
             @include responsive(large-tablet-screens) {
                 width: 370px;
@@ -672,22 +671,25 @@ main {
     
     .bottom-txt {
         // background-color: azure;
-        width: 92%;
+        max-width: 587px;
         height: 163px;
-        margin: 134px 0;
-        @include pos-center-x();
+        margin-top: 134px;
+        // @include pos-center-x();
+        
+        @include responsive(small-tablet-screens) {
+        position: absolute;
+        left: 50%;
+        margin-left: -293.5px;
 
-        @include responsive(large-tablet-screens) {
-            width: 587px;
         }
 
-        p {
-            opacity: 0;
+        div.b-txt {
+            // opacity: 0;
             text-align: center;
             width: 100%;
             font-size: 16px;
             line-height: 26px;
-            animation: fadeIn 3s 3s linear forwards;
+            // animation: fadeIn 3s 3s linear forwards;
 
             .bold-txt {
                 font-weight: 600;
@@ -703,14 +705,14 @@ main {
     //.bottom-txt
 
     .flow-txt-wrap {
-        margin-top: 350px;
+        margin-top: 134px;
         font-size: 120px;
 
         @include responsive(small-tablet-screens) {
-            font-size: 150px;
+            padding-top: 238px;
         }
         @include responsive(large-tablet-screens) { 
-            margin-top: 384px;
+            padding-top: 297px;
         }
 
         div {

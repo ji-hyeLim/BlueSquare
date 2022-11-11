@@ -354,7 +354,7 @@ main {
                 
                 flex: 50%;
                 width: 30%;
-                border: 1px solid #000;
+                border: 1px solid #fff;
                 border-right: 0;
                 border-bottom: 0;
 
@@ -367,7 +367,7 @@ main {
                 }
 
                 &:nth-child(2) {
-                    border-right: 1px solid #000; 
+                    border-right: 1px solid #fff; 
 
                     @include responsive(large-tablet-screens) {
                         margin-right: 120px;
@@ -375,8 +375,8 @@ main {
                     }
                 }
                 &:last-child {
-                    border-right: 1px solid #000; 
-                    border-bottom: 1px solid #000;
+                    border-right: 1px solid #fff; 
+                    border-bottom: 1px solid #fff;
                     
                     @include responsive(large-tablet-screens) {
                         margin-right: 0px;
@@ -386,7 +386,7 @@ main {
                 }
 
                 &:nth-child(3) {
-                    border-bottom: 1px solid #000; 
+                    border-bottom: 1px solid #fff; 
 
                     @include responsive(large-tablet-screens) {
                         margin-right: 120px;
@@ -477,7 +477,7 @@ main {
                     height: 609px;
                     padding-top: 156px;
                     padding-left: 20px;
-                    border-top: 1px solid $point-color;
+                    border-top: 2px solid $point-color;
                     border-bottom: 1px solid $point-color;
                 }
                 
@@ -537,7 +537,7 @@ main {
                     height: 609px;
                     padding-top: 156px;
                     padding-left: 20px;
-                    border-top: 1px solid #0094d6;
+                    border-top: 2px solid #0094d6;
                     border-bottom: 1px solid #0094d6;
                 }
                 padding-top: 51px;
@@ -595,7 +595,7 @@ main {
                     height: 609px;
                     padding-top: 156px;
                     padding-left: 20px;
-                    border-top: 1px solid #0094d6;
+                    border-top: 2px solid #0094d6;
                     border-bottom: 1px solid #0094d6;
                 }
                 padding-top: 51px;
