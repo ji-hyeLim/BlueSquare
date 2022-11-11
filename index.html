@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
-    <script src="https://kit.fontawesome.com/02fac5dfa7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
     <script src="./js/jquery.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/02fac5dfa7.js" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
     <title>BLUE SQUARE</title>
 </head>
@@ -18,13 +20,39 @@
                     <source src="video/videoplayback2.mp4" type="video/mp4">
                     <p>이 브라우저는 HTML5 비디오를 지원하지 않습니다.</p>
                 </video>
+                <div class="bg-content">
+                    <div class="text-wrap">
+                        <span class="we">
+                            <em data-aos="fade-up" data-aos-duration="1000">W</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">e</em>
+                        </span>
+                        <span class="inspire">
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">I</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">n</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">s</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">p</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">i</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">r</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">e</em>
+                        </span>
+                        <span class="art">
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="550">A</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">r</em>
+                            <em data-aos="fade-up" data-aos-duration="1000" data-aos-delay="650">t</em>
+                        </span>
+                    </div>
+                    <div class="scroll-wrap" data-aos="fade" data-aos-duration="800" data-aos-delay="1500">
+                        <span></span>
+                        <p>scroll down</p>
+                    </div>
+                </div> <!-- bg-content -->
             </div> <!-- header-bg -->
             <div class="logo-menu-box">
                 <div class="container">
                     <div class="flex-box">
                         <div class="header-logo">
                             <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
-                            <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
+                            <a href="#" class="large-only hover-change"><img src="./img/logo_white.png" alt="logo"></a>
                         </div>
     
                         <nav class="main-menu">
@@ -90,40 +118,40 @@
                             <a href="#">블루스퀘어</a>
                             <ul>
                                 <li><a href="#">기관소개</a></li>
-                                    <li><a href="#">좌석배치도</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">공연안내</a>
-                                <ul>
-                                    <li><a href="#">공연예매</a></li>
-                                    <li><a href="#">공연일정</a></li>
-                                    <li><a href="#">예매안내</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">대관안내</a>
-                                <ul>
-                                    <li><a href="#">대관시설/대관료</a></li>
-                                    <li><a href="#">대관신청</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">이용안내</a>
-                                <ul>
-                                    <li><a href="#">레스토랑&카페</a></li>
-                                    <li><a href="#">문화공간</a></li>
-                                    <li><a href="#">오시는 길</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">고객센터</a>
-                                <ul>
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                </ul>
-                            </li>
-                        </ul> 
+                                <li><a href="#">좌석배치도</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">공연안내</a>
+                            <ul>
+                                <li><a href="#">공연예매</a></li>
+                                <li><a href="#">공연일정</a></li>
+                                <li><a href="#">예매안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">대관안내</a>
+                            <ul>
+                                <li><a href="#">대관시설/대관료</a></li>
+                                <li><a href="#">대관신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이용안내</a>
+                            <ul>
+                                <li><a href="#">레스토랑&카페</a></li>
+                                <li><a href="#">문화공간</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul> 
                 </div> <!-- overlay-menu -->
             </div> <!-- overlay -->
         </header> <!-- header -->
@@ -132,166 +160,160 @@
             <section class="performance">
                 <h1>Performance</h1>
                 <div class="container">
-                    <h2>Performance</h2>
+                    <h2 data-aos="fade-right">Performance</h2>
                 </div> <!-- container -->
-                    <div class="slides">
-
-                            <div class="flex-box">
-                                <div class="slide1">
-                                    <a href="#">
-                                        <img src="./img/slide1.png" alt="slide1">
-                                        <div class="contents">
-                                            <h3>뮤지컬 〈물랑루즈!〉 아시아 초연</h3>
-                                            <p>20 Dec - 05 Mar</p>
-                                        </div>
-                                    </a>
-                                </div> <!-- slide1 -->
-            
-                                <div class="slide2">
-                                    <a href="#">
-                                        <img src="./img/slide2.png" alt="slide2">
-                                        <div class="contents">
-                                            <h3>뮤지컬 〈엘리자벳〉 10주년 기념공연</h3>
-                                            <p>30 Aug - 13 Nov</p>
-                                        </div>
-                                    </a>
-                                </div> <!-- slide2 -->
-
-                                <div class="slide3">
-                                    <a href="#">
-                                        <img src="./img/slide3.png" alt="slide3">
-                                        <div class="contents">
-                                            <h3>이머시브 다이닝 〈그랜드 엑스페디션〉</h3>
-                                            <p>30 Sept - 01 Mar</p>
-                                        </div>
-                                    </a>
-                                </div> <!-- slide3 -->
-
-                                <div class="slide4">
-                                    <a href="#">
-                                        <img src="./img/slide4.png" alt="slide4">
-                                        <div class="contents">
-                                            <h3>2022 ONEUS 1ST WORLD TOUR ‘REACH FOR US’ - SEOUL</h3>
-                                            <p>29 Oct - 30 Oct</p>
-                                        </div>
-                                    </a>
-                                </div> <!-- slide4 -->
-            
-                                <div class="slide5">
-                                    <a href="#">
-                                        <img src="./img/slide5.png" alt="slide5">
-                                        <div class="contents">
-                                            <h3>2022년 데이먼스 이어 단독공연 'Lady Mondegreen'</h3>
-                                            <p>05 Nov - 06 Nov</p>
-                                        </div>
-                                    </a>
-                                </div> <!-- slide5 -->
-
-                                <div class="slide6">
-                                    <a href="#">
-                                        <img src="./img/slide6.png" alt="slide6">
-                                        <div class="contents">
-                                            <h3>2022 로이킴 콘서트［그리고］</h3>
-                                            <p>19 Nov - 20 Nov</p>
-                                        </div>
-                                    </a>
-                                </div> <!-- slide6 -->
-                            </div> <!-- flex-box -->
-                            
-                            <div class="container">
-                                <div class="slide-btn">
-                                    <a href="#" class="large-only"><img src="./img/prev_black.png" alt="prev"></a>
-                                    <a href="#" class="large-only"><img src="./img/next_black.png" alt="next"></a>
+                <div class="slide-wrap" data-aos="fade-up" data-aos-delay="300">
+                    <ul class="slides">
+                        <li>
+                            <a href="#">
+                                <img src="./img/slide1.png" alt="slide1">
+                                <div class="contents">
+                                    <h3>뮤지컬 〈물랑루즈!〉 아시아 초연</h3>
+                                    <p>20 Dec - 05 Mar</p>
                                 </div>
-                            </div> <!-- container -->
-                    </div> <!-- slides -->                   
-                </section> <!-- performance -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/slide2.png" alt="slide2">
+                                <div class="contents">
+                                    <h3>뮤지컬 〈엘리자벳〉 10주년 기념공연</h3>
+                                    <p>30 Aug - 13 Nov</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/slide3.png" alt="slide3">
+                                <div class="contents">
+                                    <h3>이머시브 다이닝 〈그랜드 엑스페디션〉</h3>
+                                    <p>30 Sept - 01 Mar</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/slide4.png" alt="slide4">
+                                <div class="contents">
+                                    <h3>2022 ONEUS 1ST WORLD TOUR ‘REACH FOR US’ - SEOUL</h3>
+                                    <p>29 Oct - 30 Oct</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/slide5.png" alt="slide5">
+                                <div class="contents">
+                                    <h3>2022년 데이먼스 이어 단독공연 'Lady Mondegreen'</h3>
+                                    <p>05 Nov - 06 Nov</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/slide6.png" alt="slide6">
+                                <div class="contents">
+                                    <h3>2022 로이킴 콘서트［그리고］</h3>
+                                    <p>19 Nov - 20 Nov</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul> <!-- slides-->      
+                </div> <!-- slide-wrap --> 
 
-                <section class="restaurant_and_cafe">
-                    <h1>Restaurant&Cafe</h1>
-                    <div class="container">
-                        <div class="flex-box">
-                            <div class="title-box">
-                                <h2>Restaurant&Cafe</h2>
-                                <p class="large-only des">공연 그 이상의 즐거움</p>
+                <div class="container">
+                    <div class="slide-btn" data-aos="fade-up">
+                        <a href="#" class="large-only slide-btn-prev"><img src="./img/prev_icon.png" alt="prev"></a>
+                        <a href="#" class="large-only slide-btn-next"><img src="./img/next_black.png" alt="next"></a>
+                    </div>
+                </div> <!-- container -->
+            </section> <!-- performance -->
+
+            <section class="restaurant_and_cafe">
+                <h1>Restaurant&Cafe</h1>
+                <div class="container">
+                    <div class="flex-box">
+                        <div class="title-box" data-aos="fade-right">
+                            <h2>Restaurant&Cafe</h2>
+                            <p class="large-only des">공연 그 이상의 즐거움</p>
+                        </div>
+                        <div class="outer-flex-box" data-aos="fade-left" data-aos-delay="300">
+                            <a href="#" class="inner-flex-box">
+                                <img src="./img/grid1.png" alt="grid1">                           
+                                <p>스테이지 B</p>
+                                <span>
+                                    외식과 문화가 공존하는 예술의 공간
+                                    <img src="./img/next_white.png" alt="next">
+                                </span>
+                            </a>                             
+
+                            <a href="#" class="inner-flex-box">
+                                <img src="./img/grid2.png" alt="grid2">
+                                <p>솔로스 키친</p>
+                                <span>
+                                    정성을 다하는 오리엔탈 푸드 전문점
+                                    <img src="./img/next_white.png" alt="next">
+                                </span>
+                            </a>
+
+                            <a href="#" class="inner-flex-box">
+                                <img src="./img/grid3.jpg" alt="grid3">
+                                <p>카페 필로스</p>
+                                <span>
+                                    공연과 함께하는  테라스 카페
+                                    <img src="./img/next_white.png" alt="next">
+                                </span>
+                            </a>
+
+                            <a href="#" class="inner-flex-box">
+                                <img src="./img/grid4.png" alt="grid4">
+                                <p>케익 갤러리</p>
+                                <span>
+                                    달콤한 크레프트 케이크 전문 카페
+                                    <img src="./img/next_white.png" alt="next">
+                                </span>
+                            </a>
+                        </div> <!-- outer-flex-box -->                   
+                    </div> <!-- flex-box -->
+                </div> <!-- container -->
+            </section> <!-- restaurant_and_cafe -->
+
+            <section class="culture-space">
+                <h1>Culture Space</h1>
+                <div class="container">
+                    <h2 class="mobile-only" data-aos="fade-right">Culture Space</h2>
+                    <div class="flex-box">
+                        <div class="imgs-box">
+                            <div class="large-only img1" data-aos="zoom-out">
+                                <img src="./img/culture_img1.png" alt="img1">
+                                <span>store</span>
                             </div>
-                            <div class="outer-flex-box">
-                                <a href="#" class="inner-flex-box">
-                                    <img src="./img/grid1.png" alt="grid1">                           
-                                    <p>스테이지 B</p>
-                                    <span>
-                                        외식과 문화가 공존하는 예술의 공간
-                                        <img src="./img/next_white.png" alt="next">
-                                    </span>
-                                </a>                             
-    
-                                <a href="#" class="inner-flex-box">
-                                    <img src="./img/grid2.png" alt="grid2">
-                                    <p>솔로스 키친</p>
-                                    <span>
-                                        정성을 다하는 오리엔탈 푸드 전문점
-                                        <img src="./img/next_white.png" alt="next">
-                                    </span>
-                                </a>
-    
-                                <a href="#" class="inner-flex-box">
-                                    <img src="./img/grid3.jpg" alt="grid3">
-                                    <p>카페 필로스</p>
-                                    <span>
-                                        공연과 함께하는  테라스 카페
-                                        <img src="./img/next_white.png" alt="next">
-                                    </span>
-                                </a>
-    
-                                <a href="#" class="inner-flex-box">
-                                    <img src="./img/grid4.png" alt="grid4">
-                                    <p>케익 갤러리</p>
-                                    <span>
-                                        달콤한 크레프트 케이크 전문 카페
-                                        <img src="./img/next_white.png" alt="next">
-                                    </span>
-                                </a>
-                            </div> <!-- outer-flex-box -->                   
-                        </div> <!-- flex-box -->
-                    </div> <!-- container -->
-                </section> <!-- restaurant_and_cafe -->
 
-                <section class="culture-space">
-                    <h1>Culture Space</h1>
-                    <div class="container">
-                        <h2 class="mobile-only">Culture Space</h2>
-                        <div class="flex-box">
-                            <div class="imgs-box">
-                                <div class="large-only img1">
-                                    <img src="./img/culture_img1.png" alt="img1">
-                                    <span>store</span>
-                                </div>
-    
-                                <div class="img2">
-                                    <span class="large-only">library</span>
-                                    <img src="./img/library.png" alt="img2">
-                                </div>
-                            </div> <!-- imgs-box -->
+                            <div class="img2" data-aos="zoom-out" data-aos-delay="150">
+                                <span class="large-only">library</span>
+                                <img src="./img/library.png" alt="img2">
+                            </div>
+                        </div> <!-- imgs-box -->
 
-                            <div class="contents-box">
-                                <h2>Culture Space</h2>
-                                <strong>블루스퀘어, 문화를 만나다.</strong>
-                                <p>
-                                    블루스퀘어가 만들어 낸 공간에는 <br>
-                                    문화와 수많은 가치있는 이야기들이 <br>
-                                    새롭게 기록되어져 담깁니다.
-                                </p>
+                        <div class="contents-box">
+                            <h2 data-aos="fade-up" data-aos-delay="300">Culture Space</h2>
+                            <strong data-aos="fade-up" data-aos-delay="500">블루스퀘어, 문화를 만나다.</strong>
+                            <p data-aos="fade-up" data-aos-delay="700">
+                                블루스퀘어가 만들어 낸 공간에는 <br>
+                                문화와 수많은 가치있는 이야기들이 <br>
+                                새롭게 기록되어져 담깁니다.
+                            </p>
 
-                                <a href="#">
-                                    view more
-                                    <img src="./img/next_black.png" alt="next">
-                                </a>
-                            </div> <!-- contents-box -->
+                            <a href="#" data-aos="fade-up" data-aos-delay="900">
+                                view more
+                                <img src="./img/next_black.png" alt="next">
+                            </a>
+                        </div> <!-- contents-box -->
 
-                        </div> <!-- flex-box -->
-                        
-                    </div> <!-- container -->
-                </section> <!-- culture-space -->
+                    </div> <!-- flex-box -->
+                    
+                </div> <!-- container -->
+            </section> <!-- culture-space -->
         </main> <!-- main -->
 
         <footer>
@@ -344,7 +366,7 @@
                     </div> <!-- right-contents -->
                     
                     <div class="large-only footer-title">
-                        <h1>Blue&ZeroWidthSpace; Square</h1>
+                        <h1>Bl<span style="font-family: 'Pretendard';">u</span>e&ZeroWidthSpace; Sq<span style="font-family: 'Pretendard';">u</span>are</h1>
                     </div>
                 </div> <!-- flex-box -->                
             </div> <!-- container -->
@@ -354,5 +376,9 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
