@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/culture_space.css" type="text/css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.parallax-scroll.min.js"></script>
+    <script src="./js/culture_space.js"></script>
     <title>BLUE SQUARE</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="header-bg-bookpark">
+            <div class="header-bg-bookpark space-header show">
                 <img src="./img/bookpark01.png" alt="서점의 측면 책꽂이에 책이 꽂혀있는 모습">
                 <div class="square">
                     <div class="square-liner sqare-line1"></div>
@@ -28,7 +31,7 @@
                 </div>
             </div> 
 
-            <div class="header-bg-sodam">
+            <div class="header-bg-sodam space-header">
                 <img src="./img/sodam01.png" alt="소담상회 입구 간판을 확대한 사진">
                 <div class="square">
                     <div class="square-liner sqare-line1"></div>
@@ -115,7 +118,7 @@
                     <li><a href="#">북파크 라운지</a></li>
                     <li><a href="#">소담상회</a></li>
                 </ul>
-                <section class="bookpark">
+                <section class="bookpark show">
                     <div class="bookpark-intro">
                         <h2>나만의 서재, 편안한 휴식</h2>
                         <p>
@@ -214,7 +217,7 @@
                 </section> <!-- bookpark -->
 
                 <section class="sodam">
-                    <div class="sodam-intro">
+                    <div class="sodam-intro fixed" id="slider">
                         <h2><strong>소</strong>상공인의 이야기와<br>제품을 <strong>담</strong>은 공간</h2>
                         <p>
                             소담상회는 인터파크, 중소벤처기업부, 중소기업유통센터가 함께하는<br>
@@ -227,8 +230,8 @@
                             다채로운 행사도 진행중이니 다양하게 즐기고 누려보세요.
                         </p>
                     </div> <!-- sodam-intro -->
-    
-                    <div class="blue-nemo-wrap">
+
+                    <div class="blue-nemo-wrap" id="overflow">
                         <div class="sodam-blue">    
                             <div class="circle"></div>
                             <div class="info-img-wrap img-l">

@@ -98,6 +98,12 @@ header {
   position: relative;
   width: 100vw;
 }
+header .space-header {
+  display: none;
+}
+header .space-header.show {
+  display: block;
+}
 header .header-bg-bookpark {
   width: 100%;
   height: 100vh;
@@ -526,6 +532,7 @@ main h1 {
   display: none;
 }
 main ul.tab {
+  position: relative;
   margin-bottom: 70px;
   display: flex;
   justify-content: space-between;
@@ -555,8 +562,11 @@ main ul.tab li a:hover {
 main ul.tab li a:hover::after {
   transform: scale(1);
 }
-main .bookpark {
+main section {
   display: none;
+}
+main section.show {
+  display: block;
 }
 main .bookpark .bookpark-intro {
   margin-bottom: 120px;
@@ -782,11 +792,16 @@ main .sodam .sodam-intro {
   margin-bottom: 300px;
   font-size: 14px;
   text-align: center;
+  background-color: yellow;
 }
 @media screen and (min-width: 1024px) {
   main .sodam .sodam-intro {
+    font-size: 148px;
     margin-bottom: 400px;
   }
+}
+main .sodam .sodam-intro.fixed {
+  position: fixed;
 }
 main .sodam .sodam-intro h2 {
   font-size: 38px;
@@ -806,11 +821,15 @@ main .sodam .sodam-intro p:last-child {
 main .sodam .blue-nemo-wrap {
   font-size: 14px;
   line-height: 1.5em;
+  background-color: white;
 }
 @media screen and (min-width: 1024px) {
   main .sodam .blue-nemo-wrap {
     font-size: 18px;
   }
+}
+main .sodam .blue-nemo-wrap.scroll-event {
+  position: absolute;
 }
 main .sodam .blue-nemo-wrap .sodam-blue {
   position: relative;
@@ -820,12 +839,15 @@ main .sodam .blue-nemo-wrap .sodam-blue .circle {
   top: 600px;
   left: 50%;
   width: 280%;
-  height: 0;
+  height: 1px;
   padding-bottom: 200%;
   border-radius: 50%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-top: 2px solid #000;
   transform: translate(-50%, -800px);
-  z-index: 999;
+  z-index: -1;
+  background-color: white;
 }
 @media screen and (min-width: 1024px) {
   main .sodam .blue-nemo-wrap .sodam-blue .circle {

@@ -41,6 +41,14 @@ header {
     position: relative;
     width: 100vw;
 
+    .space-header {
+        display: none;
+        
+        &.show {
+            display: block;
+        }
+    }
+
     .header-bg-bookpark {
         // display: none;
 
@@ -464,6 +472,7 @@ main {
     }
 
     ul.tab {
+        position: relative;
         margin-bottom: 70px;
 
         @include flex-box() {
@@ -500,9 +509,15 @@ main {
         } //li
     } //ul.tab
 
-    .bookpark {
+    section {
         display: none;
 
+        &.show {
+            display: block;
+        }
+    }
+
+    .bookpark {
         .bookpark-intro {
             margin-bottom: 120px;
             text-align: center;
@@ -744,16 +759,24 @@ main {
     } //bookpark
 
     //========= sodam ==========//
-    .sodam {
+
+    
+
+    .sodam {       
+
         .sodam-intro {
             margin-bottom: 300px;
             font-size: 14px;
             text-align: center;
-            // background-color: yellow;
-
+            background-color: yellow;
+        
             @include responsive(large-tablet-screens) {
+                font-size: 148px;
                 margin-bottom: 400px;
+            }
 
+            &.fixed {
+                position: fixed;
             }
 
             h2 {
@@ -776,13 +799,18 @@ main {
             }
         } //sodam-intro
 
+
         .blue-nemo-wrap {
             font-size: 14px;
             line-height: 1.5em;
+            background-color: white;
 
             @include responsive(large-tablet-screens) {
                 font-size: 18px;
+            }
 
+            &.scroll-event {
+                position: absolute;
             }
 
             .sodam-blue {
@@ -794,17 +822,18 @@ main {
                     top: 600px;
                     left: 50%;
                     width: 280%;
-                    height: 0;
+                    height: 1px;
                     padding-bottom: 200%;
                     border-radius: 50%;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;                   
                     border-top: 2px solid #000;
                     transform: translate(-50%, -800px);
-                    z-index: 999;
-                    // background-color: lightblue;
+                    z-index: -1;
+                    background-color: white;
 
                     @include responsive(large-tablet-screens) {
                         top: 500px;
-
                     }
                 }
 
