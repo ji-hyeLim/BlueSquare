@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/culture_space.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.parallax-scroll.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/culture_space.js"></script>
     <title>BLUE SQUARE</title>
 </head>
@@ -120,14 +121,14 @@
                 </ul>
                 <section class="bookpark show">
                     <div class="bookpark-intro">
-                        <h2>나만의 서재, 편안한 휴식</h2>
-                        <p>
+                        <h2 data-aos="fade-up">나만의 서재, 편안한 휴식</h2>
+                        <p data-aos="fade-in">
                             북파크 라운지는 전문가가 추천한 좋은 책들을 <br>
                             나만의 공간에서 마음껏 읽을 수 있는 고품격 문화 공간입니다.
                         </p>
                     </div> <!-- bookpark-intro -->
     
-                    <div class="bookpark-des-wrap">
+                    <div class="bookpark-des-wrap target-section ready">
                         <div class="bookpark-des-flex bookpark-des-box-L">
                             <div class="text right">
                                 <div>
@@ -414,5 +415,12 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
 </body>
 </html>
