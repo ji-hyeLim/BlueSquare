@@ -58,6 +58,23 @@ footer {
   display: block;
 }
 
+.wrapper {
+  position: relative;
+}
+
+#slider {
+  width: 100%;
+  background-color: red;
+  height: 100%;
+}
+
+#overflow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
 .container {
   position: relative;
   margin: 0 auto;
