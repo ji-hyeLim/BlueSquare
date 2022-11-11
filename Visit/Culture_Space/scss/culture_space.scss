@@ -271,7 +271,6 @@ header {
                 width: 100%;
                 height: 5px;
                 animation: left-right 2s;
-
             }
 
             .sqare-line4 {
@@ -518,17 +517,44 @@ main {
     }
 
     .bookpark {
+        [data-aos="fade-up-slow"] {
+                opacity: 0;
+                transition-property: transform, opacity;
+        
+                &.aos-animate {
+                    opacity: 1;
+                }
+            }
+
+        div {
+            &:active {
+                opacity: 1;
+            }
+        }
+        @keyframes box-ani {
+            from {
+                transform: translate(0, -20px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+        }
+
         .bookpark-intro {
             margin-bottom: 120px;
             text-align: center;
 
             h2 {
                 font-size: $title-font-size;
+                animation: box-ani 1s linear;
             }
             
             p {
                 margin-top: 50px;
                 line-height: 2em;
+                animation: box-ani 1s linear;
             }
         } //bookpark-intro
     
