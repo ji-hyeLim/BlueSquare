@@ -22,11 +22,11 @@
 }
 
 .large-only {    
-        display: none;
+    display: none;
 
-        @include responsive(large-tablet-screens) {
-            display: block;
-        }
+    @include responsive(large-tablet-screens) {
+        display: block;
+    }
 }
 
 html,
@@ -517,30 +517,6 @@ main {
     }
 
     .bookpark {
-        [data-aos="fade-up-slow"] {
-                opacity: 0;
-                transition-property: transform, opacity;
-        
-                &.aos-animate {
-                    opacity: 1;
-                }
-            }
-
-        div {
-            &:active {
-                opacity: 1;
-            }
-        }
-        @keyframes box-ani {
-            from {
-                transform: translate(0, -20px);
-                opacity: 0;
-            }
-            to {
-                transform: translate(0, 0);
-                opacity: 1;
-            }
-        }
 
         .bookpark-intro {
             margin-bottom: 120px;
@@ -548,13 +524,11 @@ main {
 
             h2 {
                 font-size: $title-font-size;
-                animation: box-ani 1s linear;
             }
             
             p {
                 margin-top: 50px;
                 line-height: 2em;
-                animation: box-ani 1s linear;
             }
         } //bookpark-intro
     
@@ -587,7 +561,7 @@ main {
             }
     
             .bookpark-des-flex {
-                margin-bottom: 60px;
+                margin-bottom: 100px;
                 width: 100%;
 
                 &:last-child {

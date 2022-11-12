@@ -568,50 +568,16 @@ main section {
 main section.show {
   display: block;
 }
-main .bookpark [data-aos=fade-up-slow] {
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-main .bookpark [data-aos=fade-up-slow].aos-animate {
-  opacity: 1;
-}
-main .bookpark div:active {
-  opacity: 1;
-}
-@-webkit-keyframes box-ani {
-  from {
-    transform: translate(0, -20px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@keyframes box-ani {
-  from {
-    transform: translate(0, -20px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
 main .bookpark .bookpark-intro {
   margin-bottom: 120px;
   text-align: center;
 }
 main .bookpark .bookpark-intro h2 {
   font-size: 38px;
-  -webkit-animation: box-ani 1s linear;
-          animation: box-ani 1s linear;
 }
 main .bookpark .bookpark-intro p {
   margin-top: 50px;
   line-height: 2em;
-  -webkit-animation: box-ani 1s linear;
-          animation: box-ani 1s linear;
 }
 main .bookpark .bookpark-des-wrap {
   font-size: 16px;
@@ -643,7 +609,7 @@ main .bookpark .bookpark-des-wrap img {
   }
 }
 main .bookpark .bookpark-des-wrap .bookpark-des-flex {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
