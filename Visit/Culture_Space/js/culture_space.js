@@ -22,19 +22,19 @@ $(function() {
     //     }
     // }
 
-    $(window).on("scroll", function() {
+    // $(window).on("scroll", function() {
         
-        var h = $(window).scrollTop();
-        console.log(h);
+    //     var h = $(window).scrollTop();
+    //     console.log(h);
 
-        if(h >= 1100) {
-            $('.sodam-intro').addClass('fixed');
+    //     if(h >= 1100) {
+    //         $('.sodam-intro').addClass('fixed');
 
-        } else {
-            $('.sodam-intro').removeClass('fixed');
+    //     } else {
+    //         $('.sodam-intro').removeClass('fixed');
 
-        }
+    //     }
 
-    });
+    // });
 
 });

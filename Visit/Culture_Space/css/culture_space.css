@@ -94,6 +94,39 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 1024px) {
+  .img-l {
+    position: relative;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-l .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  .img-l .left {
+    background-color: purple;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .img-r {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .img-r .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
 header {
   position: relative;
   width: 100vw;
@@ -214,8 +247,8 @@ header .header-bg-bookpark .square .square-title span {
   position: absolute;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(1) {
-  top: 10%;
-  left: 10%;
+  top: 12%;
+  left: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
@@ -226,7 +259,7 @@ header .header-bg-bookpark .square .square-title span:nth-child(2) {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 10%;
+  top: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s;
@@ -234,8 +267,8 @@ header .header-bg-bookpark .square .square-title span:nth-child(2) {
           animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(3) {
-  top: 10%;
-  right: 10%;
+  top: 12%;
+  right: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 1.6s;
           animation: fadeIn 1.6s;
@@ -243,8 +276,8 @@ header .header-bg-bookpark .square .square-title span:nth-child(3) {
           animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(4) {
-  bottom: 10%;
-  left: 10%;
+  bottom: 12%;
+  left: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s;
@@ -255,7 +288,7 @@ header .header-bg-bookpark .square .square-title span:nth-child(5) {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10%;
+  bottom: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 1.2s;
           animation: fadeIn 1.2s;
@@ -263,8 +296,8 @@ header .header-bg-bookpark .square .square-title span:nth-child(5) {
           animation-fill-mode: forwards;
 }
 header .header-bg-bookpark .square .square-title span:nth-child(6) {
-  bottom: 10%;
-  right: 10%;
+  bottom: 12%;
+  right: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 2.4s;
           animation: fadeIn 2.4s;
@@ -361,8 +394,8 @@ header .header-bg-sodam .square .square-title span {
   position: absolute;
 }
 header .header-bg-sodam .square .square-title span:nth-child(1) {
-  top: 10%;
-  left: 10%;
+  top: 12%;
+  left: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
@@ -370,8 +403,8 @@ header .header-bg-sodam .square .square-title span:nth-child(1) {
           animation-fill-mode: forwards;
 }
 header .header-bg-sodam .square .square-title span:nth-child(2) {
-  top: 10%;
-  right: 10%;
+  top: 12%;
+  right: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
@@ -381,8 +414,8 @@ header .header-bg-sodam .square .square-title span:nth-child(2) {
           animation-delay: 0.3s;
 }
 header .header-bg-sodam .square .square-title span:nth-child(3) {
-  bottom: 10%;
-  left: 10%;
+  bottom: 12%;
+  left: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
@@ -392,8 +425,8 @@ header .header-bg-sodam .square .square-title span:nth-child(3) {
           animation-delay: 0.5s;
 }
 header .header-bg-sodam .square .square-title span:nth-child(4) {
-  bottom: 10%;
-  right: 10%;
+  bottom: 12%;
+  right: 12%;
   opacity: 0;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
@@ -648,11 +681,9 @@ main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
     right: 0;
     width: calc(100% - 540px);
     height: 100%;
-    background-color: azure;
   }
   main .bookpark .bookpark-des-wrap .bookpark-des-box-L .text div {
     display: inline-block;
-    background-color: pink;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -792,16 +823,12 @@ main .sodam .sodam-intro {
   margin-bottom: 300px;
   font-size: 14px;
   text-align: center;
-  background-color: yellow;
 }
 @media screen and (min-width: 1024px) {
   main .sodam .sodam-intro {
     font-size: 148px;
     margin-bottom: 400px;
   }
-}
-main .sodam .sodam-intro.fixed {
-  position: fixed;
 }
 main .sodam .sodam-intro h2 {
   font-size: 38px;
@@ -828,13 +855,10 @@ main .sodam .blue-nemo-wrap {
     font-size: 18px;
   }
 }
-main .sodam .blue-nemo-wrap.scroll-event {
-  position: absolute;
-}
-main .sodam .blue-nemo-wrap .sodam-blue {
+main .sodam .blue-nemo-wrap .blue {
   position: relative;
 }
-main .sodam .blue-nemo-wrap .sodam-blue .circle {
+main .sodam .blue-nemo-wrap .blue .circle {
   position: absolute;
   top: 600px;
   left: 50%;
@@ -850,138 +874,102 @@ main .sodam .blue-nemo-wrap .sodam-blue .circle {
   background-color: white;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-blue .circle {
+  main .sodam .blue-nemo-wrap .blue .circle {
     top: 500px;
   }
 }
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-@media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap {
-    flex-direction: row-reverse;
-  }
-}
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .info {
   order: 2;
   margin-bottom: 40px;
 }
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info h3 {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .info h3 {
   font-size: 24px;
   padding: 10px 0;
 }
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info h4 {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .info h4 {
   font-size: 18px;
   padding: 10px 0;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info {
+  main .sodam .blue-nemo-wrap .blue .info-img-wrap .info {
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info .title h3 {
+  main .sodam .blue-nemo-wrap .blue .info-img-wrap .info .title h3 {
     font-size: 38px;
   }
 }
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info .title h3 .title-blue {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .info .title h3 .blue-title {
   color: #0094d6;
 }
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap .info .blue-desc {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .info .blue-desc {
   width: 100%;
 }
-main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap img {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap img {
   width: 100%;
   order: 1;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-blue .info-img-wrap img {
+  main .sodam .blue-nemo-wrap .blue .info-img-wrap img {
     width: 700px;
     height: 500px;
     margin-bottom: 0;
   }
 }
-main .sodam .blue-nemo-wrap .sodam-nemo {
+main .sodam .blue-nemo-wrap .nemo {
   margin-top: 140px;
 }
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap {
+  main .sodam .blue-nemo-wrap .nemo .info-img-wrap {
     flex-direction: row-reverse;
   }
 }
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info {
   order: 2;
   margin-bottom: 40px;
 }
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info h3,
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info h4 {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info h3,
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info h4 {
   padding: 10px 0;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info {
+  main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info {
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info .title h3 {
+  main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info .title h3 {
     font-size: 38px;
   }
 }
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info .title h3 .title-nemo {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info .title h3 .nemo-title {
   color: orangered;
 }
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap .info .blue-desc {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info .blue-desc {
   width: 100%;
 }
-main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap img {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap img {
   width: 100%;
   order: 1;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .sodam-nemo .info-img-wrap img {
+  main .sodam .blue-nemo-wrap .nemo .info-img-wrap img {
     width: 700px;
     height: 500px;
     margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .sodam .img-l {
-    position: relative;
-    text-align: right;
-    display: flex;
-    justify-content: space-between;
-  }
-  main .sodam .img-l .info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-  }
-  main .sodam .img-l .left {
-    justify-content: start;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .sodam .img-r {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
-  main .sodam .img-r .info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
   }
 }
 main .sodam .use-guide {

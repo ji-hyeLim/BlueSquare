@@ -261,6 +261,21 @@ main {
         &:hover::after {
           transform: scale(1);
         }
+
+        &.clicked::after {
+          margin-top: 10px;
+          display: block;
+          content: "";
+          width: 100%;
+          height: 8px;
+          border-radius: 5px 5px 0 0;
+          background-color: #000;
+          transform: scale(1);
+        }
+
+        &.clicked {
+          font-weight: 600;
+        }
       }
     }//li    
   }//ul.tab
@@ -281,12 +296,20 @@ main {
       border-radius: 30px;
       
       a {
+        &.sub-tab-active {
+          font-weight: 600;
+          border-radius: 30px;
+          background-color: rgba($color: #0094d6, $alpha: 0.2)
+        }
+        
         &:hover {
           font-weight: 600;
           border-radius: 30px;
           // background-color: $gray-bg;
           background-color: rgba($color: #0094d6, $alpha: 0.2)
         }
+
+        
       }
     } //li
   } //sub-tab

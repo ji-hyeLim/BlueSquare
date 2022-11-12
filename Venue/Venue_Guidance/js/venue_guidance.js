@@ -3,6 +3,9 @@ $(function () {
   $('.tab li').click(function (e) {
     e.preventDefault();
     let idx = $(this).index();
+    $('.tab li a').removeClass('clicked');
+    $('.tab li a').eq(idx).addClass('clicked');
+
     $('section').removeClass('show');
     $('section').eq(idx).addClass('show');
   });
@@ -12,7 +15,28 @@ $(function () {
     let idx = $(this).index();
     console.log(idx);
     $('section div').removeClass('active');
-    $('section div').eq(idx).addClass('active');
+    $('section div').eq(idx).addClass('active'); 
+
+    $('.sub-tab li a').removeClass('sub-tab-active');
+    $('.sub-tab li a').eq(idx).addClass('sub-tab-active');
+  });
+
+  $('.sub-tab li').click(function (e) {
+    e.preventDefault();
+    $('section').each(function() {
+
+    })
+
+
+
+
+    let idx = $(this).index();
+    console.log(idx);
+    $('section div').removeClass('active');
+    $('section div').eq(idx).addClass('active'); 
+
+    $('.sub-tab li a').removeClass('sub-tab-active');
+    $('.sub-tab li a').eq(idx).addClass('sub-tab-active');
   });
 
   // ======================== 이미지 넘기기 신한카드홀 ========================

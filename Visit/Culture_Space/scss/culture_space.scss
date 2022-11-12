@@ -35,6 +35,45 @@ body {
     overflow-x: hidden;
 }
 
+.img-l {
+    @include responsive (large-tablet-screens) {
+        position: relative;
+        text-align: right;
+
+        @include flex-box() {
+            // flex-direction: row-reverse;
+        }
+
+
+        .info {
+            @include pos-center-y() {
+                right: 0;
+            };
+        }
+
+        .left {
+            background-color: purple;
+        }
+    }
+} //img-l
+
+.img-r {
+    @include responsive (large-tablet-screens) {
+        position: relative;
+
+        @include flex-box() {
+            flex-direction: row;
+        }
+
+        .info {
+            @include pos-center-y() {
+                left: 0;
+            };
+        }
+
+    }
+} //img-r
+
 // * ===================== header ===================== *
 
 header {
@@ -144,8 +183,8 @@ header {
                 span {
                     position: absolute;
                     &:nth-child(1) {
-                        top: 10%;
-                        left: 10%;
+                        top: 12%;
+                        left: 12%;
                         opacity: 0;
                         animation: fadeIn 2s;
                         animation-fill-mode: forwards;
@@ -153,24 +192,23 @@ header {
 
                     &:nth-child(2) {
                         @include pos-center-x();
-                        top: 10%;
+                        top: 12%;
                         opacity: 0;
                         animation: fadeIn 1s;
                         animation-fill-mode: forwards;
-
                     }
 
                     &:nth-child(3) {
-                        top: 10%;
-                        right: 10%;
+                        top: 12%;
+                        right: 12%;
                         opacity: 0;
                         animation: fadeIn 1.6s;
                         animation-fill-mode: forwards;
                     }
                     
                     &:nth-child(4) {
-                        bottom: 10%;
-                        left: 10%;
+                        bottom: 12%;
+                        left: 12%;
                         opacity: 0;
                         animation: fadeIn 1s;
                         animation-fill-mode: forwards;
@@ -178,15 +216,15 @@ header {
 
                     &:nth-child(5) {
                         @include pos-center-x();
-                        bottom: 10%;
+                        bottom: 12%;
                         opacity: 0;
                         animation: fadeIn 1.2s;
                         animation-fill-mode: forwards;
                     }
 
                     &:nth-child(6) {
-                        bottom: 10%;
-                        right: 10%;
+                        bottom: 12%;
+                        right: 12%;
                         opacity: 0;
                         animation: fadeIn 2.4s;
                         animation-fill-mode: forwards;
@@ -289,16 +327,16 @@ header {
                 span {
                     position: absolute;
                     &:nth-child(1) {
-                        top: 10%;
-                        left: 10%;
+                        top: 12%;
+                        left: 12%;
                         opacity: 0;
                         animation: fadeIn 2s;
                         animation-fill-mode: forwards;
                     }
 
                     &:nth-child(2) {
-                        top: 10%;
-                        right: 10%;
+                        top: 12%;
+                        right: 12%;
                         opacity: 0;
                         animation: fadeIn 2s;
                         animation-fill-mode: forwards;
@@ -306,8 +344,8 @@ header {
                     }
 
                     &:nth-child(3) {
-                        bottom: 10%;
-                        left: 10%;
+                        bottom: 12%;
+                        left: 12%;
                         opacity: 0;
                         animation: fadeIn 2s;
                         animation-fill-mode: forwards;
@@ -315,8 +353,8 @@ header {
                     }
                     
                     &:nth-child(4) {
-                        bottom: 10%;
-                        right: 10%;
+                        bottom: 12%;
+                        right: 12%;
                         opacity: 0;
                         animation: fadeIn 2s;
                         animation-fill-mode: forwards;
@@ -353,7 +391,7 @@ header {
                             width: 132px;
                         }
                     }
-                }
+                } //a
             } // header-logo
 
             nav.main-menu {
@@ -516,8 +554,8 @@ main {
         }
     }
 
+// ================== bookpark ================== //
     .bookpark {
-
         .bookpark-intro {
             margin-bottom: 120px;
             text-align: center;
@@ -596,12 +634,12 @@ main {
                         right: 0;
                         width: calc(100% - 540px);
                         height: 100%;
-                        background-color: azure;
+                        // background-color: azure;
 
                         div {
                             // width: 100%;
                             display: inline-block;
-                            background-color: pink; 
+                            // background-color: pink; 
 
                             @include pos-center();
                         }
@@ -758,25 +796,18 @@ main {
         } //use-guide
     } //bookpark
 
-    //========= sodam ==========//
 
-    
-
+// ================== sodam ===================//
     .sodam {       
-
         .sodam-intro {
             margin-bottom: 300px;
             font-size: 14px;
             text-align: center;
-            background-color: yellow;
+            // background-color: yellow;
         
             @include responsive(large-tablet-screens) {
                 font-size: 148px;
                 margin-bottom: 400px;
-            }
-
-            &.fixed {
-                position: fixed;
             }
 
             h2 {
@@ -809,11 +840,8 @@ main {
                 font-size: 18px;
             }
 
-            &.scroll-event {
-                position: absolute;
-            }
-
-            .sodam-blue {
+            // ========== blue ========== //
+            .blue {
                 position: relative;
                 
                 .circle {
@@ -844,10 +872,6 @@ main {
                         flex-direction: column;
                     }
 
-                    @include responsive (large-tablet-screens) {
-                        flex-direction: row-reverse;
-                    }
-
                     .info {
                         order: 2;
                         margin-bottom: 40px;
@@ -873,7 +897,7 @@ main {
                                     font-size: $title-font-size;
                                 }
         
-                                .title-blue {
+                                .blue-title {
                                     color: $point-color;
                                 }
                             }
@@ -899,7 +923,9 @@ main {
                 } //info-img-wrap
             } //sodam-blue
 
-            .sodam-nemo {
+
+            // ========== nemo ========== //
+            .nemo {
                 margin-top: 140px;
     
                 .info-img-wrap {
@@ -932,7 +958,7 @@ main {
                                     font-size: $title-font-size;
                                 }
         
-                                .title-nemo {
+                                .nemo-title {
                                     color: orangered;
                                 }
                             }
@@ -960,45 +986,7 @@ main {
         } //blue-nemo-wrap
 
 
-        .img-l {
-            @include responsive (large-tablet-screens) {
-                position: relative;
-                text-align: right;
-
-                @include flex-box() {
-                    // flex-direction: row;
-                }
-
-                .info {
-                    @include pos-center-y() {
-                        right: 0;
-                    };
-                }
-
-                .left {
-                    justify-content: start;
-                }
-
-
-            }
-        } //img-l
-
-        .img-r {
-            @include responsive (large-tablet-screens) {
-                position: relative;
-
-                @include flex-box() {
-                    flex-direction: row-reverse;
-                }
-
-                .info {
-                    @include pos-center-y() {
-                        left: 0;
-                    };
-                }
-
-            }
-        } //img-r
+        
 
         .use-guide {
             margin: 200px 0;

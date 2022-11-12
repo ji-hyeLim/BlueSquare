@@ -106,7 +106,8 @@ header .header-bg {
 header .header-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -292,6 +293,19 @@ main ul.tab li a:hover {
 main ul.tab li a:hover::after {
   transform: scale(1);
 }
+main ul.tab li a.clicked::after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 8px;
+  border-radius: 5px 5px 0 0;
+  background-color: #000;
+  transform: scale(1);
+}
+main ul.tab li a.clicked {
+  font-weight: 600;
+}
 main .sub-tab {
   width: 220px;
   height: 30px;
@@ -306,6 +320,11 @@ main .sub-tab li {
   text-align: center;
   line-height: 30px;
   border-radius: 30px;
+}
+main .sub-tab li a.sub-tab-active {
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: rgba(0, 148, 214, 0.2);
 }
 main .sub-tab li a:hover {
   font-weight: 600;
@@ -838,4 +857,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=venue_guidance.css.map */
