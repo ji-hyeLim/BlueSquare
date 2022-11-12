@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stageb.css" type="text/css">
     <script src="https://kit.fontawesome.com/df5971e9bf.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/FnB_serve.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>BLUE SQUARE</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -20,91 +25,105 @@
 
             <!-- fnbserve-header!!! -->
             <div class="fnbserve-header">
-                <div class="hd-img">
+                <!-- <div class="hd-img">
                     <img class="mb" src="./img/스테이지b이미지레이어모바일.png" alt="스테이지비">
-                </div>
-                <div class="hd-txt">
-                    <p class="50px">STAGE B</p>
-                </div>
-                <div class="dw-icon">
-                    <!-- <a href="#"><i class="fa-solid fa-arrow-down-long fa-2x"></i></a> -->
-                    <a href="#"><i class="fa-solid fa-check fa-2x"></i></a>
+                </div> -->
+                <div class="fix-box">
+                    <div class="hd-txt">
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="0">S</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="100">T</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="200">A</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="300">G</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="400">E</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="500">&nbsp;</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="600">B</span>
+                    </div>
+                    <div class="dw-icon">
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-down-long fa-2x"></i></a> -->
+                        <a href="#link-btn"><i class="fa-solid fa-check fa-2x"></i></a>
+                    </div>
                 </div>
             </div> <!-- fnbserve-header -->
 
-            <div class="logo-menu-box">
-                <div class="container">
-                    <div class="flex-box">
-                        <div class="header-logo">
-                            <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
-                            <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
-                        </div>
-    
-                        <nav class="main-menu">
-                            <ul class="gnb">
-                                <li>
-                                    <a href="#">블루스퀘어</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">기관소개</a></li>
-                                        <li><a href="#">좌석배치도</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">공연안내</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">공연예매</a></li>
-                                        <li><a href="#">공연일정</a></li>
-                                        <li><a href="#">예매안내</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">대관안내</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">대관시설/대관료</a></li>
-                                        <li><a href="#">대관신청</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">이용안내</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">레스토랑&카페</a></li>
-                                        <li><a href="#">문화공간</a></li>
-                                        <li><a href="#">오시는 길</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">고객센터</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">공지사항</a></li>
-                                        <li><a href="#">FAQ</a></li>
-                                    </ul>
-                                </li>
-                            </ul> <!-- gnb -->
-                        </nav> <!-- main-menu-->
-    
-                        <div class="right-menu">
-                            <ul>                                
-                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png" alt="ticket"></a></li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
-                                <li class="large-only"><a href="#">TICKET</a></li>
-                                <li class="large-only"><a href="#">LOG IN</a></li>
-                                <li class="large-only"><a href="#">JOIN</a></li>
-                            </ul>
-                        </div>
-                    </div> <!-- flex-box -->
-                </div> <!-- container -->
-            </div> <!-- logo-menu-box -->
+                <div class="logo-menu-box">
+                    <div class="container">
+                        <div class="flex-box">
+                            <div class="header-logo">
+                                <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
+                                <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
+                            </div>
+
+                            <nav class="main-menu">
+                                <ul class="gnb">
+                                    <li>
+                                        <a href="#">블루스퀘어</a>
+                                        <ul class="lnb">
+                                            <li><a href="#">기관소개</a></li>
+                                            <li><a href="#">좌석배치도</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">공연안내</a>
+                                        <ul class="lnb">
+                                            <li><a href="#">공연예매</a></li>
+                                            <li><a href="#">공연일정</a></li>
+                                            <li><a href="#">예매안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">대관안내</a>
+                                        <ul class="lnb">
+                                            <li><a href="#">대관시설/대관료</a></li>
+                                            <li><a href="#">대관신청</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">이용안내</a>
+                                        <ul class="lnb">
+                                            <li><a href="#">레스토랑&카페</a></li>
+                                            <li><a href="#">문화공간</a></li>
+                                            <li><a href="#">오시는 길</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">고객센터</a>
+                                        <ul class="lnb">
+                                            <li><a href="#">공지사항</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> <!-- gnb -->
+                            </nav> <!-- main-menu-->
+
+                            <div class="right-menu">
+                                <ul>
+                                    <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png"
+                                                alt="ticket"></a></li>
+                                    <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png"
+                                                alt="menu"></a></li>
+                                    <li class="large-only"><a href="#">TICKET</a></li>
+                                    <li class="large-only"><a href="#">LOG IN</a></li>
+                                    <li class="large-only"><a href="#">JOIN</a></li>
+                                </ul>
+                            </div>
+                        </div> <!-- flex-box -->
+                    </div> <!-- container -->
+                </div> <!-- logo-menu-box -->
+            
+
         </header> <!-- header -->
 
-        <main>
-            <div id="link-btn" class="container">
+        <main id="link-btn">
+            <div class="container">
                 <h2>main</h2>
-                <ul class="fnb-menu">
-                    <li><a  href="#">솔로스 키친</a></li>
-                    <li><a href="#">스테이지 B</a></li>
-                    <li><a href="#">카페 필로스</a></li>
-                    <li><a href="#">케익 갤러리</a></li>
-                </ul>
+                <div class="fixed-box on">
+                    <ul class="fnb-menu">
+                        <li><a href="#">솔로스 키친</a></li>
+                        <li><a href="#">스테이지 B</a></li>
+                        <li><a href="#">카페 필로스</a></li>
+                        <li><a href="#">케익 갤러리</a></li>
+                    </ul>
+                </div>
                 <div class="fnb-info1">
                     <div class="info-img">
                         <img src="./img/스테이지비1맞춤.png" alt="스테이지비사진1">
@@ -152,11 +171,12 @@
                         <h2>Let's Blue Square Together</h2>
                         <br>
                         <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
+                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail.
+                                bluesquare@interpark.com</span>
                         </address>
                         <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
                     </div> <!-- left-contents -->
-    
+
                     <div class="right-contents">
                         <ul class="footer-menu">
                             <li>Menu
@@ -193,17 +213,24 @@
                             </li>
                         </ul> <!-- footer-menu -->
                     </div> <!-- right-contents -->
-                    
+
                     <div class="large-only footer-title">
                         <h1>Blue&ZeroWidthSpace; Square</h1>
                     </div>
-                </div> <!-- flex-box -->                
+                </div> <!-- flex-box -->
             </div> <!-- container -->
-
             <div class="large-only line">
                 <span></span>
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        });
+    </script>
 </body>
+
 </html>

@@ -30,6 +30,19 @@
     }
 }
 
+@keyframes mover {
+    from {
+        width: 25%;
+
+    }
+
+    to {
+        width: 30%;
+
+    }
+}
+
+
 html,
 body {
     max-width: 100%;
@@ -101,7 +114,7 @@ header {
                     width: 100%;
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: -100px;
+                        margin-left: -90px;
                         width: 120%;
                     }
 
@@ -143,17 +156,18 @@ header {
                 }
 
                 &:hover {
-                    transform: scale(1.05,1);
+                    scale: 1.05;
                     transition: all 0.5s;
 
                     @include responsive(small-tablet-screens) {
-                        transform: scale(1.05,1);
+                        scale: none;
                         width: 130%;
                     }
 
                     @include responsive(large-tablet-screens) {
                         scale: none;
                         width: 30%;
+                        // animation: mover 1s linear;
                     }
                 }
             }
@@ -231,7 +245,7 @@ header {
                 .philos {
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: 0px;
+                        margin-left: -10px;
                         width: 120%;
                     }
 
@@ -295,7 +309,7 @@ header {
                     width: 100%;
 
                     @include responsive(large-tablet-screens) {
-                        margin-left: 50px;
+                        margin-left: 30px;
                         width: 120%;
                     }
 

@@ -88,6 +88,59 @@ footer {
   }
 }
 
+@-webkit-keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes text-loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes text-loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -98,72 +151,103 @@ header {
   position: relative;
   width: 100vw;
 }
-@media screen and (min-width: 1024px) {
-  header {
-    width: 100%;
-    height: 936;
-    background-image: url(../img/이미지레이어.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
-header .header-bg {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-header .solos-header {
-  position: relative;
+header .ov-header {
   width: 100%;
   height: 100vh;
 }
-header .solos-header .hd-img img.mb {
+header .ov-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
 }
-@media screen and (min-width: 1024px) {
-  header .solos-header .hd-img img.mb {
+@media screen and (min-width: 600px) {
+  header .ov-header .hd-img img.mb {
     display: none;
   }
 }
-header .solos-header .hd-txt {
+header .ov-header .hd-img img.pc {
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  header .ov-header .hd-img img.pc {
+    display: block;
+  }
+}
+header .ov-header .hd-img .line-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-header .solos-header .hd-txt p {
-  color: white;
-  font-weight: 600;
-  font-size: 40px;
-  font-family: "Montserrat", sans-serif, Arial;
-}
-@media screen and (min-width: 1024px) {
-  header .solos-header .hd-txt p {
-    font-size: 50px;
-  }
-}
-header .solos-header .dw-icon {
+header .ov-header .hd-img .line-box div.p-box {
+  position: relative;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: 40px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
 }
-@media screen and (min-width: 1024px) {
-  header .solos-header .dw-icon {
-    bottom: 60px;
+header .ov-header .hd-img .line-box div.p-box p {
+  opacity: 0;
+  -webkit-animation: fadeUp 3s;
+          animation: fadeUp 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: calc(1vw + 30px);
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif, Arial;
+}
+@media screen and (min-width: 320px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 40px);
   }
 }
-header .solos-header .dw-icon img {
-  width: 45px;
-  height: 45px;
+@media screen and (min-width: 600px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 50px);
+  }
 }
 @media screen and (min-width: 1024px) {
-  header .solos-header .dw-icon img {
-    width: 54px;
-    height: 54px;
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 60px);
   }
+}
+@media screen and (min-width: 1400px) {
+  header .ov-header .hd-img .line-box div.p-box p {
+    font-size: calc(1vw + 70px);
+  }
+}
+header .ov-header .hd-img .line-box div.p-box::before {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
+}
+header .ov-header .hd-img .line-box div.p-box::after {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
 header .logo-menu-box {
   position: absolute;
@@ -289,261 +373,314 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
 }
 
 main {
-  position: relative;
-  padding-top: 110px;
+  margin: 266px 0;
 }
-main h2 {
+main .title {
+  font-weight: 600;
   font-size: 0;
 }
-main ul.fnb-menu {
-  width: 60%;
-  margin-top: 90px;
-  display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu {
-    margin-top: 140px;
-    width: 40%;
+  main .title {
+    margin-bottom: 70px;
+    font-size: 36px;
   }
 }
-main ul.fnb-menu li {
-  flex: 50%;
-  width: 30%;
-  border: 1px solid #000;
-  border-right: 0;
-  border-bottom: 0;
-}
-main ul.fnb-menu li:nth-child(2) {
-  border-right: 1px solid #000;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:nth-child(2) {
-    border: 0;
-  }
-}
-main ul.fnb-menu li:last-child {
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:last-child {
-    border: 0;
-  }
-}
-main ul.fnb-menu li:nth-child(3) {
-  border-bottom: 1px solid #000;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:nth-child(3) {
-    border: 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li {
-    flex: 25%;
-    border: 0;
-  }
-}
-main ul.fnb-menu li a {
-  padding: 10px;
-  text-align: center;
-}
-main ul.fnb-menu li a:hover {
-  font-weight: 600;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li a {
-    padding: 0;
-  }
-  main ul.fnb-menu li a::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    margin-top: 5px;
-    background-color: #000;
-    transform: scale(0);
-    transition: all 0.5s;
-  }
-  main ul.fnb-menu li a:hover::after {
-    transform: scale(0.55);
-  }
-}
-main .solos-info1 {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 180px;
-  margin-top: 90px;
-}
-@media screen and (min-width: 1024px) {
-  main .solos-info1 {
-    margin-top: 150px;
-    flex-direction: row;
-  }
-}
-main .solos-info1 .info-img img {
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  main .solos-info1 .info-img img {
-    min-width: 620px;
-    height: 609px;
-  }
-}
-main .solos-info1 .info-txt {
-  padding-top: 55px;
-  padding-left: 0;
-}
-@media screen and (min-width: 1024px) {
-  main .solos-info1 .info-txt {
-    width: 474px;
-    height: 609px;
-    padding-top: 156px;
-    padding-left: 20px;
-    border-top: 1px solid #0094d6;
-    border-bottom: 1px solid #0094d6;
-  }
-}
-main .solos-info1 .info-txt p.solos-1 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  padding-bottom: 40px;
-}
-main .solos-info1 .info-txt p.solos-2 {
-  font-size: 16px;
-  line-height: 30px;
-  padding-bottom: 40px;
-}
-main .solos-info1 .info-txt p.solos-3 {
-  font-size: 16px;
-  line-height: 28px;
-}
-main .solos-info1 .info-txt p.solos-3 .txt-bd {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 50px;
-}
-main .solos-info2 {
+main .page-info1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
-  padding-top: 55px;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 {
+  main .page-info1 {
     flex-direction: row;
-    margin-top: 200px;
   }
 }
-main .solos-info2 .info-img img {
+main .page-info1 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-img img {
-    min-width: 620px;
-    height: 609px;
+  main .page-info1 .info-img img {
+    width: 300;
+    height: 300;
+    padding-right: 60px;
   }
 }
-main .solos-info2 .info-txt {
-  padding-top: 51px;
-  padding-left: 0px;
+@media screen and (min-width: 1400px) {
+  main .page-info1 .info-img img {
+    width: 100%;
+  }
+}
+main .page-info1 .info-txt {
+  padding-left: 0;
+  margin-bottom: 40px;
+  -webkit-animation: fadeIn 1s 3s linear forwards;
+          animation: fadeIn 1s 3s linear forwards;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info2 .info-txt {
-    width: 474px;
-    height: 609px;
-    padding-top: 156px;
-    padding-left: 20px;
-    border-top: 1px solid #0094d6;
-    border-bottom: 1px solid #0094d6;
+  main .page-info1 .info-txt {
+    width: 358px;
+    height: 454px;
   }
 }
-main .solos-info2 .info-txt p.solos-1 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  padding-bottom: 40px;
+@media screen and (min-width: 1400px) {
+  main .page-info1 .info-txt {
+    padding-top: 80px;
+    width: 474px;
+  }
 }
-main .solos-info2 .info-txt p.solos-2 {
+main .page-info1 .info-txt p.txt1 {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif, Arial;
+  color: #0094d6;
+}
+@media screen and (min-width: 1024px) {
+  main .page-info1 .info-txt p.txt1 {
+    margin-top: 40px;
+  }
+}
+main .page-info1 .info-txt p.txt2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 40px 0;
+}
+main .page-info1 .info-txt p.txt3 {
+  line-height: 1.5;
   font-size: 16px;
-  line-height: 30px;
-  padding-bottom: 40px;
 }
-main .solos-info2 .info-txt p.solos-3 {
-  font-size: 16px;
-  line-height: 28px;
+@media screen and (min-width: 1024px) {
+  main .page-info1 .info-txt p.txt3 {
+    width: 358px;
+  }
 }
-main .solos-info2 .info-txt p.solos-3 .txt-bd {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 50px;
+@media screen and (min-width: 1400px) {
+  main .page-info1 .info-txt p.txt3 {
+    width: 474px;
+  }
 }
-main .solos-info3 {
+main .page-info2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 55px;
-  margin-top: 20px;
-  margin-bottom: 110px;
+  margin-top: 134px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 {
+  main .page-info2 {
     flex-direction: row;
-    margin-top: 200px;
-    margin-bottom: 300px;
   }
 }
-main .solos-info3 .info-img img {
+main .page-info2 .info-img img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-img img {
-    min-width: 620px;
-    height: 609px;
+  main .page-info2 .info-img img {
+    min-width: 300;
+    height: 300;
+    padding-left: 60px;
   }
 }
-main .solos-info3 .info-txt {
-  padding-top: 51px;
-  padding-left: 0px;
+@media screen and (min-width: 1400px) {
+  main .page-info2 .info-img img {
+    width: 100%;
+  }
+}
+main .page-info2 .info-txt {
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 1024px) {
-  main .solos-info3 .info-txt {
-    width: 474px;
-    height: 609px;
-    padding-top: 156px;
-    padding-left: 20px;
-    border-top: 1px solid #0094d6;
-    border-bottom: 1px solid #0094d6;
+  main .page-info2 .info-txt {
+    padding-right: 0;
+    width: 374px;
+    height: 454px;
   }
 }
-main .solos-info3 .info-txt p.solos-1 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  padding-bottom: 40px;
+@media screen and (min-width: 1400px) {
+  main .page-info2 .info-txt {
+    padding-top: 80px;
+    width: 474px;
+  }
 }
-main .solos-info3 .info-txt p.solos-2 {
+main .page-info2 .info-txt p.txt1 {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif, Arial;
+  color: #0094d6;
+}
+@media screen and (min-width: 1024px) {
+  main .page-info2 .info-txt p.txt1 {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .page-info2 .info-txt p.txt1 {
+    margin-left: 100px;
+  }
+}
+main .page-info2 .info-txt p.txt2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1400px) {
+  main .page-info2 .info-txt p.txt2 {
+    margin-left: 100px;
+  }
+}
+main .page-info2 .info-txt p.txt3 {
+  line-height: 1.5;
   font-size: 16px;
-  line-height: 30px;
-  padding-bottom: 40px;
 }
-main .solos-info3 .info-txt p.solos-3 {
+@media screen and (min-width: 1024px) {
+  main .page-info2 .info-txt p.txt3 {
+    width: 374px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .page-info2 .info-txt p.txt3 {
+    margin-left: 100px;
+  }
+}
+main .page-info3 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  margin-top: 134px;
+}
+@media screen and (min-width: 1024px) {
+  main .page-info3 {
+    flex-direction: row;
+  }
+}
+main .page-info3 .info-img img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .page-info3 .info-img img {
+    width: 300;
+    height: 300;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .page-info3 .info-img img {
+    width: 100%;
+  }
+}
+main .page-info3 .info-txt {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  main .page-info3 .info-txt {
+    width: 370px;
+    height: 454px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .page-info3 .info-txt {
+    margin-top: 10px;
+    padding-top: 80px;
+    width: 474px;
+  }
+}
+main .page-info3 .info-txt p.txt1 {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif, Arial;
+  color: #0094d6;
+}
+@media screen and (min-width: 1024px) {
+  main .page-info3 .info-txt p.txt1 {
+    margin-top: 40px;
+  }
+}
+main .page-info3 .info-txt p.txt2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 40px 0;
+}
+main .page-info3 .info-txt p.txt3 {
+  line-height: 1.5;
   font-size: 16px;
-  line-height: 28px;
 }
-main .solos-info3 .info-txt p.solos-3 .txt-bd {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 50px;
+@media screen and (min-width: 1024px) {
+  main .page-info3 .info-txt p.txt3 {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .page-info3 .info-txt p.txt3 {
+    width: 474px;
+  }
+}
+main .bottom-txt {
+  max-width: 587px;
+  height: 163px;
+  margin-top: 134px;
+}
+@media screen and (min-width: 600px) {
+  main .bottom-txt {
+    position: absolute;
+    left: 50%;
+    margin-left: -293.5px;
+  }
+}
+main .bottom-txt div.b-txt {
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+}
+main .bottom-txt div.b-txt .bold-txt {
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main .bottom-txt div.b-txt {
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+main .flow-txt-wrap {
+  margin-top: 134px;
+  font-size: 120px;
+}
+@media screen and (min-width: 600px) {
+  main .flow-txt-wrap {
+    padding-top: 238px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .flow-txt-wrap {
+    padding-top: 297px;
+  }
+}
+main .flow-txt-wrap div {
+  color: #0094d6;
+  opacity: 0.5;
+  display: flex;
+  white-space: nowrap;
+  font-size: 100px;
+  font-weight: 600;
+}
+@media screen and (min-width: 600px) {
+  main .flow-txt-wrap div {
+    font-size: 150px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .flow-txt-wrap div {
+    font-size: 200px;
+  }
+}
+main .flow-txt-wrap div .flow-txt {
+  padding-right: 22px;
+  -webkit-animation: text-loop 10s linear infinite;
+          animation: text-loop 10s linear infinite;
 }
 
 footer {
@@ -714,4 +851,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=overview.css.map */

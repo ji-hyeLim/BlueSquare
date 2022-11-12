@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/philos.css" type="text/css">
     <script src="https://kit.fontawesome.com/df5971e9bf.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/FnB_serve.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>BLUE SQUARE</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -18,17 +23,29 @@
                 </video>
             </div> header-bg -->
 
-            <!-- solos header!!! -->
+            <!-- fnbserve header!!! -->
             <div class="fnbserve-header">
-                <div class="hd-img">
+                <!-- <div class="hd-img">
                     <img class="mb" src="./img/필로스이미지레이어mb.png" alt="필로스">
-                </div>
-                <div class="hd-txt">
-                    <p class="90px">Cafe PHILOS</p>
-                </div>
-                <div class="dw-icon">
-                    <!-- <a href="#"><i class="fa-solid fa-arrow-down-long fa-2x"></i></a> -->
-                    <a href="#"><i class="fa-solid fa-check fa-2x"></i></a>
+                </div> -->
+                <div class="fix-box">
+                    <div class="hd-txt">
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="0">C</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="100">a</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="200">f</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="300">e</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="400">&nbsp;</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="500">P</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="600">H</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="700">I</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="800">L</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="900">O</span>
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="1000">S</span>
+                    </div>
+                    <div class="dw-icon">
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-down-long fa-2x"></i></a> -->
+                        <a href="#link-btn"><i class="fa-solid fa-check fa-2x"></i></a>
+                    </div>
                 </div>
             </div> <!-- fnbserve-header -->
 
@@ -39,7 +56,7 @@
                             <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
                             <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
                         </div>
-    
+
                         <nav class="main-menu">
                             <ul class="gnb">
                                 <li>
@@ -81,11 +98,13 @@
                                 </li>
                             </ul> <!-- gnb -->
                         </nav> <!-- main-menu-->
-    
+
                         <div class="right-menu">
-                            <ul>                                
-                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png" alt="ticket"></a></li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
+                            <ul>
+                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png"
+                                            alt="ticket"></a></li>
+                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png"
+                                            alt="menu"></a></li>
                                 <li class="large-only"><a href="#">TICKET</a></li>
                                 <li class="large-only"><a href="#">LOG IN</a></li>
                                 <li class="large-only"><a href="#">JOIN</a></li>
@@ -96,15 +115,17 @@
             </div> <!-- logo-menu-box -->
         </header> <!-- header -->
 
-        <main>
-            <div id="link-btn" class="container">
+        <main id="link-btn">
+            <div class="container">
                 <h2>main</h2>
-                <ul class="fnb-menu">
-                    <li><a  href="#">솔로스 키친</a></li>
-                    <li><a href="#">스테이지 B</a></li>
-                    <li><a href="#">카페 필로스</a></li>
-                    <li><a href="#">케익 갤러리</a></li>
-                </ul>
+                <div class="fixed-box on">
+                    <ul class="fnb-menu">
+                        <li><a href="#">솔로스 키친</a></li>
+                        <li><a href="#">스테이지 B</a></li>
+                        <li><a href="#">카페 필로스</a></li>
+                        <li><a href="#">케익 갤러리</a></li>
+                    </ul>
+                </div>
                 <div class="fnb-info1">
                     <div class="info-img">
                         <img src="./img/필로스1.png" alt="필로스사진1">
@@ -139,7 +160,7 @@
                     </div>
                     <div class="info-txt">
                         <p class="txt-1">
-                            커피를 마시며<br> 
+                            커피를 마시며<br>
                             여유롭고 편안한 시간을 가져보세요.
                         </p>
                         <p class="txt-2">※ 문의 : 070-7724-0698</p>
@@ -155,11 +176,12 @@
                         <h2>Let's Blue Square Together</h2>
                         <br>
                         <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
+                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail.
+                                bluesquare@interpark.com</span>
                         </address>
                         <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
                     </div> <!-- left-contents -->
-    
+
                     <div class="right-contents">
                         <ul class="footer-menu">
                             <li>Menu
@@ -196,11 +218,11 @@
                             </li>
                         </ul> <!-- footer-menu -->
                     </div> <!-- right-contents -->
-                    
+
                     <div class="large-only footer-title">
                         <h1>Blue&ZeroWidthSpace; Square</h1>
                     </div>
-                </div> <!-- flex-box -->                
+                </div> <!-- flex-box -->
             </div> <!-- container -->
 
             <div class="large-only line">
@@ -208,5 +230,14 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        });
+    </script>
 </body>
+
 </html>

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cake.css" type="text/css">
     <script src="https://kit.fontawesome.com/df5971e9bf.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/FnB_serve.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>BLUE SQUARE</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -19,17 +24,32 @@
             </div> header-bg -->
 
             <!-- solos header!!! -->
-            <div class="fnbserve-header">
-                <div class="hd-img">
+            <div class="fnbserve-header img4">
+                <!-- <div class="hd-img">
                     <img class="mb" src="./img/케익이미지레이어mb.png" alt="케익갤러리">
+                </div> -->
+                <div class="fix-box">
+                    <div class="hd-txt">
+                        <span class="sd-txt" data-aos="fade-up" data-aos-delay="0">C
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="100">A</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="200">K</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="300">E</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="400">&nbsp;</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="500">G</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="600">A</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="700">L</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="800">L</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="900">E</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="1000">R</span>
+                            <span class="sd-txt" data-aos="fade-up" data-aos-delay="1100">Y</span>
+                            </p>
+                    </div>
+                    <div class="dw-icon">
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-down-long fa-2x"></i></a> -->
+                        <a href="#link-btn"><i class="fa-solid fa-check fa-2x"></i></a>
+                    </div>
                 </div>
-                <div class="hd-txt">
-                    <p class="90px">CAKE GALLERY</p>
-                </div>
-                <div class="dw-icon">
-                    <!-- <a href="#"><i class="fa-solid fa-arrow-down-long fa-2x"></i></a> -->
-                    <a href="#"><i class="fa-solid fa-check fa-2x"></i></a>
-                </div>
+
             </div> <!-- fnbserve-header -->
 
             <div class="logo-menu-box">
@@ -39,7 +59,7 @@
                             <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
                             <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
                         </div>
-    
+
                         <nav class="main-menu">
                             <ul class="gnb">
                                 <li>
@@ -81,11 +101,13 @@
                                 </li>
                             </ul> <!-- gnb -->
                         </nav> <!-- main-menu-->
-    
+
                         <div class="right-menu">
-                            <ul>                                
-                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png" alt="ticket"></a></li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
+                            <ul>
+                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png"
+                                            alt="ticket"></a></li>
+                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png"
+                                            alt="menu"></a></li>
                                 <li class="large-only"><a href="#">TICKET</a></li>
                                 <li class="large-only"><a href="#">LOG IN</a></li>
                                 <li class="large-only"><a href="#">JOIN</a></li>
@@ -96,15 +118,17 @@
             </div> <!-- logo-menu-box -->
         </header> <!-- header -->
 
-        <main>
-            <div id="link-btn" class="container">
+        <main id="link-btn">
+            <div class="container">
                 <h2>main</h2>
-                <ul class="fnb-menu">
-                    <li><a  href="#">솔로스 키친</a></li>
-                    <li><a href="#">스테이지 B</a></li>
-                    <li><a href="#">카페 필로스</a></li>
-                    <li><a href="#">케익 갤러리</a></li>
-                </ul>
+                <div class="fixed-box on">
+                    <ul class="fnb-menu">
+                        <li><a href="#">솔로스 키친</a></li>
+                        <li><a href="#">스테이지 B</a></li>
+                        <li><a href="#">카페 필로스</a></li>
+                        <li><a href="#">케익 갤러리</a></li>
+                    </ul>
+                </div>
                 <div class="fnb-info1">
                     <div class="info-img">
                         <img src="./img/케익1.png" alt="케익사진1">
@@ -147,7 +171,7 @@
                     <div class="info-txt">
                         <p class="txt-1">
                             받으시는 분께 평생 잊지 못할<Br>
-                            추억을 선물하세요. 
+                            추억을 선물하세요.
                         </p>
                         <p class="txt-2">※ 문의 : 02-3394-6080</p>
                     </div>
@@ -162,11 +186,12 @@
                         <h2>Let's Blue Square Together</h2>
                         <br>
                         <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
+                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail.
+                                bluesquare@interpark.com</span>
                         </address>
                         <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
                     </div> <!-- left-contents -->
-    
+
                     <div class="right-contents">
                         <ul class="footer-menu">
                             <li>Menu
@@ -203,11 +228,11 @@
                             </li>
                         </ul> <!-- footer-menu -->
                     </div> <!-- right-contents -->
-                    
+
                     <div class="large-only footer-title">
                         <h1>Blue&ZeroWidthSpace; Square</h1>
                     </div>
-                </div> <!-- flex-box -->                
+                </div> <!-- flex-box -->
             </div> <!-- container -->
 
             <div class="large-only line">
@@ -215,5 +240,13 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        });
+    </script>
 </body>
+
 </html>
