@@ -24,6 +24,7 @@ window.onload = function() {
             userIdValide.style.fontSize = '14px';
             userIdValide.style.color = 'green';
             userIdValide.innerHTML = '유효한 이메일입니다.';
+            return true;
         }
     }
     
@@ -53,7 +54,7 @@ window.onload = function() {
             userPwValide.style.fontSize = '14px';
             userPwValide.style.color = 'red';
             userPwValide.innerHTML = '! 영문, 숫자, 특수문자 조합 8자리 이상 입력해주세요.';
-            txt.value = '';
+            // txt.value = '';
             txt.focus();
             return false;
         } else {
@@ -62,6 +63,7 @@ window.onload = function() {
             userPwValide.style.fontSize = '14px';
             userPwValide.style.color = 'green';
             userPwValide.innerHTML = '유효한 비밀번호입니다.';
+            return true;
         }
     }
 
@@ -79,7 +81,7 @@ window.onload = function() {
     // 비밀번호 유효성 검사 끝 =======
 
     // ======= 2-2. 비밀번호 보이기/감추기 기능
-    let pwEye = document.querySelector('.fa-eye');
+    let pwEye = document.querySelector('#pw-eye');
     
     pwEye.addEventListener('click', function() {
         userPw.classList.toggle('active');
@@ -108,7 +110,7 @@ window.onload = function() {
             userPwCheckValide.style.fontSize = '14px';
             userPwCheckValide.style.color = 'red';
             userPwCheckValide.innerHTML = '! 비밀번호가 일치하지 않습니다.';
-            txt.value = '';
+            // txt.value = '';
             txt.focus();
             return false;
         } else {
@@ -117,6 +119,7 @@ window.onload = function() {
             userPwCheckValide.style.fontSize = '14px';
             userPwCheckValide.style.color = 'green';
             userPwCheckValide.innerHTML = '비밀번호가 일치합니다.';
+            return true;
         }
     }
 
@@ -128,6 +131,23 @@ window.onload = function() {
         }
     }
     // 비밀번호 재확인 끝 =======
+
+
+     // ======= 3-2. 비밀번호 재확인 보이기/감추기 기능
+     let pwReEye = document.querySelector('#pw-re-eye');
+    
+     pwReEye.addEventListener('click', function() {
+        userPwCheck.classList.toggle('active');
+         if(userPwCheck.classList.contains('active')) {
+             this.setAttribute('class', 'fa fa-eye-slash fa-lg')
+             userPwCheck.setAttribute('type', 'text');
+         } else {
+             this.setAttribute('class', 'fa fa-eye fa-lg')
+             userPwCheck.setAttribute('type', 'password');
+         }
+     })
+     // 비밀번호 재확인 보이기/감추기 기능 끝 =======
+
 
     // ======= 4. 휴대전화 유효성 검사
     let userPhone = document.querySelector('#user-phone');
@@ -153,6 +173,7 @@ window.onload = function() {
             userPhoneValid.style.fontSize = '14px';
             userPhoneValid.style.color = 'green';
             userPhoneValid.innerHTML = '! 유효한 전화번호입니다.';
+            return true;
         }
     }
 
@@ -166,7 +187,9 @@ window.onload = function() {
     let addressContent = document.querySelector('#address-content');
     let userAddress = document.querySelector('#user-address');
 
-    userAddress.addEventListener('click', () => {
+    userAddress.addEventListener('click', inputAddress, false);
+
+    function inputAddress() {
         new daum.Postcode({
             oncomplete: function(data) {
                 console.log(data);
@@ -181,8 +204,78 @@ window.onload = function() {
                 }
             }
         }).open();
-    })
-
+    }
 
     // 주소 검색 기능 끝 =======
+
+    let joinBtn = document.querySelector('#join-btn')
+    
+    joinBtn.addEventListener('click', member);
+    
+    function member(e) {
+        e.preventDefault();
+        
+        let frm = document.frm;
+        if(userId.value == '') {
+            alert('이메일을 입력해주세요!')
+            userId.focus();
+            return false;
+        }
+
+        if(userPw.value == '') {
+            alert('비밀번호를 입력해주세요!')
+            userPw.focus();
+            return false;
+        }
+
+        if(userPw.value !== userPwCheck.value) {
+            alert('비밀번호가 일치하지 않습니다!')
+            userPwCheck.focus();
+            return false;
+        }
+
+        if(userPhone.value == '') {
+            alert('휴대전화를 입력해주세요!')
+            userPhone.focus();
+            return false;
+        }
+        
+        if(!frm.agree1.checked) {
+            alert('약관에 동의하세요!');
+            frm.agree1.focus();
+            return false; // 
+        }
+
+        if(!frm.agree2.checked) {
+            alert('개인정보에 동의하세요!');
+            frm.agree2.focus();
+            return false;
+        }
+
+        window.location.assign('https://www.naver.com');
+    
+    }
+    
 }
+
+
+// ======= 6. 전체약관동의
+function allcheck() {
+    with(document.frm) {
+       if(allAgree.checked) {
+            for(let i = 0; i < frm.length; i++) {                
+                if(elements[i].type === 'checkbox') {
+                    elements[i].checked = true;
+                }
+            }
+        } else {
+            for(let i = 0; i < frm.length; i++) {
+                if(elements[i].type === 'checkbox') {
+                   elements[i].checked = false;
+                }
+            }
+        }
+    }
+}
+
+// 약관동의 끝 =======
