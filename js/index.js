@@ -70,9 +70,9 @@ $(function() {
 
     // ==== 푸터 링크
     $('#site').on('change', function() {
-        let a = $(this).val();
-        console.log(a);
-        window.open($(this).val(), '_blank');
+        if($(this).val() !== '') {
+            window.open($(this).val(), '_blank');
+        }
     })
     // 푸터 링크 끝 ====
     

@@ -58,6 +58,13 @@ header {
     .logo-menu-box {
         position: absolute;
         top: 0; left: 0; right: 0;
+
+        @include responsive(large-tablet-screens) {     
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.7);
+                background-color: #f1f1f1;
+            }
+        }
         
         .flex-box {
             position: relative;
@@ -86,7 +93,7 @@ header {
 
             nav.main-menu {
                 display: none;
-                width: 504px;
+                width: 590px;
 
                 @include responsive(large-tablet-screens) {
                     display: block;
@@ -94,35 +101,83 @@ header {
 
                 .gnb {
                     width: inherit;
+                    height: 100px;
                     display: flex;
                     justify-content: space-between;
                     @include pos-center-y();
 
                     li {
+                        width: 20%;
+                        line-height: 100px;
+                        text-align: center;
+
+                        &::after {
+                            line-height: 0;
+                            display: block;
+                            content: "";
+                            width: 60%;
+                            height: 2px;
+                            margin: 0 auto;
+                            margin-top: -34px;
+                            background-color: #000;
+                            transform: scale(0);
+                            transition: all 0.4s;
+                        }
+
+                        &:hover::after {
+                            transform: scale(1);
+                        }
+
+                        &:first-child::after {
+                            width: 70%;
+                        }
+
                         a {
                             font-size: $sub-title-font-size;
                             color: #000;
-
-                            &::after {
-                                display: block;
-                                content: "";
-                                width: 100%;
-                                height: 2px;
-                                margin-top: 5px;
-                                background-color: #000;
-                                transform: scale(0);
-                                transition: all 0.4s;
-                            }
-
-                            &:hover::after {
-                                transform: scale(1);
-                            }
                         }
 
                         .lnb {
-                            display: none;
+                            position: absolute;
+                            //top: 101px;
+                            width: 100%;
+                            
+                            li {
+                                display: none;
+                                line-height: 1;
+                                margin-top: -1px;
+                                background-color: rgba(0, 148, 214, 1);
+                                // background-color: rgba(255, 165, 0, 0.6);
+                                
+                                &::after {
+                                    display: none;
+                                }
+                                
+                                a {
+                                    color: #fff;
+                                    font-size: 16px;
+                                    width: 100%;
+                                    padding: 10px 20px;
+
+                                    &:hover {
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
                         }
-                    }
+
+                        &:hover .lnb > li {
+                            display: block;
+                        }
+
+                        &:nth-child(3) .lnb {
+                            @include lnb-pos-center();
+                        }
+
+                        &:nth-child(4) .lnb {
+                            @include lnb-pos-center();
+                        }
+                    } // li
                 } // gnb
             } // nav.main-menu
 
@@ -186,6 +241,100 @@ header {
             } // right-menu
         } // flex-box
     } // logo-menu-box    
+
+    .overlay {
+        display: block;
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0; right: 0;
+        z-index: 2;
+		background-color: rgba(0, 0, 0, 0.96);
+
+        @include responsive(small-tablet-screens) {
+            max-width: 580px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 0px; right: 20px;
+            font: {
+                size: 55px;
+                weight: 100;
+                
+            }
+            color: #f1f1f1;
+        }
+
+        .overlay-menu {
+            position: relative;
+            top: 22%;
+            text-align: center;
+            // margin-top: 20px;
+
+            ul {
+
+                li {
+                    a {
+                        font: {
+                            size: 26px;
+                            weight: 400;
+                        }
+                        color: #fff;
+                        padding: 15px 0;
+
+                        &.on {
+                            color: $point-color;
+                            transform: skew(-15deg);
+                        }
+                    }
+
+                    ul {
+
+                        li {
+                            display: none;
+
+                            &.on {
+                                display: block;
+                            }
+                            
+                            a {
+                                position: relative;
+                                display: inline-block;
+                                font: {
+                                    size: 18px;
+                                    weight: 300;
+                                }
+
+                                &:hover,
+                                &:focus {
+                                    transform: skew(0);
+                                }
+                                
+                                &::after {
+                                    position: absolute;
+                                    left: 0; bottom: 10px;
+                                    content: "";
+                                    width: 0;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    transition: all 0.4s;
+                                }
+
+                                &:hover::after {
+                                    width: 100%;
+                                }
+                                
+
+                            }
+                            
+                        } // li
+                    } // ul(depth-2)
+                    
+                } // li
+            } // ul(depth-1)
+        } // overlay-menu
+    } // overlay
 } // header
 
 
@@ -314,6 +463,7 @@ footer {
 
             h2 {
                 margin-left: -2px;
+                letter-spacing: -0.0769230769em;
                 font: {
                     size: 1.250em;
                     family: $eng-font;
@@ -469,8 +619,8 @@ footer {
             
             h1 {
                 font: {
-                    size: calc(38px + 9.8vw);
-                    family: $eng-font;
+                    size: calc(38px + 11.2vw);
+                    family: 'Lora';
                     weight: 500;
                 }
             }
@@ -482,7 +632,7 @@ footer {
         position: relative;
         span {
             position: absolute;
-            bottom: 280px;
+            bottom: 275px;
             display: block;
             content: "";
             width: 100%;
