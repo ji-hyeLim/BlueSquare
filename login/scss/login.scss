@@ -257,6 +257,7 @@ main {
                 input {
                     height: 50px;
                     width: 100%;
+                    padding-top: 5px;
                     padding-left: 50px;
                     font-size: 14px;
                     border: 1px solid $gray-border;
@@ -290,12 +291,12 @@ main {
                         background-size: 20px;
         
                         &:focus {
-                            background: url(../img/lock_active.png) 10px center no-repeat;
+                            background: url(../img/lock_active.png) 13.5px center no-repeat;
                             background-size: 20px;
                         }
                     }
                 } // pw-box
-        
+
                 button {
                     margin-top: 40px;
                     width: 100%;
