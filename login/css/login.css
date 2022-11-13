@@ -293,6 +293,7 @@ main .pos-wrap .login-wrap form label {
 main .pos-wrap .login-wrap form input {
   height: 50px;
   width: 100%;
+  padding-top: 5px;
   padding-left: 50px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -319,7 +320,7 @@ main .pos-wrap .login-wrap form .pw-box input {
   background-size: 20px;
 }
 main .pos-wrap .login-wrap form .pw-box input:focus {
-  background: url(../img/lock_active.png) 10px center no-repeat;
+  background: url(../img/lock_active.png) 13.5px center no-repeat;
   background-size: 20px;
 }
 main .pos-wrap .login-wrap form button {
@@ -560,4 +561,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=login.css.map */
