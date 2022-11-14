@@ -1,11 +1,10 @@
-$(document).ready(function () {
+$(function() {
     AOS.init ({
         duration : 1000,
         easing : 'linear',
+        once : 'false',
     });
-});
 
-$(function() {
     $(window).on('scroll',function() {
         var sc_top = $(this).scrollTop();
         console.log(sc_top);
@@ -16,7 +15,6 @@ $(function() {
             $('.fix-box').removeClass('on');
         }
 
-
         if ($(this).scrollTop() > 840) {
             $('.fixed-box').removeClass('on');
         } else {
@@ -24,15 +22,12 @@ $(function() {
         }
     });
 
-    // $('.fnb-menu li').click(function (e) {
-    //     // e.preventDefault();
-    //     let idx = $(this).index();
+    $('.fnb-menu li').click(function (e) {
+        e.preventDefault();
+        let idx = $(this).index();
 
-    //     $('section').removeClass('show');
-    //     $('section').eq(idx).addClass('show');
+        $('.fnb-menu li a').removeClass('line');
+        $('.fnb-menu li a').eq(idx).addClass('line');
 
-    //     $('.fnbserve-header').addClass('on');
-    //     $('.fnbserve-header').eq(idx).removeClass('on');
-
-    // });
+    });
 });

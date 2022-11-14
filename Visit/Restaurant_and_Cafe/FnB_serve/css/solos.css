@@ -132,6 +132,17 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -140,6 +151,20 @@ footer {
   to {
     opacity: 1;
     transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes updown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 @keyframes updown {
@@ -227,7 +252,8 @@ header .fnbserve-header.fh1 .dw-icon a i {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  animation: updown 3s infinite;
+  -webkit-animation: updown 3s infinite;
+          animation: updown 3s infinite;
   color: white;
 }
 @media screen and (min-width: 1024px) {
@@ -404,6 +430,15 @@ main ul.fnb-menu li:nth-child(2) {
     border: 0;
   }
 }
+main ul.fnb-menu li:nth-child(3) {
+  border-bottom: 1px solid transparent;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:nth-child(3) {
+    margin-right: 120px;
+    border: 0;
+  }
+}
 main ul.fnb-menu li:last-child {
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -411,15 +446,6 @@ main ul.fnb-menu li:last-child {
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:last-child {
     margin-right: 0px;
-    border: 0;
-  }
-}
-main ul.fnb-menu li:nth-child(3) {
-  border-bottom: 1px solid transparent;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:nth-child(3) {
-    margin-right: 120px;
     border: 0;
   }
 }
@@ -433,6 +459,27 @@ main ul.fnb-menu li a {
   padding: 10px;
   text-align: center;
   white-space: nowrap;
+}
+main ul.fnb-menu li a.line {
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a.line::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: #000;
+    transform: scale(1);
+    transition: all 0.4s;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main ul.fnb-menu li a.line::after {
+    transform: scale(0.45, 1);
+  }
 }
 main ul.fnb-menu li a:hover {
   font-weight: 600;
@@ -806,4 +853,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=solos.css.map */
