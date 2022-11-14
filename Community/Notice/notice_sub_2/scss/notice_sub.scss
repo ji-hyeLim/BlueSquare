@@ -394,15 +394,6 @@ main {
                 @include responsive(large-tablet-screens) {
                     font-size: $text-font-size;
                 }
-
-                span {
-                    display: block;
-                    text-indent: 34px;
-
-                    @include responsive(large-tablet-screens) {
-                        text-indent: 38px;
-                    }
-                }
             }
         } // notice-content
 

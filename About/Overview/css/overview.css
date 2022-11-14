@@ -88,31 +88,12 @@ footer {
   }
 }
 
-@-webkit-keyframes mover {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes mover {
   from {
     width: 0%;
   }
   to {
     width: 100%;
-  }
-}
-@-webkit-keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-  }
-  100% {
-    transform: none;
-    opacity: 1;
   }
 }
 @keyframes fadeUp {
@@ -125,19 +106,13 @@ footer {
     opacity: 1;
   }
 }
-@-webkit-keyframes text-loop {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
 @keyframes text-loop {
   0% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
 }
@@ -195,12 +170,9 @@ header .ov-header .hd-img .line-box div.p-box {
 }
 header .ov-header .hd-img .line-box div.p-box p {
   opacity: 0;
-  -webkit-animation: fadeUp 3s;
-          animation: fadeUp 3s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fadeUp 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
   font-size: calc(1vw + 30px);
   font-weight: 600;
   font-family: "Montserrat", sans-serif, Arial;
@@ -234,8 +206,7 @@ header .ov-header .hd-img .line-box div.p-box::before {
   width: 100%;
   height: 5px;
   background-color: white;
-  -webkit-animation: mover 2s;
-          animation: mover 2s;
+  animation: mover 2s;
 }
 header .ov-header .hd-img .line-box div.p-box::after {
   position: absolute;
@@ -246,8 +217,7 @@ header .ov-header .hd-img .line-box div.p-box::after {
   width: 100%;
   height: 5px;
   background-color: white;
-  -webkit-animation: mover 2s;
-          animation: mover 2s;
+  animation: mover 2s;
 }
 header .logo-menu-box {
   position: absolute;
@@ -382,7 +352,7 @@ main .title {
 @media screen and (min-width: 1024px) {
   main .title {
     margin-bottom: 70px;
-    font-size: 36px;
+    font-size: 38px;
   }
 }
 main .page-info1 {
@@ -414,8 +384,7 @@ main .page-info1 .info-img img {
 main .page-info1 .info-txt {
   padding-left: 0;
   margin-bottom: 40px;
-  -webkit-animation: fadeIn 1s 3s linear forwards;
-          animation: fadeIn 1s 3s linear forwards;
+  animation: fadeIn 1s 3s linear forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info1 .info-txt {
@@ -679,8 +648,7 @@ main .flow-txt-wrap div {
 }
 main .flow-txt-wrap div .flow-txt {
   padding-right: 22px;
-  -webkit-animation: text-loop 10s linear infinite;
-          animation: text-loop 10s linear infinite;
+  animation: text-loop 10s linear infinite;
 }
 
 footer {
@@ -851,4 +819,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=overview.css.map */
+}
