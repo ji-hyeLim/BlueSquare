@@ -1,43 +1,67 @@
 $(function () {
+  // $('.tab li').click(function (e) {
+  //   e.preventDefault();
+  //   let idx = $(this).index();
+
+  //   $('.tab li a').removeClass('clicked');
+  //   $('.tab li a').eq(idx).addClass('clicked');
+
+  //   $('.venue-guidance').removeClass('show');
+  //   $('.venue-guidance').eq(idx).addClass('show');
+  // });
+
+  $('.tab li:nth-child(1)').click(function (e) {
+    e.preventDefault();
+
+    $('.tab li:nth-child(1) a').removeClass('clicked');
+    $('.tab li:nth-child(1) a').eq(idx).addClass('clicked');
+
+    $('#shinhan').removeClass('show');
+    $('#shinhan').addClass('show');
+  });
+
+  // $('.tab li:nth-child(2)').click(function (e) {
+  //   e.preventDefault();
+
+  //   $('.tab li a').removeClass('clicked');
+  //   $('.tab li a').eq(idx).addClass('clicked');
+
+  //   $('#shinhan').removeClass('show2');
+  //   $('#shinhan').eq(idx).addClass('show2');
+  // });
+
+
+
+
+
+
+
 
   $('.tab li').click(function (e) {
     e.preventDefault();
     let idx = $(this).index();
+
     $('.tab li a').removeClass('clicked');
     $('.tab li a').eq(idx).addClass('clicked');
 
-    $('section').removeClass('show');
-    $('section').eq(idx).addClass('show');
+    $('#master').removeClass('show2');
+    $('#master').eq(idx).addClass('show2');
   });
 
   $('.sub-tab li').click(function (e) {
     e.preventDefault();
     let idx = $(this).index();
     console.log(idx);
-    $('section div').removeClass('active');
-    $('section div').eq(idx).addClass('active'); 
+
+    $('section > div').removeClass('active');
+    $('section > div').eq(idx).addClass('active');
 
     $('.sub-tab li a').removeClass('sub-tab-active');
     $('.sub-tab li a').eq(idx).addClass('sub-tab-active');
   });
 
-  $('.sub-tab li').click(function (e) {
-    e.preventDefault();
-    $('section').each(function() {
-
-    })
 
 
-
-
-    let idx = $(this).index();
-    console.log(idx);
-    $('section div').removeClass('active');
-    $('section div').eq(idx).addClass('active'); 
-
-    $('.sub-tab li a').removeClass('sub-tab-active');
-    $('.sub-tab li a').eq(idx).addClass('sub-tab-active');
-  });
 
   // ======================== 이미지 넘기기 신한카드홀 ========================
   $('.prev').click(function (e) {

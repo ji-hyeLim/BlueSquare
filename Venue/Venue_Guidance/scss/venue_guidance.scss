@@ -296,32 +296,38 @@ main {
       border-radius: 30px;
       
       a {
-        &.sub-tab-active {
+        &.sub-tab-clicked {
           font-weight: 600;
           border-radius: 30px;
-          background-color: rgba($color: #0094d6, $alpha: 0.2)
+          background-color: #cceaf7;
         }
         
         &:hover {
           font-weight: 600;
           border-radius: 30px;
           // background-color: $gray-bg;
-          background-color: rgba($color: #0094d6, $alpha: 0.2)
+          background-color: #cceaf7;
         }
-
-        
       }
     } //li
   } //sub-tab
 
-  section {
+  .venue-guidance {
+    background-color: pink;
     display: none;
 
     &.show {
       display: block;
     }
-  }
 
+    & > div {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    } // div
+  } // section
 
   .venue-guidance {
     &>h2 {
@@ -520,14 +526,7 @@ main {
       }
     } //rental-fee (대관료)
   } //venue-guidance (대관안내)
-
-  #shinhan div {
-    display: none;
-
-    &.active {
-      display: block;
-    }
-  }
+  
 
   #master {
     .rental-fee {

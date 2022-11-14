@@ -94,39 +94,6 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 1024px) {
-  .img-l {
-    position: relative;
-    text-align: right;
-    display: flex;
-    justify-content: space-between;
-  }
-  .img-l .info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-  }
-  .img-l .left {
-    background-color: purple;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .img-r {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .img-r .info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-  }
-}
-
 header {
   position: relative;
   width: 100vw;
@@ -340,7 +307,7 @@ header .header-bg-sodam .square {
   position: absolute;
   width: 280px;
   height: 280px;
-  color: white;
+  color: black;
   font-size: 42px;
   font-weight: 600;
   position: absolute;
@@ -350,7 +317,7 @@ header .header-bg-sodam .square {
 }
 header .header-bg-sodam .square .square-liner {
   position: absolute;
-  background-color: white;
+  background-color: black;
   height: 5px;
 }
 header .header-bg-sodam .square .sqare-line1 {
@@ -580,11 +547,12 @@ main ul.tab li {
   }
 }
 main ul.tab li a::after {
+  margin-top: 10px;
   display: block;
   content: "";
   width: 100%;
-  height: 1px;
-  margin-top: 5px;
+  height: 8px;
+  border-radius: 5px 5px 0 0;
   background-color: #000;
   transform: scale(0);
   transition: all 0.5s;
@@ -594,6 +562,20 @@ main ul.tab li a:hover {
 }
 main ul.tab li a:hover::after {
   transform: scale(1);
+}
+main ul.tab li a.clicked::after {
+  margin-top: 10px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 8px;
+  border-radius: 5px 5px 0 0;
+  background-color: #000;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+main ul.tab li a.clicked {
+  font-weight: 600;
 }
 main section {
   display: none;
@@ -700,8 +682,7 @@ main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
     position: relative;
     width: 440px;
     height: 500px;
-    background-color: #0094d6;
-    opacity: 0.2;
+    background-color: #cceaf7;
   }
   main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square1 .frontimg {
     position: absolute;
@@ -723,8 +704,7 @@ main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
     position: relative;
     width: 450px;
     height: 600px;
-    background-color: #0094d6;
-    opacity: 0.8;
+    background-color: #33a9de;
   }
   main .bookpark .bookpark-des-wrap .bookpark-des-box-L .img-and-square3 .frontimg {
     position: absolute;
@@ -770,8 +750,7 @@ main .bookpark .bookpark-des-wrap .bookpark-des-box-R {
     right: 0;
     width: 360px;
     height: 600px;
-    background-color: #0094d6;
-    opacity: 0.35;
+    background-color: #a6daf1;
   }
   main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square2 .frontimg {
     position: absolute;
@@ -793,8 +772,7 @@ main .bookpark .bookpark-des-wrap .bookpark-des-box-R {
     bottom: 0;
     width: 480px;
     height: 320px;
-    background-color: #0094d6;
-    opacity: 0.2;
+    background-color: #cceaf7;
   }
   main .bookpark .bookpark-des-wrap .bookpark-des-box-R .img-and-square4 .frontimg {
     position: absolute;
@@ -911,16 +889,53 @@ main .sodam .blue-nemo-wrap .blue .info-img-wrap .info .title h3 .blue-title {
 main .sodam .blue-nemo-wrap .blue .info-img-wrap .info .blue-desc {
   width: 100%;
 }
-main .sodam .blue-nemo-wrap .blue .info-img-wrap img {
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .img-div {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .blue .info-img-wrap .img-div {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+main .sodam .blue-nemo-wrap .blue .info-img-wrap .img-div img {
   width: 100%;
   order: 1;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .blue .info-img-wrap img {
-    width: 700px;
-    height: 500px;
+  main .sodam .blue-nemo-wrap .blue .info-img-wrap .img-div img {
+    width: 100%;
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .blue .img-l {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  main .sodam .blue-nemo-wrap .blue .img-l .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 55%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .blue .img-r {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  main .sodam .blue-nemo-wrap .blue .img-r .info {
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 55%;
   }
 }
 main .sodam .blue-nemo-wrap .nemo {
@@ -960,16 +975,53 @@ main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info .title h3 .nemo-title {
 main .sodam .blue-nemo-wrap .nemo .info-img-wrap .info .blue-desc {
   width: 100%;
 }
-main .sodam .blue-nemo-wrap .nemo .info-img-wrap img {
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .img-div {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .nemo .info-img-wrap .img-div {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+main .sodam .blue-nemo-wrap .nemo .info-img-wrap .img-div img {
   width: 100%;
   order: 1;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
-  main .sodam .blue-nemo-wrap .nemo .info-img-wrap img {
-    width: 700px;
-    height: 500px;
+  main .sodam .blue-nemo-wrap .nemo .info-img-wrap .img-div img {
+    width: 100%;
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .nemo .img-l {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  main .sodam .blue-nemo-wrap .nemo .img-l .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 55%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sodam .blue-nemo-wrap .nemo .img-r {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  main .sodam .blue-nemo-wrap .nemo .img-r .info {
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 55%;
   }
 }
 main .sodam .use-guide {

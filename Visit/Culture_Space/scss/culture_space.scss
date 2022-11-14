@@ -35,44 +35,7 @@ body {
     overflow-x: hidden;
 }
 
-.img-l {
-    @include responsive (large-tablet-screens) {
-        position: relative;
-        text-align: right;
 
-        @include flex-box() {
-            // flex-direction: row-reverse;
-        }
-
-
-        .info {
-            @include pos-center-y() {
-                right: 0;
-            };
-        }
-
-        .left {
-            background-color: purple;
-        }
-    }
-} //img-l
-
-.img-r {
-    @include responsive (large-tablet-screens) {
-        position: relative;
-
-        @include flex-box() {
-            flex-direction: row;
-        }
-
-        .info {
-            @include pos-center-y() {
-                left: 0;
-            };
-        }
-
-    }
-} //img-r
 
 // * ===================== header ===================== *
 
@@ -275,14 +238,14 @@ header {
             position: absolute;
             width: 280px;
             height: 280px;
-            color: white;
+            color: black;
             font-size: 42px;
             font-weight: 600;
             @include pos-center();
 
             .square-liner {
                 position: absolute;
-                background-color: white;
+                background-color: black;
                 height: 5px;
             }
 
@@ -525,11 +488,12 @@ main {
 
             a {
                 &::after {
+                    margin-top: 10px;
                     display: block;
                     content: "";
                     width: 100%;
-                    height: 1px;
-                    margin-top: 5px;
+                    height: 8px;
+                    border-radius: 5px 5px 0 0;
                     background-color: #000;
                     transform: scale(0);
                     transition: all 0.5s;
@@ -541,6 +505,22 @@ main {
 
                 &:hover::after {
                     transform: scale(1);
+                }
+
+                &.clicked::after {
+                    margin-top: 10px;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 8px;
+                    border-radius: 5px 5px 0 0;
+                    background-color: #000;
+                    transform: scale(1);
+                    transition: all 0.5s;
+                }
+
+                &.clicked {
+                    font-weight: 600;
                 }
             }
         } //li
@@ -654,8 +634,7 @@ main {
                             position: relative;
                             width: 440px;
                             height: 500px;
-                            background-color: $point-color;
-                            opacity: 0.2;
+                            background-color: #cceaf7;
                         }
     
                         .frontimg {
@@ -679,8 +658,7 @@ main {
                             position: relative;
                             width: 450px;
                             height: 600px;
-                            background-color: $point-color;
-                            opacity: 0.8;
+                            background-color: #33a9de;
                         }
     
                         .frontimg {
@@ -731,8 +709,7 @@ main {
                             right: 0;
                             width: 360px;
                             height: 600px;
-                            background-color: $point-color;
-                            opacity: 0.35;
+                            background-color: #a6daf1;
                         }
     
                         .frontimg {
@@ -758,8 +735,7 @@ main {
                             bottom: 0;
                             width: 480px;
                             height: 320px;
-                            background-color: $point-color;
-                            opacity: 0.2;
+                            background-color: #cceaf7;
     
                         }
     
@@ -863,7 +839,7 @@ main {
                     @include responsive(large-tablet-screens) {
                         top: 500px;
                     }
-                }
+                } //circle
 
                 .info-img-wrap {
                     // margin-top: 50px;
@@ -905,23 +881,65 @@ main {
 
                         .blue-desc {
                             width: 100%;
-                            // background-color: red;
                         }
                     } //info
-        
-                    img {
+
+                    .img-div {
                         width: 100%;
-                        order: 1;
-                        margin-bottom: 20px;
-        
+
                         @include responsive (large-tablet-screens) {
-                            width: 700px;
-                            height: 500px;
-                            margin-bottom: 0;
+                            width: 50%;
+                            margin-bottom: 30px;
+                        }
+
+
+                        img {
+                            width: 100%;
+                            order: 1;
+                            margin-bottom: 20px;
+            
+                            @include responsive (large-tablet-screens) {
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
                         }
                     }
                 } //info-img-wrap
-            } //sodam-blue
+
+                .img-l {
+                    @include responsive (large-tablet-screens) {
+                        position: relative;
+                
+                        @include flex-box() {
+                            flex-direction: row;
+                        }
+                
+                        .info {
+                            @include pos-center-y() {
+                                left: 55%;
+                            }
+                        }
+                    }
+                } //img-l
+                
+                .img-r {
+                    @include responsive (large-tablet-screens) {
+                        position: relative;
+                
+                        @include flex-box() {
+                            flex-direction: row-reverse;
+                        }
+                
+                        .info {
+                            text-align: right;
+
+                            @include pos-center-y() {
+                                right: 55%;
+                            }
+                        }
+                    }
+                } //img-r
+            } //blue
 
 
             // ========== nemo ========== //
@@ -966,27 +984,66 @@ main {
     
                         .blue-desc {
                             width: 100%;
-                            // background-color: red;
                         }
                     } //info
         
-                    img {
+                    .img-div {
                         width: 100%;
-                        order: 1;
-                        margin-bottom: 20px;
-        
+
                         @include responsive (large-tablet-screens) {
-                            width: 700px;
-                            height: 500px;
-                            margin-bottom: 0;
+                            width: 50%;
+                            margin-bottom: 30px;
+                        }
+
+
+                        img {
+                            width: 100%;
+                            order: 1;
+                            margin-bottom: 20px;
+            
+                            @include responsive (large-tablet-screens) {
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
                         }
                     }
                 } //info-img-wrap
-            } //sodam-nemo
+
+                .img-l {
+                    @include responsive (large-tablet-screens) {
+                        position: relative;
+                
+                        @include flex-box() {
+                            flex-direction: row;
+                        }
+                
+                        .info {
+                            @include pos-center-y() {
+                                left: 55%;
+                            }
+                        }
+                    }
+                } //img-l
+                
+                .img-r {
+                    @include responsive (large-tablet-screens) {
+                        position: relative;
+                
+                        @include flex-box() {
+                            flex-direction: row-reverse;
+                        }
+                
+                        .info {
+                            text-align: right;
+
+                            @include pos-center-y() {
+                                right: 55%;
+                            }
+                        }
+                    }
+                } //img-r
+            } //nemo
         } //blue-nemo-wrap
-
-
-        
 
         .use-guide {
             margin: 200px 0;

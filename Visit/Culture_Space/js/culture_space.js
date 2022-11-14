@@ -8,33 +8,8 @@ $(function() {
 
         $('section').removeClass('show');
         $('section').eq(idx).addClass('show');
+
+        $('.tab li a').removeClass('clicked');
+        $('.tab li a').eq(idx).addClass('clicked');
     });
-
-
-
-    // var scroll_top;
-    // // 인트로 타이틀 위치 조정
-    // function checkIntroTitle() {
-    //     if($('.sodam-intro').outerHeight() < window.innerHeight) {
-    //         $('.sodam-intro').addClass('fixed');
-    //     } else {
-    //         $('.sodam-intro').removeClass('fixed');
-    //     }
-    // }
-
-    // $(window).on("scroll", function() {
-        
-    //     var h = $(window).scrollTop();
-    //     console.log(h);
-
-    //     if(h >= 1100) {
-    //         $('.sodam-intro').addClass('fixed');
-
-    //     } else {
-    //         $('.sodam-intro').removeClass('fixed');
-
-    //     }
-
-    // });
-
 });

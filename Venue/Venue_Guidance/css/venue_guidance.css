@@ -321,20 +321,27 @@ main .sub-tab li {
   line-height: 30px;
   border-radius: 30px;
 }
-main .sub-tab li a.sub-tab-active {
+main .sub-tab li a.sub-tab-clicked {
   font-weight: 600;
   border-radius: 30px;
-  background-color: rgba(0, 148, 214, 0.2);
+  background-color: #cceaf7;
 }
 main .sub-tab li a:hover {
   font-weight: 600;
   border-radius: 30px;
-  background-color: rgba(0, 148, 214, 0.2);
+  background-color: #cceaf7;
 }
-main section {
+main .venue-guidance {
+  background-color: pink;
   display: none;
 }
-main section.show {
+main .venue-guidance.show {
+  display: block;
+}
+main .venue-guidance > div {
+  display: none;
+}
+main .venue-guidance > div.active {
   display: block;
 }
 main .venue-guidance > h2 {
@@ -500,12 +507,6 @@ main .venue-guidance .rental-fee .agreement a {
   display: inline-block;
   color: #0094d6;
   font-weight: 600;
-}
-main #shinhan div {
-  display: none;
-}
-main #shinhan div.active {
-  display: block;
 }
 main #master .rental-fee h2 {
   margin-bottom: 38px;
