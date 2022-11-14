@@ -23,4 +23,16 @@ $(function() {
             $('.fixed-box').addClass('on');
         }
     });
+
+    // $('.fnb-menu li').click(function (e) {
+    //     // e.preventDefault();
+    //     let idx = $(this).index();
+
+    //     $('section').removeClass('show');
+    //     $('section').eq(idx).addClass('show');
+
+    //     $('.fnbserve-header').addClass('on');
+    //     $('.fnbserve-header').eq(idx).removeClass('on');
+
+    // });
 });
