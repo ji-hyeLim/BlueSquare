@@ -291,6 +291,20 @@ main ul.tap-menu li a {
   min-width: 60px;
   font-size: 16px;
 }
+main ul.tap-menu li a.on {
+  font-weight: 600;
+}
+main ul.tap-menu li a.on::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 8px;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  background-color: #000;
+  transform: scale(1);
+  transition: all 0.4s;
+}
 @media screen and (min-width: 600px) {
   main ul.tap-menu li a {
     font-size: 18px;
@@ -717,7 +731,7 @@ main section.parking .info3 p.txt2 span {
 main section.parking .info3 p.txt2 a {
   display: inline-block;
   margin-left: 5px;
-  padding: 2px;
+  padding: 2px 3px;
   color: #fff;
   font-size: 13px;
   background-color: #0094d6;
