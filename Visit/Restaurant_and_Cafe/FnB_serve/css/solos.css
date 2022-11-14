@@ -90,6 +90,7 @@ footer {
   width: 100%;
   height: 102px;
   padding-top: 10px;
+  z-index: 2;
 }
 @media screen and (min-width: 1024px) {
   .fixed-box {
@@ -104,14 +105,6 @@ footer {
 
 .on {
   display: none;
-}
-
-.show {
-  display: block;
-}
-
-.active {
-  overflow: visible;
 }
 
 .mobile-only {
@@ -417,7 +410,7 @@ main ul.fnb-menu li {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:first-child {
-    margin-right: 120px;
+    margin-right: 100px;
     border: 0;
   }
 }
@@ -426,7 +419,7 @@ main ul.fnb-menu li:nth-child(2) {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(2) {
-    margin-right: 120px;
+    margin-right: 100px;
     border: 0;
   }
 }
@@ -435,7 +428,7 @@ main ul.fnb-menu li:nth-child(3) {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(3) {
-    margin-right: 120px;
+    margin-right: 100px;
     border: 0;
   }
 }
@@ -462,6 +455,15 @@ main ul.fnb-menu li a {
 }
 main ul.fnb-menu li a.line {
   font-weight: 600;
+  background-color: rgba(0, 148, 214, 0.2);
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px #ccc;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a.line {
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li a.line::after {
@@ -519,9 +521,6 @@ main ul.fnb-menu li a:hover {
   main ul.fnb-menu li a:hover::after {
     transform: scale(0.45, 1);
   }
-}
-main section {
-  display: none;
 }
 main section .fnb-info1 {
   display: flex;

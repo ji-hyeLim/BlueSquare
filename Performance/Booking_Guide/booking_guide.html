@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/booking_guide.css" type="text/css">
     <script src="https://kit.fontawesome.com/02fac5dfa7.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/booking_guide.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>BLUE SQUARE</title>
 </head>
 
@@ -87,16 +90,16 @@
 
         <main>
             <div class="container">
-                <h1 class="title">예매안내</h1>
+                <h1 class="title" data-aos="fade-right" data-aos-duration="500">예매안내</h1>
                 <div class="txtBox">
-                    <div>
+                    <div >
                         <img src="./img/티켓 아이콘.png" alt="티켓모양아이콘">
-                        <p>
+                        <p data-aos="flip-up" data-aos-duration="500" data-aos-delay="500">
                         블루스퀘어의 모든 공연들은 인터파크 티켓을 통해 예매하실 수 있습니다.
                         </p>
                     </div>
                 </div>
-                <div class="ticketing">
+                <div class="ticketing" data-aos="fade-up">
                     <div class="hall-title">
                         <div class="blue-sq"></div>
                         <h2>예매</h2>
@@ -128,7 +131,7 @@
                         </div>
                     </div> <!-- fee -->
                 </div> <!-- ticketing -->
-                <div class="calloff">
+                <div class="calloff" data-aos="fade-up">
                     <div class="hall-title">
                         <div class="blue-sq"></div>
                         <h2>취소</h2>
@@ -229,6 +232,13 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        });
+    </script>
 </body>
 
 </html>

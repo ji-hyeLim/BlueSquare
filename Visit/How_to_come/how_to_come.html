@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/02fac5dfa7.js" crossorigin="anonymous"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/how_to_come.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>BLUE SQUARE</title>
 </head>
 
@@ -90,7 +91,7 @@
 
         <main>
             <div class="container">
-                <h1>오시는길</h1>
+                <h1 data-aos="fade-right" data-aos-duration="500">오시는길</h1>
                 <ul class="tap-menu">
                     <li><a href="#" class="on">교통 안내</a></li>
                     <li><a href="#">주차 안내</a></li>
@@ -318,6 +319,13 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        });
+    </script>
 </body>
 
 </html>

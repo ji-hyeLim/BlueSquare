@@ -34,6 +34,7 @@
     width: 100%;
     height: 102px;
     padding-top: 10px;
+    z-index: 2;
 
     @include responsive(large-tablet-screens) {
         opacity: 1;
@@ -128,8 +129,6 @@ header {
         width: 100%;
         height: 100vh;
         
-        width: 100%;
-        height: 936px;
         background-image: url(../img/케익이미지레이어.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -192,12 +191,8 @@ header {
                     height: 65px;
                 }
             }
-        }
-
-        //dw-icon
-    }
-
-    //fnbserve-header
+        }//dw-icon
+    }//fnbserve-header
     
     .logo-menu-box {
         position: absolute;
@@ -228,9 +223,7 @@ header {
                         }
                     }
                 }
-            }
-
-            // header-logo
+            } // header-logo
 
             nav.main-menu {
                 display: none;
@@ -388,22 +381,21 @@ main {
                 }
             }
 
+             &:nth-child(3) {
+                border-bottom: 1px solid transparent;
+
+                @include responsive(large-tablet-screens) {
+                    margin-right: 120px;
+                    border: 0;
+                }
+            }
+
             &:last-child {
                 border-right: 1px solid transparent;
                 border-bottom: 1px solid transparent;
 
                 @include responsive(large-tablet-screens) {
                     margin-right: 0px;
-                    border: 0;
-                }
-
-            }
-
-            &:nth-child(3) {
-                border-bottom: 1px solid transparent;
-
-                @include responsive(large-tablet-screens) {
-                    margin-right: 120px;
                     border: 0;
                 }
             }
@@ -418,6 +410,36 @@ main {
                 text-align: center;
                 white-space: nowrap;
                 // background-color: red;
+
+                &.line {
+                    font-weight: 600;
+                    background-color: rgba($color: #0094d6, $alpha: 0.2);
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 1px #ccc;
+                    @include responsive(large-tablet-screens) {
+                        box-shadow: none;
+                        background-color: transparent;
+                    }
+                }
+
+                &.line::after {
+                    
+                    @include responsive(large-tablet-screens) {
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 8px;
+                        margin-top: 10px;
+                        border-radius: 5px 5px 0 0;
+                        background-color: #000;
+                        transform: scale(1);
+                        transition: all 0.4s;
+                    }
+
+                    @include responsive(desktop-screens) {
+                        transform: scale(0.45, 1);
+                    }
+                }
 
                 &:hover {
                     font-weight: 600;

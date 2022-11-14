@@ -191,28 +191,13 @@ header {
                                     width: 40px;
                                 }
                             }
-                        }
-
-                        // a
-                    }
-
-                    // li
-                }
-
-                // ul
-            }
-
-            // right-menu
-        }
-
-        // flex-box
-    }
-
-    // logo-menu-box    
-}
-
-// header
-
+                        }// a
+                    }// li
+                }// ul
+            }// right-menu
+        }// flex-box
+    } // logo-menu-box  
+}// header
 
 // * ===================== main ===================== *
 
@@ -274,10 +259,10 @@ main {
     } //txtBox
     
     .ticketing {
-
+            margin-bottom: 70px;
         @include responsive(small-tablet-screens) {
             margin-top: 212px;
-            margin-bottom: 70px;
+            
         }
 
         .hall-title {

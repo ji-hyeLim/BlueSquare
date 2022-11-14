@@ -1,4 +1,9 @@
 $(function() {
+    AOS.init ({
+        duration : 1000,
+        easing : 'linear',
+    });
+
     $('.tap-menu li').click(function (e) {
         e.preventDefault();
         let idx = $(this).index();
