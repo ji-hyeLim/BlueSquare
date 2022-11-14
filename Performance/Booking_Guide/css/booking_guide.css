@@ -238,7 +238,11 @@ main {
 main h1.title {
   font-weight: 600;
   font-size: 36px;
-  margin-bottom: 58px;
+}
+@media screen and (min-width: 600px) {
+  main h1.title {
+    margin-bottom: 58px;
+  }
 }
 @media screen and (min-width: 1024px) {
   main h1.title {
@@ -291,9 +295,11 @@ main .txtBox div p {
   font-size: 18px;
   font-weight: 600;
 }
-main .ticketing {
-  margin-top: 212px;
-  margin-bottom: 70px;
+@media screen and (min-width: 600px) {
+  main .ticketing {
+    margin-top: 212px;
+    margin-bottom: 70px;
+  }
 }
 main .ticketing .hall-title {
   display: flex;
@@ -304,7 +310,7 @@ main .ticketing .hall-title .blue-sq {
   width: 5px;
   height: 30px;
   margin-right: 8px;
-  margin-top: 3px;
+  margin-top: 0px;
   background-color: #0094d6;
 }
 main .ticketing .hall-title h2 {
@@ -475,7 +481,7 @@ main .calloff .hall-title .blue-sq {
   width: 5px;
   height: 30px;
   margin-right: 8px;
-  margin-top: 3px;
+  margin-top: 0px;
   background-color: #0094d6;
 }
 main .calloff .hall-title h2 {

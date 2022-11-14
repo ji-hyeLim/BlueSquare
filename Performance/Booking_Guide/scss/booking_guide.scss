@@ -222,7 +222,10 @@ main {
     h1.title {
         font-weight: 600;
         font-size: 36px;
-        margin-bottom: 58px;
+
+        @include responsive(small-tablet-screens) {
+            margin-bottom: 58px;
+        }
 
         @include responsive(large-tablet-screens) {
             font-size: 38px;
@@ -271,8 +274,12 @@ main {
     } //txtBox
     
     .ticketing {
-        margin-top: 212px;
-        margin-bottom: 70px;
+
+        @include responsive(small-tablet-screens) {
+            margin-top: 212px;
+            margin-bottom: 70px;
+        }
+
         .hall-title {
                 display: flex;
                 padding-top: 70px;
@@ -282,7 +289,7 @@ main {
                 width: 5px;
                 height: 30px;
                 margin-right: 8px;
-                margin-top: 3px;
+                margin-top: 0px;
                 background-color: $point-color;
             }
             h2 {
@@ -466,7 +473,7 @@ main {
                 width: 5px;
                 height: 30px;
                 margin-right: 8px;
-                margin-top: 3px;
+                margin-top: 0px;
                 background-color: $point-color;
             }
         
