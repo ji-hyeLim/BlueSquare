@@ -6,61 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/all_schedule.js"></script>
     <title>BLUE SQUARE</title>
-    <script>
-        $(function() {
-            $(".year a").removeAttr("href");
-            $(".2021").hide();
-            $(".2020").hide();
-            $(".2021_title").hide();
-            $(".2020_title").hide();
-
-            // 2022
-            $("#prev_arrow22").click(function() {
-                $(".2021_title").show();
-                $(".2022_title").hide();
-                $(".2021").show();
-                $(".2022").hide();
-            });
-
-            $("#next_arrow22").click(function() {
-                $(".2020_title").show();
-                $(".2022_title").hide();
-                $(".2020").show();
-                $(".2022").hide();
-            });
-
-            // 2021
-            $("#prev_arrow21").click(function() {
-                $(".2020_title").show();
-                $(".2021_title").hide();
-                $(".2020").show();
-                $(".2021").hide();
-            });
-
-            $("#next_arrow21").click(function() {
-                $(".2022_title").show();
-                $(".2021_title").hide();
-                $(".2022").show();
-                $(".2021").hide();
-            });
-
-            // 2020
-            $("#prev_arrow20").click(function() {
-                $(".2022_title").show();
-                $(".2020_title").hide();
-                $(".2022").show();
-                $(".2020").hide();
-            });
-
-            $("#next_arrow20").click(function() {
-                $(".2021_title").show();
-                $(".2020_title").hide();
-                $(".2021").show();
-                $(".2020").hide();
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -136,7 +83,7 @@
         </header> <!-- header -->
 
         <main>
-            <div class="container">
+            <div id="category" class="container">
                 <h1>공연일정</h1>
                 <hr>
                 <div class="year">
@@ -159,11 +106,41 @@
                             </div>
                         </li>
                     </ul>
+                </div> <!-- year -->
+
+                <div class="inner">
+                    <div class="schedule_check">
+                        <span class="schedule-title">구분</span>
+                        <input type="checkbox" name="searchTypeData" class="searchType_all" id="hall_ck1" value="all" checked="checked">
+                        <label for="hall_ck1">
+                            전체
+                        </label>
+    
+                        <input type="checkbox" name="searchTypeData" class="searchType_all" id="hall_ck2" value="musical">
+                        <label for="hall_ck2">
+                            뮤지컬
+                        </label>
+    
+                        <input type="checkbox" name="searchTypeData" class="searchType_all" id="hall_ck3" value="concert">
+                        <label for="hall_ck3">
+                            콘서트
+                        </label>
+                    </div> <!-- schedule_check -->
+    
+                    <div class="write">
+                        <input type="text" name="searchWord" id="search" placeholder="검색어를 입력하세요" value="">
+                        <button type="button" onclick="fn_search('1')">검색</button>
+                    </div> <!-- write -->
+    
+                </div> <!-- inner -->
+                <div class="search_r">
+                    <span>검색결과 총</span><strong></strong><span>건</span>
                 </div>
-                <div class="box">
+
+                <div id="all_list" class="box">
                     <div class="2022">
                         <ul>
-                            <li>        
+                            <li class="musical">        
                                 <div class="poster">
                                     <img src="./img/2022/물랑루즈.png" alt="">
                                 </div>
@@ -180,7 +157,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/로이킴.png" alt="">
                                 </div>
@@ -197,7 +174,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/데이먼스이어.png" alt="">
                                 </div>
@@ -214,7 +191,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/원어스.png" alt="">
                                 </div>
@@ -231,7 +208,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/빅톤.png" alt="">
                                 </div>
@@ -248,7 +225,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/검정치마.png" alt="">
                                 </div>
@@ -265,7 +242,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/엘르.png" alt="">
                                 </div>
@@ -282,7 +259,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/정선아.png" alt="">
                                 </div>
@@ -299,7 +276,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/심규선.png" alt="">
                                 </div>
@@ -316,7 +293,7 @@
                                 </div>
                             </li>
 
-                            <li>        
+                            <li class="musical">        
                                 <div class="poster">
                                     <img src="./img/2022/그랜드 엑스패디션.png" alt="">
                                 </div>
@@ -333,7 +310,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/희노애락.png" alt="">
                                 </div>
@@ -350,7 +327,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/김재중.png" alt="">
                                 </div>
@@ -367,7 +344,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/이종석.png" alt="">
                                 </div>
@@ -384,7 +361,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/조정석.png" alt="">
                                 </div>
@@ -401,7 +378,7 @@
                                 </div>
                             </li>
 
-                            <li>        
+                            <li class="musical">        
                                 <div class="poster">
                                     <img src="./img/2022/엘리자벳.png" alt="">
                                 </div>
@@ -418,7 +395,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/정세운.png" alt="">
                                 </div>
@@ -440,7 +417,7 @@
 
                     <div class="2021">
                         <ul>
-                            <li>        
+                            <li class="concert">        
                                 <div class="poster">
                                     <img src="./img/2021/김필.png" alt="">
                                 </div>
@@ -457,7 +434,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/10cm.png" alt="">
                                 </div>
@@ -474,7 +451,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/페퍼톤스.png" alt="">
                                 </div>
@@ -491,7 +468,7 @@
                                 </div>
                             </li>
                             
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/루시.png" alt="">
                                 </div>
@@ -508,7 +485,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="musical">
                                 <div class="poster">
                                     <img src="./img/2021/프랑켄슈타인.png" alt="">
                                 </div>
@@ -525,7 +502,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2022/빅톤.png" alt="">
                                 </div>
@@ -542,7 +519,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/포르테디콰트로.png" alt="">
                                 </div>
@@ -559,7 +536,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/강형호.png" alt="">
                                 </div>
@@ -576,7 +553,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/k-on.png" alt="">
                                 </div>
@@ -593,7 +570,7 @@
                                 </div>
                             </li>
 
-                            <li>        
+                            <li class="concert">        
                                 <div class="poster">
                                     <img src="./img/2021/하동균.png" alt="">
                                 </div>
@@ -610,7 +587,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/조강태.png" alt="">
                                 </div>
@@ -627,7 +604,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/키썸.png" alt="">
                                 </div>
@@ -644,7 +621,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/먼데이키즈.png" alt="">
                                 </div>
@@ -661,7 +638,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/알리.png" alt="">
                                 </div>
@@ -678,7 +655,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2021/아도이.png" alt="">
                                 </div>
@@ -696,7 +673,7 @@
                             </li>
 
                             
-                            <li>        
+                            <li class="musical">        
                                 <div class="poster">
                                     <img src="./img/2021/엑스칼리버.png" alt="">
                                 </div>
@@ -717,7 +694,7 @@
                     
                     <div class="2020">
                         <ul>
-                            <li>        
+                            <li class="concert">        
                                 <div class="poster">
                                     <img src="./img/2020/세종.png" alt="">
                                 </div>
@@ -734,7 +711,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="musical">
                                 <div class="poster">
                                     <img src="./img/2020/노트르담 드 파리.png" alt="">
                                 </div>
@@ -751,7 +728,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/빅톤.png" alt="">
                                 </div>
@@ -768,7 +745,7 @@
                                 </div>
                             </li>
                             
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/조명섭.png" alt="">
                                 </div>
@@ -785,7 +762,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/혁오.png" alt="">
                                 </div>
@@ -802,7 +779,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="musical">
                                 <div class="poster">
                                     <img src="./img/2020/킹키부츠.png" alt="">
                                 </div>
@@ -819,7 +796,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/벤.png" alt="">
                                 </div>
@@ -836,7 +813,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="musical">
                                 <div class="poster">
                                     <img src="./img/2020/렌트.png" alt="">
                                 </div>
@@ -853,7 +830,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="musical">
                                 <div class="poster">
                                     <img src="./img/2020/오페라의유령.png" alt="">
                                 </div>
@@ -870,7 +847,7 @@
                                 </div>
                             </li>
 
-                            <li>        
+                            <li class="musical">        
                                 <div class="poster">
                                     <img src="./img/2020/정재일.png" alt="">
                                 </div>
@@ -887,7 +864,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/혁오1.png" alt="">
                                 </div>
@@ -904,7 +881,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/판타스틱 뮤지컬.png" alt="">
                                 </div>
@@ -921,7 +898,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/한국뮤지컬어워즈.png" alt="">
                                 </div>
@@ -938,7 +915,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/골든차일드.png" alt="">
                                 </div>
@@ -955,7 +932,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li class="concert">
                                 <div class="poster">
                                     <img src="./img/2020/정세운.png" alt="">
                                 </div>
@@ -973,7 +950,7 @@
                             </li>
 
                             
-                            <li>        
+                            <li class="concert">        
                                 <div class="poster">
                                     <img src="./img/2020/손호영 김태우.png" alt="">
                                 </div>
@@ -996,7 +973,6 @@
             </div> <!-- container -->
         </main> <!-- main -->
 
-        
         <footer>
             <div class="container">
                 <div class="flex-box">
