@@ -90,6 +90,7 @@ footer {
   width: 100%;
   height: 102px;
   padding-top: 10px;
+  z-index: 2;
 }
 @media screen and (min-width: 1024px) {
   .fixed-box {
@@ -192,8 +193,6 @@ header .fnbserve-header {
   position: relative;
   width: 100%;
   height: 100vh;
-  width: 100%;
-  height: 936;
   background-image: url(../img/필로스이미지레이어.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -411,7 +410,7 @@ main ul.fnb-menu li {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:first-child {
-    margin-right: 120px;
+    margin-right: 100px;
     border: 0;
   }
 }
@@ -420,7 +419,16 @@ main ul.fnb-menu li:nth-child(2) {
 }
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li:nth-child(2) {
-    margin-right: 120px;
+    margin-right: 100px;
+    border: 0;
+  }
+}
+main ul.fnb-menu li:nth-child(3) {
+  border-bottom: 1px solid transparent;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li:nth-child(3) {
+    margin-right: 100px;
     border: 0;
   }
 }
@@ -434,15 +442,6 @@ main ul.fnb-menu li:last-child {
     border: 0;
   }
 }
-main ul.fnb-menu li:nth-child(3) {
-  border-bottom: 1px solid transparent;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:nth-child(3) {
-    margin-right: 120px;
-    border: 0;
-  }
-}
 @media screen and (min-width: 1024px) {
   main ul.fnb-menu li {
     flex: 25%;
@@ -453,6 +452,36 @@ main ul.fnb-menu li a {
   padding: 10px;
   text-align: center;
   white-space: nowrap;
+}
+main ul.fnb-menu li a.line {
+  font-weight: 600;
+  background-color: rgba(0, 148, 214, 0.2);
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px #ccc;
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a.line {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main ul.fnb-menu li a.line::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: #000;
+    transform: scale(1);
+    transition: all 0.4s;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main ul.fnb-menu li a.line::after {
+    transform: scale(0.45, 1);
+  }
 }
 main ul.fnb-menu li a:hover {
   font-weight: 600;

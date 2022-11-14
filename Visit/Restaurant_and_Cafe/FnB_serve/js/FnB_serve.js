@@ -2,7 +2,7 @@ $(function() {
     AOS.init ({
         duration : 1000,
         easing : 'linear',
-        once : 'false',
+        // once : 'false',
     });
 
     $(window).on('scroll',function() {
