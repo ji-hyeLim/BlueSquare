@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/shinhan.css" type="text/css">
+  <title>BLUE SQUARE</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="./js/shinhan.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-bg">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/concert_pc.png">
+          <source media="(min-width: 600px)" srcset="img/concert_tablet.png">
+          <source media="(min-width: 320px)" srcset="img/concert_mobile.png">         
+          <img src="./img/concert_pc.png" alt="">
+        </picture>
+        
+        <div class="txt-wrap">
+          <div class="txt1 mobile-only">VENUE</div>
+          <div class="txt2 mobile-only">GUIDANCE</div>
+          <div class="txt1 large-only">VENUE GUIDANCE</div>
+          <div class="txt2 large-only">VENUE GUIDANCE</div>
+          <div class="img-pos">
+            <img src="./img/title.png" alt="">
+          </div>          
+        </div>
+      </div> <!-- header-bg -->
+      
+      <div class="logo-menu-box">
+        <div class="container">
+          <div class="flex-box">
+            <div class="header-logo">
+              <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
+              <a href="#" class="large-only"><img src="./img/logo_white.png" alt="logo"></a>
+            </div>
+
+            <nav class="main-menu">
+              <ul class="gnb">
+                <li>
+                  <a href="#">블루스퀘어</a>
+                  <ul class="lnb">
+                    <li><a href="#">기관소개</a></li>
+                    <li><a href="#">좌석배치도</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">공연안내</a>
+                  <ul class="lnb">
+                    <li><a href="#">공연예매</a></li>
+                    <li><a href="#">공연일정</a></li>
+                    <li><a href="#">예매안내</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">대관안내</a>
+                  <ul class="lnb">
+                    <li><a href="#">대관시설/대관료</a></li>
+                    <li><a href="#">대관신청</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">이용안내</a>
+                  <ul class="lnb">
+                    <li><a href="#">레스토랑&카페</a></li>
+                    <li><a href="#">문화공간</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">고객센터</a>
+                  <ul class="lnb">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </li>
+              </ul> <!-- gnb -->
+            </nav> <!-- main-menu-->
+
+            <div class="right-menu">
+              <ul>
+                <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png" alt="ticket"></a>
+                </li>
+                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
+                <li class="large-only"><a href="#">TICKET</a></li>
+                <li class="large-only"><a href="#">LOG IN</a></li>
+                <li class="large-only"><a href="#">JOIN</a></li>
+              </ul>
+            </div>
+          </div> <!-- flex-box -->
+        </div> <!-- container -->
+      </div> <!-- logo-menu-box -->
+    </header> <!-- header -->
+
+    <main>
+      <div class="container">
+        <h1>대관안내</h1>
+      </div>
+
+      <ul class="tab">
+        <li><a href="./shinhan.html" class="clicked">신한카드홀</a></li>
+        <li><a href="./master/master.html">마스터카드홀</a></li>
+        <li><a href="./practice/practice.html">연습실</a></li>
+        <li><a href="./kaos/kaos.html">카오스홀</a></li>
+        <li><a href="./nemo/nemo.html">NEMO</a></li>
+      </ul>
+
+      <div class="container">  
+        <section class="venue-guidance show" id="shinhan">
+          <h2>대관안내</h2>
+          <ul class="sub-tab">
+            <li><a href="#" class="sub-tab-clicked">대관시설</a></li>
+            <li><a href="#">대관료</a></li>
+          </ul>
+          <div class="venue-facility active">
+            <div class="flexbox">
+              <div class="slide-wrap">
+                <div class="slide-img">
+                  <img class="item on" src="./img/shinhan/shinhan-hall01.png" alt="">
+                  <img class="item" src="./img/shinhan/shinhan-hall02.png" alt="">
+                  <img class="item" src="./img/shinhan/shinhan-hall03.png" alt="">
+                </div>
+
+                <div class="slide-btn">
+                  <div class="prev"><img src="./img/prev.png" alt=""></div>
+                  <div class="next"><img src="./img/next.png" alt=""></div>
+                </div>
+              </div> <!-- slide-wrap -->
+
+              <div class="intro-equip-wrap">
+                <div class="intro">
+                  신한카드홀은 뮤지컬 전용 대극장으로 총 객석 3층, 1766석으로 되어있습니다.
+                  극장을 찾은 관객이 편안하고 쾌적하게 공연을 관람할 수 있도록
+                  인테리어에 세심한 배려를 기울였으며, 객석 1층은 무대 끝 선과 객석 맨 뒤의
+                  거리가 약 27m로 관객들이 어느자리에 앉든 가깝게 무대를 바라 볼 수 있습니다.
+                  또한 객석 2층은 총 430석으로 의자가 교차별 형식으로 설계되어
+                  모든 좌석에서의 관람이 편리하며, 맨 앞 좌석에서 무대까지의 거리도 18.5m로
+                  국내 최단거리를 자랑하고 있습니다.
+                  <br><br>
+                  공연을 통해 삶의 여유를 즐기러 오신 관객 여러분을 만족시켜드리기 위해
+                  항상 배려하는 마음으로 서비스 연구에 매진하는 신한카드 홀에서
+                  뮤지컬의 뜨거운열기와 무한한 감동을 가져가시기 바랍니다.
+                </div>
+                <div class="equipment-list">
+                  <h3>장비리스트</h3>
+                  <div class="list1 btn-flex">
+                    <div>무대기술자료</div>
+                    <a href="./file/musical_hall_skill2021.pdf" target="_blank">
+                      <button class="download">PDF 다운로드</button>
+                    </a>
+                  </div>
+                  <div class="list2 btn-flex">
+                    <div>무대도면</div>
+                    <a href="./file/musical_hall_plan2021.pdf" target="_blank">
+                      <button class="download">PDF 다운로드</button>
+                    </a>
+                  </div>
+                </div><!-- equipment-list -->
+              </div> <!-- venue-info -->
+            </div> <!-- flexbox -->
+          </div> <!-- venue-facility -->
+
+          <div class="rental-fee">
+            <div class="perform-fee">
+              <h2>공연대관료</h2>
+              <div class="flexbox2">
+                <div>
+                  <h3>대관료</h3>
+                </div>
+                <div>• 회당 9,500,000(VAT 별도)</div>
+              </div>
+              <div class="flexbox2">
+                <div>
+                  <h3>안내사항</h3>
+                </div>
+                <div>
+                  <div>
+                    • 주 1일 OFF DAY에는 대관료를 부과하지 않으며 1주 1회 OFF 기준임 (추가 OFF일에는 공연대관료로 부과)
+                  </div>
+                  <br>
+                  <div>
+                    • 1일 1회 공연대관 시간 :
+                    <br>공연 시작 시간 3시간 30분 전부터 7시간 (점심, 저녁시간 1시간 제외)
+                    <br>1회 공연 대관시간은 150분을 넘지 못하며, 1일 총 대관시간은 12시간을 초과할 수 없음
+                  </div>
+                  <br>
+                  <div>• 기본 대관료에 포함되는 내용</div>
+                  <div>
+                    1) 공연 대관 시간 냉,난방료 (공연 한시간 전부터 종료시까지)<br>
+                    2) 1명의 하우스 매니저, 15명의 하우스 어셔 인력<br>
+                    3) 무대 기계시설, 기본음향, 조명시설 (음향, 조명 사용비용 별도)<br>
+                    4) 준비대관, 공연대관시 사용되는 전기, 수도세 일체<br>
+                    5) 대관기간내에 사용하는 모든 분장실, 대기실, 휴게실 및 세탁실<br>
+                  </div>
+                  <br>
+                  <div>• 시연회 및 프레스콜 등의 추가 행사 진행 시 시간당 별도 비용 부과</div>
+                </div>
+              </div> <!-- flexbox2 -->
+            </div> <!-- perform-fee -->
+
+            <div class="prepare-fee">
+              <h2>준비대관료</h2>
+              <div class="flexbox2">
+                <div>
+                  <h3>대관료</h3>
+                </div>
+                <div>• 회당 7,700,000(VAT 별도)</div>
+              </div>
+              <div class="flexbox2">
+                <div>
+                  <h3>안내사항</h3>
+                </div>
+                <div>
+                  <div>• 냉난방 및 온수 사용료 별도</div>
+                  <div>• 기본구간 준비대관 : 09:00 ~ 18:00 (8시간) * 점심시간 1시간은 대관가능시간에서 제외</div>
+                  <div>• 심야구간 기본대관 : 19:00 ~ 23:00 (4시간)</div>
+                  <div>• 철야 : 23시 이후부터 익일 9시까지 (시간당 2,000,000원)</div>
+                  <div>• 준비대관일은 최대 12일을 넘지 못하며 12일이 넘는 경우 1일 공연 대관료로 계산하여 추가함</div>
+                  <div>• 준비대관 기간에도 1주 1일 OFF가 있어야 하며 비용을 부과하지 않음</div>
+                </div>
+              </div> <!-- flexbox2 -->
+            </div> <!-- prepare-fee -->
+
+            <div class="agreement">
+              위 금액의 공연대관료 및 준비대관료에는 장비대여료, 부대시설사용료는 포함되어 있지 않음 <br>
+              (장비대여료 및 부대시설사용료는 블루스퀘어 <a href="./file/BlueSquare_rule.pdf" target="_blank">대관규약</a>에 의거 대관계약 시
+              추가산정)
+            </div>
+          </div> <!-- rental-fee -->
+        </section> <!-- venue-guidance 신한카드홀 -->
+      </div> <!-- container -->
+    </main> <!-- main -->
+
+    <footer>
+      <div class="container">
+        <div class="flex-box">
+          <div class="left-contents">
+            <h2>Let's Blue Square Together</h2>
+            <br>
+            <address>
+              주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span> . 1544-1591&nbsp;&nbsp;<span>E-mail.
+                bluesquare@interpark.com</span>
+            </address>
+            <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
+          </div> <!-- left-contents -->
+
+          <div class="right-contents">
+            <ul class="footer-menu">
+              <li>Menu
+                <ul class="menu-contents">
+                  <li><a href="#">예매안내</a></li>
+                  <li><a href="#">좌석배치도</a></li>
+                  <li><a href="#">대관안내</a></li>
+                  <li><a href="#">오시는길</a></li>
+                </ul>
+              </li>
+              <li>Guide
+                <ul class="menu-contents">
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#">윤리경영/제보</a></li>
+                  <li>
+                    <form action="#" method="post">
+                      <select name="site" id="site">
+                        <option value="">관련사이트</option>
+                        <option value="http://www.stage631.com/">스테이지631</option>
+                        <option value="http://www.shinhancard.com">신한카드</option>
+                        <option value="https://www.mastercard.co.kr/">마스터카드</option>
+                      </select>
+                      <span><img src="./img/down_icon.png" alt="select arrow"></span>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li>Social
+                <ul class="menu-contents social-menu">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></xli>
+                  <li><a href="#">Youtube</a></li>
+                </ul>
+              </li>
+            </ul> <!-- footer-menu -->
+          </div> <!-- right-contents -->
+
+          <div class="large-only footer-title">
+            <h1>Blue&ZeroWidthSpace; Square</h1>
+          </div>
+        </div> <!-- flex-box -->
+      </div> <!-- container -->
+
+      <div class="large-only line">
+        <span></span>
+      </div>
+    </footer> <!-- footer -->
+  </div> <!-- wrapper -->
+</body>
+
+</html>
