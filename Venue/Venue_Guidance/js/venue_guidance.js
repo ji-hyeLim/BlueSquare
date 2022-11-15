@@ -35,19 +35,6 @@ $(function () {
 
 
 
-
-
-  $('.tab li').click(function (e) {
-    e.preventDefault();
-    let idx = $(this).index();
-
-    $('.tab li a').removeClass('clicked');
-    $('.tab li a').eq(idx).addClass('clicked');
-
-    $('#master').removeClass('show2');
-    $('#master').eq(idx).addClass('show2');
-  });
-
   $('.sub-tab li').click(function (e) {
     e.preventDefault();
     let idx = $(this).index();
