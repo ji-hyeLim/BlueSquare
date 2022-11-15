@@ -222,7 +222,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
-  color: #fff;
+  color: black;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   display: block;
@@ -230,7 +230,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: #fff;
+  background-color: black;
   transform: scale(0);
   transition: all 0.4s;
 }
@@ -268,7 +268,7 @@ header .logo-menu-box .flex-box .right-menu ul {
   justify-content: space-between;
 }
 header .logo-menu-box .flex-box .right-menu ul li a {
-  color: #fff;
+  color: black;
   font-family: "Montserrat", sans-serif, Arial;
 }
 header .logo-menu-box .flex-box .right-menu ul li a::after {
@@ -277,7 +277,7 @@ header .logo-menu-box .flex-box .right-menu ul li a::after {
   width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: #fff;
+  background-color: black;
   transform: scale(0);
   transition: all 0.4s;
 }
@@ -416,13 +416,10 @@ main .venue-guidance .venue-facility .flexbox {
 main .venue-guidance .venue-facility .flexbox .slide-wrap {
   position: relative;
   width: 100%;
-  height: 300px;
-  background-color: skyblue;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox .slide-wrap {
     width: 100%;
-    height: 500px;
   }
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
@@ -434,14 +431,15 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
   width: 100%;
   opacity: 0;
   transition: all 1s;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img:first-child {
   opacity: 1;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
   cursor: pointer;
+  height: 100%;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
   width: 40px;
@@ -449,18 +447,19 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 0;
+  background-color: blue;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+  background-color: blue;
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
-  margin-top: 30px;
   font-size: 14px;
+  margin-top: 68%;
+  background-color: pink;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
