@@ -385,8 +385,8 @@ main .notice-wrap .notice-title time {
   }
 }
 main .notice-wrap .notice-content {
-  margin-top: 44px;
   padding-left: 20px;
+  margin-top: 44px;
   padding-bottom: 88px;
   border-bottom: 1px solid #ccc;
 }
@@ -399,11 +399,24 @@ main .notice-wrap .notice-content p {
     font-size: 16px;
   }
 }
-main .notice-wrap .notice-content p span {
+main .notice-wrap .notice-content p .title {
   display: block;
   text-align: center;
   font-size: 25px;
   font-weight: 600;
+}
+main .notice-wrap .notice-content p .sub-title {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+main .notice-wrap .notice-content p .link {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: rgb(0, 148, 214);
 }
 main .notice-wrap .back {
   margin: 0 auto;

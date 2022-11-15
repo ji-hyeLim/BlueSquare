@@ -355,7 +355,7 @@ main {
         .notice-title {
             padding-left: 20px;
             border-bottom: 1px solid $gray-border;
-            
+                
             a {
                 margin-top: 16px;
                 padding: 12px 0;
@@ -384,27 +384,31 @@ main {
 
 
         .notice-content {
-            margin-top: 44px;
             padding-left: 20px;
+            margin-top: 44px;
             padding-bottom: 88px;
             border-bottom: 1px solid $gray-border;
 
             p {
                 line-height: 2;
                 font-size: 14px;
-
+                
                 @include responsive(large-tablet-screens) {
                     font-size: $text-font-size;
                 }
-
-                span {
-                    display: block;
-                    text-align: center;
-                    font: { 
-                        size: 25px;
-                        weight: 600;
-                    }
+                
+                img {
+                    width: 700px;
                 }
+
+                .link {
+                    display: inline-block;
+                    border-radius: 5px;
+                    font-size: $mini-text-font-size;
+                    color: #fff;
+                    padding: 0 5px;
+                    background-color: $point-color;
+                } 
             }
         } // notice-content
 

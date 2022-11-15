@@ -386,11 +386,11 @@ main .notice-wrap .notice-title time {
 }
 main .notice-wrap .notice-content {
   margin-top: 44px;
-  padding-left: 20px;
   padding-bottom: 88px;
   border-bottom: 1px solid #ccc;
 }
 main .notice-wrap .notice-content p {
+  text-align: center;
   line-height: 2;
   font-size: 14px;
 }
@@ -398,12 +398,6 @@ main .notice-wrap .notice-content p {
   main .notice-wrap .notice-content p {
     font-size: 16px;
   }
-}
-main .notice-wrap .notice-content p span {
-  display: block;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 600;
 }
 main .notice-wrap .back {
   margin: 0 auto;

@@ -351,11 +351,11 @@ main {
 
     .notice-wrap {
         margin-bottom: 102px;
-
+        // background-color: red;
         .notice-title {
             padding-left: 20px;
             border-bottom: 1px solid $gray-border;
-            
+                
             a {
                 margin-top: 16px;
                 padding: 12px 0;
@@ -385,25 +385,16 @@ main {
 
         .notice-content {
             margin-top: 44px;
-            padding-left: 20px;
             padding-bottom: 88px;
             border-bottom: 1px solid $gray-border;
 
             p {
+                text-align: center;
                 line-height: 2;
                 font-size: 14px;
 
                 @include responsive(large-tablet-screens) {
                     font-size: $text-font-size;
-                }
-
-                span {
-                    display: block;
-                    text-align: center;
-                    font: { 
-                        size: 25px;
-                        weight: 600;
-                    }
                 }
             }
         } // notice-content
