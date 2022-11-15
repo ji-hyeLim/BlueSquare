@@ -111,15 +111,161 @@ header {
   width: 100vw;
 }
 header .header-bg {
+  background-color: #eee;
+  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-header .header-bg video {
+@-webkit-keyframes fadeUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+@keyframes moveBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+header .header-bg span {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  -webkit-animation: fadeUp 1s forwards;
+          animation: fadeUp 1s forwards;
+}
+header .header-bg span:nth-child(1) {
+  top: 130px;
+  left: 20px;
+}
+header .header-bg span:nth-child(2) {
+  top: 300px;
+  right: 20px;
+}
+header .header-bg span:nth-child(3) {
+  top: 460px;
+  right: 20px;
+}
+header .header-bg span:nth-child(4) {
+  bottom: 20px;
+  right: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+header .header-bg span:nth-child(5) {
+  bottom: 80px;
+  right: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg span {
+    font-size: 60px;
+  }
+  header .header-bg span:nth-child(1) {
+    top: 130px;
+    left: 20px;
+  }
+  header .header-bg span:nth-child(2) {
+    top: 360px;
+    right: 40px;
+  }
+  header .header-bg span:nth-child(3) {
+    top: 460px;
+    right: 250px;
+  }
+  header .header-bg span:nth-child(4) {
+    bottom: 60px;
+    right: 57px;
+  }
+  header .header-bg span:nth-child(5) {
+    bottom: 10px;
+    right: 305px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg span {
+    font-size: 100px;
+  }
+  header .header-bg span:nth-child(3) {
+    top: 460px;
+    right: 310px;
+  }
+  header .header-bg span:nth-child(4) {
+    bottom: 60px;
+    right: 367px;
+  }
+  header .header-bg span:nth-child(5) {
+    bottom: 10px;
+    right: 615px;
+  }
+}
+header .header-bg .img-wrap {
+  z-index: 0;
+  position: absolute;
+  top: 300px;
+  left: 20px;
+  width: 300px;
+  height: 334px;
+  overflow: hidden;
+  opacity: 0.7;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .img-wrap {
+    left: 30px;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .img-wrap {
+    left: 20px;
+    width: 500px;
+  }
+}
+header .header-bg .img-wrap img {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  opacity: 0.8;
+}
+header .header-bg .img-wrap .color-bg {
+  position: absolute;
+  top: -1px;
+  width: 500px;
+  height: 334px;
+  z-index: 99;
+  background-color: #eee;
+  -webkit-animation: moveBg 1s forwards;
+          animation: moveBg 1s forwards;
 }
 header .logo-menu-box {
   position: absolute;
@@ -171,7 +317,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
-  color: #fff;
+  color: #000;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   display: block;
@@ -179,7 +325,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
   width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: #fff;
+  background-color: #000;
   transform: scale(0);
   transition: all 0.4s;
 }
@@ -217,7 +363,7 @@ header .logo-menu-box .flex-box .right-menu ul {
   justify-content: space-between;
 }
 header .logo-menu-box .flex-box .right-menu ul li a {
-  color: #fff;
+  color: #000;
   font-family: "Montserrat", sans-serif, Arial;
 }
 header .logo-menu-box .flex-box .right-menu ul li a::after {
@@ -226,7 +372,7 @@ header .logo-menu-box .flex-box .right-menu ul li a::after {
   width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: #fff;
+  background-color: #000;
   transform: scale(0);
   transition: all 0.4s;
 }
