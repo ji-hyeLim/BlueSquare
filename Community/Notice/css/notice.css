@@ -405,7 +405,7 @@ main .notice-wrap .pagination a {
     margin: 0 8px;
   }
 }
-main .notice-wrap .pagination a.on {
+main .notice-wrap .pagination a.active {
   font-weight: 600;
   border-radius: 50%;
   background-color: #eee;

@@ -105,159 +105,33 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  position: relative;
-  width: 100vw;
-  height: 250px;
-}
-header .logo-menu-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-header .logo-menu-box .flex-box {
-  position: relative;
-  display: flex;
-  height: 80px;
-}
-@media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box {
-    height: 100px;
-  }
-}
-header .logo-menu-box .flex-box .header-logo {
-  width: 15%;
-}
-header .logo-menu-box .flex-box .header-logo a img {
-  width: 48px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box .header-logo a img {
-    width: 132px;
-  }
-}
-header .logo-menu-box .flex-box nav.main-menu {
-  display: none;
-  width: 504px;
-}
-@media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box nav.main-menu {
-    display: block;
-  }
-}
-header .logo-menu-box .flex-box nav.main-menu .gnb {
-  width: inherit;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-header .logo-menu-box .flex-box nav.main-menu .gnb li a {
-  font-size: 18px;
-  color: #000;
-}
-header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  margin-top: 5px;
-  background-color: #000;
-  transform: scale(0);
-  transition: all 0.4s;
-}
-header .logo-menu-box .flex-box nav.main-menu .gnb li a:hover::after {
-  transform: scale(1);
-}
-header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
-  display: none;
-}
-header .logo-menu-box .flex-box .right-menu {
-  width: 80px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-}
-@media screen and (min-width: 600px) {
-  header .logo-menu-box .flex-box .right-menu {
-    width: 110px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box .right-menu {
-    width: 188px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  header .logo-menu-box .flex-box .right-menu {
-    right: 0;
-  }
-}
-header .logo-menu-box .flex-box .right-menu ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-header .logo-menu-box .flex-box .right-menu ul li a {
-  color: #000;
-  font-family: "Montserrat", sans-serif, Arial;
-}
-header .logo-menu-box .flex-box .right-menu ul li a::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  margin-top: 5px;
-  background-color: #000;
-  transform: scale(0);
-  transition: all 0.4s;
-}
-@media screen and (min-width: 1024px) {
-  header .logo-menu-box .flex-box .right-menu ul li a:hover::after {
-    transform: scale(1);
-  }
-}
-header .logo-menu-box .flex-box .right-menu ul li a img {
-  width: 30px;
-}
-@media screen and (min-width: 600px) {
-  header .logo-menu-box .flex-box .right-menu ul li a img {
-    width: 40px;
-  }
-}
-
-main {
+.wrapper {
   position: relative;
   height: 1500px;
   background-color: #000;
 }
-main .go-home {
+
+.go-home {
   position: absolute;
   left: 20px;
   top: 20px;
 }
-main .go-home a {
+.go-home a {
   color: #fff;
 }
-main .go-home a::before {
+.go-home a::before {
   display: inline-block;
   content: "\f060";
   font-family: "FontAwesome";
   font-weight: 300;
   margin-right: 10px;
 }
-main .pos-wrap {
+
+.pos-wrap {
   position: relative;
   height: 1500px;
 }
-main .pos-wrap .join-wrap {
+.pos-wrap .join-wrap {
   width: 100%;
   min-width: 350px;
   padding: 50px 40px;
@@ -270,36 +144,36 @@ main .pos-wrap .join-wrap {
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 600px) {
-  main .pos-wrap .join-wrap {
+  .pos-wrap .join-wrap {
     margin: 0 auto;
     width: 550px;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .pos-wrap .join-wrap {
+  .pos-wrap .join-wrap {
     margin: 0 auto;
     width: 610px;
   }
 }
-main .pos-wrap .join-wrap h1 {
+.pos-wrap .join-wrap h1 {
   margin-bottom: 58px;
   font-family: "Montserrat", sans-serif, Arial;
   font-weight: 600;
 }
-main .pos-wrap .join-wrap form div {
+.pos-wrap .join-wrap form div {
   margin-bottom: 24px;
 }
-main .pos-wrap .join-wrap form div:last-of-type {
+.pos-wrap .join-wrap form div:last-of-type {
   margin-bottom: 0;
 }
-main .pos-wrap .join-wrap form label {
+.pos-wrap .join-wrap form label {
   display: block;
   padding-bottom: 13px;
 }
-main .pos-wrap .join-wrap form label span {
+.pos-wrap .join-wrap form label span {
   color: red;
 }
-main .pos-wrap .join-wrap form input {
+.pos-wrap .join-wrap form input {
   height: 50px;
   width: 100%;
   padding-left: 10px;
@@ -307,44 +181,44 @@ main .pos-wrap .join-wrap form input {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-main .pos-wrap .join-wrap form input:focus {
+.pos-wrap .join-wrap form input:focus {
   outline: none;
   border-color: #0094d6;
   box-shadow: 0 0 2px #0094d6;
 }
-main .pos-wrap .join-wrap form #user-id.novalid {
+.pos-wrap .join-wrap form #user-id.novalid {
   border: 1px solid red;
   box-shadow: 0 0 2px red;
 }
-main .pos-wrap .join-wrap form #user-id.valid {
+.pos-wrap .join-wrap form #user-id.valid {
   border: 1px solid green;
   box-shadow: 0 0 2px green;
 }
-main .pos-wrap .join-wrap form #user-pw.novalid {
+.pos-wrap .join-wrap form #user-pw.novalid {
   border: 1px solid red;
   box-shadow: 0 0 2px red;
 }
-main .pos-wrap .join-wrap form #user-pw.valid {
+.pos-wrap .join-wrap form #user-pw.valid {
   border: 1px solid green;
   box-shadow: 0 0 2px green;
 }
-main .pos-wrap .join-wrap form #user-pw-check.novalid {
+.pos-wrap .join-wrap form #user-pw-check.novalid {
   border: 1px solid red;
   box-shadow: 0 0 2px red;
 }
-main .pos-wrap .join-wrap form #user-pw-check.valid {
+.pos-wrap .join-wrap form #user-pw-check.valid {
   border: 1px solid green;
   box-shadow: 0 0 2px green;
 }
-main .pos-wrap .join-wrap form #user-phone.novalid {
+.pos-wrap .join-wrap form #user-phone.novalid {
   border: 1px solid red;
   box-shadow: 0 0 2px red;
 }
-main .pos-wrap .join-wrap form #user-phone.valid {
+.pos-wrap .join-wrap form #user-phone.valid {
   border: 1px solid green;
   box-shadow: 0 0 2px green;
 }
-main .pos-wrap .join-wrap form .address-box input[type=button] {
+.pos-wrap .join-wrap form .address-box input[type=button] {
   margin-top: 14px;
   color: #0094d6;
   font-weight: 600;
@@ -352,10 +226,10 @@ main .pos-wrap .join-wrap form .address-box input[type=button] {
   border: 1px solid #0094d6;
   background-color: #fff;
 }
-main .pos-wrap .join-wrap form .pw-box div {
+.pos-wrap .join-wrap form .pw-box div {
   position: relative;
 }
-main .pos-wrap .join-wrap form .pw-box div i {
+.pos-wrap .join-wrap form .pw-box div i {
   color: #b2b2b2;
   cursor: pointer;
   position: absolute;
@@ -363,10 +237,10 @@ main .pos-wrap .join-wrap form .pw-box div i {
   transform: translateY(-50%);
   right: 10px;
 }
-main .pos-wrap .join-wrap form .pw-box-check div {
+.pos-wrap .join-wrap form .pw-box-check div {
   position: relative;
 }
-main .pos-wrap .join-wrap form .pw-box-check div i {
+.pos-wrap .join-wrap form .pw-box-check div i {
   color: #b2b2b2;
   cursor: pointer;
   position: absolute;
@@ -374,7 +248,7 @@ main .pos-wrap .join-wrap form .pw-box-check div i {
   transform: translateY(-50%);
   right: 10px;
 }
-main .pos-wrap .join-wrap form .gender-box .radio-box {
+.pos-wrap .join-wrap form .gender-box .radio-box {
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -382,11 +256,11 @@ main .pos-wrap .join-wrap form .gender-box .radio-box {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-main .pos-wrap .join-wrap form .gender-box .radio-box label {
+.pos-wrap .join-wrap form .gender-box .radio-box label {
   display: inline;
   font-size: 14px;
 }
-main .pos-wrap .join-wrap form .gender-box .radio-box input {
+.pos-wrap .join-wrap form .gender-box .radio-box input {
   position: relative;
   width: 14px;
   height: 14px;
@@ -399,11 +273,11 @@ main .pos-wrap .join-wrap form .gender-box .radio-box input {
   appearance: none;
 }
 @media screen and (min-width: 600px) {
-  main .pos-wrap .join-wrap form .gender-box .radio-box input {
+  .pos-wrap .join-wrap form .gender-box .radio-box input {
     margin-left: 20%;
   }
 }
-main .pos-wrap .join-wrap form .gender-box .radio-box input:checked::after {
+.pos-wrap .join-wrap form .gender-box .radio-box input:checked::after {
   display: block;
   content: "\f00c";
   font-family: "FontAwesome";
@@ -414,10 +288,10 @@ main .pos-wrap .join-wrap form .gender-box .radio-box input:checked::after {
   left: -1px;
   top: -1px;
 }
-main .pos-wrap .join-wrap form .gender-box .radio-box input:first-child {
+.pos-wrap .join-wrap form .gender-box .radio-box input:first-child {
   margin-left: 0;
 }
-main .pos-wrap .join-wrap form button {
+.pos-wrap .join-wrap form button {
   margin-top: 40px;
   width: 100%;
   height: 55px;
@@ -428,212 +302,42 @@ main .pos-wrap .join-wrap form button {
   border-radius: 5px;
   background-color: #000;
 }
-main .pos-wrap .join-wrap form .join-agree {
+.pos-wrap .join-wrap form .join-agree {
   margin-top: 25px;
 }
-main .pos-wrap .join-wrap form .join-agree .line {
+.pos-wrap .join-wrap form .join-agree .line {
   width: 100%;
   height: 1px;
   background-color: #000;
   margin-bottom: 30px;
 }
-main .pos-wrap .join-wrap form .join-agree ul li {
+.pos-wrap .join-wrap form .join-agree ul li {
   display: flex;
   width: 100%;
   font-size: 16px;
   line-height: 2;
 }
-main .pos-wrap .join-wrap form .join-agree ul li:first-child > div {
+.pos-wrap .join-wrap form .join-agree ul li:first-child > div {
   font-weight: 600;
   font-size: 16px;
 }
-main .pos-wrap .join-wrap form .join-agree ul li div {
+.pos-wrap .join-wrap form .join-agree ul li div {
   width: 70%;
 }
-main .pos-wrap .join-wrap form .join-agree ul li div label {
+.pos-wrap .join-wrap form .join-agree ul li div label {
   display: inline-block;
   padding-bottom: 0px;
 }
-main .pos-wrap .join-wrap form .join-agree ul li div input {
+.pos-wrap .join-wrap form .join-agree ul li div input {
   width: 15px;
   height: 15px;
   margin-right: 10px;
 }
-main .pos-wrap .join-wrap form .join-agree ul li a {
+.pos-wrap .join-wrap form .join-agree ul li a {
   width: 30%;
   text-align: right;
   color: #0094d6;
 }
-main .pos-wrap .join-wrap form .join-agree ul li a i {
+.pos-wrap .join-wrap form .join-agree ul li a i {
   padding-left: 5px;
-}
-
-footer {
-  color: #fff;
-  background-color: #000;
-}
-@media screen and (min-width: 1024px) {
-  footer {
-    height: 800px;
-  }
-}
-footer .flex-box {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-}
-@media screen and (min-width: 1024px) {
-  footer .flex-box {
-    flex-direction: row;
-    height: 800px;
-  }
-}
-footer .flex-box .left-contents {
-  padding-top: 55px;
-  padding-bottom: 60px;
-}
-@media screen and (min-width: 1024px) {
-  footer .flex-box .left-contents {
-    padding-top: 52px;
-    padding-bottom: 0;
-  }
-}
-footer .flex-box .left-contents h2 {
-  margin-left: -2px;
-  font-size: 1.25em;
-  font-family: "Montserrat", sans-serif, Arial;
-  font-weight: normal;
-}
-@media screen and (min-width: 1024px) {
-  footer .flex-box .left-contents h2 {
-    margin-left: -3px;
-    font-size: 1.875em;
-  }
-}
-footer .flex-box .left-contents address {
-  line-height: 2;
-  font-style: normal;
-  font-size: 13px;
-}
-footer .flex-box .left-contents address span {
-  font-size: 13px;
-  font-family: "Montserrat", sans-serif, Arial;
-  letter-spacing: -0.0769230769em;
-}
-footer .flex-box .left-contents p {
-  line-height: 2;
-  font-size: 13px;
-  font-family: "Montserrat", sans-serif, Arial;
-  letter-spacing: -0.0769230769em;
-}
-footer .flex-box .right-contents {
-  width: 33%;
-}
-@media screen and (min-width: 1024px) {
-  footer .flex-box .right-contents {
-    width: 28%;
-  }
-}
-footer .flex-box .right-contents .footer-menu {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-@media screen and (min-width: 1024px) {
-  footer .flex-box .right-contents .footer-menu {
-    flex-direction: row;
-  }
-}
-footer .flex-box .right-contents .footer-menu > li {
-  padding-top: 56px;
-}
-footer .flex-box .right-contents .footer-menu li {
-  color: #fff;
-  font-family: "Montserrat", sans-serif, Arial;
-  font-weight: 500;
-}
-footer .flex-box .right-contents .footer-menu li:last-child {
-  width: 62px;
-  font-family: "Montserrat", sans-serif, Arial;
-}
-footer .flex-box .right-contents .footer-menu li:last-child > .social-menu {
-  margin-top: 34px;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents {
-  margin-top: 35px;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li a {
-  padding-bottom: 12px;
-  color: #fff;
-  font-size: 13px;
-  font-family: "Pretendard", "Nanum Gothic", "맑은 고딕";
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li a:hover {
-  font-weight: bold;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li:last-child > a {
-  padding-bottom: 0;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form {
-  position: relative;
-  margin-top: -3px;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form select {
-  width: 92px;
-  height: 100%;
-  border: none;
-  color: #fff;
-  font-size: 13px;
-  font-family: "Pretendard", "Nanum Gothic", "맑은 고딕";
-  background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form select::-ms-expand {
-  display: none;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form select option {
-  color: #fff;
-  background-color: black;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form span {
-  width: 18px;
-  position: absolute;
-  top: 2px;
-  right: -28px;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form span img {
-  width: 100%;
-  transition: all 0.3s;
-}
-footer .flex-box .right-contents .footer-menu li .menu-contents li form select:focus + span > img {
-  transform: rotate(180deg);
-}
-footer .flex-box .footer-title {
-  position: absolute;
-  top: 65%;
-  right: 0;
-  left: 0;
-  transform: translate(0, -50%);
-  text-align: center;
-}
-footer .flex-box .footer-title h1 {
-  font-size: calc(38px + 9.8vw);
-  font-family: "Montserrat", sans-serif, Arial;
-  font-weight: 500;
-}
-footer .line {
-  position: relative;
-}
-footer .line span {
-  position: absolute;
-  bottom: 280px;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
 }

@@ -13,217 +13,90 @@
 </head> 
 <body>
     <div class="wrapper">
-        <header style="display: none;">
-            <div class="logo-menu-box">
-                <div class="container">
-                    <div class="flex-box">
-                        <div class="header-logo">
-                            <a href="#" class="mobile-only"><img src="./img/logo_only.png" alt="logo"></a>
-                            <a href="#" class="large-only"><img src="./img/logo_black.png" alt="logo"></a>
+        <div class="go-home"><a href="#">홈으로</a></div>
+        <div class="container">
+            <div class="pos-wrap">
+                <div class="join-wrap">
+                    <h1>JOIN</h1>
+                    <form action="#" id="join-frm" name="frm">
+                        <div class="id-box">
+                            <label for="user-id">아이디(이메일)<span>*</span></label>
+                            <input type="email" placeholder="name@example.com" name="user-id" id="user-id" autocomplete="off" required>
+                            <span class="user-id-valid"></span>
                         </div>
-    
-                        <nav class="main-menu">
-                            <ul class="gnb">
+                        <div class="pw-box">
+                            <label for="user-pw">비밀번호<span>*</span></label>
+                            <div>
+                                <input type="password" placeholder="영문, 숫자, 특수문자 조합 8자리 이상" id="user-pw" name="user-pw" minlength="8" required>
+                                <i class="fa fa-eye fa-lg" id="pw-eye"></i>
+                            </div>
+                            <span class="user-pw-valid"></span>
+                        </div>
+                        <div class="pw-box-check">
+                            <label for="user-pw-check">비밀번호 확인<span>*</span></label>
+                            <div>
+                                <input type="password" placeholder="영문, 숫자, 특수문자 조합 8자리 이상" id="user-pw-check" name="user-pw-check" minlength="8" required>
+                                <i class="fa fa-eye fa-lg" id="pw-re-eye"></i>
+                            </div>
+                            <span class="user-pw-check-valid"></span>
+                        </div>
+                        <div class="phone-box">
+                            <label for="user-phone">휴대전화<span>*</span></label>
+                            <input type="text" placeholder="예)01012345678" id="user-phone" name="user-phone" maxlength="11" autocomplete="off" required>
+                            <span class="user-phone-valid"></span>
+                        </div>
+                        <div class="address-box">
+                            <label for="user-address">주소</label>
+                            <input type="text" readonly id="address-content">
+                            <input type="button" value="주소 검색" id="user-address" name="user-address"> 
+                        </div>
+                        <div class="gender-box">
+                            <label>성별</label>
+                            <div class="radio-box">
+                                <input type="radio" name="user-gender" id="woman" value="woman"> <label for="woman">여성</label>
+                                <input type="radio" name="user-gender" id="man" value="man"> <label for="man">남성</label>
+                                <input type="radio" name="user-gender" id="no-check" value="no-check" checked> <label for="no-check">선택안함</label>
+                            </div>
+                        </div>
+                        <div class="birth-box">
+                            <label for="user-birth">생년월일</label>
+                            <input type="text" placeholder="예)20010415" id="user-birth" name="user-birth" minlength="8" maxlength="8" autocomplete="off"> 
+                        </div>
+
+                        <button value="submit" id="join-btn">JOIN</button>
+
+                        <div class="join-agree">
+                            <div class="line"></div>
+                            <ul>
                                 <li>
-                                    <a href="#">블루스퀘어</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">기관소개</a></li>
-                                        <li><a href="#">좌석배치도</a></li>
-                                    </ul>
+                                    <div>
+                                        <input type="checkbox" name="allAgree" id="allAgree" onclick="allcheck()"><label for="allAgree">전체동의</label>
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="#">공연안내</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">공연예매</a></li>
-                                        <li><a href="#">공연일정</a></li>
-                                        <li><a href="#">예매안내</a></li>
-                                    </ul>
+                                    <div>
+                                        <input type="checkbox" name="agree1" id="agree1"><label for="agree1">사이트이용약관(필수)</label>
+                                    </div>
+                                    <a href="#">약관보기<i class="fa-solid fa-angle-right"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#">대관안내</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">대관시설/대관료</a></li>
-                                        <li><a href="#">대관신청</a></li>
-                                    </ul>
+                                    <div>
+                                        <input type="checkbox" name="agree2" id="agree2"><label for="agree2">개인정보처리방침(필수)</label>
+                                    </div>
+                                    <a href="#">약관보기<i class="fa-solid fa-angle-right"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#">이용안내</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">레스토랑&카페</a></li>
-                                        <li><a href="#">문화공간</a></li>
-                                        <li><a href="#">오시는 길</a></li>
-                                    </ul>
+                                    <div>
+                                        <input type="checkbox" name="agree3" id="agree3"><label for="agree3">마케팅수신동의(선택)</label>
+                                    </div>
+                                    <a href="#">약관보기<i class="fa-solid fa-angle-right"></i></a>
                                 </li>
-                                <li>
-                                    <a href="#">고객센터</a>
-                                    <ul class="lnb">
-                                        <li><a href="#">공지사항</a></li>
-                                        <li><a href="#">FAQ</a></li>
-                                    </ul>
-                                </li>
-                            </ul> <!-- gnb -->
-                        </nav> <!-- main-menu-->
-    
-                        <div class="right-menu">
-                            <ul>                                
-                                <li class="mobile-only left"><a href="#"><img src="./img/ticket_black.png" alt="ticket"></a></li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_black.png" alt="menu"></a></li>
-                                <li class="large-only"><a href="#">TICKET</a></li>
-                                <li class="large-only"><a href="#">LOG IN</a></li>
-                                <li class="large-only"><a href="#">JOIN</a></li>
                             </ul>
-                        </div>
-                    </div> <!-- flex-box -->
-                </div> <!-- container -->
-            </div> <!-- logo-menu-box -->
-        </header> <!-- header -->
-
-        <main>
-            <div class="go-home"><a href="#">홈으로</a></div>
-            <div class="container">
-                <div class="pos-wrap">
-                    <div class="join-wrap">
-                        <h1>JOIN</h1>
-                        <form action="#" id="log-in-form" name="frm">
-                            <div class="id-box">
-                                <label for="user-id">아이디(이메일)<span>*</span></label>
-                                <input type="email" placeholder="name@example.com" name="user-id" id="user-id" required>
-                                <span class="user-id-valid"></span>
-                            </div>
-                            <div class="pw-box">
-                                <label for="user-pw">비밀번호<span>*</span></label>
-                                <div>
-                                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8자리 이상" id="user-pw" name="user-pw" minlength="8" required>
-                                    <i class="fa fa-eye fa-lg" id="pw-eye"></i>
-                                </div>
-                                <span class="user-pw-valid"></span>
-                            </div>
-                            <div class="pw-box-check">
-                                <label for="user-pw-check">비밀번호 확인<span>*</span></label>
-                                <div>
-                                    <input type="password" placeholder="영문, 숫자, 특수문자 조합 8자리 이상" id="user-pw-check" name="user-pw-check" minlength="8" required>
-                                    <i class="fa fa-eye fa-lg" id="pw-re-eye"></i>
-                                </div>
-                                <span class="user-pw-check-valid"></span>
-                            </div>
-                            <div class="phone-box">
-                                <label for="user-phone">휴대전화<span>*</span></label>
-                                <input type="text" placeholder="예)01012345678" id="user-phone" name="user-phone" maxlength="11" required>
-                                <span class="user-phone-valid"></span>
-                            </div>
-                            <div class="address-box">
-                                <label for="user-address">주소</label>
-                                <input type="text" readonly id="address-content">
-                                <input type="button" value="주소 검색" id="user-address" name="user-address"> 
-                            </div>
-                            <div class="gender-box">
-                                <label>성별</label>
-                                <div class="radio-box">
-                                    <input type="radio" name="user-gender" id="woman" value="woman"> <label for="woman">여성</label>
-                                    <input type="radio" name="user-gender" id="man" value="man"> <label for="man">남성</label>
-                                    <input type="radio" name="user-gender" id="no-check" value="no-check" checked> <label for="no-check">선택안함</label>
-                                </div>
-                            </div>
-                            <div class="birth-box">
-                                <label for="user-birth">생년월일</label>
-                                <input type="text" placeholder="예)20010415" id="user-birth" name="user-birth" minlength="8" maxlength="8"> 
-                            </div>
-
-                            <button value="submit" id="join-btn">JOIN</button>
-
-                            <div class="join-agree">
-                                <div class="line"></div>
-                                <ul>
-                                    <li>
-                                        <div>
-                                            <input type="checkbox" name="allAgree" id="allAgree" onclick="allcheck()"><label for="allAgree">전체동의</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <input type="checkbox" name="agree1" id="agree1"><label for="agree1">사이트이용약관(필수)</label>
-                                        </div>
-                                        <a href="#">약관보기<i class="fa-solid fa-angle-right"></i></a>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <input type="checkbox" name="agree2" id="agree2"><label for="agree2">개인정보처리방침(필수)</label>
-                                        </div>
-                                        <a href="#">약관보기<i class="fa-solid fa-angle-right"></i></a>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <input type="checkbox" name="agree3" id="agree3"><label for="agree3">마케팅수신동의(선택)</label>
-                                        </div>
-                                        <a href="#">약관보기<i class="fa-solid fa-angle-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div> <!-- join-agree -->
-                        </form>
-                    </div> <!-- join-wrap -->
-                </div> <!-- pos-wrap -->
-            </div> <!-- container -->
-        </main> <!-- main -->
-
-        <footer style="display: none;">
-            <div class="container">
-                <div class="flex-box">
-                    <div class="left-contents">
-                        <h2>Let's Blue Square Together</h2>
-                        <br>
-                        <address>
-                            주소: 서울 용산구 이태원로 294&nbsp;&nbsp;<span>Tel</span>. 1544-1591&nbsp;&nbsp;<span>E-mail. bluesquare@interpark.com</span>
-                        </address>
-                        <p>COPYRIGHT &copy; INTERPARK THEATER. ALL RIGHT RESERVED</p>
-                    </div> <!-- left-contents -->
-    
-                    <div class="right-contents">
-                        <ul class="footer-menu">
-                            <li>Menu
-                                <ul class="menu-contents">
-                                    <li><a href="#">예매안내</a></li>
-                                    <li><a href="#">좌석배치도</a></li>
-                                    <li><a href="#">대관안내</a></li>
-                                    <li><a href="#">오시는길</a></li>
-                                </ul>
-                            </li>
-                            <li>Guide
-                                <ul class="menu-contents">
-                                    <li><a href="#">개인정보처리방침</a></li>
-                                    <li><a href="#">윤리경영/제보</a></li>
-                                    <li>
-                                        <form action="#" method="post">
-                                            <select name="site" id="site">
-                                                <option value="">관련사이트</option>
-                                                <option value="http://www.stage631.com/">스테이지631</option>
-                                                <option value="http://www.shinhancard.com">신한카드</option>
-                                                <option value="https://www.mastercard.co.kr/">마스터카드</option>
-                                            </select>
-                                            <span><img src="./img/down_icon.png" alt="select arrow"></span>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>Social
-                                <ul class="menu-contents social-menu">
-                                    <li><a href="#">Instagram</a></li>
-                                    <li><a href="#">Facebook</a></xli>
-                                    <li><a href="#">Youtube</a></li>
-                                </ul>
-                            </li>
-                        </ul> <!-- footer-menu -->
-                    </div> <!-- right-contents -->
-                    
-                    <div class="large-only footer-title">
-                        <h1>Blue&ZeroWidthSpace; Square</h1>
-                    </div>
-                </div> <!-- flex-box -->             
-            </div> <!-- container -->
-
-            <div class="large-only line">
-                <span></span>
-            </div>
-        </footer> <!-- footer -->
+                        </div> <!-- join-agree -->
+                    </form>
+                </div> <!-- join-wrap -->
+            </div> <!-- pos-wrap -->
+        </div> <!-- container -->
     </div> <!-- wrapper -->
 </body>
 </html>

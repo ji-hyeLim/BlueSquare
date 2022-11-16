@@ -133,20 +133,20 @@ window.onload = function() {
     // 비밀번호 재확인 끝 =======
 
 
-     // ======= 3-2. 비밀번호 재확인 보이기/감추기 기능
-     let pwReEye = document.querySelector('#pw-re-eye');
+    // ======= 3-2. 비밀번호 재확인 보이기/감추기 기능
+    let pwReEye = document.querySelector('#pw-re-eye');
     
-     pwReEye.addEventListener('click', function() {
+    pwReEye.addEventListener('click', function() {
         userPwCheck.classList.toggle('active');
-         if(userPwCheck.classList.contains('active')) {
-             this.setAttribute('class', 'fa fa-eye-slash fa-lg')
-             userPwCheck.setAttribute('type', 'text');
-         } else {
-             this.setAttribute('class', 'fa fa-eye fa-lg')
-             userPwCheck.setAttribute('type', 'password');
-         }
-     })
-     // 비밀번호 재확인 보이기/감추기 기능 끝 =======
+        if(userPwCheck.classList.contains('active')) {
+            this.setAttribute('class', 'fa fa-eye-slash fa-lg')
+            userPwCheck.setAttribute('type', 'text');
+        } else {
+            this.setAttribute('class', 'fa fa-eye fa-lg')
+            userPwCheck.setAttribute('type', 'password');
+        }
+    })
+    // 비밀번호 재확인 보이기/감추기 기능 끝 =======
 
 
     // ======= 4. 휴대전화 유효성 검사
@@ -183,6 +183,7 @@ window.onload = function() {
     }
     // 휴대전화 유효성 검사 끝 =======
     
+
     // ======= 5. 주소 검색 기능
     let addressContent = document.querySelector('#address-content');
     let userAddress = document.querySelector('#user-address');
@@ -205,9 +206,10 @@ window.onload = function() {
             }
         }).open();
     }
-
     // 주소 검색 기능 끝 =======
 
+
+    // ======= 회원가입 버튼 
     let joinBtn = document.querySelector('#join-btn')
     
     joinBtn.addEventListener('click', member);
@@ -217,25 +219,25 @@ window.onload = function() {
         
         let frm = document.frm;
         if(userId.value == '') {
-            alert('이메일을 입력해주세요!')
+            alert('이메일을 입력해주세요!');
             userId.focus();
             return false;
         }
 
         if(userPw.value == '') {
-            alert('비밀번호를 입력해주세요!')
+            alert('비밀번호를 입력해주세요!');
             userPw.focus();
             return false;
         }
 
         if(userPw.value !== userPwCheck.value) {
-            alert('비밀번호가 일치하지 않습니다!')
+            alert('비밀번호가 일치하지 않습니다!');
             userPwCheck.focus();
             return false;
         }
 
         if(userPhone.value == '') {
-            alert('휴대전화를 입력해주세요!')
+            alert('휴대전화를 입력해주세요!');
             userPhone.focus();
             return false;
         }
@@ -253,16 +255,15 @@ window.onload = function() {
         }
 
         window.location.assign('https://www.naver.com');
-    
     }
-    
+    // 회원가입 버튼 끝 =======
 }
 
 
 // ======= 6. 전체약관동의
 function allcheck() {
     with(document.frm) {
-       if(allAgree.checked) {
+        if(allAgree.checked) {
             for(let i = 0; i < frm.length; i++) {                
                 if(elements[i].type === 'checkbox') {
                     elements[i].checked = true;
@@ -271,11 +272,10 @@ function allcheck() {
         } else {
             for(let i = 0; i < frm.length; i++) {
                 if(elements[i].type === 'checkbox') {
-                   elements[i].checked = false;
+                    elements[i].checked = false;
                 }
             }
         }
     }
 }
-
-// 약관동의 끝 =======
+// 전체약관동의 끝 =======

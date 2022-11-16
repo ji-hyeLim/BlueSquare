@@ -26,7 +26,7 @@ window.onload = function() {
             userId.focus();
         } else {
             validTxt.innerHTML = '';
-           return true;
+            return true;
         }
     }
 
