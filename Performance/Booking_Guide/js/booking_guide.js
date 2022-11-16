@@ -8,5 +8,5 @@ $(document).ready(function () {
     var hdtxtWrap = $('.hdtxt-wrap');
     setTimeout(function() {
         hdtxtWrap.removeClass('content-hidden');
-    }, 3000);
+    }, 5000);
 });

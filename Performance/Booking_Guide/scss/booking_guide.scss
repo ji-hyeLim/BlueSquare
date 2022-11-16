@@ -40,6 +40,17 @@
     }
 }
 
+@keyframes ct {
+    
+    0% {
+        color: #fff;
+    }
+
+    90% {
+        color: $point-color;
+    }
+}
+
 html,
 body {
     max-width: 100%;
@@ -65,6 +76,7 @@ header {
         }
         
         .hdtxt-wrap {
+            
             @include pos-center-y();
             width: 100%;
             text-align: center;
@@ -73,7 +85,7 @@ header {
                 display: inline-block;
                 margin-right: 0px;
                 font: {
-                    size: 60px;
+                    size: 45px;
                     family: serif;
                     weight: 600;
                 }
@@ -85,17 +97,18 @@ header {
                     margin-right: 0;
                 }
 
-                &.content-color {
-                    li:nth-child(1) {color: $point-color;}
+                @include responsive(small-tablet-screens) {
+                    font-size: 60px;
                 }
 
                 @include responsive(large-tablet-screens) {
                     font-size: 120px;
                 }
-            }
+            animation: ct 10s 10s infinite;
+        }
 
             &.content-hidden {
-                li {opacity: 0; color: $point-color;}
+                li {opacity: 0; }
                 li:nth-child(1) {transform: translate3d(-120px, 0, 0);}
                 li:nth-child(2) {transform: translate3d(-100px, 0, 0);}
                 li:nth-child(3) {transform: translate3d(-80px, 0, 0);}
@@ -111,32 +124,49 @@ header {
                 li:nth-child(13) {transform: translate3d(120px, 0, 0);}
             }
 
+            
+
         }
 
         .hdtxt-bottom{
             font-family: $eng-font;
-            font-size: 15px;
+            font-size: 13px;
             line-height: 1.5;
             color: $gray-font;
+            white-space: nowrap;
+
+            @include responsive(small-tablet-screens) {
+                font-size: 15px;
+            }
+
         }
 
         .hdtxt2 {
             opacity: 0;
             @include pos-center-x;
-            top: 85%;
-            left: 40%;
+            top: 80%;
+            left: 35%;
             // text-align: center;
             bottom: 50px;
-            animation: fadeIn 1s 2s forwards;
+            animation: fadeIn 1s 4s forwards;
+
+            @include responsive(small-tablet-screens) {
+                left: 43%;
+            }
         }
         .hdtxt3 {
             opacity: 0;
             @include pos-center-x;
             top: 70%;
-            left: 60%;
+            left: 72%;
             // text-align: center;
-            animation: fadeIn 1s 2.5s forwards;
+            animation: fadeIn 1s 4.5s forwards;
             transition: all 0.5;
+
+            @include responsive(small-tablet-screens) {
+                top: 70%;
+                left: 62%;
+            }
         }
     }
     //=========booking Guide hd end ==========//

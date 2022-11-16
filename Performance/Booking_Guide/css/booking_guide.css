@@ -106,6 +106,22 @@ footer {
     opacity: 1;
   }
 }
+@-webkit-keyframes ct {
+  0% {
+    color: #fff;
+  }
+  90% {
+    color: #0094d6;
+  }
+}
+@keyframes ct {
+  0% {
+    color: #fff;
+  }
+  90% {
+    color: #0094d6;
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -137,18 +153,22 @@ header .header-bg .hdtxt-wrap {
 header .header-bg .hdtxt-wrap .hdtxt li {
   display: inline-block;
   margin-right: 0px;
-  font-size: 60px;
+  font-size: 45px;
   font-family: serif;
   font-weight: 600;
   color: #fff;
   opacity: 1;
   transition: all 3s ease;
+  -webkit-animation: ct 10s 10s infinite;
+          animation: ct 10s 10s infinite;
 }
 header .header-bg .hdtxt-wrap .hdtxt li li:nth-child(13) {
   margin-right: 0;
 }
-header .header-bg .hdtxt-wrap .hdtxt li.content-color li:nth-child(1) {
-  color: #0094d6;
+@media screen and (min-width: 600px) {
+  header .header-bg .hdtxt-wrap .hdtxt li {
+    font-size: 60px;
+  }
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .hdtxt-wrap .hdtxt li {
@@ -157,7 +177,6 @@ header .header-bg .hdtxt-wrap .hdtxt li.content-color li:nth-child(1) {
 }
 header .header-bg .hdtxt-wrap.content-hidden li {
   opacity: 0;
-  color: #0094d6;
 }
 header .header-bg .hdtxt-wrap.content-hidden li:nth-child(1) {
   transform: translate3d(-120px, 0, 0);
@@ -200,20 +219,31 @@ header .header-bg .hdtxt-wrap.content-hidden li:nth-child(13) {
 }
 header .header-bg .hdtxt-bottom {
   font-family: "Montserrat", sans-serif, Arial;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
   color: #b2b2b2;
+  white-space: nowrap;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .hdtxt-bottom {
+    font-size: 15px;
+  }
 }
 header .header-bg .hdtxt2 {
   opacity: 0;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 85%;
-  left: 40%;
+  top: 80%;
+  left: 35%;
   bottom: 50px;
-  -webkit-animation: fadeIn 1s 2s forwards;
-          animation: fadeIn 1s 2s forwards;
+  -webkit-animation: fadeIn 1s 4s forwards;
+          animation: fadeIn 1s 4s forwards;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .hdtxt2 {
+    left: 43%;
+  }
 }
 header .header-bg .hdtxt3 {
   opacity: 0;
@@ -221,10 +251,16 @@ header .header-bg .hdtxt3 {
   left: 50%;
   transform: translateX(-50%);
   top: 70%;
-  left: 60%;
-  -webkit-animation: fadeIn 1s 2.5s forwards;
-          animation: fadeIn 1s 2.5s forwards;
+  left: 72%;
+  -webkit-animation: fadeIn 1s 4.5s forwards;
+          animation: fadeIn 1s 4.5s forwards;
   transition: all 0.5;
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .hdtxt3 {
+    top: 70%;
+    left: 62%;
+  }
 }
 header .logo-menu-box {
   position: absolute;
