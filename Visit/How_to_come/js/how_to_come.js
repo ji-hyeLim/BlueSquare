@@ -2,6 +2,7 @@ $(function() {
     AOS.init ({
         duration : 1000,
         easing : 'linear',
+        once: true
     });
 
     $('.tap-menu li').click(function (e) {
