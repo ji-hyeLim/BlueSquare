@@ -144,9 +144,32 @@ header .header-bg .txt-wrap {
     width: 1400px;
   }
 }
+@-webkit-keyframes moveright {
+  from {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes moveright {
+  from {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 header .header-bg .txt-wrap .txt1 {
   position: absolute;
   top: 100px;
+  opacity: 0;
+  -webkit-animation: moveright 3s forwards;
+          animation: moveright 3s forwards;
 }
 header .header-bg .txt-wrap .txt2 {
   position: absolute;

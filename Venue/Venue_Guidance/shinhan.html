@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/shinhan.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <title>BLUE SQUARE</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/shinhan.js"></script>
-
 </head>
 
 <body>
@@ -22,9 +23,8 @@
           <source media="(min-width: 320px)" srcset="img/concert_mobile.png">         
           <img src="./img/concert_pc.png" alt="">
         </picture>
-        
         <div class="txt-wrap">
-          <div class="txt1 mobile-only">VENUE</div>
+          <div div class="txt1 mobile-only">VENUE</div>
           <div class="txt2 mobile-only">GUIDANCE</div>
           <div class="txt1 large-only">VENUE GUIDANCE</div>
           <div class="txt2 large-only">VENUE GUIDANCE</div>
@@ -123,16 +123,14 @@
             <div class="flexbox">
               <div class="slide-wrap">
                 <div class="slide-img">
-                  <img class="item on" src="./img/shinhan/shinhan-hall01.png" alt="">
-                  <img class="item" src="./img/shinhan/shinhan-hall02.png" alt="">
-                  <img class="item" src="./img/shinhan/shinhan-hall03.png" alt="">
-                  
-                  <div class="slide-btn">
-                    <div class="prev"><img src="./img/prev.png" alt=""></div>
-                    <div class="next"><img src="./img/next.png" alt=""></div>
-                  </div>
+                  <img class="item on" id="photo" src="./img/shinhan/shinhan-hall1.png" alt="">
+                  <img class="item" src="./img/shinhan/shinhan-hall2.png" alt="">
+                  <img class="item" src="./img/shinhan/shinhan-hall3.png" alt="">
                 </div>
-                
+                <div class="slide-btn">
+                  <div class="prev"><img src="./img/prev.png" alt=""></div>
+                  <div class="next"><img src="./img/next.png" alt=""></div>
+                </div>
               </div> <!-- slide-wrap -->
 
               <div class="intro-equip-wrap">
@@ -300,6 +298,13 @@
       </div>
     </footer> <!-- footer -->
   </div> <!-- wrapper -->
+
+  <script>
+    AOS.init({
+        easing: 'linear',
+        duration: 800            
+    });
+</script>
 </body>
 
 </html>

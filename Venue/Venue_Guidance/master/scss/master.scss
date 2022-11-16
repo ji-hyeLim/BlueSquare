@@ -73,9 +73,16 @@ header {
         width: 1400px;
       }
       
+      @keyframes moveright {
+        from {transform: translate(-100%, 0); opacity: 0;}
+        to {transform: translate(0, 0); opacity: 1;}
+      }
+
       .txt1 {
         position: absolute;
         top: 100px;
+        opacity: 0;
+        animation: moveright 3s forwards;
       }
 
       .txt2 {

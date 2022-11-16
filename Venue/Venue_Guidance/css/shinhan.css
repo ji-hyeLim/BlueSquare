@@ -144,14 +144,60 @@ header .header-bg .txt-wrap {
     width: 1400px;
   }
 }
+@-webkit-keyframes moveright {
+  from {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes moveright {
+  from {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveleft {
+  from {
+    transform: translate(50%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes moveleft {
+  from {
+    transform: translate(50%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 header .header-bg .txt-wrap .txt1 {
   position: absolute;
   top: 100px;
+  left: 0px;
+  opacity: 0;
+  -webkit-animation: moveright 3s forwards;
+          animation: moveright 3s forwards;
 }
 header .header-bg .txt-wrap .txt2 {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 0px;
+  -webkit-animation: moveleft 3s forwards;
+          animation: moveleft 3s forwards;
 }
 header .header-bg .txt-wrap .img-pos {
   width: 100%;
@@ -417,48 +463,38 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap {
   position: relative;
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
-  main .venue-guidance .venue-facility .flexbox .slide-wrap {
-    width: 100%;
-  }
-}
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
-  width: 100%;
+  position: relative;
+  display: flex;
+  margin-left: -100%;
+  width: 300%;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
-  position: absolute;
-  top: 0;
   width: 100%;
-  opacity: 0;
-  transition: all 1s;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img:first-child {
-  opacity: 1;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
   cursor: pointer;
-  height: 100%;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
   width: 40px;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
-  position: absolute;
-  top: 50%;
+  height: 40px;
   background-color: blue;
 }
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
+  left: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
   right: 0;
-  background-color: blue;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
+  margin-top: 30px;
   font-size: 14px;
-  margin-top: 68%;
   background-color: pink;
 }
 @media screen and (min-width: 1024px) {

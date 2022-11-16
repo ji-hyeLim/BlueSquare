@@ -1,5 +1,21 @@
+// 이미지 넘기기
+// var num = 1;
+// function imgNext() {
+//     num++;
+//     if (num > 3) num = 1;
+//     document.getElementById("photo").setAttribute("src","./img/shinhan/shinhan-hall" + num + ".png");
+// }
+
+// function imgPrev() {
+//     num--;
+//     if (num < 1) num = 3;
+//     document.getElementById("photo").setAttribute("src","./img/shinhan/shinhan-hall" + num + ".png");
+// }
+
+// ======================== 제이쿼리 =========================== //
 $(function () {
 
+  // ========= 탭기능 ========= //
   $('.sub-tab li').click(function (e) {
     e.preventDefault();
     let idx = $(this).index();
@@ -7,52 +23,84 @@ $(function () {
     $('section > div').removeClass('active');
     $('section > div').eq(idx).addClass('active');
 
-    $('.sub-tab li a').removeClass('sub-tab-active');
-    $('.sub-tab li a').eq(idx).addClass('sub-tab-active');
+    $('.sub-tab li a').removeClass('sub-tab-clicked');
+    $('.sub-tab li a').eq(idx).addClass('sub-tab-clicked');
   });
+
 
   // ======================== 이미지 넘기기 신한카드홀 ========================
-  $('.prev').click(function (e) {
-    e.preventDefault();
-    let imgOn = $('#shinhan .slide-img').find('.on').index(); // 현재 이미지 위치
-    let imgLen = $('#shinhan .slide-img .item').length;
-    // console.log('이미지 위치:', imgOn);
-    // console.log('이미지 개수:', imgLen);
 
-    $("#shinhan .slide-img .item").eq(imgOn).removeClass("on");
-    $("#shinhan .slide-img .item").eq(imgOn).css("opacity", 0);
-
-    imgOn = imgOn - 1;
-
-    if (imgOn < 0) {
-      $("#shinhan .slide-img .item").eq(imgLen - 1).css("opacity", 1);
-      $("#shinhan .slide-img .item").eq(imgLen - 1).addClass("on");
-    } else {
-      $("#shinhan .slide-img .item").eq(imgOn).css("opacity", 1);
-      $("#shinhan .slide-img .item").eq(imgOn).addClass("on");
-    }
+  // ===== 1번 ===== // 
+  $('.prev').click(function() {
+    $('.slide-img').animate({'left' : '-100%'}, 500, function() {
+        $('.slide-img').append($('.slide-img li:first-child')).css({"left" : 0});
+    });
   });
 
-  $('.next').click(function (e) {
-    e.preventDefault();
-    let imgOn = $('#shinhan .slide-img').find('.on').index(); // 현재 이미지 위치
-    let imgLen = $('#shinhan .slide-img .item').length; // 4
+  $('.next').click(function() {
+      $('.slide-img').prepend($('.slide-img li:last-child')).css({'left' : '-100%'}).animate({'left':0}, 500);
+  }); // ===== 1번 끝  ===== // 
 
-    $("#shinhan .slide-img .item").eq(imgOn).removeClass("on");
-    $("#shinhan .slide-img .item").eq(imgOn).css("opacity", 0);
+  // ===== 2번 ===== // 
+  var slideW = cnt = setId = 0;
+  resizeFn();
 
-    imgOn = imgOn + 1;
+  function resizeFn() {
+    slideW = $('.slide-img').width();
+    console.log(slideW);
+    // $(".slide-wrap").css({
+    //   width: slideW
+    // });
+  };
 
-    if (imgOn === imgLen) {
-      $("#shinhan .slide-img .item").eq(0).css("opacity", 1);
-      $("#shinhan .slide-img .item").eq(0).addClass("on");
-    } else {
-      $("#shinhan .slide-img .item").eq(imgOn).css("opacity", 1);
-      $("#shinhan .slide-img .item").eq(imgOn).addClass("on");
-    }
-  });
+  // $(window).resize(function() {
+  //   resizeFn();
+  // });
 
-  $('.slider').bxSlider();
+  var cnt = $('.slide-img img').index();
+  var imgLength = $(".slide-img img").length;
+  console.log(imgLength);
+
+  $('.next').click(function() {
+    cnt++;
+    console.log(cnt);
+
+    $(".slide-img").stop().animate({ left : (-100 * cnt) + "%"}, 600, 
+    function() {
+      if (cnt > 2) {
+        cnt = 0;
+      }
+
+      $(".slide-img").animate({
+        left: (-100 * cnt) + "%"
+      }, 0)
+    })
+  })
+
+  // function nextCountFn() {
+  //   cnt++;
+  // };
+
+  function prevCountFn() {
+    cnt--;
+    mainslideFn();
+  };
+
+  // function mainslideFn() {
+  //   $(".slide-wrap").stop().animate({
+  //     left: (-100 * cnt) + "%"
+  //   }, 600, function() {
+  //     if (cnt > 3) {
+  //       cnt = 0;
+  //     }
+  //     if (cnt < 0) {
+  //       cnt = 3
+  //     }
+  //     $(".slide-wrap").stop().animate({
+  //       left: (-100 * cnt) + "%"
+  //     }, 0)
+  //   });
+    // $(".pageBt").removeClass("addPageBt");
+    // $(".pageBt").eq(cnt > 3 ? cnt = 0 : cnt).addClass("addPageBt");  // ===== 2번 끝 ===== // 
 
 });
-

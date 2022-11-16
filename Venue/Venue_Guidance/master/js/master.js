@@ -6,8 +6,8 @@ $(function () {
     $('section > div').removeClass('active');
     $('section > div').eq(idx).addClass('active');
 
-    $('.sub-tab li a').removeClass('sub-tab-active');
-    $('.sub-tab li a').eq(idx).addClass('sub-tab-active');
+    $('.sub-tab li a').removeClass('sub-tab-clicked');
+    $('.sub-tab li a').eq(idx).addClass('sub-tab-clicked');
   })
 
 

@@ -8,57 +8,18 @@
     <title>BLUE SQUARE</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="./js/seating_charts.js"></script>
-    <script>
-        // $(function() {
-		// 	$('.next').click(function(e) {
 
-        //         e.preventDefault();
-        //         let imgOn = $('.slide-img').find('.on').index(); // 현재 이미지 위치
-        //         let imgLen = $('.slide-img .item').length; // 4
-        //         // console.log(imgLen);
-
-        //         $(".slide-img .item").eq(imgOn).removeClass("on");
-        //         $(".slide-img .item").eq(imgOn).css("opacity", 0);
-
-        //         imgOn = imgOn + 1;
-
-        //         if(imgOn === imgLen) {
-        //         $(".slide-img .item").eq(0).css("opacity", 1);
-        //         $(".slide-img .item").eq(0).addClass("on");
-        //         } else {
-        //         $(".slide-img .item").eq(imgOn).css("opacity", 1);
-        //         $(".slide-img .item").eq(imgOn).addClass("on");
-        //         }
-		// 	});
-
-		// 	$('.prev').click(function(e) {
-		// 		e.preventDefault();
-		// 		let imgOn = $('.slide-img').find('.on').index(); // 현재 이미지 위치
-		// 		let imgLen = $('.slide-img .item').length;
-		// 		// console.log(imgOn);
-
-		// 		$(".slide-img .item").eq(imgOn).removeClass("on");
-		// 		$(".slide-img .item").eq(imgOn).css("opacity", 0);
-				
-		// 		imgOn = imgOn - 1;
-
-		// 		if(imgOn < 0) {
-		// 			$(".slide-img .item").eq(imgLen - 1).css("opacity", 1);
-		// 			$(".slide-img .item").eq(imgLen - 1).addClass("on");
-		// 		} else {
-		// 			$(".slide-img .item").eq(imgOn).css("opacity", 1);
-		// 			$(".slide-img .item").eq(imgOn).addClass("on");
-		// 		}
-		// 	});
-        // });
-
-    </script>
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="header-bg">
                 <img src="./img/seating-main.png" alt="공연장에서 가수가 노래하는 모습">
+                <div class="line-box">
+                    <div class="p-box">
+                        <p>SEATING CHARTS</p>
+                    </div>
+                </div> <!-- line-box -->
             </div> <!-- header-bg -->
             <div class="logo-menu-box">
                 <div class="container">
@@ -155,15 +116,14 @@
                             </div>
                         </div>
                         <div class="slide-wrap">
-                            <div class="slide-img">
-                                <img class="item on" src="./img/shinhan/shinhan-hall01.png"> 
-                                <!-- <img class="item" src="./img/shinhan/shinhan-hall02.png">  
-                                <img class="item" src="./img/shinhan/shinhan-hall03.png">   -->
+                            <div class="slide-img slide-img-shin">
+                                <img class="item" id="photo_s" src="./img/shinhan/shinhan-hall1.png"> 
                             </div>
                             <div class="slide-btn">
-                                <button class="btn prev">이전</button>
-                                <button class="btn next">다음<button>   
+                                <div class="prev" onclick="imgPrevS()"><img src="./img/prev.png" alt=""></div>
+                                <div class="next" onclick="imgNextS()"><img src="./img/next.png" alt=""></div>
                             </div>
+
                         </div> <!-- img-wrap -->
                     </section> <!-- shinhan-card-hall -->
 
@@ -194,15 +154,12 @@
                             </div>
                         </div>
                         <div class="slide-wrap">
-                            <div class="slide-img">
-                                <img class="on item" src="./img/master/master-hall01.png">  
-                                <!-- <img class="item" src="./img/master/master-hall02.png">  
-                                <img class="item" src="./img/master/master-hall03.png">  
-                                <img class="item" src="./img/master/master-hall04.png">   -->
+                            <div class="slide-img slide-img-mas">
+                                <img class="item" id="photo_m" src="./img/master/master-hall1.png">  
                             </div>
                             <div class="slide-btn">
-                                <button class="btn prev">이전</button>
-                                <button class="btn next">다음<button>   
+                                <div class="prev2" onclick="imgPrevM()"><img src="./img/prev.png" alt=""></div>
+                                <div class="next2" onclick="imgNextM()"><img src="./img/next.png" alt=""></div>
                             </div>
                         </div>  <!-- img-wrap -->
                     </section> <!-- master-card-hall -->
