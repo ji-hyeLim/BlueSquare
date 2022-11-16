@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/Tickets_detail.js"></script>
     <title>BLUE SQUARE</title>
 </head>
@@ -80,8 +82,8 @@
             <div class="content-wrap">
                 <div class="detail-wrap">
                     <div class="container">
-                        <h1 class="h1_line">상세보기</h1>
-                        <hr>
+                        <h1 class="h1_line" data-aos="fade-right" data-aos-duration="800">상세보기</h1>
+                        <hr data-aos="fade-right" data-aos-duration="800">
                     </div>
                     
                     <div class="detail-main">
@@ -92,7 +94,7 @@
                                         <div class="bg">
                                             <img src="./img/poster.png" alt="poster">
                                         </div>
-                                        <div class="content">
+                                        <div class="content"  data-aos="fade-right" data-aos-duration="300">
                                             <div class="main-poster">
                                                 <img src="./img/poster.png" alt="elisabeth" class="poster">
                                                 
@@ -116,10 +118,10 @@
                                     </div> <!-- topWrap -->
                                 </div> <!-- ticket-poster -->
                                 <div class="sns">
-                                        <ul class="sns-box">
-                                            <li><a href="#"><img src="./img/sns-instagram.png" alt="instagram"></a></li>
-                                            <li><a href="#"><img src="./img/sns-facebook.png" alt="facebook"></a></li>
-                                            <li><a href="#"><img src="./img/sns-kakaotalk.png" alt="kakaotalk"></a></li>
+                                        <ul class="sns-box" data-aos="fade-right" data-aos-duration="800">
+                                            <li><a href="https://www.instagram.com/moulinmusicalkr/" target="_blank"><img src="./img/sns-instagram.png" alt="instagram"></a></li>
+                                            <li><a href="https://www.facebook.com/moulinmusicalkr/" target="_blank"><img src="./img/sns-facebook.png" alt="facebook"></a></li>
+                                            <li><a href="https://www.youtube.com/c/cjmusical" target="_blank"><img src="./img/sns-youtube_white.png" alt="youtube"></a></li>
                                         </ul>
                                     </div> <!-- sns -->
                             </div> <!-- left-img -->
@@ -160,6 +162,13 @@
                                             <li> 
                                                 <p>관람시간</p>
                                                 <p>160분 (인터미션 : 20분)</p>
+                                            </li>
+                                            <li>
+                                                <p>사이트</p>
+                                                <p>
+                                                    <a href="https://moulinrougemusical.kr/" class="link">https://moulinrougemusical.kr/</a>
+                                                    <a href="https://moulinrougemusical.kr/" target="_blank" class="link">사이트 바로가기 ▶</a>
+                                                </p>
                                             </li>
                                             <li>
                                                 <p>가격</p>
@@ -603,5 +612,6 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+    <script>AOS.init();</script>
 </body>
 </html>

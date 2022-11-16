@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/Tickets_detail.js"></script>
     <title>BLUE SQUARE</title>
 </head>
@@ -82,8 +84,8 @@
             <div class="content-wrap">
                 <div class="detail-wrap">
                     <div class="container">
-                        <h1 class="h1_line">상세보기</h1>
-                        <hr>
+                        <h1 class="h1_line" data-aos="fade-right" data-aos-duration="800">상세보기</h1>
+                        <hr data-aos="fade-right" data-aos-duration="800">
                     </div>
                     
                     <div class="detail-main">
@@ -94,7 +96,7 @@
                                         <div class="bg">
                                             <img src="./img/grand-expedition/poster.png" alt="poster_background">
                                         </div>
-                                        <div class="content">
+                                        <div class="content" data-aos="fade-right" data-aos-duration="300">
                                             <div class="main-poster">
                                                 <img src="./img/grand-expedition/poster.png" alt="poster" class="poster">
                                                 
@@ -118,10 +120,9 @@
                                     </div> <!-- topWrap -->
                                 </div> <!-- ticket-poster -->
                                 <div class="sns">
-                                        <ul class="sns-box">
-                                            <li><a href="#"><img src="./img/sns-instagram.png" alt="instagram"></a></li>
-                                            <li><a href="#"><img src="./img/sns-facebook.png" alt="facebook"></a></li>
-                                            <li><a href="#"><img src="./img/sns-kakaotalk.png" alt="kakaotalk"></a></li>
+                                        <ul class="sns-box" data-aos="fade-right" data-aos-duration="800">
+                                            <li><a href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbW1INFVpRkh0VTFtc1NweDNuMnZxV3BJZ1AxUXxBQ3Jtc0trQThsSEZxdnJsaEF6V2pjSVl2cFNaOWpUOUpfa2RpVHV1OGpuZ29BanVpQ0lFQWNqMmxKYzZrdTZQbW51M05ORGpyZ3JmQ3l5VzMyUlZpZGtpM2dKZ0QySTlrUUJScWl1NnlaeUtSOTBEMDJQOE5Xaw&q=https%3A%2F%2Fwww.instagram.com%2Fncc_musical" target="_blank"><img src="./img/sns-instagram.png" alt="instagram"></a></li>
+                                            <li><a href="https://www.youtube.com/c/%EB%89%B4%EC%BB%A8%ED%85%90%EC%B8%A0%EC%BB%B4%ED%8D%BC%EB%8B%88NCC/featured" target="_blank"><img src="./img/sns-youtube_white.png" alt="youtube"></a></li>
                                         </ul>
                                     </div> <!-- sns -->
                             </div> <!-- left-img -->
@@ -472,5 +473,6 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+    <script>AOS.init();</script>
 </body>
 </html>

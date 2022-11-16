@@ -54,38 +54,55 @@ $(function() {
 });
 
 
-// category
+
 $(function() {
     $(document).ready(function(){
+        var width_size = window.outerWidth;
+        $(".search_r").hide();
+
+        // category
         $("input").click(function() {
             $("input[type=checkbox]:checked").each(function(){
                 var category = $(this).val();
 
                 if(category == "all") {
-                    $("#all_list").find("li").fadeIn("slow");
+                    $("#all_list").find("li").fadeIn("fast");
                 } else { 
-                    $("#all_list div li").fadeOut("slow");
+                    $("#all_list div li").hide();
                     $("#all_list div li[class*="+category+"]").fadeIn("slow");   
                 }
-                $("#all_list").find("li").length;
-                console.log($("li").length); 
+                var n = $('.box li:visible').length;
+                $(".search_r strong").text(n);
+                $(".search_r").show();
 
+                //
+                if(width_size >= 600) {
+                    $(".box ul").css("justify-content","left");
+                }
+
+                if(width_size >= 1400) {
+                    $(".box ul li").css("margin-right","14px");
+                } else if(width_size >= 1024 && width_size < 1400) {
+                    $(".box ul li").css("margin-right","9px");
+                } else if(width_size >= 800) {
+                    $(".box ul li").css("margin-right","10px");
+                } else if(width_size >= 600 && width_size < 800){
+                    $(".box ul li").css("margin-right","7px");
+                }
+            });
+        });
+
+        // search
+        $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+    
+            $("#all_list div li").filter(function() {
+                $(this).toggle($(this).find("strong").text().toLowerCase().indexOf(value) > -1);
             });
 
-        }); 
-    });
-});
-
-
-// search
-$(function() {
-    $(document).ready(function(){
-        $("#search").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-    
-          $("#all_list div li").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
+            var n = $('.box li:visible').length;
+            $(".search_r strong").text(n);
+            $(".search_r").show();
         });
     });
 });

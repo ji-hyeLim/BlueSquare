@@ -41,6 +41,7 @@ body {
 header {
     position: relative;
     width: 100vw;
+    height: 100vh;
 
     .header-bg {
         width: 100%; 
@@ -184,13 +185,75 @@ header {
                 } // ul
             } // right-menu
         } // flex-box
-    } // logo-menu-box    
+    } // logo-menu-box
+
+    .main_text {
+        transform: translateY(-150%);
+        color: #fff;
+        z-index: 9999;
+        
+        p {
+            width: 100%;
+            letter-spacing: -1px;
+            text-indent: 5px;
+            font:
+            {
+                size: 30px;
+
+            }
+
+            &:first-child {
+                font:
+                {
+                    family: 'Montserrat', sans-serif;
+                    weight:600;
+                }
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+                margin: 5px;
+            }
+        }
+
+        span {
+            margin-top: 10px;
+            margin-left: 5px;
+            font:
+            {
+                size: 10px;
+                family: 'Montserrat', sans-serif;
+            }
+        }
+        @include responsive(large-tablet-screens) {
+            p {
+                font-size: 35px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+
+        @include responsive(desktop-screens) {
+            p {
+                font-size: 40px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    } // main_text
 } // header
 
 
 // * ===================== main ===================== *
 
 main {
+
     h1 {
         display: block;
         margin-top: 266px;
@@ -233,6 +296,15 @@ main {
                     background-repeat: no-repeat;
                     background-position: 0;
                     background-size: 15px;
+                }
+
+                .prev_arrow,
+                .next_arrow {
+                    &:hover {
+                        scale: 1.2;
+                        transition: 0.1s;
+                        cursor: pointer;
+                    }
                 }
 
                 .prev_arrow {
@@ -371,6 +443,7 @@ main {
             input[type=checkbox] {
                 margin-left: 10px;
                 margin-right: 5px;
+
                 @include responsive(large-tablet-screens) {
                     margin-left: 40px;
                     margin-right: 10px;
@@ -411,7 +484,6 @@ main {
     
                 &:focus {
                     outline: none;
-                    // color: gray;
                 }
 
                 @include responsive(large-tablet-screens) {
@@ -437,6 +509,12 @@ main {
                 background-size: 100%;
                 cursor: pointer;
 
+                &:hover {
+                    transform: scale(1.3);
+                    transition: 1s;
+
+                }
+
                 @include responsive(desktop-screens) {
                     width: 2em;
                     height: 2em;
@@ -447,7 +525,11 @@ main {
                 color: $gray-font;
                 font-size: 15px;
                 text-align: left;
+
+                @include responsive(desktop-screens) {
+                    transform: translateY(10%);
                 }
+            }
 
             input::-webkit-input-placeholder {
                 color: $gray-font;
@@ -474,15 +556,17 @@ main {
             @include flex-box() {
                 flex-wrap: wrap;
             }
-            
+
             li {
                 position: relative;
                 width: 48%;
                 border: 1px solid black;
                 
                 margin-bottom: 10px;
-                &:nth-child(2n) {
-                    margin-right: 0;
+
+                &:hover {
+                    transform: scale(1.03);
+                    transition: all 0.3s;
                 }
 
                 .hover-black {
@@ -564,14 +648,6 @@ main {
                 li {
                     width: 32%;
                     margin-bottom: 10px;
-                    margin-right: 10px;
-
-                    &:nth-child(2n) {
-                        margin-right: 10px;
-                    }
-                    &:nth-child(3n) {
-                        margin-right: 0;
-                    }
 
                     .poster {
                         img {
@@ -606,19 +682,8 @@ main {
                 width: 100%;
                 li {
                     width: 24%;
-                    margin-right: 10px;
                     margin-bottom: 25px;
                     padding: 15px;
-
-                    &:nth-child(2n) {
-                        margin-right: 10px;
-                    }
-                    &:nth-child(3n) {
-                        margin-right: 10px;
-                    }
-                    &:nth-child(4n) {
-                        margin-right: 0;
-                    }
 
                     .poster {
                         img {
@@ -627,7 +692,7 @@ main {
                         @include responsive(desktop-screens) {
         
                             img {
-                                height: 450px;
+                                height: 380px;
                             }
                         }
                     }  
@@ -655,9 +720,7 @@ main {
             } // ul
         } // box
     } // large-tablet-screens
-
-     
-}
+} // main
 
 
 // * ===================== footer ===================== *
