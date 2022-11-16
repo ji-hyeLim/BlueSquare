@@ -28,63 +28,68 @@ $(function () {
   });
 
 
-  // ======================== 이미지 넘기기 신한카드홀 ========================
+  // =================== 이미지 넘기기 신한카드홀 ===================
 
   // ===== 1번 ===== // 
-  $('.prev').click(function() {
-    $('.slide-img').animate({'left' : '-100%'}, 500, function() {
-        $('.slide-img').append($('.slide-img li:first-child')).css({"left" : 0});
+  $('.slide-btn .next').click(function() {
+    $('.slide-img').stop().animate({left : (-100) + "%" }, 500, function() {
+        $('.slide-img').append($('.slide-img img:first-child')).css({ left : 0});
     });
   });
 
-  $('.next').click(function() {
-      $('.slide-img').prepend($('.slide-img li:last-child')).css({'left' : '-100%'}).animate({'left':0}, 500);
-  }); // ===== 1번 끝  ===== // 
+  $('.prev').click(function() {
+      $('.slide-img').prepend($('.slide-img img:last-child')).css({left : (-100) + "%"}).stop().animate({left : 0}, 500);
+  }); 
+  // ===== 1번 끝  ===== // 
+
+
+
+
+
 
   // ===== 2번 ===== // 
-  var slideW = cnt = setId = 0;
-  resizeFn();
+  // var slideW = cnt = setId = 0;
+  // resizeFn();
 
-  function resizeFn() {
-    slideW = $('.slide-img').width();
-    console.log(slideW);
-    // $(".slide-wrap").css({
-    //   width: slideW
-    // });
-  };
+  // function resizeFn() {
+  //   slideW = $('.slide-wrap').width();
+  //   console.log(slideW);
+  //   $(".slide-wrap").css({
+  //     width: slideW
+  //   });
+  // };
 
   // $(window).resize(function() {
   //   resizeFn();
   // });
 
-  var cnt = $('.slide-img img').index();
-  var imgLength = $(".slide-img img").length;
-  console.log(imgLength);
+  // var cnt = $('.slide-img img').index();
+  // var imgLength = $(".slide-img img").length;
+  // console.log(imgLength);
 
-  $('.next').click(function() {
-    cnt++;
-    console.log(cnt);
+  // $('.next').click(function() {
+  //   cnt++;
+  //   console.log(cnt);
 
-    $(".slide-img").stop().animate({ left : (-100 * cnt) + "%"}, 600, 
-    function() {
-      if (cnt > 2) {
-        cnt = 0;
-      }
-
-      $(".slide-img").animate({
-        left: (-100 * cnt) + "%"
-      }, 0)
-    })
-  })
+  //   $(".slide-img").stop().animate({ left : (-100 * cnt) + "%"}, 600, 
+  //   function() {
+  //     if (cnt > 2) {
+  //       cnt = 0;
+  //       $(".slide-img").animate({
+  //         left: (-100 * cnt) + "%"
+  //       }, 0)
+  //     }
+  //   })
+  // });
 
   // function nextCountFn() {
   //   cnt++;
   // };
 
-  function prevCountFn() {
-    cnt--;
-    mainslideFn();
-  };
+  // function prevCountFn() {
+  //   cnt--;
+  //   mainslideFn();
+  // };
 
   // function mainslideFn() {
   //   $(".slide-wrap").stop().animate({
@@ -101,6 +106,9 @@ $(function () {
   //     }, 0)
   //   });
     // $(".pageBt").removeClass("addPageBt");
-    // $(".pageBt").eq(cnt > 3 ? cnt = 0 : cnt).addClass("addPageBt");  // ===== 2번 끝 ===== // 
+    // $(".pageBt").eq(cnt > 3 ? cnt = 0 : cnt).addClass("addPageBt");  
+  // }
+    // ===== 2번 끝 ===== // 
+
 
 });

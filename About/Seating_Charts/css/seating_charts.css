@@ -209,17 +209,17 @@ header .header-bg .line-box div.p-box p {
 }
 @media screen and (min-width: 600px) {
   header .header-bg .line-box div.p-box p {
-    font-size: calc(1vw + 50px);
+    font-size: calc(1vw + 40px);
   }
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .line-box div.p-box p {
-    font-size: calc(1vw + 60px);
+    font-size: calc(1vw + 45px);
   }
 }
 @media screen and (min-width: 1400px) {
   header .header-bg .line-box div.p-box p {
-    font-size: calc(1vw + 70px);
+    font-size: calc(1vw + 60px);
   }
 }
 header .header-bg .line-box div.p-box::before {
@@ -474,6 +474,9 @@ main .hall-wrap .card-hall .slide-wrap .slide-img img {
   main .hall-wrap .card-hall .slide-wrap .slide-img {
     width: 100%;
   }
+}
+main .hall-wrap #shinhan-card-hall {
+  margin-bottom: 70px;
 }
 main .hall-wrap #shinhan-card-hall .info-wrap .seat-info-box {
   position: relative;

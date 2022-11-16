@@ -117,15 +117,18 @@ header {
                     }
 
                     @include responsive(small-tablet-screens) {
-                        font-size: calc(1vw + 50px);
+                        font-size: calc(1vw + 40px);
+                        // 바꾸기 전 : calc(1vw + 50px)
                     }
 
                     @include responsive(large-tablet-screens) {
-                        font-size: calc(1vw + 60px);
+                        font-size: calc(1vw + 45px);
+                        // 바꾸기 전 : calc(1vw + 60px)
                     }
 
                     @include responsive(desktop-screens) {
-                        font-size: calc(1vw + 70px);
+                        font-size: calc(1vw + 60px);
+                        // 바꾸기 전 : calc(1vw + 70px)
                     }
                 }
 
@@ -165,7 +168,6 @@ header {
                 text-align: center;
                 color: #fff;
             }
-
             //span
         }
 
@@ -417,6 +419,7 @@ main {
         } //card-hall
 
         #shinhan-card-hall {
+            margin-bottom: 70px;
             .info-wrap {
                 .seat-info-box {
                     position: relative;
