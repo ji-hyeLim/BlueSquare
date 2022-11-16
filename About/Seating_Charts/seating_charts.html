@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/seating_charts.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>BLUE SQUARE</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/seating_charts.js"></script>
 
 </head>
@@ -92,8 +94,8 @@
                     <section class="card-hall" id="shinhan-card-hall">
                         <h2>shinhan-card-hall</h2>
                         <div class="info-wrap">
-                            <h2>신한카드홀</h2>
-                            <div class="seat-info-box">
+                            <h2 data-aos="fade-in">신한카드홀</h2>
+                            <div class="seat-info-box" data-aos="fade-in" >
                                 <div class="seat-info">
                                     <p>관람석</p>
                                     <p class="seat-num">총 1,766석</p>
@@ -111,7 +113,7 @@
                                     <p class="seat-num">14석</p>
                                 </div>
                             </div>
-                            <div class="seating-chart-btn">
+                            <div class="seating-chart-btn" data-aos="fade-in">
                                 <a href="#">좌석배치도</a>
                             </div>
                         </div>
@@ -123,7 +125,6 @@
                                 <div class="prev" onclick="imgPrevS()"><img src="./img/prev.png" alt=""></div>
                                 <div class="next" onclick="imgNextS()"><img src="./img/next.png" alt=""></div>
                             </div>
-
                         </div> <!-- img-wrap -->
                     </section> <!-- shinhan-card-hall -->
 
@@ -131,9 +132,9 @@
                         <h2>master-card-hall</h2>
                         <div class="info-wrap">
                             <div class="hall-title">
-                                <h2>마스터카드홀</h2>
+                                <h2 data-aos="fade-in">마스터카드홀</h2>
                             </div>
-                            <div class="seat-info-box-ms">
+                            <div class="seat-info-box-ms" data-aos="fade-in">
                                 <div class="seat-info-ms">
                                     <p>스탠딩형</p>
                                     <div class="seat-num-ms info-ms1">
@@ -149,7 +150,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="seating-chart-btn">
+                            <div class="seating-chart-btn" data-aos="fade-in">
                                 <a href="#">좌석배치도</a>
                             </div>
                         </div>
@@ -227,5 +228,12 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+
+    <script>
+        AOS.init({
+            easing: 'linear',
+            duration: 800
+        });
+    </script>
 </body>
 </html>

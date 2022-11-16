@@ -402,14 +402,13 @@ main {
         .slide-wrap {
           position: relative;
           width: 100%;
+          height: auto;
 
           .slide-img {
             position: relative;
             display: flex;
-            // overflow: hidden;
-            margin-left: calc(-100%*1);
-
-            width: 300%;
+            overflow: hidden;
+            // margin-left: -200%;
             // background-color: black;
 
             img {
@@ -436,7 +435,6 @@ main {
               @include pos-center-y();
             }
           } //slide-btn
-
         } //slide-wrap
 
         .intro-equip-wrap {
