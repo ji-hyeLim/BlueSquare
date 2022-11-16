@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -88,6 +89,23 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -108,6 +126,105 @@ header .header-bg video {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header .header-bg .hdtxt-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+header .header-bg .hdtxt-wrap .hdtxt li {
+  display: inline-block;
+  margin-right: 0px;
+  font-size: 60px;
+  font-family: serif;
+  font-weight: 600;
+  color: #fff;
+  opacity: 1;
+  transition: all 3s ease;
+}
+header .header-bg .hdtxt-wrap .hdtxt li li:nth-child(13) {
+  margin-right: 0;
+}
+header .header-bg .hdtxt-wrap .hdtxt li.content-color li:nth-child(1) {
+  color: #0094d6;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .hdtxt-wrap .hdtxt li {
+    font-size: 120px;
+  }
+}
+header .header-bg .hdtxt-wrap.content-hidden li {
+  opacity: 0;
+  color: #0094d6;
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(1) {
+  transform: translate3d(-120px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(2) {
+  transform: translate3d(-100px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(3) {
+  transform: translate3d(-80px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(4) {
+  transform: translate3d(-60px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(5) {
+  transform: translate3d(-40px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(6) {
+  transform: translate3d(-20px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(7) {
+  transform: translate3d(0px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(8) {
+  transform: translate3d(20px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(9) {
+  transform: translate3d(40px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(10) {
+  transform: translate3d(60px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(11) {
+  transform: translate3d(80px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(12) {
+  transform: translate3d(100px, 0, 0);
+}
+header .header-bg .hdtxt-wrap.content-hidden li:nth-child(13) {
+  transform: translate3d(120px, 0, 0);
+}
+header .header-bg .hdtxt-bottom {
+  font-family: "Montserrat", sans-serif, Arial;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #b2b2b2;
+}
+header .header-bg .hdtxt2 {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 85%;
+  left: 40%;
+  bottom: 50px;
+  -webkit-animation: fadeIn 1s 2s forwards;
+          animation: fadeIn 1s 2s forwards;
+}
+header .header-bg .hdtxt3 {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
+  left: 60%;
+  -webkit-animation: fadeIn 1s 2.5s forwards;
+          animation: fadeIn 1s 2.5s forwards;
+  transition: all 0.5;
 }
 header .logo-menu-box {
   position: absolute;
