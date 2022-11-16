@@ -44,7 +44,11 @@ header {
     width: 100vw;
 
     .header-bg {
-        background-color: $gray-bg;
+        // background-color: $gray-bg;
+        background-image: url(../img/70bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
         // ==================== 새로한 부분 ====================
         position: relative;
         width: 100%;
