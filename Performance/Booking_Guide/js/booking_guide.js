@@ -1,6 +1,6 @@
 $(document).ready(function () {
     AOS.init ({
-        duration : 1000,
+        duration : 700,
         easing : 'linear',
         once: true
     });
