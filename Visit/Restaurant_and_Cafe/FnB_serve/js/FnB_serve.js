@@ -23,7 +23,7 @@ $(function() {
     });
 
     $('.fnb-menu li').click(function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         let idx = $(this).index();
 
         $('.fnb-menu li a').removeClass('line');
