@@ -451,28 +451,6 @@ main {
               margin-bottom: 10px;
             }
 
-            .btn-flex {
-              display: flex;
-              line-height: 30px;
-
-              div {
-                width: 110px;
-                padding-right: 20px;
-                margin-bottom: 10px;
-              }
-
-              .download {
-                width: 120px;
-                height: 28px;
-                font-size: 14px;
-                color: white;
-                border: 0;
-                border-radius: 30px;
-                cursor: pointer;
-                background-color: $point-color;
-              }
-            } //btn-flex
-
             .list1 {
               margin-bottom: 10px;
             }
@@ -595,7 +573,7 @@ main {
               }
 
               h4 {
-                width: 80px;
+                min-width: 80px;
                 font-size: 14px;
 
                 @include responsive(large-tablet-screens) {

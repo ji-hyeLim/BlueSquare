@@ -37,7 +37,8 @@ body {
 }
 
 .caution {
-    color: red;
+    color: #f21313;
+    margin-bottom: 10px
 }
 
 .seat-img {
@@ -230,7 +231,7 @@ main {
     .tab-menu {
         ul {
             margin-top: 58px;
-            margin-bottom: 50px;
+            margin-bottom: 70px;
             font-size: $tab-font-size;
             
             @include flex-box() {
@@ -290,10 +291,11 @@ main {
     .sub-tab-menu {
 
         ul {
-            margin-top: 40px;
-            @include flex-box() {
-                justify-content: center;
-            }
+            width: 220px;
+            margin: 0px auto 70px;
+            font-size: 16px;
+
+            @include flex-box();
     
             li {
                 width: 100px;
@@ -319,187 +321,49 @@ main {
         } //ul
     } //sub-tab-menu
 
-    section {
-        display: none;
-        &.show {
-            display: block;
-        }
-    }
-
-    .shinhan-hall {
-        // display: none;
-        .shinhan-firstF {
-            .on {
-                display: block;
-            }
-
-            .number-of-seat {
-
-                .number-wrap1 {
-                    width: 390px;
-                    padding-right: 100px;
-
-                    .title,
-                    .content {
-                        div {
-                            padding-bottom: 8px;
-                        }
-                    }
-
-                    @include flex-box();
-
-                    @include responsive (large-tablet-screens) {
-                        display: none;
-                    }
-
-                    .orange {
-                        color: #d38b1c;
-                        font-weight: 600;
-                    }
-        
-                    .green {
-                        color: #b1b77b;
-                        font-weight: 600;
-                    }
-        
-                    .purple {
-                        color: #b377b5;
-                        font-weight: 600;
-                    }
-                } //number-wrap1
-
-                .number-wrap2 {
-                    display: none;
-
-                    .orange {
-                        color: #d38b1c;
-                        font-weight: 600;
-                    }
-        
-                    .green {
-                        color: #b1b77b;
-                        font-weight: 600;
-                    }
-        
-                    .purple {
-                        color: #b377b5;
-                        font-weight: 600;
-                    }
-
-                    @include responsive (large-tablet-screens) {
-                        display: block;
-                        display: flex;
-                        div {
-                            &:nth-child(odd) {
-                                padding-right: 20px;
-                            }
-                            &:nth-child(even) {
-                                padding-right: 40px;
-                            }
-                        }
-                    }
-                } //number-wrap2
-            } //number-of-seat
-        } //shinhan-firstF
-
-        .shinhan-secondF {
-
-        } //shinhan-secondF
-
-        .shinhan-thirdF {
-
-        } //shinhan-thirdF
-
-        .seat-img-tab {
-            // display: none;
-            margin-top: 80px;
-
-            @include responsive(large-tablet-screens) {
-                width: 20%;
-                position: absolute;
-                right: 0;
-                top: 460px;
-            }
-
-            
-            ul {
-                // background-color: red;
-                @include flex-box();
-
-                @include responsive(large-tablet-screens) {
-                    
-                    @include responsive(large-tablet-screens) {
-                        flex-direction: column;
-                        align-items: flex-end;
-                        width: 80%;
-                    }
-                }
-        
-                li {
-                    // cursor: pointer;
-                    width: 30%;
-                    text-align: center;
-                    color: #ccc;
-
-                    @include responsive(large-tablet-screens) {
-                        width: 100%;
-                        padding-bottom: 20px;
-                    }
-
-                    &:last-child {
-                        @include responsive(large-tablet-screens) {
-                            padding-bottom: 0;
-                        }
-                    }
-        
-                    img {
-                        display: block;
-                        width: 100%;
-                        // height: 98px;
-                        // height 값 auto 주면 크기 다 달라용
-
-                    }
-                }
-            } //ul
-        } //seat-img-tab
-
-    } //shinhan-hall
-
     .master-hall {
-        // display: none;
-        & > div {
+        margin-top: 70px;
+
+        .sub-tab {
             display: none;
 
             &.show {
                 display: block;
             }
         }
+
         .master-standing {
-            .standing-firstF {
-                // background-color: skyblue;
-                .number-of-seat {
-                    div {
-                        display: flex;
-                        padding-right: 20px;
+            .F_wrap {
+                &>div {
+                    display: none;
+    
+                    &.img_tab_on {
+                        display: block;
                     }
                 }
-            }
-            
-            .standing-secondF {
-                .number-of-seat {
-                    div {
-                        display: flex;
-                        padding-right: 20px;
-                        &:nth-child(odd) {
+                .standing-firstF {
+                    .number-of-seat {
+                        div {
+                            display: flex;
                             padding-right: 20px;
                         }
-                        &:nth-child(2) {
-                            padding-right: 40px;
-                        }
                     }
-                }
+                } //standing-firstF
                 
-
+                .standing-secondF {
+                    .number-of-seat {
+                        div {
+                            display: flex;
+                            padding-right: 20px;
+                            &:nth-child(odd) {
+                                padding-right: 20px;
+                            }
+                            &:nth-child(2) {
+                                padding-right: 40px;
+                            }
+                        }
+                    } //number-of-seat
+                } //standing-secondF
             }
 
             .seat-img-tab {
@@ -514,15 +378,100 @@ main {
                 
                 ul {
                     // background-color: red;
-                    @include flex-box();
+                    @include flex-box() {
+                        justify-content: space-around;
+                    }
     
                     @include responsive(large-tablet-screens) {
-                        
+                        flex-direction: column;
+                        align-items: flex-end;
+                        width: 80%;
+                    }
+            
+                    li {
+                        width: 30%;
+                        text-align: center;
+                        color: #ccc;
+    
                         @include responsive(large-tablet-screens) {
-                            flex-direction: column;
-                            align-items: flex-end;
-                            width: 80%;
+                            width: 100%;
+                            padding-bottom: 20px;
                         }
+    
+                        &:last-child {
+                            @include responsive(large-tablet-screens) {
+                                padding-bottom: 0;
+                            }
+                        }
+            
+                        img {
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                } //ul
+            } //seat-img-tab
+        } //master-standing
+    
+    
+        .master-ground {
+            .F_wrap2 {
+                &>div {
+                    display: none;
+    
+                    &.img_tab_on2 {
+                        display: block;
+                    }
+                }
+
+                .ground-firstF {
+                    .number-of-seat {
+                        div {
+                            display: flex;
+                            padding-right: 20px;
+                        }
+                    }
+                } // ground-firstF
+                
+                .ground-secondF {
+                    .number-of-seat {
+                        div {
+                            display: flex;
+                            padding-right: 20px;
+                            
+                            &:nth-child(odd) {
+                                padding-right: 20px;
+                            }
+                            &:nth-child(2) {
+                                padding-right: 40px;
+                            }
+                        }
+                    } // number-of-seat
+                } // ground-secondF
+            } //F_wrap
+    
+            .seat-img-tab {
+                margin-top: 80px;
+    
+                @include responsive(large-tablet-screens) {
+                    width: 20%;
+                    position: absolute;
+                    right: 0;
+                    top: 680px;
+                }
+                
+                ul {
+                    // background-color: red;
+                    @include flex-box() {
+                        justify-content: space-around;
+                    }
+    
+                    @include responsive(large-tablet-screens) {
+                        flex-direction: column;
+                        align-items: flex-end;
+                        width: 80%;
                     }
             
                     li {
@@ -545,91 +494,15 @@ main {
                         img {
                             display: block;
                             width: 100%;
+                            margin-bottom: 10px;
+                            cursor: pointer;
                         }
-                    }
+                    } // li
                 } //ul
             } //seat-img-tab
-        }
-    } //master-standing
-    
-    .master-ground {
-        .ground-firstF {
-            .number-of-seat {
-                div {
-                    display: flex;
-                    padding-right: 20px;
-                }
-            }
-        }
-        
-        .ground-secondF {
-            .number-of-seat {
-                div {
-                    display: flex;
-                    padding-right: 20px;
-                    
-                    &:nth-child(odd) {
-                        padding-right: 20px;
-                    }
-                    &:nth-child(2) {
-                        padding-right: 40px;
-                        background-color: purple;
-                    }
-                }
-            }
-        }
-
-        .seat-img-tab {
-            display: none;
-            margin-top: 80px;
-
-            @include responsive(large-tablet-screens) {
-                width: 20%;
-                position: absolute;
-                right: 0;
-                top: 460px;
-            }
-            
-            ul {
-                // background-color: red;
-                @include flex-box();
-
-                @include responsive(large-tablet-screens) {
-                    
-                    @include responsive(large-tablet-screens) {
-                        flex-direction: column;
-                        align-items: flex-end;
-                        width: 80%;
-                    }
-                }
-        
-                li {
-                    // cursor: pointer;
-                    width: 30%;
-                    text-align: center;
-                    color: #ccc;
-
-                    @include responsive(large-tablet-screens) {
-                        width: 100%;
-                        padding-bottom: 20px;
-                    }
-
-                    &:last-child {
-                        @include responsive(large-tablet-screens) {
-                            padding-bottom: 0;
-                        }
-                    }
-        
-                    img {
-                        display: block;
-                        width: 100%;
-                    }
-                }
-            } //ul
-        } //seat-img-tab
+        } //master-ground
     } //master-hall
-
-} /* main */
+} // main
 
 // * ===================== footer ===================== *
 

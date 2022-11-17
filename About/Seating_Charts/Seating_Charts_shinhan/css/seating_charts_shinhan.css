@@ -94,10 +94,6 @@ body {
   overflow-x: hidden;
 }
 
-.caution {
-  color: red;
-}
-
 .seat-img {
   width: 100%;
   text-align: center;
@@ -296,7 +292,7 @@ main h2 {
 }
 main .tab-menu ul {
   margin-top: 58px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
@@ -346,7 +342,7 @@ main .tab-menu ul li a.clicked {
 main .shinhan-hall .F_wrap > div {
   display: none;
 }
-main .shinhan-hall .F_wrap > div.on {
+main .shinhan-hall .F_wrap > div.img_tab_on {
   display: block;
 }
 main .shinhan-hall .F_wrap .shinhan-firstF .number-of-seat .number-wrap1 {
@@ -393,7 +389,6 @@ main .shinhan-hall .F_wrap .shinhan-firstF .number-of-seat .number-wrap2 .purple
 }
 @media screen and (min-width: 1024px) {
   main .shinhan-hall .F_wrap .shinhan-firstF .number-of-seat .number-wrap2 {
-    display: block;
     display: flex;
   }
   main .shinhan-hall .F_wrap .shinhan-firstF .number-of-seat .number-wrap2 div:nth-child(odd) {
@@ -403,14 +398,19 @@ main .shinhan-hall .F_wrap .shinhan-firstF .number-of-seat .number-wrap2 .purple
     padding-right: 40px;
   }
 }
-main .shinhan-hall .F_wrap .shinhan-secondF {
-  color: pink;
+main .shinhan-hall .F_wrap .shinhan-secondF .number-of-seat > div {
+  display: flex;
 }
-main .shinhan-hall .F_wrap .shinhan-thirdF {
-  color: purple;
+main .shinhan-hall .F_wrap .shinhan-secondF .number-of-seat > div div:first-child {
+  padding-right: 20px;
+}
+main .shinhan-hall .F_wrap .shinhan-thirdF .number-of-seat > div {
+  display: flex;
+}
+main .shinhan-hall .F_wrap .shinhan-thirdF .number-of-seat > div div:first-child {
+  padding-right: 20px;
 }
 main .shinhan-hall .seat-img-tab {
-  display: block;
   margin-top: 80px;
 }
 @media screen and (min-width: 1024px) {
@@ -425,7 +425,7 @@ main .shinhan-hall .seat-img-tab ul {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   main .shinhan-hall .seat-img-tab ul {
     flex-direction: column;
     align-items: flex-end;
@@ -436,6 +436,9 @@ main .shinhan-hall .seat-img-tab ul li {
   width: 30%;
   text-align: center;
   color: #ccc;
+}
+main .shinhan-hall .seat-img-tab ul li.black_txt {
+  color: black;
 }
 @media screen and (min-width: 1024px) {
   main .shinhan-hall .seat-img-tab ul li {
@@ -453,6 +456,20 @@ main .shinhan-hall .seat-img-tab ul li img {
   width: 100%;
   margin-bottom: 10px;
   cursor: pointer;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: 0.1s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: 0.1s ease-in-out;
+}
+main .shinhan-hall .seat-img-tab ul li img.color {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: 0.1s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: 0.1s ease-in-out;
 }
 
 footer {

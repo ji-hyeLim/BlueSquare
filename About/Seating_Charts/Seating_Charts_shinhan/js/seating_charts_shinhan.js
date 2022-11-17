@@ -1,14 +1,16 @@
 $(function() {
-    $('.seat-img-tab ul > li').click(function(e) {
-        e.preventDefault();
-        let idx = $(this).index();      
-        console.log(idx);    
-        $('.F_wrap > div').removeClass('on');
-        $('.F_wrap > div').eq(idx).addClass('on');
+    $(".seat-img-tab ul > li").click(function(e) {
+        let idx = $(this).index();
+        console.log(idx);
+
+        $(".F_wrap > div").removeClass('img_tab_on');
+        $(".F_wrap > div").eq(idx).addClass('img_tab_on');
+
+        $(".seat-img-tab ul > li > img").removeClass('color');
+        $(".seat-img-tab ul > li > img").eq(idx).addClass('color');
+
+        $(".seat-img-tab ul > li").removeClass('black_txt');
+        $(".seat-img-tab ul > li").eq(idx).addClass('black_txt');
     });
 
-    //이미지1을 클릭하면 1층이 보이도록
-    //id로 연결?
-    //인덱스 번호로 연결?
-    //흑백은 어떻게 처리할겨 ㅜ 
 });

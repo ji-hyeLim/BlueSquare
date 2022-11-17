@@ -36,16 +36,16 @@ body {
     overflow-x: hidden;
 }
 
-.caution {
-    color: red;
-}
-
 .seat-img {
     @include seat-img-style();
 }
 
 .number-of-seat {
     @include number-of-seat-style();
+    
+    // border-top: 1px solid $gray-border;
+    // border-bottom: 1px solid $gray-border;
+    // background: none;
 }
 
 .blue {
@@ -230,7 +230,7 @@ main {
     .tab-menu {
         ul {
             margin-top: 58px;
-            margin-bottom: 50px;
+            margin-bottom: 70px;
             font-size: $tab-font-size;
             
             @include flex-box() {
@@ -306,7 +306,7 @@ main {
             &>div {
                 display: none;
     
-                &.on {
+                &.img_tab_on {
                     display: block;
                 }
             }
@@ -365,8 +365,8 @@ main {
                         }
     
                         @include responsive (large-tablet-screens) {
-                            display: block;
                             display: flex;
+
                             div {
                                 &:nth-child(odd) {
                                     padding-right: 20px;
@@ -381,17 +381,35 @@ main {
             } //shinhan-firstF
     
             .shinhan-secondF {
-                color: pink;
+                .number-of-seat {
+                    &>div {
+                        display: flex;
+
+                        div {
+                            &:first-child {
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                } //number-of-seat
             } //shinhan-secondF
     
             .shinhan-thirdF {
-                color: purple;
-    
+                .number-of-seat {
+                    &>div {
+                        display: flex;
+
+                        div {
+                            &:first-child {
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                } //number-of-seat
             } //shinhan-thirdF
         } //F_wrap
 
         .seat-img-tab {
-            display: block;
             margin-top: 80px;
 
             @include responsive(large-tablet-screens) {
@@ -401,24 +419,24 @@ main {
                 top: 460px;
             }
 
-            
             ul {
                 // background-color: red;
                 @include flex-box();
 
                 @include responsive(large-tablet-screens) {
-                    
-                    @include responsive(large-tablet-screens) {
-                        flex-direction: column;
-                        align-items: flex-end;
-                        width: 80%;
-                    }
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 80%;
                 }
-        
+
                 li {
                     width: 30%;
                     text-align: center;
                     color: #ccc;
+
+                    &.black_txt {
+                        color: black;
+                    }
 
                     @include responsive(large-tablet-screens) {
                         width: 100%;
@@ -437,9 +455,21 @@ main {
                         margin-bottom: 10px;
                         cursor: pointer;
 
-                        // height: 98px;
-                        // height 값 auto 주면 크기 다 달라용
+                        -webkit-filter: grayscale(100%);
+                        -webkit-transition: .1s ease-in-out;
+                        -moz-filter: grayscale(100%); 
+                        -moz-transition: .1s ease-in-out;
+                        -o-filter: grayscale(100%); 
+                        -o-transition: .1s ease-in-out;
 
+                        &.color {
+                            -webkit-filter: grayscale(0%);
+                            -webkit-transition: .1s ease-in-out;
+                            -moz-filter: grayscale(0%);
+                            -moz-transition: .1s ease-in-out;
+                            -o-filter: grayscale(0%);
+                            -o-transition: .1s ease-in-out;
+                        }
                     }
                 } //li
             } //ul

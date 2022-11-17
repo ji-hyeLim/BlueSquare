@@ -95,7 +95,8 @@ body {
 }
 
 .caution {
-  color: red;
+  color: #f21313;
+  margin-bottom: 10px;
 }
 
 .seat-img {
@@ -296,7 +297,7 @@ main h2 {
 }
 main .tab-menu ul {
   margin-top: 58px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
@@ -344,10 +345,11 @@ main .tab-menu ul li a.clicked {
   font-weight: 600;
 }
 main .sub-tab-menu ul {
-  margin-top: 40px;
+  width: 220px;
+  margin: 0px auto 70px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
-  justify-content: center;
 }
 main .sub-tab-menu ul li {
   width: 100px;
@@ -365,129 +367,33 @@ main .sub-tab-menu ul li a:hover {
   border-radius: 30px;
   background-color: #cceaf7;
 }
-main section {
+main .master-hall {
+  margin-top: 70px;
+}
+main .master-hall .sub-tab {
   display: none;
 }
-main section.show {
+main .master-hall .sub-tab.show {
   display: block;
 }
-main .shinhan-hall .shinhan-firstF .on {
-  display: block;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 {
-  width: 390px;
-  padding-right: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .title div,
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .content div {
-  padding-bottom: 8px;
-}
-@media screen and (min-width: 1024px) {
-  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 {
-    display: none;
-  }
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .orange {
-  color: #d38b1c;
-  font-weight: 600;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .green {
-  color: #b1b77b;
-  font-weight: 600;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap1 .purple {
-  color: #b377b5;
-  font-weight: 600;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 {
+main .master-hall .master-standing .F_wrap > div {
   display: none;
 }
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 .orange {
-  color: #d38b1c;
-  font-weight: 600;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 .green {
-  color: #b1b77b;
-  font-weight: 600;
-}
-main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 .purple {
-  color: #b377b5;
-  font-weight: 600;
-}
-@media screen and (min-width: 1024px) {
-  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 {
-    display: block;
-    display: flex;
-  }
-  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 div:nth-child(odd) {
-    padding-right: 20px;
-  }
-  main .shinhan-hall .shinhan-firstF .number-of-seat .number-wrap2 div:nth-child(even) {
-    padding-right: 40px;
-  }
-}
-main .shinhan-hall .seat-img-tab {
-  margin-top: 80px;
-}
-@media screen and (min-width: 1024px) {
-  main .shinhan-hall .seat-img-tab {
-    width: 20%;
-    position: absolute;
-    right: 0;
-    top: 460px;
-  }
-}
-main .shinhan-hall .seat-img-tab ul {
-  display: flex;
-  justify-content: space-between;
-}
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  main .shinhan-hall .seat-img-tab ul {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 80%;
-  }
-}
-main .shinhan-hall .seat-img-tab ul li {
-  width: 30%;
-  text-align: center;
-  color: #ccc;
-}
-@media screen and (min-width: 1024px) {
-  main .shinhan-hall .seat-img-tab ul li {
-    width: 100%;
-    padding-bottom: 20px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main .shinhan-hall .seat-img-tab ul li:last-child {
-    padding-bottom: 0;
-  }
-}
-main .shinhan-hall .seat-img-tab ul li img {
-  display: block;
-  width: 100%;
-}
-main .master-hall > div {
-  display: none;
-}
-main .master-hall > div.show {
+main .master-hall .master-standing .F_wrap > div.img_tab_on {
   display: block;
 }
-main .master-hall .master-standing .standing-firstF .number-of-seat div {
+main .master-hall .master-standing .F_wrap .standing-firstF .number-of-seat div {
   display: flex;
   padding-right: 20px;
 }
-main .master-hall .master-standing .standing-secondF .number-of-seat div {
+main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat div {
   display: flex;
   padding-right: 20px;
 }
-main .master-hall .master-standing .standing-secondF .number-of-seat div:nth-child(odd) {
+main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat div:nth-child(odd) {
   padding-right: 20px;
 }
-main .master-hall .master-standing .standing-secondF .number-of-seat div:nth-child(2) {
+main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat div:nth-child(2) {
   padding-right: 40px;
 }
 main .master-hall .master-standing .seat-img-tab {
@@ -504,8 +410,9 @@ main .master-hall .master-standing .seat-img-tab {
 main .master-hall .master-standing .seat-img-tab ul {
   display: flex;
   justify-content: space-between;
+  justify-content: space-around;
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   main .master-hall .master-standing .seat-img-tab ul {
     flex-direction: column;
     align-items: flex-end;
@@ -531,67 +438,75 @@ main .master-hall .master-standing .seat-img-tab ul li {
 main .master-hall .master-standing .seat-img-tab ul li img {
   display: block;
   width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
-main .master-ground .ground-firstF .number-of-seat div {
-  display: flex;
-  padding-right: 20px;
-}
-main .master-ground .ground-secondF .number-of-seat div {
-  display: flex;
-  padding-right: 20px;
-}
-main .master-ground .ground-secondF .number-of-seat div:nth-child(odd) {
-  padding-right: 20px;
-}
-main .master-ground .ground-secondF .number-of-seat div:nth-child(2) {
-  padding-right: 40px;
-  background-color: purple;
-}
-main .master-ground .seat-img-tab {
+main .master-hall .master-ground .F_wrap2 > div {
   display: none;
+}
+main .master-hall .master-ground .F_wrap2 > div.img_tab_on2 {
+  display: block;
+}
+main .master-hall .master-ground .F_wrap2 .ground-firstF .number-of-seat div {
+  display: flex;
+  padding-right: 20px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat div {
+  display: flex;
+  padding-right: 20px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat div:nth-child(odd) {
+  padding-right: 20px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat div:nth-child(2) {
+  padding-right: 40px;
+}
+main .master-hall .master-ground .seat-img-tab {
   margin-top: 80px;
 }
 @media screen and (min-width: 1024px) {
-  main .master-ground .seat-img-tab {
+  main .master-hall .master-ground .seat-img-tab {
     width: 20%;
     position: absolute;
     right: 0;
-    top: 460px;
+    top: 680px;
   }
 }
-main .master-ground .seat-img-tab ul {
+main .master-hall .master-ground .seat-img-tab ul {
   display: flex;
   justify-content: space-between;
+  justify-content: space-around;
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  main .master-ground .seat-img-tab ul {
+@media screen and (min-width: 1024px) {
+  main .master-hall .master-ground .seat-img-tab ul {
     flex-direction: column;
     align-items: flex-end;
     width: 80%;
   }
 }
-main .master-ground .seat-img-tab ul li {
+main .master-hall .master-ground .seat-img-tab ul li {
   width: 30%;
   text-align: center;
   color: #ccc;
 }
 @media screen and (min-width: 1024px) {
-  main .master-ground .seat-img-tab ul li {
+  main .master-hall .master-ground .seat-img-tab ul li {
     width: 100%;
     padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .master-ground .seat-img-tab ul li:last-child {
+  main .master-hall .master-ground .seat-img-tab ul li:last-child {
     padding-bottom: 0;
   }
 }
-main .master-ground .seat-img-tab ul li img {
+main .master-hall .master-ground .seat-img-tab ul li img {
   display: block;
   width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-/* main */
 footer {
   color: #fff;
   background-color: #000;
