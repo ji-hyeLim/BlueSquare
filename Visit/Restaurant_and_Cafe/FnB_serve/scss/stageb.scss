@@ -26,19 +26,19 @@
 }
 
 .fixed-box {
-    opacity: 0.1;
+    // opacity: 0.1;
     background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 102px;
+    height: 80px;
     padding-top: 10px;
     z-index: 2;
     @include responsive(large-tablet-screens) {
-        opacity: 1;
+        // opacity: 1;
         padding-top: 20px;
-        height: 59px;
+        height: 60px;
     }
 
     &:hover {
@@ -80,17 +80,27 @@
 @keyframes updown {
     0% {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) rotate(135deg);
     }
 
     50% {
         opacity: 0;
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, -10%) rotate(135deg);
     }
 
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+}
+
+@keyframes scaleImg {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.0);
     }
 }
 
@@ -110,26 +120,19 @@ header {
         width: 100%;
         height: 100vh;
         overflow: hidden;
-
-        // video {
-        //     width: 100%; 
-        //     height: 100%;
-        //     object-fit: cover;
-        // }
-    }
-
-    // header-bg
+    }// header-bg
 
     //========== fnbserve-header!!! ============//
     .fnbserve-header {
         position: relative;
         width: 100%;
         height: 100vh;
-       
+
         background-image: url(../img/스테이지비\ 헤드\ 이미지레이어.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        animation: scaleImg 2s forwards;
 
         .hd-txt {
             // background-color: #0094d6;
@@ -140,12 +143,11 @@ header {
             .sd-txt {
                 display: inline-block;
                 color: white;
-                // animation: fadeIn 3s forwards;
                 font: {
-                    // weight: 600;
                     size: 45px;
                     family: $eng-font;
                 }
+                letter-spacing: -0.07em;
 
                 @include responsive(small-tablet-screens) {
                     font-size: 60px;
@@ -175,10 +177,16 @@ header {
                 width: 54px;
                 height: 54px;
                 
-                i {
-                    @include pos-center();
+                span {
+                    @include pos-center() {
+                        top: 30%;
+                    }
+                    width: 30px; height: 30px;
+                    display: block;
+                    border-top: 2px solid white;
+                    border-right: 2px solid white;
+                    // background-color: red;
                     animation: updown 3s infinite;
-                    color: white;
                 }
 
                 @include responsive(large-tablet-screens) {
@@ -333,9 +341,6 @@ header {
     }// logo-menu-box  
 }// header
 
-
-
-
 // * ===================== main ===================== *
 
 main {
@@ -347,150 +352,138 @@ main {
             font-size: 0;
         }
 
-        ul.fnb-menu {
-            width: 60%;
-            // background-color: red;
-            @include flex-box() {
-                justify-content: center;
-                flex-wrap: wrap
-            }
-            @include pos-center-x();
-            
-            @include responsive(large-tablet-screens) {
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                // width: 100%
-            }
-            
-            li { 
-                
-                flex: 50%;
-                width: 30%;
-                border: 1px solid transparent;
-                border-right: 0;
-                border-bottom: 0;
-
-                &:first-child {
-
-                    @include responsive(large-tablet-screens) {
-                        margin-right: 100px;
-                        border: 0;
-                    }
-                }
-
-                &:nth-child(2) {
-                    border-right: 1px solid transparent;
-
-                    @include responsive(large-tablet-screens) {
-                        margin-right: 100px;
-                        border: 0;
-                    }
-                }
-                
-                &:nth-child(3) {
-                    border-bottom: 1px solid transparent;
+        .fixed-box {
+            border-bottom: 1px solid $gray-border;
     
-                    @include responsive(large-tablet-screens) {
-                        margin-right: 100px;
-                        border: 0;
-                    }
+            ul.fnb-menu {
+                // border: 1px solid black;
+                width: 60%;
+                @include flex-box() {
+                    justify-content: center;
+                    flex-wrap: wrap
+                }
+                @include pos-center-x();
+                
+                @include responsive(large-tablet-screens) {
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    // width: 100%
                 }
                 
-                &:last-child {
-                    border-right: 1px solid transparent;
-                    border-bottom: 1px solid transparent;
-                    
-                    @include responsive(large-tablet-screens) {
-                        margin-right: 0px;
-                        border: 0;
-                    }
-
-                }
-
-                @include responsive(large-tablet-screens) {
-                    flex: 25%;
-                    border: 0;
-                }
-
-                a {
-                    padding: 10px;
-                    text-align: center;
-                    white-space: nowrap;
-                    // background-color: red;
-
-                    &.line {
-                        font-weight: 600;
-                        background-color: rgba($color: #0094d6, $alpha: 0.2);
-                        border-radius: 20px;
-                        box-shadow: 2px 2px 1px #ccc;
+                li {  
+                    flex: 50%;
+                    width: 30%;
+                    border: 1px solid transparent;
+                    border-right: 0;
+                    border-bottom: 0;
+    
+                    &:first-child {
+    
                         @include responsive(large-tablet-screens) {
-                            box-shadow: none;
-                            background-color: transparent;
+                            margin-right: 100px;
+                            border: 0;
                         }
                     }
     
-                    &.line::after {
+                    &:nth-child(2) {
+                        border-right: 1px solid transparent;
+    
+                        @include responsive(large-tablet-screens) {
+                            margin-right: 100px;
+                            border: 0;
+                        }
+                    }
+                    &:nth-child(3) {
+                        border-bottom: 1px solid transparent;
+    
+                        @include responsive(large-tablet-screens) {
+                            margin-right: 100px;
+                            border: 0;
+                        }
+                    }
+                    &:last-child {
+                        border-right: 1px solid transparent; 
+                        border-bottom: 1px solid transparent;
                         
                         @include responsive(large-tablet-screens) {
-                            display: block;
-                            content: "";
-                            width: 100%;
-                            height: 8px;
-                            margin-top: 10px;
-                            border-radius: 5px 5px 0 0;
-                            background-color: #000;
-                            transform: scale(1);
-                            transition: all 0.4s;
+                            margin-right: 0px;
+                            border: 0;
+                        }
+                    }
+    
+                    @include responsive(large-tablet-screens) {
+                        flex: 25%;
+                        border: 0;
+                    }
+    
+                    a {
+                        padding: 5px 5px;
+                        text-align: center;
+                        white-space: nowrap;
+                        // background-color: red;
+    
+                        @include responsive(large-tablet-screens) {
+                            padding: 0;
+                            font-size: 18px;
+                            
+                            // &::after { //라인고정
+                            //     margin: 0 auto;
+                            //     margin-top: 10px;
+                            //     display: block;
+                            //     content: "";
+                            //     width: 100px;
+                            //     height: 8px;
+                            //     border-radius: 5px 5px 0 0;
+                            //     background-color: #000;
+                            //     transform: scale(0);
+                            //     transition: all 0.4s;
+                            // }
+    
+                            // &.line::after {
+                            //     transform: scale(1);
+                            // }
                         }
     
-                        @include responsive(desktop-screens) {
-                            transform: scale(0.45, 1);
-                        }
-                    }
-
-                    &:hover {
-                        font-weight: 600;
-                        background-color: rgba($color: #0094d6, $alpha: 0.2);
-                        box-shadow: 2px 2px 1px #ccc;
-                        border-radius: 20px;
-                        // color: #fff;
-                        color: #000;
-                        transition: all 0.5s;
-
-                        @include responsive(large-tablet-screens) {
-                            box-shadow: none;
-                            background-color: transparent;
-                            // color: #000;
-                        }
-                    }
-
-                    @include responsive(large-tablet-screens) {
-                        padding: 0;
-                        font-size: 18px;
-
-                        &::after {
-                            display: block;
-                            content: "";
-                            width: 100%;
-                            height: 8px;
-                            margin-top: 10px;
-                            border-radius: 5px 5px 0 0;
-                            background-color: #000;
-                            transform: scale(0);
-                            transition: all 0.4s;
-                        }
-        
-                        &:hover::after {
-                            transform: scale(1);
-
-                            @include responsive(desktop-screens) {
-                                transform: scale(0.45, 1);
+                        &.line {
+                            font-weight: 600;
+                            background-color: #cceaf7;
+                            border-radius: 20px;
+                            // box-shadow: 2px 2px 1px #ccc;
+                            @include responsive(large-tablet-screens) {
+                                box-shadow: none;
+                                background-color: transparent;
                             }
                         }
-                    }
-                }
-            }
-        } //ul.fnb-menu
+    
+                        // @include responsive(large-tablet-screens) { //언더라인
+                        //     padding: 0;
+                        //     font-size: 18px;
+        
+                        //     &::after {
+                        //         margin: 0 auto;
+                        //         display: block;
+                        //         content: "";
+                        //         width: 100%;
+                        //         height: 8px;
+                        //         margin-top: 10px;
+                        //         border-radius: 5px 5px 0 0;
+                        //         background-color: #000;
+                        //         transform: scale(0);
+                        //         transition: all 0.4s;
+                        //     }
+        
+                        //     &:hover::after {
+                        //         transform: scale(1);
+        
+                        //         @include responsive(desktop-screens) {
+                        //             transform: scale(0.45, 1);
+                        //         }
+                        //     }
+                        // } //underline
+                    } //a
+                } //li
+            } //ul.fnb-menu
+        } // fixed-box
 
         .fnb-info1 {
             @include flex-box();

@@ -92,7 +92,6 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .fixed-box {
-    opacity: 1;
     padding-top: 20px;
     height: 60px;
   }

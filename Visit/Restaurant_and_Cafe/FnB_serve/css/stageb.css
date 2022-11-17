@@ -82,21 +82,19 @@ footer {
 }
 
 .fixed-box {
-  opacity: 0.1;
   background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 102px;
+  height: 80px;
   padding-top: 10px;
   z-index: 2;
 }
 @media screen and (min-width: 1024px) {
   .fixed-box {
-    opacity: 1;
     padding-top: 20px;
-    height: 59px;
+    height: 60px;
   }
 }
 .fixed-box:hover {
@@ -149,29 +147,45 @@ footer {
 @-webkit-keyframes updown {
   0% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(135deg);
   }
   50% {
     opacity: 0;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -10%) rotate(135deg);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(135deg);
   }
 }
 @keyframes updown {
   0% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(135deg);
   }
   50% {
     opacity: 0;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -10%) rotate(135deg);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+@-webkit-keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 html,
@@ -197,6 +211,8 @@ header .fnbserve-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-animation: scaleImg 2s forwards;
+          animation: scaleImg 2s forwards;
 }
 header .fnbserve-header .hd-txt {
   width: 100%;
@@ -211,6 +227,7 @@ header .fnbserve-header .hd-txt .sd-txt {
   color: white;
   font-size: 45px;
   font-family: "Montserrat", sans-serif, Arial;
+  letter-spacing: -0.07em;
 }
 @media screen and (min-width: 600px) {
   header .fnbserve-header .hd-txt .sd-txt {
@@ -240,14 +257,19 @@ header .fnbserve-header .dw-icon a {
   width: 54px;
   height: 54px;
 }
-header .fnbserve-header .dw-icon a i {
+header .fnbserve-header .dw-icon a span {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  top: 30%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
   -webkit-animation: updown 3s infinite;
           animation: updown 3s infinite;
-  color: white;
 }
 @media screen and (min-width: 1024px) {
   header .fnbserve-header .dw-icon a {
@@ -385,7 +407,10 @@ main {
 main h2 {
   font-size: 0;
 }
-main ul.fnb-menu {
+main .fixed-box {
+  border-bottom: 1px solid #ccc;
+}
+main .fixed-box ul.fnb-menu {
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -396,12 +421,12 @@ main ul.fnb-menu {
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu {
+  main .fixed-box ul.fnb-menu {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
 }
-main ul.fnb-menu li {
+main .fixed-box ul.fnb-menu li {
   flex: 50%;
   width: 30%;
   border: 1px solid transparent;
@@ -409,117 +434,65 @@ main ul.fnb-menu li {
   border-bottom: 0;
 }
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:first-child {
+  main .fixed-box ul.fnb-menu li:first-child {
     margin-right: 100px;
     border: 0;
   }
 }
-main ul.fnb-menu li:nth-child(2) {
+main .fixed-box ul.fnb-menu li:nth-child(2) {
   border-right: 1px solid transparent;
 }
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:nth-child(2) {
+  main .fixed-box ul.fnb-menu li:nth-child(2) {
     margin-right: 100px;
     border: 0;
   }
 }
-main ul.fnb-menu li:nth-child(3) {
+main .fixed-box ul.fnb-menu li:nth-child(3) {
   border-bottom: 1px solid transparent;
 }
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:nth-child(3) {
+  main .fixed-box ul.fnb-menu li:nth-child(3) {
     margin-right: 100px;
     border: 0;
   }
 }
-main ul.fnb-menu li:last-child {
+main .fixed-box ul.fnb-menu li:last-child {
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu li:last-child {
+  main .fixed-box ul.fnb-menu li:last-child {
     margin-right: 0px;
     border: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu li {
+  main .fixed-box ul.fnb-menu li {
     flex: 25%;
     border: 0;
   }
 }
-main ul.fnb-menu li a {
-  padding: 10px;
+main .fixed-box ul.fnb-menu li a {
+  padding: 5px 5px;
   text-align: center;
   white-space: nowrap;
 }
-main ul.fnb-menu li a.line {
-  font-weight: 600;
-  background-color: rgba(0, 148, 214, 0.2);
-  border-radius: 20px;
-  box-shadow: 2px 2px 1px #ccc;
-}
 @media screen and (min-width: 1024px) {
-  main ul.fnb-menu li a.line {
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li a.line::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 8px;
-    margin-top: 10px;
-    border-radius: 5px 5px 0 0;
-    background-color: #000;
-    transform: scale(1);
-    transition: all 0.4s;
-  }
-}
-@media screen and (min-width: 1400px) {
-  main ul.fnb-menu li a.line::after {
-    transform: scale(0.45, 1);
-  }
-}
-main ul.fnb-menu li a:hover {
-  font-weight: 600;
-  background-color: rgba(0, 148, 214, 0.2);
-  box-shadow: 2px 2px 1px #ccc;
-  border-radius: 20px;
-  color: #000;
-  transition: all 0.5s;
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li a:hover {
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main ul.fnb-menu li a {
+  main .fixed-box ul.fnb-menu li a {
     padding: 0;
     font-size: 18px;
   }
-  main ul.fnb-menu li a::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 8px;
-    margin-top: 10px;
-    border-radius: 5px 5px 0 0;
-    background-color: #000;
-    transform: scale(0);
-    transition: all 0.4s;
-  }
-  main ul.fnb-menu li a:hover::after {
-    transform: scale(1);
-  }
 }
-@media screen and (min-width: 1024px) and (min-width: 1400px) {
-  main ul.fnb-menu li a:hover::after {
-    transform: scale(0.45, 1);
+main .fixed-box ul.fnb-menu li a.line {
+  font-weight: 600;
+  background-color: #cceaf7;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .fixed-box ul.fnb-menu li a.line {
+    box-shadow: none;
+    background-color: transparent;
   }
 }
 main .fnb-info1 {
