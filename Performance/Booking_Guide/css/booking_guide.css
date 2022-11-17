@@ -236,6 +236,7 @@ header .header-bg .hdtxt2 {
   transform: translateX(-50%);
   top: 80%;
   left: 35%;
+  text-align: center;
   bottom: 50px;
   -webkit-animation: fadeIn 1s 4s forwards;
           animation: fadeIn 1s 4s forwards;
@@ -252,6 +253,7 @@ header .header-bg .hdtxt3 {
   transform: translateX(-50%);
   top: 70%;
   left: 72%;
+  text-align: center;
   -webkit-animation: fadeIn 1s 4.5s forwards;
           animation: fadeIn 1s 4.5s forwards;
   transition: all 0.5;
