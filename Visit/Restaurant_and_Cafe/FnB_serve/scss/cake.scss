@@ -138,26 +138,28 @@ header {
         position: relative;
         width: 100%;
         height: 100vh;
-        
+
         background-image: url(../img/케익이미지레이어.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
         animation: scaleImg 2s forwards;
-        
+
         .hd-txt {
             // background-color: #0094d6;
             width: 100%;
-            @include pos-center(); 
+            @include pos-center();
             text-align: center;
 
             .sd-txt {
                 display: inline-block;
                 color: white;
+
                 font: {
                     size: 45px;
                     family: $eng-font;
                 }
+
                 letter-spacing: -0.07em;
 
                 @include responsive(small-tablet-screens) {
@@ -192,7 +194,9 @@ header {
                     @include pos-center() {
                         top: 30%;
                     }
-                    width: 30px; height: 30px;
+
+                    width: 30px;
+                    height: 30px;
                     display: block;
                     border-top: 2px solid white;
                     border-right: 2px solid white;
@@ -205,9 +209,13 @@ header {
                     height: 65px;
                 }
             }
-        }//dw-icon
-    }//fnbserve-header
-    
+        }
+
+        //dw-icon
+    }
+
+    //fnbserve-header
+
     .logo-menu-box {
         position: absolute;
         top: 0;
@@ -237,7 +245,9 @@ header {
                         }
                     }
                 }
-            } // header-logo
+            }
+
+            // header-logo
 
             nav.main-menu {
                 display: none;
@@ -278,8 +288,12 @@ header {
                             display: none;
                         }
                     }
-                }// gnb
-            }// nav.main-menu
+                }
+
+                // gnb
+            }
+
+            // nav.main-menu
 
             .right-menu {
                 width: 80px;
@@ -337,13 +351,27 @@ header {
                                     width: 40px;
                                 }
                             }
-                        }// a
-                    }// li
-                }// ul
-            }// right-menu
-        } // flex-box
-    }// logo-menu-box 
-}// header
+                        }
+
+                        // a
+                    }
+
+                    // li
+                }
+
+                // ul
+            }
+
+            // right-menu
+        }
+
+        // flex-box
+    }
+
+    // logo-menu-box 
+}
+
+// header
 
 // * ===================== main ===================== *
 
@@ -362,19 +390,21 @@ main {
         ul.fnb-menu {
             // border: 1px solid black;
             width: 60%;
+
             @include flex-box() {
                 justify-content: center;
                 flex-wrap: wrap
             }
+
             @include pos-center-x();
-            
+
             @include responsive(large-tablet-screens) {
                 flex-wrap: nowrap;
                 justify-content: flex-start;
                 // width: 100%
             }
-            
-            li {  
+
+            li {
                 flex: 50%;
                 width: 30%;
                 border: 1px solid transparent;
@@ -397,6 +427,7 @@ main {
                         border: 0;
                     }
                 }
+
                 &:nth-child(3) {
                     border-bottom: 1px solid transparent;
 
@@ -405,10 +436,11 @@ main {
                         border: 0;
                     }
                 }
+
                 &:last-child {
-                    border-right: 1px solid transparent; 
+                    border-right: 1px solid transparent;
                     border-bottom: 1px solid transparent;
-                    
+
                     @include responsive(large-tablet-screens) {
                         margin-right: 0px;
                         border: 0;
@@ -429,7 +461,7 @@ main {
                     @include responsive(large-tablet-screens) {
                         padding: 0;
                         font-size: 18px;
-                        
+
                         // &::after { //라인고정
                         //     margin: 0 auto;
                         //     margin-top: 10px;
@@ -452,6 +484,7 @@ main {
                         font-weight: 600;
                         background-color: #cceaf7;
                         border-radius: 20px;
+
                         // box-shadow: 2px 2px 1px #ccc;
                         @include responsive(large-tablet-screens) {
                             box-shadow: none;
@@ -462,7 +495,7 @@ main {
                     // @include responsive(large-tablet-screens) { //언더라인
                     //     padding: 0;
                     //     font-size: 18px;
-    
+
                     //     &::after {
                     //         margin: 0 auto;
                     //         display: block;
@@ -475,19 +508,45 @@ main {
                     //         transform: scale(0);
                     //         transition: all 0.4s;
                     //     }
-    
+
                     //     &:hover::after {
                     //         transform: scale(1);
-    
+
                     //         @include responsive(desktop-screens) {
                     //             transform: scale(0.45, 1);
                     //         }
                     //     }
                     // } //underline
-                } //a
-            } //li
-        } //ul.fnb-menu
-    } // fixed-box
+                }//a
+            }//li
+        }//ul.fnb-menu
+
+        .gomain {
+            opacity: 0;
+
+            @include responsive(large-tablet-screens) {
+                opacity: 0.7;
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background-color: #cceaf7;
+                width: 4em;
+                height: 4em;
+                line-height: 4em;
+                text-align: center;
+                border-radius: 50%;
+                border: none;
+                font-size: 1em;
+                font-weight: 500;
+                z-index: 99;
+
+                i {
+                    @include pos-center;
+
+                }
+            }
+        }//gomain
+    }// fixed-box
 
     .fnb-info1 {
         @include flex-box();
@@ -553,7 +612,9 @@ main {
                 }
             }
         }
-    }//fnb-info1
+    }
+
+    //fnb-info1
 
     .fnb-info2 {
         // background-color: aquamarine;
@@ -612,7 +673,9 @@ main {
                 }
             }
         }
-    }//fnb-info2
+    }
+
+    //fnb-info2
 
     .fnb-info3 {
         @include flex-box();
@@ -667,8 +730,12 @@ main {
                 line-height: 1.5;
             }
         }
-    }//fnb-info3
-}//main
+    }
+
+    //fnb-info3
+}
+
+//main
 
 // * ===================== footer ===================== *
 
