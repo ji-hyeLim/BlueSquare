@@ -7,7 +7,7 @@ $(function() {
 
     $(window).on('scroll',function() {
         var sc_top = $(this).scrollTop();
-        console.log(sc_top);
+        // console.log(sc_top);
 
         if($(this).scrollTop() > 1000) {
             $('.fix-box').addClass('on');
