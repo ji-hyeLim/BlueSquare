@@ -172,6 +172,22 @@ footer {
     transform: translate(-50%, -50%) rotate(135deg);
   }
 }
+@-webkit-keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 html,
 body {
   max-width: 100%;
@@ -195,6 +211,8 @@ header .fnbserve-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-animation: scaleImg 2s forwards;
+          animation: scaleImg 2s forwards;
 }
 header .fnbserve-header .hd-txt {
   width: 100%;
