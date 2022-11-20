@@ -457,23 +457,22 @@ main .bookpark .bookpark-intro {
   text-align: center;
 }
 main .bookpark .bookpark-intro h2 {
-  font-size: 38px;
+  font-size: 34px;
 }
 main .bookpark .bookpark-intro p {
   margin-top: 50px;
   line-height: 2em;
 }
 main .bookpark .bookpark-des-wrap {
-  font-size: 16px;
-  /* bookpark-des-box-L */
+  font-size: 14px;
 }
 @media screen and (min-width: 1024px) {
   main .bookpark .bookpark-des-wrap {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 main .bookpark .bookpark-des-wrap h3 {
-  font-size: 24px;
+  font-size: 20px;
   padding: 30px 0 10px;
 }
 @media screen and (min-width: 1024px) {
@@ -513,7 +512,6 @@ main .bookpark .bookpark-des-wrap .bookpark-des-flex {
 }
 main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
   position: relative;
-  /* (large-tablet-screens) */
 }
 @media screen and (min-width: 1024px) {
   main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
@@ -535,6 +533,7 @@ main .bookpark .bookpark-des-wrap .bookpark-des-box-L {
   }
   main .bookpark .bookpark-des-wrap .bookpark-des-box-L .text div {
     display: inline-block;
+    background-color: pink;
     position: absolute;
     left: 50%;
     top: 50%;

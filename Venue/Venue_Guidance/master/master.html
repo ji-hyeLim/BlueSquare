@@ -126,19 +126,16 @@
                         <div class="flexbox">
                             <div class="slide-wrap">
                                 <div class="slide-img">
-                                    <img class="item" src="./img/master/master-hall1.png" alt="">
-                                    <img class="item" src="./img/master/master-hall2.png" alt="">
-                                    <img class="item" src="./img/master/master-hall3.png" alt="">
-                                    <img class="item" src="./img/master/master-hall4.png" alt="">
+                                    <img id="photo" src="./img/master/master-hall1.png" alt="">
                                 </div>
                                 <div class="slide-btn">
-                                    <div class="prev"><img src="./img/prev.png" alt=""></div>
-                                    <div class="next"><img src="./img/next.png" alt=""></div>
+                                    <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
+                                    <div class="next" onclick="imgNext()"><img src="./img/next.png" alt=""></div>
                                 </div>
                             </div> <!-- slide-wrap -->
 
-                            <div class="intro-equip-wrap" data-aos="fade-in">
-                                <div class="intro">
+                            <div class="intro-equip-wrap">
+                                <div class="intro" data-aos="fade-in">
                                     마스터카드홀은 진정한 라이브를 만들고 즐길 수 있도록 태어난 콘서트 공연장으로,
                                     좌석변형이 가능한 객석 시스템을 갖추고 있어 1층 공간을 자유자재로 사용할 수 있습니다.
                                     국내 최고의 음향 시설과 조명 시설이 Full Spec으로 완비되어 있어
@@ -149,17 +146,17 @@
                                     마스터 카드 홀에서 무대와 관객이 하나되어
                                     뜨거운 열기를 만끽하실 수 있기를 바랍니다.
                                 </div>
-                                <div class="equipment-list">
+                                <div class="equipment-list" data-aos="fade-in">
                                     <h3>장비리스트</h3>
                                     <div class="list1 btn-flex">
                                         <div>무대기술자료</div>
-                                        <a href="./file/musical_hall_skill2021.pdf" target="_blank">
+                                        <a href="../file/musical_hall_skill2021.pdf" target="_blank">
                                             <button class="download">PDF 다운로드</button>
                                         </a>
                                     </div>
                                     <div class="list2 btn-flex">
                                         <div>무대도면</div>
-                                        <a href="./file/musical_hall_plan2021.pdf" target="_blank">
+                                        <a href="../file/musical_hall_plan2021.pdf" target="_blank">
                                             <button class="download">PDF 다운로드</button>
                                         </a>
                                     </div>
@@ -259,18 +256,14 @@
                             </div> <!-- table-area -->
                         </div> <!-- prepare-fee -->
 
-                        <div class="flexbox2">
+                        <div class="information flexbox2">
+                            <div><h3>안내사항</h3></div>
                             <div>
-                                <h3>안내사항</h3>
-                            </div>
-                            <div>
-                                <div>
-                                    • 공연 대관: 09:00~23:00 / 준비 대관: 09:00~22:00 <br>
-                                    (대관시 12~13시, 18~19시의 식사시간은 대관가능시간에서 제외)
-                                </div>
+                                <div>• 공연 대관: 09:00~23:00 / 준비 대관: 09:00~22:00</div>
+                                <div class="text-indent">(대관시 12~13시, 18~19시의 식사시간은 대관가능시간에서 제외)</div>
                                 <div>• 공연 1회는 최대 150분을 기준으로 하며, 1일 2회 공연의 경우 50% 할증 적용</div>
                                 <div>• 기본 대관료에 포함되는 내용</div>
-                                <div>
+                                <div class="text-indent">
                                     1) 공연 대관 시간 냉,난방료 (공연 한시간 전부터 종료시까지) / 준비대관 시 냉난방 및 온수 사용료 별도 <br>
                                     2) 1명의 하우스 매니저, 4명의 하우스 어셔 인력<br>
                                     3) 대관기간내 사용하는 전기, 수도세 일체 / 분장실, 대기실, 휴게실 및 세탁실 사용료 일체<br>
@@ -356,7 +349,8 @@
     <script>
         AOS.init({
             easing: 'linear',
-            duration: 800            
+            duration: 800,
+            once: true
         });
     </script>
 </body>

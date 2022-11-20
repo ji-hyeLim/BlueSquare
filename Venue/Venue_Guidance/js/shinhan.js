@@ -1,17 +1,17 @@
 // 이미지 넘기기
-var num = 1;
+// var num = 1;
 
-function imgNext() {
-    num++;
-    if (num > 3) num = 1;
-    document.getElementById("photo").setAttribute("src","./img/shinhan/shinhan-hall" + num + ".png");
-}
+// function imgNext() {
+//     num++;
+//     if (num > 3) num = 1;
+//     document.getElementById("photo").setAttribute("src","./img/shinhan/shinhan-hall" + num + ".png");
+// }
 
-function imgPrev() {
-    num--;
-    if (num < 1) num = 3;
-    document.getElementById("photo").setAttribute("src","./img/shinhan/shinhan-hall" + num + ".png");
-}
+// function imgPrev() {
+//     num--;
+//     if (num < 1) num = 3;
+//     document.getElementById("photo").setAttribute("src","./img/shinhan/shinhan-hall" + num + ".png");
+// }
 
 // ======================== 제이쿼리 =========================== //
 $(function () {
@@ -27,4 +27,6 @@ $(function () {
     $('.sub-tab li a').removeClass('sub-tab-clicked');
     $('.sub-tab li a').eq(idx).addClass('sub-tab-clicked');
   });
+
+
 });

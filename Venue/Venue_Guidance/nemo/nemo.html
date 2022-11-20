@@ -90,8 +90,7 @@
                                 <li class="mobile-only left"><a href="#"><img src="./img/ticket_white.png"
                                             alt="ticket"></a>
                                 </li>
-                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png"
-                                            alt="menu"></a></li>
+                                <li class="mobile-only right"><a href="#"><img src="./img/menu_white.png" alt="menu"></a></li>
                                 <li class="large-only"><a href="#">TICKET</a></li>
                                 <li class="large-only"><a href="#">LOG IN</a></li>
                                 <li class="large-only"><a href="#">JOIN</a></li>
@@ -126,13 +125,12 @@
                         <div class="flexbox">
                             <div class="slide-wrap">
                                 <div class="slide-img">
-                                    <img class="item" src="./img/nemo/nemo1.png" alt="">
-                                    <img class="item" src="./img/nemo/nemo2.png" alt="">
-                                    <img class="item" src="./img/nemo/nemo3.png" alt="">
+                                    <img id="photo" src="./img/nemo/nemo1.png" alt="">
+
                                 </div>
                                 <div class="slide-btn">
-                                    <div class="prev"><img src="./img/prev.png" alt=""></div>
-                                    <div class="next"><img src="./img/next.png" alt=""></div>
+                                    <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
+                                    <div class="next" onclick="imgNext();"><img src="./img/next.png" alt=""></div>
                                 </div>
                             </div> <!-- slide-wrap -->
 
@@ -315,7 +313,8 @@
     <script>
         AOS.init({
             easing: 'linear',
-            duration: 800            
+            duration: 800,
+            once: true
         });
     </script>
 </body>

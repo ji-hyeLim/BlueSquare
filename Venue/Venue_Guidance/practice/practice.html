@@ -125,13 +125,11 @@
                         <div class="flexbox">
                             <div class="slide-wrap">
                                 <div class="slide-img">
-                                    <img class="item on" src="./img/practice/practice1.png" alt="">
-                                    <img class="item" src="./img/practice/practice2.png" alt="">
-                                    <img class="item" src="./img/practice/practice3.png" alt="">
+                                    <img id="photo" src="./img/practice/practice1.png" alt="">
                                 </div>
                                 <div class="slide-btn">
-                                    <div class="prev"><img src="./img/prev.png" alt=""></div>
-                                    <div class="next"><img src="./img/next.png" alt=""></div>
+                                    <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
+                                    <div class="next" onclick="imgNext();"><img src="./img/next.png" alt=""></div>
                                 </div>
                             </div> <!-- slide-wrap -->
 
@@ -285,7 +283,8 @@
     <script>
         AOS.init({
             easing: 'linear',
-            duration: 800            
+            duration: 800,
+            once: true
         });
     </script>
 </body>

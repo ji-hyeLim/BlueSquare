@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/kaos.css" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
     <title>BLUE SQUARE</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/kaos.js"></script>
-
 </head>
 
 <body>
@@ -125,19 +127,13 @@
                     <div class="venue-facility active">
                         <div class="flexbox">
                             <div class="slide-wrap">
-                                <div class="slide-img">
-                                    <img id="photo" src="./img/kaos/kaos1.png" alt="">
-                                    <img src="./img/kaos/kaos2.png" alt="">
-                                    <img src="./img/kaos/kaos3.png" alt="">
-                                </div>
-                                <div class="slide-btn">
-                                    <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
-                                    <div class="next" onclick="imgNext();"><img src="./img/next.png" alt=""></div>
-                                </div>
+                                <img id="photo" src="./img/kaos/kaos1.png" alt="">
+                                <img id="photo" src="./img/kaos/kaos2.png" alt="">
+                                <img id="photo" src="./img/kaos/kaos3.png" alt="">s
                             </div> <!-- slide-wrap -->
 
-                            <div class="intro-about-wrap">
-                                <div class="intro" data-aos="fade-in">
+                            <div class="intro-about-wrap" data-aos="fade-in">
+                                <div class="intro">
                                     카오스홀(KAOS홀)은 블루스퀘어 신한카드홀 3층에 위치한 다목적 홀로 각종
                                     컨퍼런스와 토크콘서트, 강연회, 박람회, 쇼케이스 등 다방면의 장르를 아우를 수
                                     있는 장소입니다.
@@ -154,7 +150,7 @@
                                         <div>강연회, 기자회견, 세미나, 컨퍼런스, 쇼케이스, 워크숍, 토크콘서트, 팬미팅 등</div>
                                     </div>
                                 </div>
-                                <div class="about-facility" data-aos="fade-in">
+                                <div class="about-facility">
                                     <h3>시설 구성</h3>
                                     <div class="flexbox2">
                                         <h4>기본장비</h4>
@@ -285,7 +281,18 @@
     <script>
         AOS.init({
             easing: 'linear',
-            duration: 800            
+            duration: 800,
+            once: true
+        });
+
+        // 이미지 슬라이드 (slick)
+        $(function(){
+            $('.slide-wrap').slick({
+            arrows : true,
+            prevArrow : "<div class='slick-prev'><img src='./img/prev.png'></div>",    
+            nextArrow : "<div class='slick-next'><img src='./img/next.png'></div>",
+            fade: true
+            });
         });
     </script>
 </body>

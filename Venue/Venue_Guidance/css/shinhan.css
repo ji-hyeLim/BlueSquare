@@ -62,6 +62,7 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: rgb(73, 73, 73);
 }
 @media screen and (min-width: 1400px) {
   .container {
@@ -464,32 +465,13 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap {
   width: 100%;
   height: auto;
 }
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
-  position: relative;
-  display: flex;
-  overflow: hidden;
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .venue-facility .flexbox .slide-wrap {
+    width: 50%;
+  }
 }
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
+main .venue-guidance .venue-facility .flexbox .slide-wrap img {
   width: 100%;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
-  cursor: pointer;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
-  width: 40px;
-  height: 40px;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
-  left: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
-  right: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
   margin-top: 30px;
@@ -516,6 +498,25 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list 
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list h3 {
   margin-bottom: 10px;
+}
+main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .btn-flex {
+  display: flex;
+  line-height: 30px;
+}
+main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .btn-flex div {
+  width: 110px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .btn-flex .download {
+  width: 120px;
+  height: 28px;
+  font-size: 14px;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #0094d6;
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .list1 {
   margin-bottom: 10px;
@@ -559,7 +560,7 @@ main .venue-guidance .rental-fee .perform-fee .flexbox2 h3 {
   width: 140px;
 }
 main .venue-guidance .rental-fee .prepare-fee {
-  margin-top: 70px;
+  margin: 70px 0;
   font-size: 14px;
 }
 main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
@@ -575,14 +576,14 @@ main .venue-guidance .rental-fee .prepare-fee .flexbox2 h3 {
 }
 main .venue-guidance .rental-fee .agreement {
   width: 100%;
-  margin-top: 80px;
+  margin: 0 auto;
   padding: 40px;
   text-align: center;
   background-color: #eee;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .rental-fee .agreement {
-    width: 1000px;
+    width: 1200px;
   }
 }
 main .venue-guidance .rental-fee .agreement a {

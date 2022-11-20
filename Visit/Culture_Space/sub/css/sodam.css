@@ -465,7 +465,6 @@ main .sodam .blue-nemo-wrap .blue {
 }
 main .sodam .blue-nemo-wrap .blue .circle {
   position: absolute;
-  top: 600px;
   left: 50%;
   width: 280%;
   height: 1px;
@@ -474,13 +473,13 @@ main .sodam .blue-nemo-wrap .blue .circle {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-top: 2px solid #000;
-  transform: translate(-50%, -800px);
-  z-index: -1;
   background-color: white;
+  top: -160px;
+  transform: translate(-50%, 0);
 }
 @media screen and (min-width: 1024px) {
   main .sodam .blue-nemo-wrap .blue .circle {
-    top: 500px;
+    top: -260px;
   }
 }
 main .sodam .blue-nemo-wrap .blue .info-img-wrap {

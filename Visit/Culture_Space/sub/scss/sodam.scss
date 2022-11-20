@@ -392,7 +392,6 @@ main {
             margin-bottom: 300px;
             font-size: 14px;
             text-align: center;
-            // background-color: yellow;
         
             @include responsive(large-tablet-screens) {
                 font-size: 148px;
@@ -434,23 +433,25 @@ main {
                 position: relative;
                 
                 .circle {
-                    // display: none;
+                    // display: block;
                     position: absolute;
-                    top: 600px;
+                    // top: 600px;
                     left: 50%;
                     width: 280%;
                     height: 1px;
                     padding-bottom: 200%;
                     border-radius: 50%;
                     border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;                   
+                    border-bottom-right-radius: 0;
                     border-top: 2px solid #000;
-                    transform: translate(-50%, -800px);
-                    z-index: -1;
+                    // transform: translate(-50%, -800px);
+                    // z-index: -1;
                     background-color: white;
+                    top: -160px;
+                    transform: translate(-50%, 0);
 
                     @include responsive(large-tablet-screens) {
-                        top: 500px;
+                        top: -260px;
                     }
                 } //circle
 
@@ -474,7 +475,6 @@ main {
                             font-size: 18px;
                             padding: 10px 0;
                         }
-                        
     
                         @include responsive(large-tablet-screens) {
                             margin-bottom: 0;

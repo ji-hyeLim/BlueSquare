@@ -360,12 +360,43 @@ main {
         &:hover {
           font-weight: 600;
           border-radius: 30px;
-          // background-color: $gray-bg;
           background-color: #cceaf7;
         }
       }
     } //li
   } //sub-tab
+
+  // .sub-tab { // 서브탭 2번째 디자인
+  //   display: flex;
+  //   width: 100%;
+  //   height: 50px;
+  //   margin: 0 auto;
+  //   margin-bottom: 70px;
+  //   font-size: $sub-tab-font-size;
+
+  //   li {
+  //     width: 50%;
+  //     text-align: center;
+  //     line-height: 50px;
+  //     border: 1px solid black;
+
+  //     &:first-child {
+  //       border-right: 0;
+  //     }
+      
+  //     a {
+  //       &.sub-tab-clicked {
+  //         font-weight: 600;
+  //         background-color: #cceaf7;
+  //       }
+        
+  //       &:hover {
+  //         font-weight: 600;
+  //         background-color: #cceaf7;
+  //       }
+  //     }
+  //   } //li
+  // } //sub-tab
 
   section {
     &>div {
@@ -415,7 +446,6 @@ main {
             img {
               width: 40px;
               height: 40px;
-              background-color: blue;
             }
 
             .prev {
@@ -530,31 +560,36 @@ main {
       } //perform-fee
 
       .prepare-fee {
-        // margin-top: 40px;
+        margin: 70px 0;
         font-size: 14px;
 
-        .flexbox2 {
-          margin-top: 40px;
-
-          @include responsive(large-tablet-screens) {
-            display: flex;
-          }
-
-          h3 {
-            width: 140px;
-          }
-        }
       } //prepare-fee
+
+      .information {
+        margin-bottom: 70px;
+
+        @include responsive(large-tablet-screens) {
+          display: flex;
+        }
+
+        h3 {
+          width: 140px;
+        }
+
+        .text-indent {
+          padding: 0 14px;
+        }
+      } //information
 
       .agreement {
         width: 100%;
-        margin-top: 80px;
+        margin: 0 auto;
         padding: 40px;
         text-align: center;
         background-color: $gray-bg;
 
         @include responsive(large-tablet-screens) {
-          width: 1000px;
+          width: 1200px;
         }
 
         a {
@@ -574,9 +609,6 @@ main {
       }
 
       .table-area {
-        margin-top: 30px;
-        margin-bottom: 134px;
-
         table {
           border-collapse: collapse;
           width: 100%;
@@ -586,7 +618,7 @@ main {
           @include left-right-border-none();
 
           thead {
-            border-bottom: 3px solid $point-color;
+            border-bottom: 2px solid rgb(170, 170, 170);
           }
 
           th,

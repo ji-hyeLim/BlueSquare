@@ -455,7 +455,6 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
   width: 40px;
   height: 40px;
-  background-color: blue;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
   left: 0;
@@ -556,29 +555,33 @@ main .venue-guidance .rental-fee .perform-fee .flexbox2 h3 {
   width: 140px;
 }
 main .venue-guidance .rental-fee .prepare-fee {
+  margin: 70px 0;
   font-size: 14px;
 }
-main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
-  margin-top: 40px;
+main .venue-guidance .rental-fee .information {
+  margin-bottom: 70px;
 }
 @media screen and (min-width: 1024px) {
-  main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
+  main .venue-guidance .rental-fee .information {
     display: flex;
   }
 }
-main .venue-guidance .rental-fee .prepare-fee .flexbox2 h3 {
+main .venue-guidance .rental-fee .information h3 {
   width: 140px;
+}
+main .venue-guidance .rental-fee .information .text-indent {
+  padding: 0 14px;
 }
 main .venue-guidance .rental-fee .agreement {
   width: 100%;
-  margin-top: 80px;
+  margin: 0 auto;
   padding: 40px;
   text-align: center;
   background-color: #eee;
 }
 @media screen and (min-width: 1024px) {
   main .venue-guidance .rental-fee .agreement {
-    width: 1000px;
+    width: 1200px;
   }
 }
 main .venue-guidance .rental-fee .agreement a {
@@ -588,10 +591,6 @@ main .venue-guidance .rental-fee .agreement a {
 }
 main #master .rental-fee h2 {
   margin-bottom: 38px;
-}
-main #master .rental-fee .table-area {
-  margin-top: 30px;
-  margin-bottom: 134px;
 }
 main #master .rental-fee .table-area table {
   border-collapse: collapse;
@@ -612,7 +611,7 @@ main #master .rental-fee .table-area table td:last-child {
   border-right: 0;
 }
 main #master .rental-fee .table-area table thead {
-  border-bottom: 3px solid #0094d6;
+  border-bottom: 2px solid rgb(170, 170, 170);
 }
 main #master .rental-fee .table-area table th,
 main #master .rental-fee .table-area table td {

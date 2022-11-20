@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/shinhan.css" type="text/css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
   <title>BLUE SQUARE</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/slick.js"></script>
   <script src="./js/shinhan.js"></script>
 </head>
 
@@ -121,23 +124,16 @@
           </ul>
           <div class="venue-facility active">
             <div class="flexbox">
-              <div class="slide-wrap" id="touchSlider">
-                
-                <div class="slide-img">
-                  <img id="photo" src="./img/shinhan/shinhan-hall1.png" alt="">
-                  <img src="./img/shinhan/shinhan-hall2.png" alt="">
-                  <img src="./img/shinhan/shinhan-hall3.png" alt="">
-                </div>
-
-                <div class="slide-btn">
-                  <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
-                  <div class="next" onclick="imgNext();"><img src="./img/next.png" alt=""></div>
-                </div>
-                
-              </div> <!-- slide-wrap -->
+              <!-- 이미지 슬라이드 slick -->
+              <div class="slide-wrap">
+                <div><img src="./img/shinhan/shinhan-hall1.png" alt=""></div>
+                <div><img src="./img/shinhan/shinhan-hall2.png" alt=""></div>
+                <div><img src="./img/shinhan/shinhan-hall3.png" alt=""></div>
+              </div>        
+              <!-- slick 끝 -->
 
               <div class="intro-equip-wrap">
-                <div class="intro"  data-aos="fade-in">
+                <div class="intro" data-aos="fade-in">
                   신한카드홀은 뮤지컬 전용 대극장으로 총 객석 3층, 1766석으로 되어있습니다.
                   극장을 찾은 관객이 편안하고 쾌적하게 공연을 관람할 수 있도록
                   인테리어에 세심한 배려를 기울였으며, 객석 1층은 무대 끝 선과 객석 맨 뒤의
@@ -150,7 +146,7 @@
                   항상 배려하는 마음으로 서비스 연구에 매진하는 신한카드 홀에서
                   뮤지컬의 뜨거운열기와 무한한 감동을 가져가시기 바랍니다.
                 </div>
-                <div class="equipment-list"  data-aos="fade-in">
+                <div class="equipment-list" data-aos="fade-in">
                   <h3>장비리스트</h3>
                   <div class="list1 btn-flex">
                     <div>무대기술자료</div>
@@ -215,7 +211,7 @@
                 </div>
                 <div>• 회당 7,700,000(VAT 별도)</div>
               </div>
-              <div class="flexbox2">
+              <div class="information flexbox2">
                 <div>
                   <h3>안내사항</h3>
                 </div>
@@ -305,9 +301,21 @@
   <script>
     AOS.init({
         easing: 'linear',
-        duration: 800            
+        duration: 800,
+        once: true        
     });
-</script>
+
+  // 이미지 슬라이드 (slick)
+  $(function(){
+    $('.slide-wrap').slick({
+
+      arrows : true,
+      prevArrow : "<div class='slick-prev'><img src='./img/prev.png'></div>",    
+      nextArrow : "<div class='slick-next'><img src='./img/next.png'></div>",
+      fade: true
+    });
+  });
+  </script>
 </body>
 
 </html>

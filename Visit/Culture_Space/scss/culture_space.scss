@@ -410,7 +410,7 @@ main {
             text-align: center;
 
             h2 {
-                font-size: $title-font-size;
+                font-size: 34px;
             }
             
             p {
@@ -420,14 +420,14 @@ main {
         } //bookpark-intro
     
         .bookpark-des-wrap {
-            font-size: 16px;
+            font-size: 14px;
 
             @include responsive(large-tablet-screens) {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             h3 {
-                font-size: 24px;
+                font-size: 20px;
                 padding: 30px 0 10px;
 
                 @include responsive(large-tablet-screens) {
@@ -486,9 +486,8 @@ main {
                         // background-color: azure;
 
                         div {
-                            // width: 100%;
                             display: inline-block;
-                            // background-color: pink; 
+                            background-color: pink;
 
                             @include pos-center();
                         }
@@ -541,8 +540,8 @@ main {
                             }
                         }
                     } //img-and-square3
-                } /* (large-tablet-screens) */
-            } /* bookpark-des-box-L */
+                } // (large-tablet-screens)
+            } // bookpark-des-box-L
     
             .bookpark-des-box-R {
                 position: relative;

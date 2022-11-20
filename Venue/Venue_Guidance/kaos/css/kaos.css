@@ -418,32 +418,13 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap {
   width: 100%;
   height: auto;
 }
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
-  position: relative;
-  display: flex;
-  overflow: hidden;
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .venue-facility .flexbox .slide-wrap {
+    width: 50%;
+  }
 }
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
+main .venue-guidance .venue-facility .flexbox .slide-wrap img {
   width: 100%;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
-  cursor: pointer;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
-  width: 40px;
-  height: 40px;
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
-  left: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
-  right: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
   margin-top: 30px;
@@ -525,23 +506,6 @@ main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
 }
 main .venue-guidance .rental-fee .prepare-fee .flexbox2 h3 {
   width: 140px;
-}
-main .venue-guidance .rental-fee .agreement {
-  width: 100%;
-  margin-top: 80px;
-  padding: 40px;
-  text-align: center;
-  background-color: #eee;
-}
-@media screen and (min-width: 1024px) {
-  main .venue-guidance .rental-fee .agreement {
-    width: 1000px;
-  }
-}
-main .venue-guidance .rental-fee .agreement a {
-  display: inline-block;
-  color: #0094d6;
-  font-weight: 600;
 }
 main #kaos {
   font-size: 14px;
