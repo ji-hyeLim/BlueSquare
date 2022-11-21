@@ -111,6 +111,7 @@ body {
 }
 
 .go-home {
+  z-index: 99;
   position: absolute;
   left: 20px;
   top: 20px;
@@ -265,4 +266,4 @@ body {
 }
 .pos-wrap .login-wrap .sns-login .sns li img {
   width: 50px;
-}
+}/*# sourceMappingURL=login.css.map */

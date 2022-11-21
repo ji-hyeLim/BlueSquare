@@ -115,6 +115,7 @@ body {
   position: absolute;
   left: 20px;
   top: 20px;
+  z-index: 999;
 }
 .go-home a {
   color: #fff;
@@ -340,4 +341,4 @@ body {
 }
 .pos-wrap .join-wrap form .join-agree ul li a i {
   padding-left: 5px;
-}
+}/*# sourceMappingURL=join.css.map */
