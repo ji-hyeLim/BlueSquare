@@ -38,32 +38,95 @@ $(function() {
     // 햄버거 메뉴 콘텐츠 스타일 적용 끝 ====
 
 
+    
     // ==== 슬라이드
+    let ww = window.innerWidth;
+
     let swiper = new Swiper('.swiper', {
-        slidesPerView: spaceNumber(),
+        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         }
         
     });
-    
-    function spaceNumber() {
-        let space = 0;
-        
-        let windowWidth = $(window).width();
 
-        if(windowWidth >= 600 && windowWidth < 1024) {
-            space = 3;
-        } else if(windowWidth >= 1024 && windowWidth < 1400) {
-            space = 4;
-        } else if(windowWidth >= 1400) {
-            space = 5;
-        } else if(windowWidth < 600) {
-            space = 2;
+    responsiveSwiper();
+
+    function responsiveSwiper() {
+        if(ww < 600) {
+            swiper.destroy();
+            swiper = new Swiper('.swiper', {
+                slidesPerView: 2,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+                
+            });
+        } else if(ww >= 600 && ww < 1024) {
+            swiper.destroy();
+            swiper = new Swiper('.swiper', {
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+                
+            });
+        } else if(ww >= 1024 && ww < 1400) {
+            swiper.destroy();
+            swiper = new Swiper('.swiper', {
+                slidesPerView: 4,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+                
+            });
+        } else if(ww >= 1400) {
+            swiper.destroy();
+            swiper = new Swiper('.swiper', {
+                slidesPerView: 5,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+                
+            });
         }
-        return space;
     }
+
+    window.addEventListener('resize', function() {
+        ww = window.innerWidth;
+        responsiveSwiper();
+    });
+
+    // let swiper = new Swiper('.swiper', {
+    //     slidesPerView: spaceNumber(),
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     }
+        
+    // });
+    
+    // function spaceNumber() {
+    //     let space = 0;
+        
+    //     let windowWidth = $(window).width();
+
+    //     if(windowWidth >= 600 && windowWidth < 1024) {
+    //         space = 3;
+    //     } else if(windowWidth >= 1024 && windowWidth < 1400) {
+    //         space = 4;
+    //     } else if(windowWidth >= 1400) {
+    //         space = 5;
+    //     } else if(windowWidth < 600) {
+    //         space = 2;
+    //     }
+    //     return space;
+    // }
     // 슬라이드 끝 ====
 
 

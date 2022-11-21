@@ -94,15 +94,6 @@ body {
   overflow-x: hidden;
 }
 
-@-webkit-keyframes rotateImg {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes rotateImg {
   0% {
     transform: rotate(0deg);
@@ -164,8 +155,7 @@ header .header-bg .txt-wrap .img-pos img {
   width: 30%;
   min-width: 180px;
   max-width: 250px;
-  -webkit-animation: rotateImg 6s linear infinite;
-          animation: rotateImg 6s linear infinite;
+  animation: rotateImg 6s linear infinite;
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .txt-wrap .img-pos img {
@@ -769,4 +759,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=kaos.css.map */
+}
