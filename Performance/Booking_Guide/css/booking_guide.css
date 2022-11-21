@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nanum+Gothic:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +20,7 @@ li {
 }
 
 a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: black;
 }
@@ -89,6 +88,15 @@ footer {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -97,12 +105,20 @@ footer {
     opacity: 1;
   }
 }
+@-webkit-keyframes ct {
+  0% {
+    color: #fff;
+  }
+  80% {
+    color: rgb(0, 148, 214);
+  }
+}
 @keyframes ct {
   0% {
     color: #fff;
   }
   80% {
-    color: #0094d6;
+    color: rgb(0, 148, 214);
   }
 }
 html,
@@ -123,7 +139,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header-bg .hdtxt-wrap {
   position: absolute;
@@ -141,7 +158,8 @@ header .header-bg .hdtxt-wrap .hdtxt li {
   color: #fff;
   opacity: 1;
   transition: all 3s ease;
-  animation: ct 10s 10s infinite;
+  -webkit-animation: ct 10s 10s infinite;
+          animation: ct 10s 10s infinite;
 }
 header .header-bg .hdtxt-wrap .hdtxt li li:nth-child(13) {
   margin-right: 0;
@@ -219,7 +237,8 @@ header .header-bg .hdtxt2 {
   left: 35%;
   text-align: center;
   bottom: 50px;
-  animation: fadeIn 1s 4s forwards;
+  -webkit-animation: fadeIn 1s 4s forwards;
+          animation: fadeIn 1s 4s forwards;
 }
 @media screen and (min-width: 600px) {
   header .header-bg .hdtxt2 {
@@ -234,7 +253,8 @@ header .header-bg .hdtxt3 {
   top: 70%;
   left: 72%;
   text-align: center;
-  animation: fadeIn 1s 4.5s forwards;
+  -webkit-animation: fadeIn 1s 4.5s forwards;
+          animation: fadeIn 1s 4.5s forwards;
   transition: all 0.5;
 }
 @media screen and (min-width: 600px) {
@@ -447,7 +467,7 @@ main .ticketing .hall-title .blue-sq {
   height: 30px;
   margin-right: 8px;
   margin-top: 0px;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
 }
 main .ticketing .hall-title h2 {
   font-weight: 600;
@@ -500,7 +520,7 @@ main .ticketing .way .internet p.txt a {
   color: #fff;
   padding: 0 4px;
   font-size: 13px;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
   margin-left: 3px;
 }
 main .ticketing .way .internet p.txt a i {
@@ -618,7 +638,7 @@ main .calloff .hall-title .blue-sq {
   height: 30px;
   margin-right: 8px;
   margin-top: 0px;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
 }
 main .calloff .hall-title h2 {
   font-weight: 600;
@@ -857,4 +877,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=booking_guide.css.map */

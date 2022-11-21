@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nanum+Gothic:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -58,18 +58,6 @@ footer {
   display: block;
 }
 
-table,
-th,
-td {
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 10px;
-  border: 1px solid #eee;
-}
-
 .container {
   position: relative;
   margin: 0 auto;
@@ -120,6 +108,16 @@ header .header-bg {
   height: 100vh;
   overflow: hidden;
 }
+@-webkit-keyframes fadeUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 @keyframes fadeUp {
   0% {
     transform: translate3d(0, 100%, 0);
@@ -128,6 +126,14 @@ header .header-bg {
   100% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
+  }
+}
+@-webkit-keyframes moveBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
   }
 }
 @keyframes moveBg {
@@ -146,7 +152,8 @@ header .header-bg span {
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0;
-  animation: fadeUp 1s forwards;
+  -webkit-animation: fadeUp 1s forwards;
+          animation: fadeUp 1s forwards;
 }
 header .header-bg span:nth-child(1) {
   top: 130px;
@@ -248,7 +255,8 @@ header .header-bg .img-wrap .color-bg {
   height: 334px;
   z-index: 99;
   background-color: #000;
-  animation: moveBg 1s forwards;
+  -webkit-animation: moveBg 1s forwards;
+          animation: moveBg 1s forwards;
 }
 header .logo-menu-box {
   position: absolute;
@@ -614,7 +622,7 @@ main section.map-txt .flex-box .txt .load2 .c-txt {
 }
 main section.map-txt .flex-box .txt .load2 .c-txt span {
   font-weight: 500;
-  color: #0094d6;
+  color: rgb(0, 148, 214);
 }
 @media screen and (min-width: 1024px) {
   main section.map-txt .flex-box .txt .load2 .c-txt {
@@ -656,7 +664,7 @@ main section.map-txt .flex-box .txt .load3 .c-txt {
 }
 main section.map-txt .flex-box .txt .load3 .c-txt span {
   font-weight: 500;
-  color: #0094d6;
+  color: rgb(0, 148, 214);
 }
 main section.parking {
   padding-top: 107px;
@@ -674,7 +682,7 @@ main section.parking .top-txt p {
   }
 }
 main section.parking .top-txt p span {
-  color: #0094d6;
+  color: rgb(0, 148, 214);
   font-weight: 500;
 }
 main section.parking .elec-info {
@@ -863,7 +871,7 @@ main section.parking .info3 p.txt2 a {
   padding: 2px 3px;
   color: #fff;
   font-size: 13px;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
 }
 main section.parking .info3 p.txt2 a i {
   margin-left: 5px;
@@ -1037,4 +1045,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=how_to_come.css.map */
