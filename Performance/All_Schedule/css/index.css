@@ -107,7 +107,8 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -514,12 +515,28 @@ main .inner .write button:hover {
     height: 2em;
   }
 }
+main .inner .write input::-moz-placeholder {
+  color: #b2b2b2;
+  font-size: 15px;
+  text-align: left;
+}
+main .inner .write input:-ms-input-placeholder {
+  color: #b2b2b2;
+  font-size: 15px;
+  text-align: left;
+}
 main .inner .write input::placeholder {
   color: #b2b2b2;
   font-size: 15px;
   text-align: left;
 }
 @media screen and (min-width: 1400px) {
+  main .inner .write input::-moz-placeholder {
+    transform: translateY(10%);
+  }
+  main .inner .write input:-ms-input-placeholder {
+    transform: translateY(10%);
+  }
   main .inner .write input::placeholder {
     transform: translateY(10%);
   }
@@ -838,4 +855,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=index.css.map */
