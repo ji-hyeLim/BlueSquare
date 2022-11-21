@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nanum+Gothic:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -107,8 +107,7 @@ header .header-bg {
 header .header-bg video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .logo-menu-box {
   position: absolute;
@@ -233,14 +232,19 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
   }
 }
 header .main_text {
-  transform: translateY(-150%);
+  position: absolute;
+  bottom: 80px;
   color: #fff;
   z-index: 9999;
+}
+@media screen and (min-width: 1024px) {
+  header .main_text {
+    bottom: 50px;
+  }
 }
 header .main_text p {
   width: 100%;
   letter-spacing: -1px;
-  text-indent: 5px;
   font-size: 30px;
 }
 header .main_text p:first-child {
@@ -515,28 +519,12 @@ main .inner .write button:hover {
     height: 2em;
   }
 }
-main .inner .write input::-moz-placeholder {
-  color: #b2b2b2;
-  font-size: 15px;
-  text-align: left;
-}
-main .inner .write input:-ms-input-placeholder {
-  color: #b2b2b2;
-  font-size: 15px;
-  text-align: left;
-}
 main .inner .write input::placeholder {
   color: #b2b2b2;
   font-size: 15px;
   text-align: left;
 }
 @media screen and (min-width: 1400px) {
-  main .inner .write input::-moz-placeholder {
-    transform: translateY(10%);
-  }
-  main .inner .write input:-ms-input-placeholder {
-    transform: translateY(10%);
-  }
   main .inner .write input::placeholder {
     transform: translateY(10%);
   }
@@ -556,14 +544,13 @@ main .box {
   margin-top: 50px;
 }
 main .box ul {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 main .box ul li {
   position: relative;
-  width: 48%;
+  width: 49%;
   border: 1px solid black;
   margin-bottom: 10px;
 }
@@ -855,4 +842,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}

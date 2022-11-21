@@ -72,6 +72,11 @@
     }
 }
 
+@mixin lnb-pos-center() {
+    width: 130%;
+    transform: translateX(-18px);
+}
+
 // background-gradiunt 넣기
 @mixin background-gradiunt($path:"../img/elisabeth/",$name,$format:".png") {
     background: linear-gradient(

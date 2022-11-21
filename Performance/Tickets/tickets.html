@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/index2.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./js/tickets.js"></script>
     <title>BLUE SQUARE</title>
 </head>
@@ -16,7 +19,6 @@
         <header>
             <div class="swiper">
                     <div class="swiper-wrapper">
-
                         <div class="swiper-slide">
                             <div class="video-container">    
                                 <div class="player">
@@ -113,7 +115,7 @@
                                 </video>
                                 <div class="container">
                                     <div class="all_text">
-                                        <div class="title">ONEUS 1ST WORLD TOUR CONCERT</div>
+                                        <div class="title">ONEUS CONCERT</div>
                                         <div class="subtitle">원어스 콘서트</div>
                                         <div class="text">
                                             <p>
@@ -141,10 +143,11 @@
                                 </video>
                                 <div class="container">
                                     <div class="all_text">
-                                        <div class="title">2022 ROYKIM CONCERT 'AND'</div>
+                                        <div class="title">ROYKIM CONCERT</div>
                                         <div class="subtitle">로이킴 콘서트</div>
                                         <div class="text">
                                             <p>
+                                                2022 ROYKIM CONCERT 'AND'<br>
                                                 4년만에 돌아온 감성보컬<br>
                                                 데뷔 10주년을 맞은 발라더 로이킴의 늦가을 콘서트
                                             </p>
@@ -227,25 +230,6 @@
                     </div> <!-- flex-box -->
                 </div> <!-- container -->
             </div> <!-- logo-menu-box -->
-            
-            <!-- <div class="intro-text">
-                <div class="container">
-                    <h1>
-                        <span></span><br>
-                        엘리자벳
-                    </h1>
-                    <p>
-                        &lt;레베카&gt;, &lt;모차르트!&gt;를 탄생시킨 세계적인 거장<br>
-                        극작가 미하엘 쿤체와 작곡가 실베스터 르베이의 작품.<br>      
-                        10년간 제작 노하우를 총 망라한 마지막 시즌
-                    </p>
-                    <a href="#">Buy a ticket &nbsp;&gt;</a>
-                    <p>
-                        30<br>
-                        August - 
-                    </p>
-                </div> container -->
-            <!-- </div> intro-text -->
         </header> <!-- header -->
 
         <main>
@@ -253,33 +237,41 @@
             <h2>
                 What<span style="font-family: 명조체; font-weight: normal;">'</span>s <span>ON</span>
             </h2>
-            <div id="flow">
-                <ul class="flow-img">
-                    <li><a href="#"><img src="./img/poster/1.moulin-rouge.png" alt="물랑루즈"></a></li>
-                    <li><a href="#"><img src="./img/poster/2.elisabeth.png" alt="엘리자벳"></a></li>
-                    <li><a href="#"><img src="./img/poster/3.grand-expedition.png" alt="그랜드 엑스패디션"></a></li>
-                    <li><a href="#"><img src="./img/poster/4.oneus.png" alt="원어스 콘서트"></a></li>
-                    <li><a href="#"><img src="./img/poster/5.damonsyear.png" alt="데이먼스 이어 콘서트"></a></li>
-                    <li><a href="#"><img src="./img/poster/6.roykim.png" alt="로이킴 콘서트"></a></li>
-                    <li><a href="#"><img src="./img/poster/1.moulin-rouge.png" alt="물랑루즈"></a></li>
-                    <li><a href="#"><img src="./img/poster/2.elisabeth.png" alt="엘리자벳"></a></li>
-                    <li><a href="#"><img src="./img/poster/3.grand-expedition.png" alt="그랜드 엑스패디션"></a></li>
-                    <li><a href="#"><img src="./img/poster/4.oneus.png" alt="원어스 콘서트"></a></li>
-                    <li><a href="#"><img src="./img/poster/5.damonsyear.png" alt="데이먼스 이어 콘서트"></a></li>
-                    <li><a href="#"><img src="./img/poster/6.roykim.png" alt="로이킴 콘서트"></a></li>
-                </ul>
-            </div><!-- flow-img -->
+            <div class="flow-container">
+                <div class="flow">
+                    <div class="flow-wrap">
+                        <div class="roller">
+                            <ul class="flow-img">
+                                <li><a href="#"><img src="./img/poster/1.moulin-rouge.png" alt="물랑루즈"></a></li>
+                                <li><a href="#"><img src="./img/poster/2.elisabeth.png" alt="엘리자벳"></a></li>
+                                <li><a href="#"><img src="./img/poster/3.grand-expedition.png" alt="그랜드 엑스패디션"></a></li>
+                                <li><a href="#"><img src="./img/poster/4.oneus.png" alt="원어스 콘서트"></a></li>
+                                <li><a href="#"><img src="./img/poster/5.damonsyear.png" alt="데이먼스 이어 콘서트"></a></li>
+                                <li><a href="#"><img src="./img/poster/6.roykim.png" alt="로이킴 콘서트"></a></li>
+                                <li><a href="#"><img src="./img/poster/1.moulin-rouge.png" alt="물랑루즈"></a></li>
+                                <li><a href="#"><img src="./img/poster/2.elisabeth.png" alt="엘리자벳"></a></li>
+                                <li><a href="#"><img src="./img/poster/3.grand-expedition.png" alt="그랜드 엑스패디션"></a></li>
+                                <li><a href="#"><img src="./img/poster/4.oneus.png" alt="원어스 콘서트"></a></li>
+                                <li><a href="#"><img src="./img/poster/5.damonsyear.png" alt="데이먼스 이어 콘서트"></a></li>
+                                <li><a href="#"><img src="./img/poster/6.roykim.png" alt="로이킴 콘서트"></a></li>
+                            </ul> <!-- flow-img -->
+                        </div> <!-- roller -->
+                    </div> <!-- flow-wrap -->
+                </div> <!-- flow -->
+            </div> <!-- flow-container -->
             <hr>
             <div class="ticket-intro">
                 <div class="container">
                     <div class="left-img">
                         <div class="first-content">
-                            <div class="ticket-poster">
-                                <a href="./Tickets_detail/elisabeth/Tickets_detail_elisabeth.html"><img src="./img/poster/2.elisabeth.png" alt="엘리자벳"></a>
+                            <div class="ticket-poster" data-aos="fade-right" data-aos-duration="800">
+                                <a href="./Tickets_detail/elisabeth/Tickets_detail_elisabeth.html">
+                                    <img src="./img/poster/2.elisabeth.png" alt="엘리자벳">
+                                </a>
                             </div> <!-- ticket-poster -->
                         </div> <!-- first-content -->
-                        <div class="last-content">
-                            <div class="ticket-text">
+                        <div class="last-content" >
+                            <div class="ticket-text" data-aos="fade-right" data-aos-duration="800">
                                 <div class="show-info-ing">
                                     <p>공연 중</p>
                                 </div> <!-- show-info-ing -->
@@ -322,12 +314,12 @@
 
                     <div class="right-img">
                         <div class="last-content">
-                            <div class="ticket-poster">
+                            <div class="ticket-poster" data-aos="fade-left" data-aos-duration="800">
                                 <a href="./Tickets_detail/grand-expedition/Tickets_detail_grand-expedition.html"><img src="./img/poster/3.grand-expedition.png" alt="그랜드 엑스패디션"></a>
                             </div> <!-- ticket-poster -->
                         </div> <!-- last-content -->
                         <div class="first-content">
-                            <div class="ticket-text">
+                            <div class="ticket-text" data-aos="fade-left" data-aos-duration="800">
                                 <div class="show-info-ing">
                                     <p>공연 중</p>
                                 </div> <!-- show-info-ing -->
@@ -369,12 +361,12 @@
 
                     <div class="left-img">
                         <div class="first-content">
-                            <div class="ticket-poster">
+                            <div class="ticket-poster" data-aos="fade-right" data-aos-duration="800">
                                 <a href="./Tickets_detail/moulin-rouge/Tickets_detail_moulin-rouge.html"><img src="./img/poster/1.moulin-rouge.png" alt="물랑루즈"></a>
                             </div> <!-- ticket-poster -->
                         </div> <!-- first-content -->
                         <div class="last-content">
-                            <div class="ticket-text">
+                            <div class="ticket-text" data-aos="fade-right" data-aos-duration="800">
                                 <div class="show-info-schedule">
                                     <p>공연 예정</p>
                                 </div> <!-- show-info-schedule -->
@@ -416,12 +408,12 @@
 
                     <div class="right-img">
                         <div class="last-content">
-                            <div class="ticket-poster">
+                            <div class="ticket-poster" data-aos="fade-left" data-aos-duration="800">
                                 <a href="./Tickets_detail/oneus/Tickets_detail_oneus.html"><img src="./img/poster/4.oneus.png" alt="원어스 콘서트"></a>
                             </div> <!-- ticket-poster -->
                         </div> <!-- last-content -->
                         <div class="first-content">
-                            <div class="ticket-text">
+                            <div class="ticket-text" data-aos="fade-left" data-aos-duration="800">
                                 <div class="show-info-schedule">
                                     <p>공연 예정</p>
                                 </div> <!-- show-info-schedule -->
@@ -463,17 +455,17 @@
 
                     <div class="left-img">
                         <div class="first-content">
-                            <div class="ticket-poster">
+                            <div class="ticket-poster" data-aos="fade-right" data-aos-duration="800">
                                 <a href="./Tickets_detail/damonsyear/Tickets_detail_damonsyear.html"><img src="./img/poster/5.damonsyear.png" alt="데이먼스이어 콘서트"></a>
                             </div> <!-- ticket-poster -->
                         </div> <!-- first-content -->
                         <div class="last-content">
-                            <div class="ticket-text">
+                            <div class="ticket-text" data-aos="fade-right" data-aos-duration="800">
                                 <div class="show-info-schedule">
                                     <p>공연 예정</p>
                                 </div> <!-- show-info-schedule -->
                                 <div class="ticket-intro-text">
-                                    <h3>데이먼스 이어 콘서트</h3>
+                                    <h3>데이먼스이어 콘서트</h3>
                                     <p class="date">2022.11.05 ~ 2022.11.06</p>
                                     <ul>
                                         <li>
@@ -510,12 +502,12 @@
 
                 <div class="right-img">
                     <div class="last-content">
-                        <div class="ticket-poster">
+                        <div class="ticket-poster" data-aos="fade-left" data-aos-duration="800">
                             <a href="./Tickets_detail/roykim/Tickets_detail_roykim.html"><img src="./img/poster/6.roykim.png" alt="로이킴 콘서트"></a>
                         </div> <!-- ticket-poster -->
                     </div> <!-- last-content -->
                     <div class="first-content">
-                        <div class="ticket-text">
+                        <div class="ticket-text" data-aos="fade-left" data-aos-duration="800">
                             <div class="show-info-schedule">
                                 <p>공연 예정</p>
                             </div> <!-- show-info-schedule -->
@@ -618,5 +610,13 @@
             </div>
         </footer> <!-- footer -->
     </div> <!-- wrapper -->
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -13,13 +13,6 @@
     }
 }
 
-@keyframes poster-rotate {
-    0% { transform: rotate3d(0, 0, 0, 0deg); }
-
-    100% { transform: rotate3d(0, 5, 0, 20deg); }
-
-}
-
 @keyframes poster-3d {
     0% { transform:translate3d(0px, 0px, 0px); }
     50% { transform:translate3d(-50px, 0px, 30px); }
@@ -454,17 +447,22 @@ main {
                         &:first-child {
                             width: 40%;
                             background-color: $gray-border;
+                            a {
+                                margin-top: 2px;
+                                
+                            }
                         }
-
+                        
                         &:last-child {
                             width: 60%;
                             background-color: $point-color;
                             a {
+                                margin-top: 0px;
                                 color: #fff;
                                 padding: 0 20%;
                                 transform: translate(0, 10%);
                             }
-                        } // a
+                        }
                     } // li
                 } // ul
             } // info-booking-button
@@ -473,17 +471,22 @@ main {
 
     @include responsive(small-tablet-screens) {
         .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
             #modal {
                 width: 60vw; 
                 min-width: 580px;
-                height: 20vh;
-                min-height: 340px;
+                height: 35vh;
+                min-height: 400px;
                 z-index: 10;
                 border-radius: 10px;
                 border: 1px solid $gray-border;
                 position: fixed;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
+                
 
                 transition: all 1s;
                 background-color: #fff;
@@ -492,30 +495,25 @@ main {
             .modal_header {
                 position: relative;
                 width: 100%;
-                height: 50px;
+                height: 10%;
                 border-bottom: 1px solid $gray-border;
 
                 .del-btn {
                     cursor: pointer;
 
-                    &::before,
-                    &::after {
-                        position: absolute;
-                        top: 15px; right: 25px; 
-                        content:''; 
-                        height: 20px; 
-                        width: 1px; 
-                        background-color: #222;
-                    }
+                    img {
+                        @include pos-center-y() {
+                            position: absolute;
+                            right: 20px;
+                        };
+                        width: 20px; height: 20px;
+                        // background-color: aqua;
 
-                    &::before {
-                        transform: rotate(45deg);
+                        @include responsive(large-tablet-screens) {
+                            width: 25px; height: 25px;
+                        }
                     }
-
-                    &::after {
-                        transform: rotate(-45deg);
-                    }
-                } // del-btn   
+                } // del-btn
             } // modal_header
 
             .txt {
@@ -946,7 +944,7 @@ main {
             }
 
             .hidden {
-                height: 500px;
+                height: 300px;
                 overflow: hidden;
             }
         }
@@ -1156,22 +1154,16 @@ main {
         .price-del-btn {
             cursor: pointer;
 
-            &::before,
-            &::after {
-                position: absolute;
-                top: 10px; right: 25px;
-                content:''; 
-                height: 20px; 
-                width:1px; 
-                background-color: #222;
-            }
+            img {
+                @include pos-center-y() {
+                    position: absolute;
+                    right: 20px;
+                };
+                width: 20px; height: 20px;
 
-            &::before {
-                transform: rotate(45deg);
-            }
-
-            &::after {
-                transform: rotate(-45deg);
+                @include responsive(large-tablet-screens) {
+                    width: 25px; height: 25px;
+                }
             }
         } // del-btn   
     } // price_modal_header
@@ -1198,22 +1190,16 @@ main {
                 font-size: 0;
                 cursor: pointer;
 
-                &::before,
-                &::after {
-                    position: absolute;
-                    top: 25px; right: 30px;
-                    content:''; 
-                    height: 20px; 
-                    width:1px; 
-                    background-color: #000;
-                }
-
-                &::before {
-                    transform: rotate(45deg);
-                }
-
-                &::after {
-                    transform: rotate(-45deg);
+                img {
+                    @include pos-center-y() {
+                        position: absolute;
+                        right: 20px;
+                    };
+                    width: 20px; height: 20px;
+    
+                    @include responsive(large-tablet-screens) {
+                        width: 25px; height: 25px;
+                    }
                 }
             }
         } // titleWrap
@@ -1304,29 +1290,7 @@ main {
             position: relative;
             width: 100%;
             height: 50px;
-            border-bottom: 1px solid $gray-border;
-
-            .price-del-btn {
-                cursor: pointer;
-
-                &::before,
-                &::after {
-                    position: absolute;
-                    top: 16px; right: 25px;
-                    content:''; 
-                    height: 20px; 
-                    width: 1px; 
-                    background-color: #222;
-                }
-
-                &::before {
-                    transform: rotate(45deg);
-                }
-
-                &::after {
-                    transform: rotate(-45deg);
-                }
-            } // del-btn   
+            border-bottom: 1px solid $gray-border;   
         } // price_modal_header
 
         .price-wrap {
