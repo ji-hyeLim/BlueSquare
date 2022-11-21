@@ -94,9 +94,63 @@ body {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
 .caution {
-  color: #f21313;
   margin-bottom: 10px;
+  font-size: 14px;
+  color: #f21313;
 }
 
 .seat-img {
@@ -149,13 +203,107 @@ header {
 header .header-bg {
   width: 100%;
   height: 100vh;
+  transform: scale(1.1);
+  -webkit-animation: scaleImg 2s forwards;
+          animation: scaleImg 2s forwards;
   overflow: hidden;
+  margin-bottom: 140px;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg {
+    margin-bottom: 280px;
+  }
 }
 header .header-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header .header-bg .line-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header .header-bg .line-box div.p-box {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+header .header-bg .line-box div.p-box p {
+  opacity: 0;
+  -webkit-animation: fadeUp 3s;
+          animation: fadeUp 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: calc(1vw + 30px);
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif, Arial;
+}
+@media screen and (min-width: 320px) {
+  header .header-bg .line-box div.p-box p {
+    font-size: calc(1vw + 40px);
+  }
+}
+@media screen and (min-width: 600px) {
+  header .header-bg .line-box div.p-box p {
+    font-size: calc(1vw + 40px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .line-box div.p-box p {
+    font-size: calc(1vw + 45px);
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .header-bg .line-box div.p-box p {
+    font-size: calc(1vw + 60px);
+  }
+}
+header .header-bg .line-box div.p-box::before {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .line-box div.p-box::before {
+    height: 4px;
+  }
+}
+header .header-bg .line-box div.p-box::after {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
+}
+@media screen and (min-width: 1024px) {
+  header .header-bg .line-box div.p-box::after {
+    height: 4px;
+  }
 }
 header .logo-menu-box {
   position: absolute;
@@ -382,9 +530,37 @@ main .master-hall .master-standing .F_wrap > div {
 main .master-hall .master-standing .F_wrap > div.img_tab_on {
   display: block;
 }
+main .master-hall .master-standing .F_wrap .standing-firstF .number-of-seat {
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  margin-bottom: 70px;
+  background-color: #eee;
+  height: 130px;
+}
+main .master-hall .master-standing .F_wrap .standing-firstF .number-of-seat h3 {
+  padding-bottom: 20px;
+}
+main .master-hall .master-standing .F_wrap .standing-firstF .number-of-seat p {
+  line-height: 26px;
+}
 main .master-hall .master-standing .F_wrap .standing-firstF .number-of-seat div {
   display: flex;
   padding-right: 20px;
+}
+main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat {
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  margin-bottom: 70px;
+  background-color: #eee;
+  height: 130px;
+}
+main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat h3 {
+  padding-bottom: 20px;
+}
+main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat p {
+  line-height: 26px;
 }
 main .master-hall .master-standing .F_wrap .standing-secondF .number-of-seat div {
   display: flex;
@@ -424,6 +600,9 @@ main .master-hall .master-standing .seat-img-tab ul li {
   text-align: center;
   color: #ccc;
 }
+main .master-hall .master-standing .seat-img-tab ul li.black_txt {
+  color: black;
+}
 @media screen and (min-width: 1024px) {
   main .master-hall .master-standing .seat-img-tab ul li {
     width: 100%;
@@ -440,6 +619,20 @@ main .master-hall .master-standing .seat-img-tab ul li img {
   width: 100%;
   margin-bottom: 10px;
   cursor: pointer;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: 0.1s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: 0.1s ease-in-out;
+}
+main .master-hall .master-standing .seat-img-tab ul li img.color {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: 0.1s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: 0.1s ease-in-out;
 }
 main .master-hall .master-ground .F_wrap2 > div {
   display: none;
@@ -447,9 +640,37 @@ main .master-hall .master-ground .F_wrap2 > div {
 main .master-hall .master-ground .F_wrap2 > div.img_tab_on2 {
   display: block;
 }
+main .master-hall .master-ground .F_wrap2 .ground-firstF .number-of-seat {
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  margin-bottom: 70px;
+  background-color: #eee;
+  height: 130px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-firstF .number-of-seat h3 {
+  padding-bottom: 20px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-firstF .number-of-seat p {
+  line-height: 26px;
+}
 main .master-hall .master-ground .F_wrap2 .ground-firstF .number-of-seat div {
   display: flex;
   padding-right: 20px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat {
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  margin-bottom: 70px;
+  background-color: #eee;
+  height: 130px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat h3 {
+  padding-bottom: 20px;
+}
+main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat p {
+  line-height: 26px;
 }
 main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat div {
   display: flex;
@@ -461,50 +682,67 @@ main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat div:nt
 main .master-hall .master-ground .F_wrap2 .ground-secondF .number-of-seat div:nth-child(2) {
   padding-right: 40px;
 }
-main .master-hall .master-ground .seat-img-tab {
+main .master-hall .master-ground .seat-img-tab2 {
   margin-top: 80px;
 }
 @media screen and (min-width: 1024px) {
-  main .master-hall .master-ground .seat-img-tab {
+  main .master-hall .master-ground .seat-img-tab2 {
     width: 20%;
     position: absolute;
     right: 0;
     top: 680px;
   }
 }
-main .master-hall .master-ground .seat-img-tab ul {
+main .master-hall .master-ground .seat-img-tab2 ul {
   display: flex;
   justify-content: space-between;
   justify-content: space-around;
 }
 @media screen and (min-width: 1024px) {
-  main .master-hall .master-ground .seat-img-tab ul {
+  main .master-hall .master-ground .seat-img-tab2 ul {
     flex-direction: column;
     align-items: flex-end;
     width: 80%;
   }
 }
-main .master-hall .master-ground .seat-img-tab ul li {
+main .master-hall .master-ground .seat-img-tab2 ul li {
   width: 30%;
   text-align: center;
   color: #ccc;
 }
+main .master-hall .master-ground .seat-img-tab2 ul li.black_txt2 {
+  color: black;
+}
 @media screen and (min-width: 1024px) {
-  main .master-hall .master-ground .seat-img-tab ul li {
+  main .master-hall .master-ground .seat-img-tab2 ul li {
     width: 100%;
     padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .master-hall .master-ground .seat-img-tab ul li:last-child {
+  main .master-hall .master-ground .seat-img-tab2 ul li:last-child {
     padding-bottom: 0;
   }
 }
-main .master-hall .master-ground .seat-img-tab ul li img {
+main .master-hall .master-ground .seat-img-tab2 ul li img {
   display: block;
   width: 100%;
   margin-bottom: 10px;
   cursor: pointer;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: 0.1s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: 0.1s ease-in-out;
+}
+main .master-hall .master-ground .seat-img-tab2 ul li img.color2 {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: 0.1s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: 0.1s ease-in-out;
 }
 
 footer {

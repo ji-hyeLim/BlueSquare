@@ -401,7 +401,6 @@ main .hall-wrap .card-hall {
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
-  /* slide-wrap */
 }
 main .hall-wrap .card-hall > h2 {
   display: none;

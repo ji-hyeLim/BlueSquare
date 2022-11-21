@@ -44,12 +44,10 @@ body {
 @keyframes mover {
     from {
         width: 0%;
-
     }
 
     to {
         width: 100%;
-
     }
 }
 
@@ -167,11 +165,8 @@ header {
                 @include pos-center();
                 text-align: center;
                 color: #fff;
-            }
-            //span
-        }
-
-        // line-box
+            } //span
+        } // line-box
     } // header-bg
 
     .logo-menu-box {
@@ -342,7 +337,6 @@ main {
             }
 
             .info-wrap {
-                // @include
                 h2 {
                     position: relative;
                     font-size: 20px;
@@ -397,8 +391,6 @@ main {
                 height: auto;
                 margin-bottom: 20px;
 
-                
-        
                 .slide-img {        
                     img {
                         width: 100%;
@@ -415,11 +407,12 @@ main {
                         width: 100%;
                     }
                 } // slide-img
-            } /* slide-wrap */
+            } // slide-wrap
         } //card-hall
 
         #shinhan-card-hall {
             margin-bottom: 70px;
+
             .info-wrap {
                 .seat-info-box {
                     position: relative;
@@ -427,7 +420,6 @@ main {
 
                     @include responsive(large-tablet-screens) {
                         min-width: 400px;
-                        // background-color: pink;
                     }
 
                     .seat-info {

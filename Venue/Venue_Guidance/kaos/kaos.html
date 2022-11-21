@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/kaos.css" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
     <title>BLUE SQUARE</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <script src="./js/slick.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/kaos.js"></script>
 </head>
@@ -127,9 +124,13 @@
                     <div class="venue-facility active">
                         <div class="flexbox">
                             <div class="slide-wrap">
-                                <img id="photo" src="./img/kaos/kaos1.png" alt="">
-                                <img id="photo" src="./img/kaos/kaos2.png" alt="">
-                                <img id="photo" src="./img/kaos/kaos3.png" alt="">s
+                                <div class="slide-img">
+                                    <img id="photo" src="./img/kaos/kaos1.png" alt="">
+                                </div>
+                                <div class="slide-btn">
+                                    <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
+                                    <div class="next" onclick="imgNext()"><img src="./img/next.png" alt=""></div>
+                                </div>
                             </div> <!-- slide-wrap -->
 
                             <div class="intro-about-wrap" data-aos="fade-in">
@@ -283,16 +284,6 @@
             easing: 'linear',
             duration: 800,
             once: true
-        });
-
-        // 이미지 슬라이드 (slick)
-        $(function(){
-            $('.slide-wrap').slick({
-            arrows : true,
-            prevArrow : "<div class='slick-prev'><img src='./img/prev.png'></div>",    
-            nextArrow : "<div class='slick-next'><img src='./img/next.png'></div>",
-            fade: true
-            });
         });
     </script>
 </body>

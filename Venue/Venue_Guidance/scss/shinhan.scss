@@ -6,7 +6,6 @@
   position: relative;
   margin: 0 auto;
   padding: 0 20px;
-  background-color: rgb(73, 73, 73);
 
   @include responsive(desktop-screens) {
     width: 1400px;
@@ -400,53 +399,54 @@ main {
         }
 
         // 원래 버전
-        // .slide-wrap {
-        //   position: relative;
-        //   width: 100%;
-        //   height: auto;
-
-        //   .slide-img {
-        //     position: relative;
-
-        //     img {
-        //       width: 100%;
-        //     }
-            
-        //     .slide-btn {
-        //       cursor: pointer;
-  
-        //       img {
-        //         width: 40px;
-        //         height: 40px;
-        //       }
-  
-        //       .prev {
-        //         left: 0;
-        //         @include pos-center-y();
-        //       }
-  
-        //       .next {
-        //         right: 0;
-        //         @include pos-center-y();
-        //       }
-        //     } //slide-btn
-        //   } //slide-img
-        // } //slide-wrap
-
-        // 슬릭 버전
         .slide-wrap {
           position: relative;
           width: 100%;
           height: auto;
 
-          @include responsive(large-tablet-screens) {
-            width: 50%;
-          }
+          .slide-img {
+            position: relative;
 
-          img {
-            width: 100%;
-          }
+            img {
+              width: 100%;
+            }
+            
+          } //slide-img
+          
+          .slide-btn {
+            cursor: pointer;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+
+            .prev {
+              left: 0;
+              @include pos-center-y();
+            }
+
+            .next {
+              right: 0;
+              @include pos-center-y();
+            }
+          } //slide-btn
         } //slide-wrap
+
+        // 슬릭 버전
+        // .slide-wrap {
+        //   position: relative;
+        //   width: 100%;
+        //   height: auto;
+
+        //   @include responsive(large-tablet-screens) {
+        //     width: 50%;
+        //   }
+
+        //   img {
+        //     width: 100%;
+        //   }
+        // } 
         // 슬릭 버전 끝
 
         .intro-equip-wrap {
@@ -545,6 +545,10 @@ main {
           h3 {
             width: 140px;
           }
+        }
+
+        .text-indent {
+          padding: 0 14px;
         }
       } //perform-fee
 

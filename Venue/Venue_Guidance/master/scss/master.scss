@@ -415,6 +415,7 @@ main {
 
     .venue-facility {
       .flexbox {
+
         @include flex-box() {
           flex-direction: column;
         }
@@ -430,10 +431,6 @@ main {
 
           .slide-img {
             position: relative;
-            display: flex;
-            overflow: hidden;
-            // margin-left: -200%;
-            // background-color: black;
 
             img {
               width: 100%;
@@ -600,7 +597,6 @@ main {
       }
     } //rental-fee (대관료)
   } //venue-guidance (대관안내)
-  
 
   #master {
     .rental-fee {

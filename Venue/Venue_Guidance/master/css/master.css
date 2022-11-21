@@ -443,8 +443,6 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap {
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
   position: relative;
-  display: flex;
-  overflow: hidden;
 }
 main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
   width: 100%;

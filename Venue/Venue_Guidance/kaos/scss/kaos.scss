@@ -387,53 +387,53 @@ main {
           flex-direction: row;
         }
 
-        // .slide-wrap {
-        //   position: relative;
-        //   width: 100%;
-        //   height: auto;
-
-        //   .slide-img {
-        //     position: relative;
-
-        //     img {
-        //       width: 100%;
-        //     }
-        //   } //slide-img
-
-        //   .slide-btn {
-        //     cursor: pointer;
-
-        //     img {
-        //       width: 40px;
-        //       height: 40px;
-        //     }
-
-        //     .prev {
-        //       left: 0;
-        //       @include pos-center-y();
-        //     }
-
-        //     .next {
-        //       right: 0;
-        //       @include pos-center-y();
-        //     }
-        //   } //slide-btn
-        // } //slide-wrap
-
-        // 슬릭 버전
         .slide-wrap {
           position: relative;
           width: 100%;
           height: auto;
 
-          @include responsive(large-tablet-screens) {
-            width: 50%;
-          }
+          .slide-img {
+            position: relative;
 
-          img {
-            width: 100%;
-          }
+            img {
+              width: 100%;
+            }
+          } //slide-img
+
+          .slide-btn {
+            cursor: pointer;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+
+            .prev {
+              left: 0;
+              @include pos-center-y();
+            }
+
+            .next {
+              right: 0;
+              @include pos-center-y();
+            }
+          } //slide-btn
         } //slide-wrap
+
+        // 슬릭 버전
+        // .slide-wrap {
+        //   position: relative;
+        //   width: 100%;
+        //   height: auto;
+
+        //   @include responsive(large-tablet-screens) {
+        //     width: 50%;
+        //   }
+
+        //   img {
+        //     width: 100%;
+        //   }
+        // }
         // 슬릭 버전 끝
 
         .intro-equip-wrap {

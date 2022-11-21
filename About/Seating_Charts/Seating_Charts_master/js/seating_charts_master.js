@@ -20,13 +20,25 @@ $(function() {
 
         $(".F_wrap > div").removeClass('img_tab_on');
         $(".F_wrap > div").eq(idx1).addClass('img_tab_on');
+
+        $(".seat-img-tab ul > li > img").removeClass('color');
+        $(".seat-img-tab ul > li > img").eq(idx1).addClass('color');
+
+        $(".seat-img-tab ul > li").removeClass('black_txt');
+        $(".seat-img-tab ul > li").eq(idx1).addClass('black_txt');
     });
 
     // 마스터 그라운드 층 별 on, off
-    $(".seat-img-tab ul > li").click(function(e) {
-        let idx1 = $(this).index();
+    $(".seat-img-tab2 ul > li").click(function(e) {
+        let idx2 = $(this).index();
 
         $(".F_wrap2 > div").removeClass('img_tab_on2');
-        $(".F_wrap2 > div").eq(idx1).addClass('img_tab_on2');
+        $(".F_wrap2 > div").eq(idx2).addClass('img_tab_on2');
+
+        $(".seat-img-tab2 ul > li > img").removeClass('color2');
+        $(".seat-img-tab2 ul > li > img").eq(idx2).addClass('color2');
+
+        $(".seat-img-tab2 ul > li").removeClass('black_txt2');
+        $(".seat-img-tab2 ul > li").eq(idx2).addClass('black_txt2');
     });
 });

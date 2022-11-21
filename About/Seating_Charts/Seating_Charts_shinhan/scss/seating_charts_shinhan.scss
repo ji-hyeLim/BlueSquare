@@ -36,17 +36,41 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes scaleImg {
+    0% {transform: scale(1.1);}
+    100% {transform: scale(1.0);}
+}
+
+@keyframes mover {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+
+    }
+}
+
 .seat-img {
     @include seat-img-style();
 }
 
-.number-of-seat {
-    @include number-of-seat-style();
-    
-    // border-top: 1px solid $gray-border;
-    // border-bottom: 1px solid $gray-border;
-    // background: none;
-}
+// .number-of-seat {
+//     @include number-of-seat-style();
+// }
 
 .blue {
     color: $point-color;
@@ -67,13 +91,103 @@ header {
     .header-bg {
         width: 100%; 
         height: 100vh;
+        transform: scale(1.1);
+        animation: scaleImg 2s forwards;
         overflow: hidden;
+        margin-bottom: 140px;
+        @include responsive (large-tablet-screens) {
+            margin-bottom: 280px;
+        }
 
         img {
             width: 100%; 
             height: 100%;
             object-fit: cover;
         }
+
+        .line-box {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            @include pos-center();
+
+            div.p-box {
+                position: relative;
+
+                p {
+                    opacity: 0;
+                    animation: fadeUp 3s;
+                    animation-delay: 2s;
+                    animation-fill-mode: forwards;
+
+                    font: {
+                        size: calc(1vw + 30px);
+                        weight: 500;
+                        family: $eng-font;
+                    }
+
+                    @include responsive(mobile-screens) {
+                        font-size: calc(1vw + 40px);
+                    }
+
+                    @include responsive(small-tablet-screens) {
+                        font-size: calc(1vw + 40px);
+                        // 바꾸기 전 : calc(1vw + 50px)
+                    }
+
+                    @include responsive(large-tablet-screens) {
+                        font-size: calc(1vw + 45px);
+                        // 바꾸기 전 : calc(1vw + 60px)
+                    }
+
+                    @include responsive(desktop-screens) {
+                        font-size: calc(1vw + 60px);
+                        // 바꾸기 전 : calc(1vw + 70px)
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    top: -20px;
+                    left: 0px;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    animation: mover 2s;
+
+                    @include responsive(large-tablet-screens) {
+                        height: 4px;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    bottom: -20px;
+                    right: 0;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    animation: mover 2s;
+
+                    @include responsive(large-tablet-screens) {
+                        height: 4px;
+                    }
+                }
+
+                @include pos-center();
+                text-align: center;
+                color: #fff;
+            }
+            //span
+        }
+
+        // line-box
     } // header-bg
 
     .logo-menu-box {
@@ -313,6 +427,19 @@ main {
             
             .shinhan-firstF {
                 .number-of-seat {
+                    height: 200px;
+                    background-color: yellow;
+                    
+                    @include number-of-seat-style() {
+                        h3 {
+                            padding-bottom: 16px;
+                        }
+                    }
+
+                    @include responsive (large-tablet-screens) {
+                        height: 130px;
+                    }
+
                     .number-wrap1 {
                         width: 390px;
                         padding-right: 100px;
@@ -326,7 +453,7 @@ main {
                         .title,
                         .content {
                             div {
-                                padding-bottom: px;
+                                padding-bottom: 3px;
                             }
                         }
     
@@ -381,7 +508,13 @@ main {
             } //shinhan-firstF
     
             .shinhan-secondF {
+
                 .number-of-seat {
+
+                    @include number-of-seat-style() {
+                        height: 130px;
+                    }
+
                     &>div {
                         display: flex;
 
@@ -396,6 +529,10 @@ main {
     
             .shinhan-thirdF {
                 .number-of-seat {
+                    @include number-of-seat-style() {
+                        height: 130px;
+                    }
+
                     &>div {
                         display: flex;
 

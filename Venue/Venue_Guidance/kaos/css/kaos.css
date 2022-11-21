@@ -418,13 +418,30 @@ main .venue-guidance .venue-facility .flexbox .slide-wrap {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 1024px) {
-  main .venue-guidance .venue-facility .flexbox .slide-wrap {
-    width: 50%;
-  }
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img {
+  position: relative;
 }
-main .venue-guidance .venue-facility .flexbox .slide-wrap img {
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-img img {
   width: 100%;
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn {
+  cursor: pointer;
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn img {
+  width: 40px;
+  height: 40px;
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .prev {
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .venue-guidance .venue-facility .flexbox .slide-wrap .slide-btn .next {
+  right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap {
   margin-top: 30px;

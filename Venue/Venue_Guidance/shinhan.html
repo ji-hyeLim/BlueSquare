@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/shinhan.css" type="text/css">
+  <!-- <link rel="stylesheet" href="./css/slick.css"> -->
+  <!-- <link rel="stylesheet" href="./css/slick-theme.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  <link rel="stylesheet" href="./css/slick.css">
-  <link rel="stylesheet" href="./css/slick-theme.css">
   <title>BLUE SQUARE</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <!-- <script src="./js/slick.js"></script> -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="./js/slick.js"></script>
   <script src="./js/shinhan.js"></script>
 </head>
 
@@ -124,12 +124,22 @@
           </ul>
           <div class="venue-facility active">
             <div class="flexbox">
-              <!-- 이미지 슬라이드 slick -->
               <div class="slide-wrap">
+                <div class="slide-img">
+                  <img id="photo" src="./img/shinhan/shinhan-hall1.png" alt="">
+                </div>
+                <div class="slide-btn">
+                  <div class="prev" onclick="imgPrev();"><img src="./img/prev.png" alt=""></div>
+                  <div class="next" onclick="imgNext()"><img src="./img/next.png" alt=""></div>
+                </div>
+              </div> <!-- slide-wrap -->
+
+              <!-- 이미지 슬라이드 slick -->
+              <!-- <div class="slide-wrap">
                 <div><img src="./img/shinhan/shinhan-hall1.png" alt=""></div>
                 <div><img src="./img/shinhan/shinhan-hall2.png" alt=""></div>
                 <div><img src="./img/shinhan/shinhan-hall3.png" alt=""></div>
-              </div>        
+              </div>         -->
               <!-- slick 끝 -->
 
               <div class="intro-equip-wrap">
@@ -190,7 +200,7 @@
                   </div>
                   <br>
                   <div>• 기본 대관료에 포함되는 내용</div>
-                  <div>
+                  <div class="text-indent">
                     1) 공연 대관 시간 냉,난방료 (공연 한시간 전부터 종료시까지)<br>
                     2) 1명의 하우스 매니저, 15명의 하우스 어셔 인력<br>
                     3) 무대 기계시설, 기본음향, 조명시설 (음향, 조명 사용비용 별도)<br>
@@ -302,19 +312,18 @@
     AOS.init({
         easing: 'linear',
         duration: 800,
-        once: true        
+        once: true
     });
 
   // 이미지 슬라이드 (slick)
-  $(function(){
-    $('.slide-wrap').slick({
-
-      arrows : true,
-      prevArrow : "<div class='slick-prev'><img src='./img/prev.png'></div>",    
-      nextArrow : "<div class='slick-next'><img src='./img/next.png'></div>",
-      fade: true
-    });
-  });
+  // $(function(){
+  //   $('.slide-wrap').slick({
+  //     arrows : true,
+  //     prevArrow : "<div class='slick-prev'><img src='./img/prev.png'></div>",    
+  //     nextArrow : "<div class='slick-next'><img src='./img/next.png'></div>",
+  //     fade: true
+  //   });
+  // });
   </script>
 </body>
 
