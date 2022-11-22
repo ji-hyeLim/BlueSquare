@@ -501,12 +501,12 @@ main {
                     margin: 10px 0;
                     font-size: $title-font-size;
                 }
-
+                
                 .date {
                     font-size: $mini-text-font-size;
                     margin: 10px 0;
                 }
-
+                
                 ul {
                     li {
                         @include flex-box() {
@@ -584,6 +584,7 @@ main {
 
             .left-img {
                 border-bottom: $black-line;
+                
 
                 @include flex-box() {
                     justify-content: right;
