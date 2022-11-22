@@ -52,11 +52,6 @@
     }
 }
 
-@mixin lnb-pos-center() {
-    width: 130%;
-    transform: translateX(-18px);
-}
-
 @mixin flex-box($jc: space-between) { // flex 박스 설정
     display: flex;
     justify-content: $jc;
@@ -69,6 +64,11 @@
         display: block;
         clear: both;
     }
+}
+
+@mixin lnb-pos-center() {
+    width: 130%;
+    transform: translateX(-18px);
 }
 
 @mixin left-right-border-none() {

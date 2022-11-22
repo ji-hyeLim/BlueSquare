@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nanum+Gothic:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -94,15 +94,6 @@ body {
   overflow-x: hidden;
 }
 
-@-webkit-keyframes rotateImg {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes rotateImg {
   0% {
     transform: rotate(0deg);
@@ -164,8 +155,7 @@ header .header-bg .txt-wrap .img-pos img {
   width: 30%;
   min-width: 180px;
   max-width: 250px;
-  -webkit-animation: rotateImg 6s linear infinite;
-          animation: rotateImg 6s linear infinite;
+  animation: rotateImg 6s linear infinite;
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .txt-wrap .img-pos img {
@@ -490,11 +480,11 @@ main .venue-guidance .rental-fee h2::before {
   content: "";
   width: 5px;
   height: 100%;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
 }
 main .venue-guidance .rental-fee h3 {
   font-weight: normal;
-  color: #0094d6;
+  color: rgb(0, 148, 214);
 }
 main .venue-guidance .rental-fee .perform-fee {
   font-size: 14px;
@@ -602,7 +592,7 @@ main #kaos .rental-fee .timeandfee .table-area table td:last-child {
   border-right: 0;
 }
 main #kaos .rental-fee .timeandfee .table-area table thead {
-  border-bottom: 3px solid #0094d6;
+  border-bottom: 3px solid rgb(0, 148, 214);
 }
 main #kaos .rental-fee .timeandfee .table-area table th,
 main #kaos .rental-fee .timeandfee .table-area table td {
@@ -615,7 +605,7 @@ main #kaos .rental-fee .timeandfee .table-area table th {
 }
 main #kaos .rental-fee .timeandfee .attention {
   padding-top: 20px;
-  color: #0094d6;
+  color: rgb(0, 148, 214);
 }
 
 footer {
@@ -786,4 +776,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=kaos.css.map */
+}
