@@ -108,16 +108,6 @@ header .header-bg {
   height: 100vh;
   overflow: hidden;
 }
-@-webkit-keyframes fadeUp {
-  0% {
-    transform: translate3d(0, 100%, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
 @keyframes fadeUp {
   0% {
     transform: translate3d(0, 100%, 0);
@@ -126,14 +116,6 @@ header .header-bg {
   100% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes moveBg {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, -100%);
   }
 }
 @keyframes moveBg {
@@ -152,8 +134,7 @@ header .header-bg span {
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0;
-  -webkit-animation: fadeUp 1s forwards;
-          animation: fadeUp 1s forwards;
+  animation: fadeUp 1s forwards;
 }
 header .header-bg span:nth-child(1) {
   top: 130px;
@@ -165,17 +146,17 @@ header .header-bg span:nth-child(2) {
 }
 header .header-bg span:nth-child(3) {
   top: 495px;
-  right: 135px;
+  left: 40px;
 }
 header .header-bg span:nth-child(4) {
   bottom: 10px;
-  right: 75px;
+  left: 60px;
   font-size: 15px;
   line-height: 1.5;
 }
 header .header-bg span:nth-child(5) {
   bottom: 60px;
-  right: 20px;
+  left: 60px;
   font-size: 15px;
   line-height: 1.5;
 }
@@ -193,14 +174,17 @@ header .header-bg span:nth-child(5) {
   }
   header .header-bg span:nth-child(3) {
     top: 460px;
+    left: auto;
     right: 250px;
   }
   header .header-bg span:nth-child(4) {
     bottom: 60px;
+    left: auto;
     right: 57px;
   }
   header .header-bg span:nth-child(5) {
     bottom: 10px;
+    left: auto;
     right: 305px;
   }
 }
@@ -210,14 +194,17 @@ header .header-bg span:nth-child(5) {
   }
   header .header-bg span:nth-child(3) {
     top: 460px;
+    left: auto;
     right: 310px;
   }
   header .header-bg span:nth-child(4) {
     bottom: 60px;
+    left: auto;
     right: 367px;
   }
   header .header-bg span:nth-child(5) {
     bottom: 10px;
+    left: auto;
     right: 615px;
   }
 }
@@ -255,14 +242,18 @@ header .header-bg .img-wrap .color-bg {
   height: 334px;
   z-index: 99;
   background-color: #000;
-  -webkit-animation: moveBg 1s forwards;
-          animation: moveBg 1s forwards;
+  animation: moveBg 1s forwards;
 }
 header .logo-menu-box {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+}
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 }
 header .logo-menu-box .flex-box {
   position: relative;
@@ -291,7 +282,7 @@ header .logo-menu-box .flex-box .header-logo a img {
 }
 header .logo-menu-box .flex-box nav.main-menu {
   display: none;
-  width: 504px;
+  width: 590px;
 }
 @media screen and (min-width: 1024px) {
   header .logo-menu-box .flex-box nav.main-menu {
@@ -300,31 +291,70 @@ header .logo-menu-box .flex-box nav.main-menu {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb {
   width: inherit;
+  height: 100px;
   display: flex;
-  justify-content: space-between;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li {
+  width: 20%;
+  line-height: 100px;
+  text-align: center;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li::after {
+  line-height: 0;
+  display: block;
+  content: "";
+  margin: 0 auto;
+  width: 60%;
+  height: 2px;
+  margin-top: -34px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.4s;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li:first-child::after {
+  width: 70%;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li:hover::after {
+  transform: scale(1);
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
   color: #fff;
 }
-header .logo-menu-box .flex-box nav.main-menu .gnb li a::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  margin-top: 5px;
-  background-color: #000;
-  transform: scale(0);
-  transition: all 0.4s;
-}
-header .logo-menu-box .flex-box nav.main-menu .gnb li a:hover::after {
-  transform: scale(1);
-}
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
+  position: absolute;
+  width: 100%;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li {
   display: none;
+  line-height: 1;
+  margin-top: -1px;
+  background-color: rgb(0, 148, 214);
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li::after {
+  display: none;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li a {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px 20px;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li a:hover {
+  font-weight: 600;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li:hover .lnb > li {
+  display: block;
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li:nth-child(3) .lnb {
+  width: 130%;
+  transform: translateX(-18px);
+}
+header .logo-menu-box .flex-box nav.main-menu .gnb li:nth-child(4) .lnb {
+  width: 130%;
+  transform: translateX(-18px);
 }
 header .logo-menu-box .flex-box .right-menu {
   width: 80px;
@@ -353,6 +383,16 @@ header .logo-menu-box .flex-box .right-menu ul {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box .flex-box .right-menu ul {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box .flex-box .right-menu ul li {
+    line-height: 100px;
+  }
+}
 header .logo-menu-box .flex-box .right-menu ul li a {
   color: #fff;
   font-family: "Montserrat", sans-serif, Arial;
@@ -362,10 +402,14 @@ header .logo-menu-box .flex-box .right-menu ul li a::after {
   content: "";
   width: 100%;
   height: 2px;
-  margin-top: 5px;
-  background-color: #000;
+  background-color: black;
   transform: scale(0);
   transition: all 0.4s;
+}
+@media screen and (min-width: 1024px) {
+  header .logo-menu-box .flex-box .right-menu ul li a::after {
+    margin-top: -34px;
+  }
 }
 @media screen and (min-width: 1024px) {
   header .logo-menu-box .flex-box .right-menu ul li a:hover::after {
@@ -379,6 +423,72 @@ header .logo-menu-box .flex-box .right-menu ul li a img {
   header .logo-menu-box .flex-box .right-menu ul li a img {
     width: 40px;
   }
+}
+header .overlay {
+  display: block;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.96);
+}
+@media screen and (min-width: 600px) {
+  header .overlay {
+    max-width: 580px;
+  }
+}
+header .overlay .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 55px;
+  font-weight: 100;
+  color: #f1f1f1;
+}
+header .overlay .overlay-menu {
+  position: relative;
+  top: 22%;
+  text-align: center;
+}
+header .overlay .overlay-menu ul li a {
+  font-size: 26px;
+  font-weight: 400;
+  color: #fff;
+  padding: 15px 0;
+}
+header .overlay .overlay-menu ul li a.on {
+  color: rgb(0, 148, 214);
+  transform: skew(-15deg);
+}
+header .overlay .overlay-menu ul li ul li {
+  display: none;
+}
+header .overlay .overlay-menu ul li ul li.on {
+  display: block;
+}
+header .overlay .overlay-menu ul li ul li a {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+}
+header .overlay .overlay-menu ul li ul li a:hover, header .overlay .overlay-menu ul li ul li a:focus {
+  transform: skew(0);
+}
+header .overlay .overlay-menu ul li ul li a::after {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.4s;
+}
+header .overlay .overlay-menu ul li ul li a:hover::after {
+  width: 100%;
 }
 
 main {
@@ -794,6 +904,13 @@ main section.parking .info2 table {
     font-size: 16px;
   }
 }
+main section.parking .info2 table th,
+main section.parking .info2 table td {
+  padding: 5px 0;
+}
+main section.parking .info2 table td {
+  padding-left: 5px;
+}
 main section.parking .info2 table .t-sub {
   background: #eee;
 }
@@ -910,6 +1027,7 @@ footer .flex-box .left-contents {
 }
 footer .flex-box .left-contents h2 {
   margin-left: -2px;
+  letter-spacing: -0.0769230769em;
   font-size: 1.25em;
   font-family: "Montserrat", sans-serif, Arial;
   font-weight: normal;
@@ -1030,8 +1148,8 @@ footer .flex-box .footer-title {
   text-align: center;
 }
 footer .flex-box .footer-title h1 {
-  font-size: calc(38px + 9.8vw);
-  font-family: "Montserrat", sans-serif, Arial;
+  font-size: calc(38px + 11.2vw);
+  font-family: "Lora";
   font-weight: 500;
 }
 footer .line {
@@ -1039,10 +1157,10 @@ footer .line {
 }
 footer .line span {
   position: absolute;
-  bottom: 280px;
+  bottom: 275px;
   display: block;
   content: "";
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=how_to_come.css.map */
+}

@@ -58,21 +58,6 @@ footer {
   display: block;
 }
 
-@-webkit-keyframes rollingleft1 { /* 원본용 */
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  50.01% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes rollingleft1 { /* 원본용 */
   0% {
     transform: translateX(0);
@@ -85,14 +70,6 @@ footer {
   }
   100% {
     transform: translateX(0);
-  }
-}
-@-webkit-keyframes rollingleft2 { /* 클론용 */
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-200%);
   }
 }
 @keyframes rollingleft2 { /* 클론용 */
@@ -167,8 +144,7 @@ header .swiper .swiper-wrapper .swiper-slide .video-container .player {
 header .swiper .swiper-wrapper .swiper-slide .video-container .player video {
   width: 100%;
   height: 1000px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .swiper .swiper-wrapper .swiper-slide .all_text {
   transform: translateY(-170%);
@@ -477,12 +453,10 @@ main .flow .flow-wrap .roller .flow-img li img {
   padding-right: 10px;
 }
 main .flow .original {
-  -webkit-animation: 50s linear 0s infinite normal forwards running rollingleft1;
-          animation: 50s linear 0s infinite normal forwards running rollingleft1;
+  animation: 50s linear 0s infinite normal forwards running rollingleft1;
 }
 main .flow .clone {
-  -webkit-animation: 50s linear 0s infinite normal none running rollingleft2;
-          animation: 50s linear 0s infinite normal none running rollingleft2;
+  animation: 50s linear 0s infinite normal none running rollingleft2;
 }
 main .ticket-intro {
   margin-bottom: 266px;
@@ -970,4 +944,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}
