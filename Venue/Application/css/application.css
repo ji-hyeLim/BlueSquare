@@ -94,20 +94,9 @@ body {
   overflow-x: hidden;
 }
 
-@-webkit-keyframes move1 {
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 @keyframes move1 {
   100% {
     transform: translateX(0%);
-  }
-}
-@-webkit-keyframes move2 {
-  100% {
-    transform: translateX(-100%);
   }
 }
 @keyframes move2 {
@@ -115,19 +104,9 @@ body {
     transform: translateX(-100%);
   }
 }
-@-webkit-keyframes move3 {
-  100% {
-    transform: translateX(-200%);
-  }
-}
 @keyframes move3 {
   100% {
     transform: translateX(-200%);
-  }
-}
-@-webkit-keyframes img-fadeIn {
-  100% {
-    opacity: 1;
   }
 }
 @keyframes img-fadeIn {
@@ -135,41 +114,24 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes text-loop {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
 @keyframes text-loop {
   0% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
-  }
-}
-@-webkit-keyframes text-loop-reverse {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
   }
 }
 @keyframes text-loop-reverse {
   0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
   100% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes text-fadeIn {
-  100% {
-    opacity: 1;
   }
 }
 @keyframes text-fadeIn {
@@ -205,10 +167,8 @@ header .header-bg .txt-wrap-top .txt1 {
   white-space: nowrap;
   opacity: 0;
   padding-right: 20px;
-  -webkit-animation: text-loop 10s linear infinite forwards, text-fadeIn 3s linear forwards;
-          animation: text-loop 10s linear infinite forwards, text-fadeIn 3s linear forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: text-loop 10s linear infinite forwards, text-fadeIn 3s linear forwards;
+  animation-delay: 1s;
 }
 header .header-bg .img-wrap {
   margin-top: 50px;
@@ -225,8 +185,7 @@ header .header-bg .img-wrap {
 header .header-bg .img-wrap img {
   padding-left: 6px;
   opacity: 0;
-  -webkit-animation: img-fadeIn 2s linear forwards;
-          animation: img-fadeIn 2s linear forwards;
+  animation: img-fadeIn 2s linear forwards;
 }
 header .header-bg .img-wrap img:nth-child(1), header .header-bg .img-wrap img:nth-child(2), header .header-bg .img-wrap img:nth-child(3), header .header-bg .img-wrap img:nth-child(4) {
   display: none;
@@ -252,10 +211,8 @@ header .header-bg .txt-wrap-bottom .txt2 {
   white-space: nowrap;
   opacity: 0;
   padding-right: 20px;
-  -webkit-animation: text-loop-reverse 10s linear infinite, text-fadeIn 3s linear forwards;
-          animation: text-loop-reverse 10s linear infinite, text-fadeIn 3s linear forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: text-loop-reverse 10s linear infinite, text-fadeIn 3s linear forwards;
+  animation-delay: 1s;
 }
 header .logo-menu-box {
   position: absolute;
@@ -337,6 +294,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li:first-child::after {
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
+  font-weight: 600;
   color: #000;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
@@ -355,6 +313,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li::after {
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li a {
   color: #fff;
   font-size: 16px;
+  font-weight: 400;
   width: 100%;
   padding: 10px 20px;
 }
@@ -402,6 +361,7 @@ header .logo-menu-box .flex-box .right-menu ul {
 header .logo-menu-box .flex-box .right-menu ul li a {
   color: #000;
   font-family: "Montserrat", sans-serif, Arial;
+  font-weight: 600;
 }
 header .logo-menu-box .flex-box .right-menu ul li a::after {
   display: block;
@@ -544,9 +504,18 @@ main .venue-process .swiper .swiper-slide {
   font-size: 18px;
   background-color: #fff;
   /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 main .venue-process .swiper .swiper-slide .slide-fix {
@@ -877,4 +846,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=application.css.map */
+}

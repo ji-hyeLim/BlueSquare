@@ -252,6 +252,7 @@ header {
 
                         a {
                             font-size: $sub-title-font-size;
+                            font-weight: 600;
                             color: #000;
                         }
 
@@ -274,6 +275,7 @@ header {
                                 a {
                                     color: #fff;
                                     font-size: 16px;
+                                    font-weight: 400;
                                     width: 100%;
                                     padding: 10px 20px;
 
@@ -326,7 +328,7 @@ header {
                             color: #000;
                             font: {
                                 family: $eng-font;
-                                // weight: 500;
+                                weight: 600;
                             }
 
                             &::after { 

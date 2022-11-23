@@ -1,5 +1,6 @@
 
 $(function() {
+    
     // ===== 햄버거 메뉴 펼치고 닫기
     $('.overlay .close-btn').hide();
             
@@ -26,21 +27,7 @@ $(function() {
         $('.overlay-menu > ul > li > ul > li').removeClass('on'); 
         $(this).children().children().addClass('on');
     });
-    // 햄버거 메뉴 콘텐츠 스타일 적용 끝 ====
-
-
-    // ==== 헤더 메뉴 호버 시 스타일 변화
-    $('.logo-menu-box').hover(function() {
-        $('.header-logo > .hover-change > img').attr('src', './img/logo_black.png');
-        $('.gnb > li > a').css({'color':'black', 'font-weight':'600'});
-        $('.right-menu > ul > li > a').css({'color':'black', 'font-weight':'600'});
-    }, function() {
-        $('.header-logo > .hover-change > img').attr('src', './img/logo_white.png');
-        $('.gnb > li > a').css({'color':'white', 'font-weight':'normal'});
-        $('.right-menu > ul > li > a').css({'color':'white', 'font-weight':'normal'});
-    })
-    // 헤더 메뉴 호버 시 스타일 변화 끝 ====
-
+    // 햄버거 메뉴 콘텐츠 스타일 적용 끝 ====   
 
     // ==== 푸터 링크
     $('#site').on('change', function() {
