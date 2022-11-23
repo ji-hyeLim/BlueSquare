@@ -58,6 +58,21 @@ footer {
   display: block;
 }
 
+@-webkit-keyframes rollingleft1 { /* 원본용 */
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes rollingleft1 { /* 원본용 */
   0% {
     transform: translateX(0);
@@ -70,6 +85,14 @@ footer {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@-webkit-keyframes rollingleft2 { /* 클론용 */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
 @keyframes rollingleft2 { /* 클론용 */
@@ -144,7 +167,8 @@ header .swiper .swiper-wrapper .swiper-slide .video-container .player {
 header .swiper .swiper-wrapper .swiper-slide .video-container .player video {
   width: 100%;
   height: 1000px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .swiper .swiper-wrapper .swiper-slide .all_text {
   transform: translateY(-170%);
@@ -603,10 +627,12 @@ main .flow .flow-wrap .roller .flow-img li img {
   }
 }
 main .flow .original {
-  animation: 50s linear 0s infinite normal forwards running rollingleft1;
+  -webkit-animation: 50s linear 0s infinite normal forwards running rollingleft1;
+          animation: 50s linear 0s infinite normal forwards running rollingleft1;
 }
 main .flow .clone {
-  animation: 50s linear 0s infinite normal none running rollingleft2;
+  -webkit-animation: 50s linear 0s infinite normal none running rollingleft2;
+          animation: 50s linear 0s infinite normal none running rollingleft2;
 }
 main .ticket-intro {
   margin-bottom: 266px;
@@ -795,18 +821,18 @@ main .ticket-intro .ticket-text .detail-booking-button ul li a .ticket {
     margin-right: 10px;
   }
   main .ticket-intro .ticket-text .detail-booking-button ul li a {
-    width: 110px;
+    width: 120px;
     text-indent: 15px;
   }
   main .ticket-intro .ticket-text .detail-booking-button ul li a img {
     top: 12px;
     right: 15px;
-    width: 16px;
+    width: 18px;
   }
   main .ticket-intro .ticket-text .detail-booking-button ul li a .ticket {
-    top: 11px;
+    top: 8px;
     right: 12px;
-    width: 18px;
+    width: 24px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -1095,4 +1121,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=tickets.css.map */

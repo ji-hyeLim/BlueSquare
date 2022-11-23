@@ -370,7 +370,7 @@ main {
         // == left-img == //
         .left-img {
             position: relative;
-            height: 600px;
+            height: 550px;
 
             .ticket-poster {
                 
@@ -435,7 +435,7 @@ main {
             /* sns */
             .sns-box {
                 position: absolute;
-                bottom: 50px; right: 20px;
+                bottom: 20px; right: 20px;
                 @include flex-box();
 
                 li {
@@ -466,7 +466,6 @@ main {
                 text-align: left;
 
                 .title-box {
-                    position: relative;
                     margin-bottom: 40px;
 
                     h2 {
@@ -479,9 +478,8 @@ main {
                     }
 
                     .show-info-ing {
-                        position: absolute;
-                        top: 30%; right: 0;
                         width: 70px;
+                        margin-bottom: 10px;
                         padding: 5px;
                         text-align: center;
                         background-color: $gray-border;
@@ -577,6 +575,7 @@ main {
                         text-align: center;
                         a {
                             padding: 20px 0;
+                            font-weight: 600;
 
                             img {
                                 width: 30px;
