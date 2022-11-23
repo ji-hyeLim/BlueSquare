@@ -574,22 +574,6 @@ main {
           } //slide-btn
         } //slide-wrap
 
-        // 슬릭 버전
-        // .slide-wrap {
-        //   position: relative;
-        //   width: 100%;
-        //   height: auto;
-
-        //   @include responsive(large-tablet-screens) {
-        //     width: 50%;
-        //   }
-
-        //   img {
-        //     width: 100%;
-        //   }
-        // }
-        // 슬릭 버전 끝
-
         .intro-equip-wrap {
           // position: absolute;
           // top: 700px;
@@ -630,6 +614,11 @@ main {
     .rental-fee {
       line-height: 30px;
       margin-top: 40px;
+      font-size: 14px;
+
+      @include responsive(large-tablet-screens) {
+        font-size: 16px;
+      }
 
       h2 {
         position: relative;
@@ -654,7 +643,6 @@ main {
       }
 
       .perform-fee {
-        font-size: 14px;
 
         .flexbox2 {
           margin-top: 40px;
@@ -670,9 +658,6 @@ main {
       } //perform-fee
 
       .prepare-fee {
-        // margin-top: 40px;
-        font-size: 14px;
-
 
         .flexbox2 {
           margin-top: 40px;
@@ -698,9 +683,6 @@ main {
 
     .venue-facility {
       .flexbox {
-        .slide-wrap {
-
-        }
 
         .intro-about-wrap {
           margin-top: 30px;
@@ -774,7 +756,7 @@ main {
             @include left-right-border-none();
   
             thead {
-              border-bottom: 3px solid $point-color;
+              border-bottom: 2px solid rgb(170, 170, 170);
             }
   
             th,

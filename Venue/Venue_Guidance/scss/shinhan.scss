@@ -55,7 +55,7 @@ body {
 header {
   position: relative;
   width: 100vw;
-  height: 100vh; // -> 여기도 수정했기 때문에 반드시 start 부분부터 복붙하기!
+  height: 100vh;
   
   .header-bg {
     position: relative;
@@ -118,186 +118,188 @@ header {
     position: absolute;
     top: 0; left: 0; right: 0;
 
-    @include responsive(large-tablet-screens) {     
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.7);
-            background-color: #f1f1f1;
-        }
+    @include responsive(large-tablet-screens) {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        background-color: #f1f1f1;
+      }
     }
     
     .flex-box {
-        position: relative;
-        display: flex;
-        height: 80px;
+      position: relative;
+      display: flex;
+      height: 80px;
 
-        @include responsive(large-tablet-screens) {     
-            height: 100px;
+      @include responsive(large-tablet-screens) {     
+        height: 100px;
+      }
+
+      .header-logo {
+        width: 15%;
+
+        a {
+          img {
+            width: 48px;
+            display: block;
+            @include pos-center-y();
+
+            @include responsive(large-tablet-screens) {     
+              width: 132px;
+            }
+          }
+        }
+      } // header-logo
+
+      nav.main-menu {
+        display: none;
+        width: 590px;
+
+        @include responsive(large-tablet-screens) {
+          display: block;
         }
 
-        .header-logo {
-            width: 15%;
+        .gnb {
+          width: inherit;
+          height: 100px;
+          display: flex;
+          justify-content: space-between;
+          @include pos-center-y();
+
+          li {
+            width: 20%;
+            line-height: 100px;
+            text-align: center;
+
+            &::after {
+              line-height: 0;
+              display: block;
+              content: "";
+              width: 60%;
+              height: 2px;
+              margin: 0 auto;
+              margin-top: -34px;
+              background-color: #000;
+              transform: scale(0);
+              transition: all 0.4s;
+            }
+
+            &:hover::after {
+              transform: scale(1);
+            }
+
+            &:first-child::after {
+              width: 70%;
+            }
 
             a {
-                img {
-                    width: 48px;
-                    display: block;
-                    @include pos-center-y();
-
-                    @include responsive(large-tablet-screens) {     
-                        width: 132px;
-                    }
-                }
-            }
-        } // header-logo
-
-        nav.main-menu {
-            display: none;
-            width: 590px;
-
-            @include responsive(large-tablet-screens) {
-                display: block;
+              font-size: $sub-title-font-size;
+              color: #000;
+              font-weight: 600;
             }
 
-            .gnb {
-                width: inherit;
-                height: 100px;
-                display: flex;
-                justify-content: space-between;
-                @include pos-center-y();
-
-                li {
-                    width: 20%;
-                    line-height: 100px;
-                    text-align: center;
-
-                    &::after {
-                        line-height: 0;
-                        display: block;
-                        content: "";
-                        width: 60%;
-                        height: 2px;
-                        margin: 0 auto;
-                        margin-top: -34px;
-                        background-color: #000;
-                        transform: scale(0);
-                        transition: all 0.4s;
-                    }
-
-                    &:hover::after {
-                        transform: scale(1);
-                    }
-
-                    &:first-child::after {
-                        width: 70%;
-                    }
-
-                    a {
-                        font-size: $sub-title-font-size;
-                        color: #000;
-                    }
-
-                    .lnb {
-                        position: absolute;
-                        //top: 101px;
-                        width: 100%;
-                        
-                        li {
-                            display: none;
-                            line-height: 1;
-                            margin-top: -1px;
-                            background-color: rgba(0, 148, 214, 1);
-                            // background-color: rgba(255, 165, 0, 0.6);
-                            
-                            &::after {
-                                display: none;
-                            }
-                            
-                            a {
-                                color: #fff;
-                                font-size: 16px;
-                                width: 100%;
-                                padding: 10px 20px;
-
-                                &:hover {
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-                    }
-
-                    &:hover .lnb > li {
-                        display: block;
-                    }
-
-                    &:nth-child(3) .lnb {
-                        @include lnb-pos-center();
-                    }
-
-                    &:nth-child(4) .lnb {
-                        @include lnb-pos-center();
-                    }
-                } // li
-            } // gnb
-        } // nav.main-menu
-
-        .right-menu {
-            width: 80px;
-            @include pos-center-y() {
-                right: 0;
-            }
-            
-            @include responsive(small-tablet-screens) {
-                width: 110px;
-            }
-            
-            @include responsive(large-tablet-screens) {
-                width: 188px;
-            }
-
-            @include responsive(desktop-screens) {
-                right: 0;
-            }
-
-            ul {
-                width: 100%;
-                @include flex-box();
+            .lnb {
+              position: absolute;
+              //top: 101px;
+              width: 100%;
+              
+              li {
+                display: none;
+                line-height: 1;
+                margin-top: -1px;
+                background-color: rgba(0, 148, 214, 1);
+                // background-color: rgba(255, 165, 0, 0.6);
                 
-                li {
-                    a {
-                        color: #000;
-                        font: {
-                            family: $eng-font;
-                            // weight: 500;
-                        }
+                &::after {
+                  display: none;
+                }
+                
+                a {
+                  color: #fff;
+                  font-size: 16px;
+                  width: 100%;
+                  padding: 10px 20px;
+                  font-weight: 400;
 
-                        &::after { 
-                            display: block;
-                            content: "";
-                            width: 100%;
-                            height: 2px;
-                            margin-top: 5px;
-                            background-color: #000;
-                            transform: scale(0);
-                            transition: all 0.4s;
-                        }
+                  &:hover {
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
 
-                        @include responsive(large-tablet-screens) {
-                            &:hover::after {
-                                transform: scale(1);
-                            }
-                        }
+            &:hover .lnb > li {
+              display: block;
+            }
 
-                        img {
-                            width: 30px;
+            &:nth-child(3) .lnb {
+              @include lnb-pos-center();
+            }
 
-                            @include responsive(small-tablet-screens) {
-                                width: 40px;
-                            }
-                        }
-                    } // a
-                } // li
-            } // ul
-        } // right-menu
+            &:nth-child(4) .lnb {
+              @include lnb-pos-center();
+            }
+          } // li
+        } // gnb
+      } // nav.main-menu
+
+      .right-menu {
+        width: 80px;
+        @include pos-center-y() {
+          right: 0;
+        }
+        
+        @include responsive(small-tablet-screens) {
+          width: 110px;
+        }
+        
+        @include responsive(large-tablet-screens) {
+          width: 188px;
+        }
+
+        @include responsive(desktop-screens) {
+          right: 0;
+        }
+
+        ul {
+          width: 100%;
+          @include flex-box();
+          
+          li {
+            a {
+              color: #000;
+              font: {
+                family: $eng-font;
+                weight: 600;
+              }
+
+              &::after { 
+                display: block;
+                content: "";
+                width: 100%;
+                height: 2px;
+                margin-top: 5px;
+                background-color: #000;
+                transform: scale(0);
+                transition: all 0.4s;
+              }
+
+              @include responsive(large-tablet-screens) {
+                &:hover::after {
+                  transform: scale(1);
+                }
+              }
+
+              img {
+                width: 30px;
+
+                @include responsive(small-tablet-screens) {
+                  width: 40px;
+                }
+              }
+            } // a
+          } // li
+        } // ul
+      } // right-menu
     } // flex-box
   } // logo-menu-box    
 
@@ -311,90 +313,84 @@ header {
     background-color: rgba(0, 0, 0, 0.96);
 
     @include responsive(small-tablet-screens) {
-        max-width: 580px;
+      max-width: 580px;
     }
 
     .close-btn {
-        position: absolute;
-        top: 0px; right: 20px;
-        font: {
-            size: 55px;
-            weight: 100;
-            
-        }
-        color: #f1f1f1;
+      position: absolute;
+      top: 0px; right: 20px;
+      font: {
+        size: 55px;
+        weight: 100;
+        
+      }
+      color: #f1f1f1;
     }
 
     .overlay-menu {
-        position: relative;
-        top: 22%;
-        text-align: center;
-        // margin-top: 20px;
+      position: relative;
+      top: 22%;
+      text-align: center;
+      // margin-top: 20px;
 
-        ul {
+      ul {
 
+        li {
+          a {
+            font: {
+              size: 26px;
+              weight: 400;
+            }
+            color: #fff;
+            padding: 15px 0;
+
+            &.on {
+              color: $point-color;
+              transform: skew(-15deg);
+            }
+          }
+
+          ul {
             li {
-                a {
-                    font: {
-                        size: 26px;
-                        weight: 400;
-                    }
-                    color: #fff;
-                    padding: 15px 0;
+              display: none;
 
-                    &.on {
-                        color: $point-color;
-                        transform: skew(-15deg);
-                    }
+              &.on {
+                display: block;
+              }
+              
+              a {
+                position: relative;
+                display: inline-block;
+                font: {
+                  size: 18px;
+                  weight: 300;
                 }
 
-                ul {
-
-                    li {
-                        display: none;
-
-                        &.on {
-                            display: block;
-                        }
-                        
-                        a {
-                            position: relative;
-                            display: inline-block;
-                            font: {
-                                size: 18px;
-                                weight: 300;
-                            }
-
-                            &:hover,
-                            &:focus {
-                                transform: skew(0);
-                            }
-                            
-                            &::after {
-                                position: absolute;
-                                left: 0; bottom: 10px;
-                                content: "";
-                                width: 0;
-                                height: 1px;
-                                background-color: #fff;
-                                transition: all 0.4s;
-                            }
-
-                            &:hover::after {
-                                width: 100%;
-                            }
-                            
-
-                        }
-                        
-                    } // li
-                } // ul(depth-2)
+                &:hover,
+                &:focus {
+                  transform: skew(0);
+                }
                 
+                &::after {
+                  position: absolute;
+                  left: 0; bottom: 10px;
+                  content: "";
+                  width: 0;
+                  height: 1px;
+                  background-color: #fff;
+                  transition: all 0.4s;
+                }
+
+                &:hover::after {
+                  width: 100%;
+                }
+              }
             } // li
-        } // ul(depth-1)
+          } // ul(depth-2)
+        } // li
+      } // ul(depth-1)
     } // overlay-menu
   } // overlay
-
 } // header
 
 
@@ -654,6 +650,11 @@ main {
     .rental-fee {
       line-height: 30px;
       margin-top: 40px;
+      font-size: 14px;
+
+      @include responsive(large-tablet-screens) {
+        font-size: 16px;
+      }
 
       h2 {
         position: relative;
@@ -678,7 +679,6 @@ main {
       }
 
       .perform-fee {
-        font-size: 14px;
 
         .flexbox2 {
           margin-top: 40px;
@@ -699,7 +699,6 @@ main {
 
       .prepare-fee {
         margin: 70px 0;
-        font-size: 14px;
 
         .flexbox2 {
           margin-top: 40px;

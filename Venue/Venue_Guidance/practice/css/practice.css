@@ -623,6 +623,12 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list 
 main .venue-guidance .rental-fee {
   line-height: 30px;
   margin-top: 40px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .rental-fee {
+    font-size: 16px;
+  }
 }
 main .venue-guidance .rental-fee h2 {
   position: relative;
@@ -644,9 +650,6 @@ main .venue-guidance .rental-fee h3 {
   font-weight: normal;
   color: rgb(0, 148, 214);
 }
-main .venue-guidance .rental-fee .perform-fee {
-  font-size: 14px;
-}
 main .venue-guidance .rental-fee .perform-fee .flexbox2 {
   margin-top: 40px;
 }
@@ -657,9 +660,6 @@ main .venue-guidance .rental-fee .perform-fee .flexbox2 {
 }
 main .venue-guidance .rental-fee .perform-fee .flexbox2 h3 {
   width: 140px;
-}
-main .venue-guidance .rental-fee .prepare-fee {
-  font-size: 14px;
 }
 main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
   margin-top: 40px;
@@ -767,7 +767,7 @@ main #practice .rental-fee .timeandfee .table-area table td:last-child {
   border-right: 0;
 }
 main #practice .rental-fee .timeandfee .table-area table thead {
-  border-bottom: 3px solid rgb(0, 148, 214);
+  border-bottom: 2px solid rgb(170, 170, 170);
 }
 main #practice .rental-fee .timeandfee .table-area table th,
 main #practice .rental-fee .timeandfee .table-area table td {

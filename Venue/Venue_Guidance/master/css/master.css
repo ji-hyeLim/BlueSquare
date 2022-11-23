@@ -656,6 +656,12 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list 
 main .venue-guidance .rental-fee {
   line-height: 30px;
   margin-top: 40px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .rental-fee {
+    font-size: 16px;
+  }
 }
 main .venue-guidance .rental-fee h2 {
   position: relative;
@@ -677,9 +683,6 @@ main .venue-guidance .rental-fee h3 {
   font-weight: normal;
   color: rgb(0, 148, 214);
 }
-main .venue-guidance .rental-fee .perform-fee {
-  font-size: 14px;
-}
 main .venue-guidance .rental-fee .perform-fee .flexbox2 {
   margin-top: 40px;
 }
@@ -693,7 +696,6 @@ main .venue-guidance .rental-fee .perform-fee .flexbox2 h3 {
 }
 main .venue-guidance .rental-fee .prepare-fee {
   margin: 70px 0;
-  font-size: 14px;
 }
 main .venue-guidance .rental-fee .information {
   margin-bottom: 70px;

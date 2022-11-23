@@ -781,7 +781,7 @@ main #nemo .rental-fee .timeandfee .table-area table td:last-child {
   border-right: 0;
 }
 main #nemo .rental-fee .timeandfee .table-area table thead {
-  border-bottom: 3px solid rgb(0, 148, 214);
+  border-bottom: 2px solid rgb(170, 170, 170);
 }
 main #nemo .rental-fee .timeandfee .table-area table th,
 main #nemo .rental-fee .timeandfee .table-area table td {
@@ -830,6 +830,7 @@ footer .flex-box .left-contents {
 }
 footer .flex-box .left-contents h2 {
   margin-left: -2px;
+  letter-spacing: -0.0769230769em;
   font-size: 1.25em;
   font-family: "Montserrat", sans-serif, Arial;
   font-weight: normal;
@@ -950,8 +951,8 @@ footer .flex-box .footer-title {
   text-align: center;
 }
 footer .flex-box .footer-title h1 {
-  font-size: calc(38px + 9.8vw);
-  font-family: "Montserrat", sans-serif, Arial;
+  font-size: calc(38px + 11.2vw);
+  font-family: "Lora";
   font-weight: 500;
 }
 footer .line {
@@ -959,7 +960,7 @@ footer .line {
 }
 footer .line span {
   position: absolute;
-  bottom: 280px;
+  bottom: 275px;
   display: block;
   content: "";
   width: 100%;
