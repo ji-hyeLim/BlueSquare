@@ -94,6 +94,15 @@ body {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes rotateImg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes rotateImg {
   0% {
     transform: rotate(0deg);
@@ -102,9 +111,29 @@ body {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes moveright {
+  from {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 @keyframes moveright {
   from {
     transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveleft {
+  from {
+    transform: translate(50%, 0);
     opacity: 0;
   }
   to {
@@ -160,13 +189,15 @@ header .header-bg .txt-wrap .txt1 {
   top: 100px;
   left: 0px;
   opacity: 0;
-  animation: moveright 1980ms forwards;
+  -webkit-animation: moveright 1980ms forwards;
+          animation: moveright 1980ms forwards;
 }
 header .header-bg .txt-wrap .txt2 {
   position: absolute;
   bottom: 0;
   right: 0;
-  animation: moveleft 2000ms forwards;
+  -webkit-animation: moveleft 2000ms forwards;
+          animation: moveleft 2000ms forwards;
 }
 header .header-bg .txt-wrap .img-pos {
   width: 100%;
@@ -179,7 +210,8 @@ header .header-bg .txt-wrap .img-pos img {
   width: 30%;
   min-width: 180px;
   max-width: 250px;
-  animation: rotateImg 6s linear infinite;
+  -webkit-animation: rotateImg 6s linear infinite;
+          animation: rotateImg 6s linear infinite;
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .txt-wrap .img-pos img {
@@ -393,7 +425,7 @@ header .overlay .overlay-menu ul li a {
   padding: 15px 0;
 }
 header .overlay .overlay-menu ul li a.on {
-  color: #0094d6;
+  color: rgb(0, 148, 214);
   transform: skew(-15deg);
 }
 header .overlay .overlay-menu ul li ul li {
@@ -616,7 +648,7 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list 
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
 }
 main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list .list1 {
   margin-bottom: 10px;
@@ -639,11 +671,11 @@ main .venue-guidance .rental-fee h2::before {
   content: "";
   width: 5px;
   height: 100%;
-  background-color: #0094d6;
+  background-color: rgb(0, 148, 214);
 }
 main .venue-guidance .rental-fee h3 {
   font-weight: normal;
-  color: #0094d6;
+  color: rgb(0, 148, 214);
 }
 main .venue-guidance .rental-fee .perform-fee {
   font-size: 14px;
@@ -691,7 +723,7 @@ main .venue-guidance .rental-fee .agreement {
 }
 main .venue-guidance .rental-fee .agreement a {
   display: inline-block;
-  color: #0094d6;
+  color: rgb(0, 148, 214);
   font-weight: 600;
 }
 main #master .rental-fee h2 {
@@ -900,4 +932,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=master.css.map */
