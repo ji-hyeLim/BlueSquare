@@ -94,15 +94,6 @@ body {
   overflow-x: hidden;
 }
 
-@-webkit-keyframes rotateImg {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes rotateImg {
   0% {
     transform: rotate(0deg);
@@ -111,29 +102,9 @@ body {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes moveright {
-  from {
-    transform: translate(-50%, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
 @keyframes moveright {
   from {
     transform: translate(-50%, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes moveleft {
-  from {
-    transform: translate(50%, 0);
     opacity: 0;
   }
   to {
@@ -189,15 +160,13 @@ header .header-bg .txt-wrap .txt1 {
   top: 100px;
   left: 0px;
   opacity: 0;
-  -webkit-animation: moveright 1980ms forwards;
-          animation: moveright 1980ms forwards;
+  animation: moveright 1980ms forwards;
 }
 header .header-bg .txt-wrap .txt2 {
   position: absolute;
   bottom: 0;
   right: 0px;
-  -webkit-animation: moveleft 2000ms forwards;
-          animation: moveleft 2000ms forwards;
+  animation: moveleft 2000ms forwards;
 }
 header .header-bg .txt-wrap .img-pos {
   width: 100%;
@@ -210,8 +179,7 @@ header .header-bg .txt-wrap .img-pos img {
   width: 30%;
   min-width: 180px;
   max-width: 250px;
-  -webkit-animation: rotateImg 6s linear infinite;
-          animation: rotateImg 6s linear infinite;
+  animation: rotateImg 6s linear infinite;
 }
 @media screen and (min-width: 1024px) {
   header .header-bg .txt-wrap .img-pos img {
@@ -893,4 +861,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=shinhan.css.map */
+}

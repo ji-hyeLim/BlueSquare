@@ -58,17 +58,6 @@ footer {
   display: block;
 }
 
-@-webkit-keyframes fadeInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeInTop {
   0% {
     opacity: 0;
@@ -77,17 +66,6 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes poster-3d {
-  0% {
-    transform: translate3d(0px, 0px, 0px);
-  }
-  50% {
-    transform: translate3d(-50px, 0px, 30px);
-  }
-  100% {
-    transform: translate3d(0px, 0px, 0px);
   }
 }
 @keyframes poster-3d {
@@ -420,8 +398,7 @@ main .detail-main .left-img .ticket-poster .topWrap .bg img {
   width: 100%;
   height: 100%;
   filter: blur(10px);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .detail-main .left-img .ticket-poster .topWrap .content {
   position: relative;
@@ -447,7 +424,6 @@ main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .poste
   box-shadow: 0px 10px 5px gray;
 }
 main .detail-main .left-img .ticket-poster .topWrap .content .main-poster .posterBoxPlayBtn {
-  position: -webkit-sticky;
   position: sticky;
   position: absolute;
   left: 12px;
@@ -482,8 +458,7 @@ main .detail-main .left-img .sns-box li a img {
 }
 main .detail-main .right-text {
   position: relative;
-  -webkit-animation: fadeInTop 1s;
-          animation: fadeInTop 1s;
+  animation: fadeInTop 1s;
   width: 100%;
 }
 main .detail-main .right-text .ticket-intro-text {
@@ -681,8 +656,7 @@ main .detail-main .right-text .info-booking-button ul li:last-child a {
     border: 1px solid #ccc;
   }
   main .detail-main {
-    -webkit-animation: fadeInTop 1s;
-            animation: fadeInTop 1s;
+    animation: fadeInTop 1s;
     text-align: center;
     margin-top: 70px;
   }
@@ -1453,4 +1427,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}
