@@ -267,6 +267,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li:first-child::after {
 header .logo-menu-box .flex-box nav.main-menu .gnb li a {
   font-size: 18px;
   color: #000;
+  font-weight: 600;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb {
   position: absolute;
@@ -286,6 +287,7 @@ header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li a {
   font-size: 16px;
   width: 100%;
   padding: 10px 20px;
+  font-weight: 400;
 }
 header .logo-menu-box .flex-box nav.main-menu .gnb li .lnb li a:hover {
   font-weight: 600;
@@ -331,6 +333,7 @@ header .logo-menu-box .flex-box .right-menu ul {
 header .logo-menu-box .flex-box .right-menu ul li a {
   color: #000;
   font-family: "Montserrat", sans-serif, Arial;
+  font-weight: 600;
 }
 header .logo-menu-box .flex-box .right-menu ul li a::after {
   display: block;
@@ -621,6 +624,12 @@ main .venue-guidance .venue-facility .flexbox .intro-equip-wrap .equipment-list 
 main .venue-guidance .rental-fee {
   line-height: 30px;
   margin-top: 40px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  main .venue-guidance .rental-fee {
+    font-size: 16px;
+  }
 }
 main .venue-guidance .rental-fee h2 {
   position: relative;
@@ -642,9 +651,6 @@ main .venue-guidance .rental-fee h3 {
   font-weight: normal;
   color: rgb(0, 148, 214);
 }
-main .venue-guidance .rental-fee .perform-fee {
-  font-size: 14px;
-}
 main .venue-guidance .rental-fee .perform-fee .flexbox2 {
   margin-top: 40px;
 }
@@ -661,7 +667,6 @@ main .venue-guidance .rental-fee .perform-fee .text-indent {
 }
 main .venue-guidance .rental-fee .prepare-fee {
   margin: 70px 0;
-  font-size: 14px;
 }
 main .venue-guidance .rental-fee .prepare-fee .flexbox2 {
   margin-top: 40px;

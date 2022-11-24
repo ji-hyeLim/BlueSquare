@@ -605,6 +605,11 @@ main {
     .rental-fee {
       line-height: 30px;
       margin-top: 40px;
+      font-size: 14px;
+
+      @include responsive(large-tablet-screens) {
+        font-size: 16px;
+      }
 
       h2 {
         position: relative;
@@ -629,8 +634,6 @@ main {
       }
 
       .perform-fee {
-        font-size: 14px;
-
         .flexbox2 {
           margin-top: 40px;
 
@@ -645,10 +648,6 @@ main {
       } //perform-fee
 
       .prepare-fee {
-        // margin-top: 40px;
-        font-size: 14px;
-
-
         .flexbox2 {
           margin-top: 40px;
 
@@ -767,7 +766,7 @@ main {
             @include left-right-border-none();
   
             thead {
-              border-bottom: 3px solid $point-color;
+              border-bottom: 2px solid rgb(170, 170, 170);
             }
   
             th,

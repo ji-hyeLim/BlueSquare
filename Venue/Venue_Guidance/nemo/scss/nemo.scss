@@ -771,7 +771,7 @@ main {
             @include left-right-border-none();
   
             thead {
-              border-bottom: 3px solid $point-color;
+              border-bottom: 2px solid rgb(170, 170, 170);
             }
   
             th,

@@ -749,7 +749,7 @@ main #nemo .rental-fee .timeandfee .table-area table td:last-child {
   border-right: 0;
 }
 main #nemo .rental-fee .timeandfee .table-area table thead {
-  border-bottom: 3px solid rgb(0, 148, 214);
+  border-bottom: 2px solid rgb(170, 170, 170);
 }
 main #nemo .rental-fee .timeandfee .table-area table th,
 main #nemo .rental-fee .timeandfee .table-area table td {
