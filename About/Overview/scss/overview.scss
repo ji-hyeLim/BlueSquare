@@ -116,7 +116,7 @@ header {
                 @include responsive(small-tablet-screens) {
                     display: block;
                 }
-                @include responsive(large-tablet-screens) {
+                @include responsive(desktop-screens) {
                     display: none;
                 }
             }
@@ -127,7 +127,7 @@ header {
                 transform:scale(1.1);
                 animation:scaleImg 2s forwards;
 
-                @include responsive(small-tablet-screens) {
+                @include responsive(desktop-screens) {
                     display: block;
                 }
             }

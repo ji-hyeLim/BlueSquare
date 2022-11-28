@@ -88,12 +88,31 @@ footer {
   }
 }
 
+@-webkit-keyframes mover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @keyframes mover {
   from {
     width: 0%;
   }
   to {
     width: 100%;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
   }
 }
 @keyframes fadeUp {
@@ -106,14 +125,28 @@ footer {
     opacity: 1;
   }
 }
-@keyframes text-loop {
+@-webkit-keyframes text-loop {
   0% {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes text-loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-webkit-keyframes scaleImg {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes scaleImg {
@@ -142,7 +175,8 @@ header .ov-header .hd-img img.mb {
   width: 100%;
   height: 100vh;
   transform: scale(1.1);
-  animation: scaleImg 2s forwards;
+  -webkit-animation: scaleImg 2s forwards;
+          animation: scaleImg 2s forwards;
 }
 @media screen and (min-width: 600px) {
   header .ov-header .hd-img img.mb {
@@ -154,14 +188,15 @@ header .ov-header .hd-img img.tb {
   height: 100vh;
   display: none;
   transform: scale(1.1);
-  animation: scaleImg 2s forwards;
+  -webkit-animation: scaleImg 2s forwards;
+          animation: scaleImg 2s forwards;
 }
 @media screen and (min-width: 600px) {
   header .ov-header .hd-img img.tb {
     display: block;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   header .ov-header .hd-img img.tb {
     display: none;
   }
@@ -171,9 +206,10 @@ header .ov-header .hd-img img.pc {
   height: 100vh;
   display: none;
   transform: scale(1.1);
-  animation: scaleImg 2s forwards;
+  -webkit-animation: scaleImg 2s forwards;
+          animation: scaleImg 2s forwards;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1400px) {
   header .ov-header .hd-img img.pc {
     display: block;
   }
@@ -199,9 +235,12 @@ header .ov-header .hd-img .line-box div.p-box {
 }
 header .ov-header .hd-img .line-box div.p-box p {
   opacity: 0;
-  animation: fadeUp 3s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  -webkit-animation: fadeUp 3s;
+          animation: fadeUp 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   font-size: calc(1vw + 30px);
   font-weight: 500;
   font-family: "Montserrat", sans-serif, Arial;
@@ -235,7 +274,8 @@ header .ov-header .hd-img .line-box div.p-box::before {
   width: 100%;
   height: 3px;
   background-color: white;
-  animation: mover 2s;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
 @media screen and (min-width: 1024px) {
   header .ov-header .hd-img .line-box div.p-box::before {
@@ -251,7 +291,8 @@ header .ov-header .hd-img .line-box div.p-box::after {
   width: 100%;
   height: 3px;
   background-color: white;
-  animation: mover 2s;
+  -webkit-animation: mover 2s;
+          animation: mover 2s;
 }
 @media screen and (min-width: 1024px) {
   header .ov-header .hd-img .line-box div.p-box::after {
@@ -547,7 +588,8 @@ main .page-info1 .info-img img {
 main .page-info1 .info-txt {
   padding-left: 0;
   margin-bottom: 40px;
-  animation: fadeIn 1s 3s linear forwards;
+  -webkit-animation: fadeIn 1s 3s linear forwards;
+          animation: fadeIn 1s 3s linear forwards;
 }
 @media screen and (min-width: 1024px) {
   main .page-info1 .info-txt {
@@ -811,7 +853,8 @@ main .flow-txt-wrap div {
 }
 main .flow-txt-wrap div .flow-txt {
   padding-right: 22px;
-  animation: text-loop 10s linear infinite;
+  -webkit-animation: text-loop 10s linear infinite;
+          animation: text-loop 10s linear infinite;
 }
 
 footer {
@@ -983,4 +1026,4 @@ footer .line span {
   width: 100%;
   height: 2px;
   background-color: #fff;
-}
+}/*# sourceMappingURL=overview.css.map */
