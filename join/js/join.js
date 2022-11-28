@@ -86,10 +86,10 @@ window.onload = function() {
     pwEye.addEventListener('click', function() {
         userPw.classList.toggle('active');
         if(userPw.classList.contains('active')) {
-            this.setAttribute('class', 'fa fa-eye-slash fa-lg')
+            this.setAttribute('class', 'fa fa-eye fa-lg')
             userPw.setAttribute('type', 'text');
         } else {
-            this.setAttribute('class', 'fa fa-eye fa-lg')
+            this.setAttribute('class', 'fa fa-eye-slash fa-lg')
             userPw.setAttribute('type', 'password');
         }
     })
@@ -139,10 +139,10 @@ window.onload = function() {
     pwReEye.addEventListener('click', function() {
         userPwCheck.classList.toggle('active');
         if(userPwCheck.classList.contains('active')) {
-            this.setAttribute('class', 'fa fa-eye-slash fa-lg')
+            this.setAttribute('class', 'fa fa-eye fa-lg')
             userPwCheck.setAttribute('type', 'text');
         } else {
-            this.setAttribute('class', 'fa fa-eye fa-lg')
+            this.setAttribute('class', 'fa fa-eye-slash fa-lg')
             userPwCheck.setAttribute('type', 'password');
         }
     })
